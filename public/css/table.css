@@ -1,0 +1,32 @@
+<style>
+		table, th, td {
+		    border: 1px solid black;
+		}
+		th {
+		    height: 20px;
+		    width: 193px;
+		    text-align: left;
+		    color: white;
+		    background-color: black;
+		}
+		td {
+		    height: 20px;
+		    width: 200px;
+		    text-align: left;    
+		    background-color: green;
+		}
+		table {
+		    border-spacing: 3px;
+		    background-color: #f1f1c1;
+		}
+		div.order {	  
+		    
+		}
+		.head{
+		    height: 50px;
+		    width: 450px;
+		    color: rgb(0,0,255);
+		    text-transform: uppercase;
+		    background-color: #f1f1c2;
+		}
+	</style>
