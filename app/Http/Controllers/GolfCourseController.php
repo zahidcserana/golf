@@ -13,5 +13,14 @@ class GolfCourseController extends Controller
 		$golfCourseObj = new GolfCourse;
 		$golfCourseObj->data = json_encode($request->gameResult);
 		$golfCourseObj->save();
+		return view('index');
+	}
+
+	public function ViewCourse(Request $request)
+	{
+		$golfCourseObj = new GolfCourse;
+		$userId ='2';
+		$courseResult = $golfCourseObj->GetUserCourse($userId);
+		dd($courseResult->data);
 	}
 }

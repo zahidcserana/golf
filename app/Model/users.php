@@ -28,6 +28,6 @@ class users extends Model
 	}
 	public function GetLogInInfo($userName, $password)
 	{
-	      return DB::table($this->table)->where('user_name', $userName)->where('password', $password)->first();
+	      return DB::table($this->table)->where('name', $userName)->where('password', $password)->first();
 	}
 }

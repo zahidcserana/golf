@@ -11,6 +11,10 @@ class GolfCourse extends Model
 	protected $primaryKey = 'id';
 	public $timestamps = false;
 
+	public function GetUserCourse($userId)
+	{
+		return DB::table($this->table)->where('user_id', $userId)->first();
+	}
 	/*public function GetUserName($userName)
 	{
 	      return DB::table($this->table)->where('user_name', $userName)->get();

@@ -137,49 +137,49 @@
 			</tr>
 			<tr>
 				<td>GIR_DIST_PUTT_1</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[gir_dist_put_1][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[gir_dist_put_1][19]" /></td>
 				<td><input type="hidden" Name="gameResult[gir_dist_put_1][20]" /></td>
 			</tr>
 			<tr>
 				<td>AVG_DIST_HOL_GIR</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hol_gir][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hol_gir][19]" /></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hol_gir][20]" /></td>
 			</tr>
@@ -209,73 +209,73 @@
 			</tr>
 			<tr>
 				<td>DIST_AFT_PUTT_1</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[dist_aft_putt_1][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[dist_aft_putt_1][19]" /></td>
 				<td><input type="hidden" Name="gameResult[dist_aft_putt_1][20]" /></td>
 			</tr>
 			<tr>
 				<td>NUM_PUTT_2</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[num_putt_2][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[num_putt_2][19]" /></td>
 				<td><input type="hidden" Name="gameResult[num_putt_2][20]" /></td>
 			</tr>
 			<tr>
 				<td>AVG_DIST_HOL_PUTT1</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hole_putt1][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hole_putt1][19]" /></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hole_putt1][20]" /></td>
 			</tr>
@@ -305,25 +305,25 @@
 			</tr>
 			<tr>
 				<td>NUM_PUTT_3</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[num_putt_3][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[num_putt_3][19]" /></td>
 				<td><input type="hidden" Name="gameResult[num_putt_3][20]" /></td>
 			</tr>
@@ -641,73 +641,73 @@
 			</tr>
 			<tr>
 				<td>NOGIR_DIST_PUTT_1</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[nogir_dist_putt_1][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[nogir_dist_putt_1][19]" /></td>
 				<td><input type="hidden" Name="gameResult[nogir_dist_putt_1][20]" /></td>
 			</tr>
 			<tr>
 				<td>NO_GIR</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[no_gir][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[no_gir][19]" /></td>
 				<td><input type="hidden" Name="gameResult[no_gir][20]" /></td>
 			</tr>
 			<tr>
 				<td>AVG_DIST_HOL_NOGIR</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hol_nogir][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hol_nogir][19]" /></td>
 				<td><input type="hidden" Name="gameResult[avg_dist_hol_nogir][20]" /></td>
 			</tr>
@@ -761,25 +761,25 @@
 			</tr>
 			<tr>
 				<td>SCRAMBL%</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[scrambl%][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[scrambl%][19]" /></td>
 				<td><input type="hidden" Name="gameResult[scrambl%][20]" /></td>
 			</tr>
@@ -833,25 +833,25 @@
 			</tr>
 			<tr>
 				<td>SAND%</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[sand%][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[sand%][19]" /></td>
 				<td><input type="hidden" Name="gameResult[sand%][20]" /></td>
 			</tr>
@@ -929,25 +929,25 @@
 			</tr>
 			<tr>
 				<td>PAR3SCOR</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[par3strokes][9]" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[par3strokes][19]" /></td>
 				<td><input type="hidden" Name="gameResult[par3strokes][20]" /></td>
 			</tr>
@@ -1241,26 +1241,26 @@
 			</tr>
 			<tr>
 				<td>PLAYED HOLES</td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
-				<td class="black"><input type="text" /></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
+				<td class="black"></td>
 				<td><input type="hidden" Name="gameResult[played_holes][20]" /></td>
 			</tr>
 			<tr>

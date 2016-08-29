@@ -1,4 +1,5 @@
-<form action = "{{ url('login') }}" method = "post" align="center">
+<?php echo url('login') ; ?>
+<form action = "{{ url('loginform') }}" method = "post" align="center">
   <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
    <table>
       <tr>

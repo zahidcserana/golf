@@ -16,9 +16,12 @@ Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController
 
 
 //shakil's User Panel
-Route::get('loginform', 'LoginController@LoginForm');
-Route::post('login', 'LoginController@Login');
+Route::get('loginform', ['as'=>'loginform', 'uses'=>'LoginController@LoginForm']);
+Route::post('loginform', ['as'=>'login', 'uses'=>'LoginController@CompleteLogin']);
 //Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
-Route::get('loginsuccess', function(){return view('index');});
+Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess']);
+//Route::get('/loginsuccess', ['as'=>'loginsuccess'], 'uses'=>'LoginController@Loginsuccess');
 Route::get('form', function(){return view('form');});
-Route::post('submitForm', 'GolfCourseController@Form');
+Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form']);
+Route::get('view_course', ['as'=>'view_course', 'uses'=>'GolfCourseController@ViewCourse']);
+/////
