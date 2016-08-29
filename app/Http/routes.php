@@ -15,3 +15,10 @@ Route::get('/password_change/{id}',['as'=>'password_change', 'uses' => 'UserCont
 Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset']);
 
 
+//shakil's User Panel
+Route::get('loginform', 'UsersController@LoginForm');
+Route::post('login', 'UsersController@Login');
+//Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
+Route::get('loginsuccess', function(){return view('index');});
+Route::get('form', function(){return view('form');});
+Route::post('submitForm', 'GolfCourseController@Form');
