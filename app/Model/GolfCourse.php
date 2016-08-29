@@ -1,33 +1,26 @@
 <?php
-
 namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 use Mockery\CountValidator\Exception;
 use Validator;
-
-class users extends Model
+class GolfCourse extends Model
 {
-	protected $table = 'users';
-	protected $fillable = ['id','name','password'];
+    protected $table = 'golf_course';
+	protected $fillable = ['id', 'users', 'data'];
 	protected $primaryKey = 'id';
 	public $timestamps = false;
 
-	public function GetAllUser()
+	/*public function GetUserName($userName)
 	{
-	      return DB::table($this->table)->get();
+	      return DB::table($this->table)->where('user_name', $userName)->get();
 	}
-	
-	public function UserEmailCheck($email)
+	public function GetEmail($email)
 	{
 	      return DB::table($this->table)->where('email', $email)->get();
-	}
-	public function PasswordChange($id,$password)
-	{
-		 return DB::table($this->table)->where('id', $id)->update(['password'=>$password]);	
 	}
 	public function GetLogInInfo($userName, $password)
 	{
 	      return DB::table($this->table)->where('user_name', $userName)->where('password', $password)->first();
-	}
+	}*/
 }

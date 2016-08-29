@@ -16,8 +16,8 @@ Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController
 
 
 //shakil's User Panel
-Route::get('loginform', 'UsersController@LoginForm');
-Route::post('login', 'UsersController@Login');
+Route::get('loginform', 'LoginController@LoginForm');
+Route::post('login', 'LoginController@Login');
 //Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
 Route::get('loginsuccess', function(){return view('index');});
 Route::get('form', function(){return view('form');});
