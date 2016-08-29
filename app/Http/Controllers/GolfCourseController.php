@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Model\GolfCourse;
 use Illuminate\Http\Request;
-
+use Session;
 use App\Http\Requests;
 
 class GolfCourseController extends Controller
@@ -11,6 +11,8 @@ class GolfCourseController extends Controller
     public function Form(Request $request)
 	{
 		$golfCourseObj = new GolfCourse;
+		$userId = Session::get('userId');
+		$golfCourseObj->user_id = $userId;
 		$golfCourseObj->data = json_encode($request->gameResult);
 		$golfCourseObj->save();
 		return view('index');
@@ -19,8 +21,12 @@ class GolfCourseController extends Controller
 	public function ViewCourse(Request $request)
 	{
 		$golfCourseObj = new GolfCourse;
-		$userId ='2';
+		$userId = Session::get('userId');
 		$courseResult = $golfCourseObj->GetUserCourse($userId);
-		dd($courseResult->data);
+		for($i=0; $i<count($courseResult); $i++)
+		{
+			echo $courseResult[$i]->data;
+		}
+		
 	}
 }

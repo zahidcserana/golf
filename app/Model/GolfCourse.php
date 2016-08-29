@@ -13,7 +13,7 @@ class GolfCourse extends Model
 
 	public function GetUserCourse($userId)
 	{
-		return DB::table($this->table)->where('user_id', $userId)->first();
+		return DB::table($this->table)->where('user_id', $userId)->get();
 	}
 	/*public function GetUserName($userName)
 	{
