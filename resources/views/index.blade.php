@@ -13,7 +13,7 @@
 			
 			<a href="{{$asset}}">Home</a>
 			<a href="{{$asset}}form">Form Submission</a>
-			<a href="{{$asset}}view_course">View Result</a>
+			<a href="{{$asset}}list">View List</a>
 			
 		</div><br><br>
 		<br>

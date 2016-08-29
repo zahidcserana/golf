@@ -23,10 +23,11 @@ class GolfCourseController extends Controller
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
 		$courseResult = $golfCourseObj->GetUserCourse($userId);
-		for($i=0; $i<count($courseResult); $i++)
+		/*for($i=0; $i<count($courseResult); $i++)
 		{
 			echo $courseResult[$i]->data;
-		}
+		}*/
+		return view('list', ['courseResult'=>$courseResult]);
 		
 	}
 }
