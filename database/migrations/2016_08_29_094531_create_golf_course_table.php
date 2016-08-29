@@ -14,7 +14,7 @@ class CreateGolfCourseTable extends Migration
     {
         Schema::create('golf_course', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('users');
+            $table->int('user_id');
             $table->text('data');
             $table->timestamps();
         });
