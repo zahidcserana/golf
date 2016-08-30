@@ -18,7 +18,7 @@ class UserValidationMiddleware
         $userId = Session::get('userId');
         $userType = Session::get('userType');
         if ($userId=='' || $userType=='') {
-            return redirect()->route('admin');
+            return redirect()->route('loginform');
         }
         return $next($request);
     }

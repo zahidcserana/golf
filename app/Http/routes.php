@@ -3,8 +3,8 @@
 
 Route::get('/admin/home',['as'=>'admin_home', 'uses' => 'AdminController@AdminHome']);
 Route::get('/admin_logout',['as'=>'admin_logout', 'uses' => 'AdminController@AdminLogout']);
-Route::get('/admin',['as'=>'admin', 'uses' => 'AdminController@AdminLoginForm']);
-Route::post('/admin_login',['as'=>'admin_login', 'uses' => 'AdminController@AdminLogin']);
+Route::get('admin/login',['as'=>'admin', 'uses' => 'AdminController@AdminLoginForm']);
+Route::post('admin/login',['as'=>'admin_login', 'uses' => 'AdminController@AdminLogin']);
 
 
 Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserController@RegistrationForm']);
@@ -26,6 +26,8 @@ Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@For
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse']);
 /////    ggg
 // Middleware
-Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => ['UserValidationMiddleware']]);
 
-//Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList']);
+//Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => ['UserValidationMiddleware']]);
+//Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => 'AdminValidationMiddleware']);
+
+Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');;

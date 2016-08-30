@@ -15,6 +15,12 @@ class AdminValidationMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        $userId = Session::get('userId');
+        $userType = Session::get('userType');
+        if ($userId!='' || $userType=='admin') {
+            return $next($request);
+        }
+        return redirect()->route('admin');
+        
     }
 }

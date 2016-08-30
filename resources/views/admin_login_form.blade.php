@@ -1,5 +1,5 @@
 <div align="center">
-    <form method="POST" action="{{ url('admin_login') }}">
+    <form method="POST" action="{{ url('admin/login') }}">
         {!! csrf_field() !!}
             <table>
                 <tr>

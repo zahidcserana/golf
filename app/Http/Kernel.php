@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http;
-
+use Illuminate\Routing\Middleware\AdminValidationMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -50,5 +50,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'UserValidationMiddleware' => \Illuminate\Routing\Middleware\UserValidationMiddleware::class,
+        'AdminValidationMiddleware' => \Illuminate\Routing\Middleware\AdminValidationMiddleware::class,
     ];
 }
