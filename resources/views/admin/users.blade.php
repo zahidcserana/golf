@@ -2,7 +2,7 @@
     $asset = asset('/'); 
 ?>
 <link href="{{$asset}}css/table.css" rel="stylesheet" type="text/css" />
-@extends('admin_master')
+@extends('admin.master')
 @section('admincontent')
 <br /><br />
 	<table align="center">

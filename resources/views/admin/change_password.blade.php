@@ -1,4 +1,4 @@
-@extends('admin_master')
+@extends('admin.master')
 @section('admincontent')
 <div align="center">
     <form method="POST" action="{{ url('password_reset') }}">

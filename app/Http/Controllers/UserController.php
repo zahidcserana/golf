@@ -12,11 +12,11 @@ class UserController extends Controller
 	{
 		$userListObj = new users;
 		$userList = $userListObj->GetAllUser();
-		return view('users', ['users'=>$userList]);
+		return view('admin.users', ['users'=>$userList]);
 	}
 	public function RegistrationForm()
 	{
-		return view('registration_form');
+		return view('admin.registration_form');
 	}
 	public function Registration(Request $request)
 	{
@@ -45,7 +45,7 @@ class UserController extends Controller
 	}
 	public function ChangePassword($id)
 	{
-		return view('change_password',['id'=>$id]);
+		return view('admin.change_password',['id'=>$id]);
 	}
 	public function PasswordReset(Request $request)
 	{

@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
 	public function AdminLoginForm()
 	{
-		return view('admin_login_form');
+		return view('admin.login_form');
 	}
 	public function AdminLogin(Request $request)
 	{
@@ -34,7 +34,7 @@ class AdminController extends Controller
 	}
 	public function AdminHome()
 	{
-		return view('admin_home');
+		return view('admin.home');
 	}
     	public function AdminLogout()
     	{

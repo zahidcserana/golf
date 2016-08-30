@@ -1,7 +1,7 @@
 <?php
   $asset = asset('/');
 ?>
-@extends('admin_master')
+@extends('admin.master')
 @section('validate')
 @parent
 <script src="{{$asset}}js/jquery.min.js"></script>
