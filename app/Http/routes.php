@@ -25,3 +25,5 @@ Route::get('form', function(){return view('form');});
 Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form']);
 Route::get('list', ['as'=>'view_course', 'uses'=>'GolfCourseController@ViewCourse']);
 /////    ggg
+// Middleware
+Route::get('/user_validation',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => ['LoginValidationMiddleware']]);
