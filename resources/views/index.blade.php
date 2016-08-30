@@ -1,6 +1,8 @@
 <?php
   $asset = asset('/');
 ?>
+@extends('master')
+@section('content')
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,15 +10,7 @@
 	</head>
 	<body>
 		<center><h1>Golf</h1></center>
-		<br>
-		<div id = "menu" align="center">
-			
-			<a href="{{$asset}}">Home</a>
-			<a href="{{$asset}}form">Add Course</a>
-			<a href="{{$asset}}list">View List</a>
-			
-		</div><br><br>
-		<br>
-		<br>
+		
 	</body>
 </html>
+@stop

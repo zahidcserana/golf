@@ -1,7 +1,8 @@
-
+@extends('master')
+@section('content')
 <?php
-$gameResult = json_decode($gameResult, true);
 $asset = asset('/');
+$gameResult = json_decode($gameResult, true);
 ?>
 <!doctype html>
 <html class="no-js" lang="">

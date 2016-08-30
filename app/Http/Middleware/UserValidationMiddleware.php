@@ -20,6 +20,6 @@ class UserValidationMiddleware
         if ($userId!='' || $userType=='user') {
             return $next($request);
         }
-        return redirect()->route('loginform');
+        return redirect()->route('home');
     }
 }

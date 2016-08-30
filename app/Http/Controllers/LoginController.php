@@ -9,7 +9,11 @@ class LoginController extends Controller
 {
     public function LoginForm()
     {
-        return view('login');   
+        $sessionId = Session::get('userId');
+        if(!$sessionId)
+            return view('login');
+        else 
+            return view('master'); 
     }
 
 
@@ -32,6 +36,8 @@ class LoginController extends Controller
             //$msg = "yes. logged in";
             return redirect()->route('index');
         }
+        else
+            return redirect()->route('home');
         /*else
         {
             $msg = "Give correct user name and password";
@@ -43,5 +49,9 @@ class LoginController extends Controller
     {
         return view('index');
     }
-   
+    public function UserLogout()
+        {
+            session()->flush();
+        return redirect('/');
+        }
 }

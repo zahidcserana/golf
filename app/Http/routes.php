@@ -20,7 +20,8 @@ Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Reg
 
 
 //shakil's User Panel
-Route::get('loginform', ['as'=>'loginform', 'uses'=>'LoginController@LoginForm']);
+//Route::get('/', function(){return view(in)})
+Route::get('/', ['as'=>'home', 'uses'=>'LoginController@LoginForm']);
 Route::post('loginform', ['as'=>'login', 'uses'=>'LoginController@CompleteLogin']);
 //Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess']);
@@ -31,6 +32,8 @@ Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@For
 
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
 
-Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails']);
+Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails'])->middleware('UserValidationMiddleware');
+Route::get('/user_logout',['as'=>'user_logout', 'uses' => 'LoginController@UserLogout']);
+
 /////    ggg
 

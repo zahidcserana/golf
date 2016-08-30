@@ -1,4 +1,5 @@
-<?php echo url('login') ; ?>
+@extends('master')
+@section('content')
 <form action = "{{ url('loginform') }}" method = "post" align="center">
   <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
    <table>
@@ -17,3 +18,4 @@
       </tr>
    </table>
 </form>
+@stop
