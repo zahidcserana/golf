@@ -30,18 +30,22 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <form method="POST" action="{{ url('admin/login') }}">
-        {!! csrf_field() !!}
-        <div class="form-group">
-            <input type="text" class="form-control" name="email" placeholder="Enter name">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Enter password">
-        </div>
-        <div class="form-group">
-            <label class="fn"><input type="checkbox"> <span>Remember me</span></label>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+	<div class="row">
+		<div class='col-sm-4 col-md-offset-4'>
+			<form method="POST" action="{{ url('admin/login') }}">
+				{!! csrf_field() !!}
+				<div class="form-group">
+					<input type="text" class="form-control" name="email" placeholder="Enter name">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" name="password" placeholder="Enter password">
+				</div>
+				<div class="form-group">
+					<label class="fn"><input type="checkbox"> <span>Remember me</span></label>
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
   </body>
 </html>
