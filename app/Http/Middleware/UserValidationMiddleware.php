@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use session;
 use Closure;
 
 class UserValidationMiddleware
@@ -15,6 +15,7 @@ class UserValidationMiddleware
      */
     public function handle($request, Closure $next)
     {
+        session::get
         return $next($request);
     }
 }
