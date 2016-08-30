@@ -461,241 +461,241 @@ $asset = asset('/');
 									</tr>
 									<tr>
 										<td>PUTT_OPP_&lt;5</td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][8]" /></td>
+										<td>{{$gameResult['putt_opp_<5'][0]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][1]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][2]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][3]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][4]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][5]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][6]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][7]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_<5][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_<5][18]" /></td>
+										<td>{{$gameResult['putt_opp_<5'][10]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][11]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][12]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][13]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][14]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][15]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][16]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][17]}}</td>
+										<td>{{$gameResult['putt_opp_<5'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_<5][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_opp_<5][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_&lt;5</td>
-										<td><input type="text" Name="gameResult[putt_make_<5][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][8]" /></td>
+										<td>{{$gameResult['putt_make_<5'][0]}}</td>
+										<td>{{$gameResult['putt_make_<5'][1]}}</td>
+										<td>{{$gameResult['putt_make_<5'][2]}}</td>
+										<td>{{$gameResult['putt_make_<5'][3]}}</td>
+										<td>{{$gameResult['putt_make_<5'][4]}}</td>
+										<td>{{$gameResult['putt_make_<5'][5]}}</td>
+										<td>{{$gameResult['putt_make_<5'][6]}}</td>
+										<td>{{$gameResult['putt_make_<5'][7]}}</td>
+										<td>{{$gameResult['putt_make_<5'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_<5][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_<5][18]" /></td>
+										<td>{{$gameResult['putt_make_<5'][10]}}</td>
+										<td>{{$gameResult['putt_make_<5'][11]}}</td>
+										<td>{{$gameResult['putt_make_<5'][12]}}</td>
+										<td>{{$gameResult['putt_make_<5'][13]}}</td>
+										<td>{{$gameResult['putt_make_<5'][14]}}</td>
+										<td>{{$gameResult['putt_make_<5'][15]}}</td>
+										<td>{{$gameResult['putt_make_<5'][16]}}</td>
+										<td>{{$gameResult['putt_make_<5'][17]}}</td>
+										<td>{{$gameResult['putt_make_<5'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_<5][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_make_<5][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_5-9</td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][8]" /></td>
+										<td>{{$gameResult['putt_opp_5-9'][0]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][1]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][2]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][3]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][4]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][5]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][6]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][7]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_5-9][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_5-9][18]" /></td>
+										<td>{{$gameResult['putt_opp_5-9'][10]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][11]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][12]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][13]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][14]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][15]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][16]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][17]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_5-9][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_opp_5-9][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_5-9</td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][8]" /></td>
+										<td>{{$gameResult['putt_make_5-9'][0]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][1]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][2]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][3]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][4]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][5]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][6]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][7]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_5-9][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_5-9][18]" /></td>
+									    <td>{{$gameResult['putt_make_5-9'][10]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][11]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][12]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][13]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][14]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][15]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][16]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][17]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_5-9][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_make_5-9][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_10-19</td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][8]" /></td>
+										<td>{{$gameResult['putt_opp_10-19'][0]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][1]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][2]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][3]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][4]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][5]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][6]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][7]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_10-19][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][18]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][19]" /></td>
+										<td>{{$gameResult['putt_opp_10-19'][10]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][11]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][12]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][13]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][14]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][15]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][16]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][17]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][18]}}</td>
+										<td><input type="hidden" Name="gameResult[putt_opp_10-19][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_opp_10-19][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_10-19</td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][8]" /></td>
+										<td>{{$gameResult['putt_make_10-19'][0]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][1]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][2]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][3]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][4]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][5]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][6]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][7]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_10-19][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_10-19][18]" /></td>
+										<td>{{$gameResult['putt_make_10-19'][10]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][11]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][12]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][13]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][14]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][15]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][16]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][17]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_10-19][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_make_10-19][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_20-29</td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][8]" /></td>
+										<td>{{$gameResult['putt_opp_20-29'][0]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][1]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][2]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][3]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][4]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][5]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][6]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][7]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_20-29][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_20-29][18]" /></td>
+										<td>{{$gameResult['putt_opp_20-29'][10]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][11]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][12]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][13]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][14]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][15]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][16]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][17]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_20-29][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_opp_20-29][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_20-29</td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][8]" /></td>
+										<td>{{$gameResult['putt_make_20-29'][0]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][1]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][2]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][3]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][4]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][5]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][6]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][7]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_20-29][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_20-29][18]" /></td>
+										<td>{{$gameResult['putt_make_20-29'][10]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][11]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][12]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][13]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][14]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][15]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][16]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][17]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_20-29][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_make_20-29][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_30+</td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][8]" /></td>
+										<td>{{$gameResult['putt_opp_30+'][0]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][1]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][2]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][3]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][4]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][5]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][6]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][7]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_30+][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_30+][18]" /></td>
+										<td>{{$gameResult['putt_opp_30+'][10]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][11]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][12]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][13]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][14]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][15]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][16]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][17]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_opp_30+][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_opp_30+][20]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_30+</td>
-										<td><input type="text" Name="gameResult[putt_make_30+][0]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][1]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][2]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][3]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][4]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][5]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][6]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][7]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][8]" /></td>
+										<td>{{$gameResult['putt_make_30+'][0]}}</td>
+										<td>{{$gameResult['putt_make_30+'][1]}}</td>
+										<td>{{$gameResult['putt_make_30+'][2]}}</td>
+										<td>{{$gameResult['putt_make_30+'][3]}}</td>
+										<td>{{$gameResult['putt_make_30+'][4]}}</td>
+										<td>{{$gameResult['putt_make_30+'][5]}}</td>
+										<td>{{$gameResult['putt_make_30+'][6]}}</td>
+										<td>{{$gameResult['putt_make_30+'][7]}}</td>
+										<td>{{$gameResult['putt_make_30+'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_30+][9]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][10]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][11]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][12]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][13]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][14]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][15]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][16]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][17]" /></td>
-										<td><input type="text" Name="gameResult[putt_make_30+][18]" /></td>
+										<td>{{$gameResult['putt_make_30+'][10]}}</td>
+										<td>{{$gameResult['putt_make_30+'][11]}}</td>
+										<td>{{$gameResult['putt_make_30+'][12]}}</td>
+										<td>{{$gameResult['putt_make_30+'][13]}}</td>
+										<td>{{$gameResult['putt_make_30+'][14]}}</td>
+										<td>{{$gameResult['putt_make_30+'][15]}}</td>
+										<td>{{$gameResult['putt_make_30+'][16]}}</td>
+										<td>{{$gameResult['putt_make_30+'][17]}}</td>
+										<td>{{$gameResult['putt_make_30+'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[putt_make_30+][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_make_30+][20]" /></td>
 									</tr>
@@ -773,49 +773,49 @@ $asset = asset('/');
 									</tr>
 									<tr>
 										<td>SCRAMBL_OPP</td>
-										<td><input type="text" Name="gameResult[scrambl_opp][0]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][1]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][2]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][3]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][4]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][5]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][6]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][7]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][8]" /></td>
+										<td>{{$gameResult['scrambl_opp'][0]}}</td>
+										<td>{{$gameResult['scrambl_opp'][1]}}</td>
+										<td>{{$gameResult['scrambl_opp'][2]}}</td>
+										<td>{{$gameResult['scrambl_opp'][3]}}</td>
+										<td>{{$gameResult['scrambl_opp'][4]}}</td>
+										<td>{{$gameResult['scrambl_opp'][5]}}</td>
+										<td>{{$gameResult['scrambl_opp'][6]}}</td>
+										<td>{{$gameResult['scrambl_opp'][7]}}</td>
+										<td>{{$gameResult['scrambl_opp'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[scrambl_opp][9]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][10]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][11]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][12]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][13]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][14]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][15]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][16]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][17]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_opp][18]" /></td>
+										<td>{{$gameResult['scrambl_opp'][10]}}</td>
+										<td>{{$gameResult['scrambl_opp'][11]}}</td>	
+										<td>{{$gameResult['scrambl_opp'][12]}}</td>
+										<td>{{$gameResult['scrambl_opp'][13]}}</td>
+										<td>{{$gameResult['scrambl_opp'][14]}}</td>
+										<td>{{$gameResult['scrambl_opp'][15]}}</td>
+										<td>{{$gameResult['scrambl_opp'][16]}}</td>
+										<td>{{$gameResult['scrambl_opp'][17]}}</td>
+										<td>{{$gameResult['scrambl_opp'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[scrambl_opp][19]" /></td>
 										<td><input type="hidden" Name="gameResult[scrambl_opp][20]" /></td>
 									</tr>
 									<tr>
 										<td>SCRAMBL_SAV</td>
-										<td><input type="text" Name="gameResult[scrambl_sav][0]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][1]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][2]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][3]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][4]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][5]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][6]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][7]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][8]" /></td>
+										<td>{{$gameResult['scrambl_sav'][0]}}</td>
+										<td>{{$gameResult['scrambl_sav'][1]}}</td>
+										<td>{{$gameResult['scrambl_sav'][2]}}</td>
+										<td>{{$gameResult['scrambl_sav'][3]}}</td>
+										<td>{{$gameResult['scrambl_sav'][4]}}</td>
+										<td>{{$gameResult['scrambl_sav'][5]}}</td>
+										<td>{{$gameResult['scrambl_sav'][6]}}</td>
+										<td>{{$gameResult['scrambl_sav'][7]}}</td>
+										<td>{{$gameResult['scrambl_sav'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[scrambl_sav][9]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][10]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][11]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][12]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][13]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][14]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][15]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][16]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][17]" /></td>
-										<td><input type="text" Name="gameResult[scrambl_sav][18]" /></td>
+										<td>{{$gameResult['scrambl_sav'][10]}}</td>
+										<td>{{$gameResult['scrambl_sav'][11]}}</td>
+										<td>{{$gameResult['scrambl_sav'][12]}}</td>
+										<td>{{$gameResult['scrambl_sav'][13]}}</td>
+										<td>{{$gameResult['scrambl_sav'][14]}}</td>
+										<td>{{$gameResult['scrambl_sav'][15]}}</td>
+										<td>{{$gameResult['scrambl_sav'][16]}}</td>
+										<td>{{$gameResult['scrambl_sav'][17]}}</td>
+										<td>{{$gameResult['scrambl_sav'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[scrambl_sav][19]" /></td>
 										<td><input type="hidden" Name="gameResult[scrambl_sav][20]" /></td>
 									</tr>
@@ -845,49 +845,49 @@ $asset = asset('/');
 									</tr>
 									<tr>
 										<td>SAND_OPP</td>
-										<td><input type="text" Name="gameResult[sand_opp][0]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][1]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][2]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][3]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][4]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][5]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][6]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][7]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][8]" /></td>
+										<td>{{$gameResult['sand_opp'][0]}}</td>
+										<td>{{$gameResult['sand_opp'][1]}}</td>
+										<td>{{$gameResult['sand_opp'][2]}}</td>
+										<td>{{$gameResult['sand_opp'][3]}}</td>
+										<td>{{$gameResult['sand_opp'][4]}}</td>
+										<td>{{$gameResult['sand_opp'][5]}}</td>
+										<td>{{$gameResult['sand_opp'][6]}}</td>
+										<td>{{$gameResult['sand_opp'][7]}}</td>
+										<td>{{$gameResult['sand_opp'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[sand_opp][9]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][10]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][11]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][12]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][13]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][14]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][15]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][16]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][17]" /></td>
-										<td><input type="text" Name="gameResult[sand_opp][18]" /></td>
+										<td>{{$gameResult['sand_opp'][10]}}</td>
+										<td>{{$gameResult['sand_opp'][11]}}</td>
+										<td>{{$gameResult['sand_opp'][12]}}</td>
+										<td>{{$gameResult['sand_opp'][13]}}</td>
+										<td>{{$gameResult['sand_opp'][14]}}</td>
+										<td>{{$gameResult['sand_opp'][15]}}</td>
+										<td>{{$gameResult['sand_opp'][16]}}</td>
+										<td>{{$gameResult['sand_opp'][17]}}</td>
+										<td>{{$gameResult['sand_opp'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[sand_opp][19]" /></td>
 										<td><input type="hidden" Name="gameResult[sand_opp][20]" /></td>
 									</tr>
 									<tr>
 										<td>SAND_SAV</td>
-										<td><input type="text" Name="gameResult[sand_sav][0]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][1]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][2]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][3]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][4]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][5]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][6]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][7]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][8]" /></td>
+										<td>{{$gameResult['sand_sav'][0]}}</td>
+										<td>{{$gameResult['sand_sav'][1]}}</td>
+										<td>{{$gameResult['sand_sav'][2]}}</td>
+										<td>{{$gameResult['sand_sav'][3]}}</td>
+										<td>{{$gameResult['sand_sav'][4]}}</td>
+										<td>{{$gameResult['sand_sav'][5]}}</td>
+										<td>{{$gameResult['sand_sav'][6]}}</td>
+										<td>{{$gameResult['sand_sav'][7]}}</td>
+										<td>{{$gameResult['sand_sav'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[sand_sav][9]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][10]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][11]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][12]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][13]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][14]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][15]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][16]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][17]" /></td>
-										<td><input type="text" Name="gameResult[sand_sav][18]" /></td>
+										<td>{{$gameResult['sand_sav'][10]}}</td>
+										<td>{{$gameResult['sand_sav'][11]}}</td>
+										<td>{{$gameResult['sand_sav'][12]}}</td>
+										<td>{{$gameResult['sand_sav'][13]}}</td>
+										<td>{{$gameResult['sand_sav'][14]}}</td>
+										<td>{{$gameResult['sand_sav'][15]}}</td>
+										<td>{{$gameResult['sand_sav'][16]}}</td>
+										<td>{{$gameResult['sand_sav'][17]}}</td>
+										<td>{{$gameResult['sand_sav'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[sand_sav][19]" /></td>
 										<td><input type="hidden" Name="gameResult[sand_sav][20]" /></td>
 									</tr>
@@ -917,25 +917,25 @@ $asset = asset('/');
 									</tr>
 									<tr>
 										<td>PENALTIES</td>
-										<td><input type="text" Name="gameResult[penalties][0]" /></td>
-										<td><input type="text" Name="gameResult[penalties][1]" /></td>
-										<td><input type="text" Name="gameResult[penalties][2]" /></td>
-										<td><input type="text" Name="gameResult[penalties][3]" /></td>
-										<td><input type="text" Name="gameResult[penalties][4]" /></td>
-										<td><input type="text" Name="gameResult[penalties][5]" /></td>
-										<td><input type="text" Name="gameResult[penalties][6]" /></td>
-										<td><input type="text" Name="gameResult[penalties][7]" /></td>
-										<td><input type="text" Name="gameResult[penalties][8]" /></td>
+										<td>{{$gameResult['penalties'][0]}}</td>
+										<td>{{$gameResult['penalties'][1]}}</td>
+										<td>{{$gameResult['penalties'][2]}}</td>
+										<td>{{$gameResult['penalties'][3]}}</td>
+										<td>{{$gameResult['penalties'][4]}}</td>
+										<td>{{$gameResult['penalties'][5]}}</td>
+										<td>{{$gameResult['penalties'][6]}}</td>
+										<td>{{$gameResult['penalties'][7]}}</td>
+										<td>{{$gameResult['penalties'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[penalties][9]" /></td>
-										<td><input type="text" Name="gameResult[penalties][10]" /></td>
-										<td><input type="text" Name="gameResult[penalties][11]" /></td>
-										<td><input type="text" Name="gameResult[penalties][12]" /></td>
-										<td><input type="text" Name="gameResult[penalties][13]" /></td>
-										<td><input type="text" Name="gameResult[penalties][14]" /></td>
-										<td><input type="text" Name="gameResult[penalties][15]" /></td>
-										<td><input type="text" Name="gameResult[penalties][16]" /></td>
-										<td><input type="text" Name="gameResult[penalties][17]" /></td>
-										<td><input type="text" Name="gameResult[penalties][18]" /></td>
+										<td>{{$gameResult['penalties'][10]}}</td>
+										<td>{{$gameResult['penalties'][11]}}</td>
+										<td>{{$gameResult['penalties'][12]}}</td>
+										<td>{{$gameResult['penalties'][13]}}</td>
+										<td>{{$gameResult['penalties'][14]}}</td>
+										<td>{{$gameResult['penalties'][15]}}</td>
+										<td>{{$gameResult['penalties'][16]}}</td>
+										<td>{{$gameResult['penalties'][17]}}</td>
+										<td>{{$gameResult['penalties'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[penalties][19]" /></td>
 										<td><input type="hidden" Name="gameResult[penalties][20]" /></td>
 									</tr>
@@ -1157,145 +1157,145 @@ $asset = asset('/');
 									</tr>
 									<tr>
 										<td>EAGLE</td>
-										<td><input type="text" Name="gameResult[eagle][0]" /></td>
-										<td><input type="text" Name="gameResult[eagle][1]" /></td>
-										<td><input type="text" Name="gameResult[eagle][2]" /></td>
-										<td><input type="text" Name="gameResult[eagle][3]" /></td>
-										<td><input type="text" Name="gameResult[eagle][4]" /></td>
-										<td><input type="text" Name="gameResult[eagle][5]" /></td>
-										<td><input type="text" Name="gameResult[eagle][6]" /></td>
-										<td><input type="text" Name="gameResult[eagle][7]" /></td>
-										<td><input type="text" Name="gameResult[eagle][8]" /></td>
+										<td>{{$gameResult['eagle'][0]}}</td>
+										<td>{{$gameResult['eagle'][1]}}</td>
+										<td>{{$gameResult['eagle'][2]}}</td>
+										<td>{{$gameResult['eagle'][3]}}</td>
+										<td>{{$gameResult['eagle'][4]}}</td>
+										<td>{{$gameResult['eagle'][5]}}</td>
+										<td>{{$gameResult['eagle'][6]}}</td>
+										<td>{{$gameResult['eagle'][7]}}</td>
+										<td>{{$gameResult['eagle'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[eagle][9]" /></td>
-										<td><input type="text" Name="gameResult[eagle][10]" /></td>
-										<td><input type="text" Name="gameResult[eagle][11]" /></td>
-										<td><input type="text" Name="gameResult[eagle][12]" /></td>
-										<td><input type="text" Name="gameResult[eagle][13]" /></td>
-										<td><input type="text" Name="gameResult[eagle][14]" /></td>
-										<td><input type="text" Name="gameResult[eagle][15]" /></td>
-										<td><input type="text" Name="gameResult[eagle][16]" /></td>
-										<td><input type="text" Name="gameResult[eagle][17]" /></td>
-										<td><input type="text" Name="gameResult[eagle][18]" /></td>
+										<td>{{$gameResult['eagle'][10]}}</td>
+										<td>{{$gameResult['eagle'][11]}}</td>
+										<td>{{$gameResult['eagle'][12]}}</td>
+										<td>{{$gameResult['eagle'][13]}}</td>
+										<td>{{$gameResult['eagle'][14]}}</td>
+										<td>{{$gameResult['eagle'][15]}}</td>
+										<td>{{$gameResult['eagle'][16]}}</td>
+										<td>{{$gameResult['eagle'][17]}}</td>
+										<td>{{$gameResult['eagle'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[eagle][19]" /></td>
 										<td><input type="hidden" Name="gameResult[eagle][20]" /></td>
 									</tr>
 									<tr>
 										<td>BIRDIE</td>
-										<td><input type="text" Name="gameResult[birdie][0]" /></td>
-										<td><input type="text" Name="gameResult[birdie][1]" /></td>
-										<td><input type="text" Name="gameResult[birdie][2]" /></td>
-										<td><input type="text" Name="gameResult[birdie][3]" /></td>
-										<td><input type="text" Name="gameResult[birdie][4]" /></td>
-										<td><input type="text" Name="gameResult[birdie][5]" /></td>
-										<td><input type="text" Name="gameResult[birdie][6]" /></td>
-										<td><input type="text" Name="gameResult[birdie][7]" /></td>
-										<td><input type="text" Name="gameResult[birdie][8]" /></td>
+										<td>{{$gameResult['birdie'][0]}}</td>
+										<td>{{$gameResult['birdie'][1]}}</td>
+										<td>{{$gameResult['birdie'][2]}}</td>
+										<td>{{$gameResult['birdie'][3]}}</td>
+										<td>{{$gameResult['birdie'][4]}}</td>
+										<td>{{$gameResult['birdie'][5]}}</td>
+										<td>{{$gameResult['birdie'][6]}}</td>
+										<td>{{$gameResult['birdie'][7]}}</td>
+										<td>{{$gameResult['birdie'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[birdie][9]" /></td>
-										<td><input type="text" Name="gameResult[birdie][10]" /></td>
-										<td><input type="text" Name="gameResult[birdie][11]" /></td>
-										<td><input type="text" Name="gameResult[birdie][12]" /></td>
-										<td><input type="text" Name="gameResult[birdie][13]" /></td>
-										<td><input type="text" Name="gameResult[birdie][14]" /></td>
-										<td><input type="text" Name="gameResult[birdie][15]" /></td>
-										<td><input type="text" Name="gameResult[birdie][16]" /></td>
-										<td><input type="text" Name="gameResult[birdie][17]" /></td>
-										<td><input type="text" Name="gameResult[birdie][18]" /></td>
+										<td>{{$gameResult['birdie'][10]}}</td>
+										<td>{{$gameResult['birdie'][11]}}</td>
+										<td>{{$gameResult['birdie'][12]}}</td>
+										<td>{{$gameResult['birdie'][13]}}</td>
+										<td>{{$gameResult['birdie'][14]}}</td>
+										<td>{{$gameResult['birdie'][15]}}</td>
+										<td>{{$gameResult['birdie'][16]}}</td>
+										<td>{{$gameResult['birdie'][17]}}</td>
+										<td>{{$gameResult['birdie'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[birdie][19]" /></td>
 										<td><input type="hidden" Name="gameResult[birdie][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR</td>
-										<td><input type="text" Name="gameResult[par][0]" /></td>
-										<td><input type="text" Name="gameResult[par][1]" /></td>
-										<td><input type="text" Name="gameResult[par][2]" /></td>
-										<td><input type="text" Name="gameResult[par][3]" /></td>
-										<td><input type="text" Name="gameResult[par][4]" /></td>
-										<td><input type="text" Name="gameResult[par][5]" /></td>
-										<td><input type="text" Name="gameResult[par][6]" /></td>
-										<td><input type="text" Name="gameResult[par][7]" /></td>
-										<td><input type="text" Name="gameResult[par][8]" /></td>
+										<td>{{$gameResult['par'][0]}}</td>
+										<td>{{$gameResult['par'][1]}}</td>
+										<td>{{$gameResult['par'][2]}}</td>
+										<td>{{$gameResult['par'][3]}}</td>
+										<td>{{$gameResult['par'][4]}}</td>
+										<td>{{$gameResult['par'][5]}}</td>
+										<td>{{$gameResult['par'][6]}}</td>
+										<td>{{$gameResult['par'][7]}}</td>
+										<td>{{$gameResult['par'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[par][9]" /></td>
-										<td><input type="text" Name="gameResult[par][10]" /></td>
-										<td><input type="text" Name="gameResult[par][11]" /></td>
-										<td><input type="text" Name="gameResult[par][12]" /></td>
-										<td><input type="text" Name="gameResult[par][13]" /></td>
-										<td><input type="text" Name="gameResult[par][14]" /></td>
-										<td><input type="text" Name="gameResult[par][15]" /></td>
-										<td><input type="text" Name="gameResult[par][16]" /></td>
-										<td><input type="text" Name="gameResult[par][17]" /></td>
-										<td><input type="text" Name="gameResult[par][18]" /></td>
+										<td>{{$gameResult['par'][10]}}</td>
+										<td>{{$gameResult['par'][11]}}</td>
+										<td>{{$gameResult['par'][12]}}</td>
+										<td>{{$gameResult['par'][13]}}</td>
+										<td>{{$gameResult['par'][14]}}</td>
+										<td>{{$gameResult['par'][15]}}</td>
+										<td>{{$gameResult['par'][16]}}</td>
+										<td>{{$gameResult['par'][17]}}</td>
+										<td>{{$gameResult['par'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[par][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par][20]" /></td>
 									</tr>
 									<tr>
 										<td>BOGEY</td>
-										<td><input type="text" Name="gameResult[bogey][0]" /></td>
-										<td><input type="text" Name="gameResult[bogey][1]" /></td>
-										<td><input type="text" Name="gameResult[bogey][2]" /></td>
-										<td><input type="text" Name="gameResult[bogey][3]" /></td>
-										<td><input type="text" Name="gameResult[bogey][4]" /></td>
-										<td><input type="text" Name="gameResult[bogey][5]" /></td>
-										<td><input type="text" Name="gameResult[bogey][6]" /></td>
-										<td><input type="text" Name="gameResult[bogey][7]" /></td>
-										<td><input type="text" Name="gameResult[bogey][8]" /></td>
+										<td>{{$gameResult['bogey'][0]}}</td>
+										<td>{{$gameResult['bogey'][1]}}</td>
+										<td>{{$gameResult['bogey'][2]}}</td>
+										<td>{{$gameResult['bogey'][3]}}</td>
+										<td>{{$gameResult['bogey'][4]}}</td>
+										<td>{{$gameResult['bogey'][5]}}</td>
+										<td>{{$gameResult['bogey'][6]}}</td>
+										<td>{{$gameResult['bogey'][7]}}</td>
+										<td>{{$gameResult['bogey'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[bogey][9]" /></td>
-										<td><input type="text" Name="gameResult[bogey][10]" /></td>
-										<td><input type="text" Name="gameResult[bogey][11]" /></td>
-										<td><input type="text" Name="gameResult[bogey][12]" /></td>
-										<td><input type="text" Name="gameResult[bogey][13]" /></td>
-										<td><input type="text" Name="gameResult[bogey][14]" /></td>
-										<td><input type="text" Name="gameResult[bogey][15]" /></td>
-										<td><input type="text" Name="gameResult[bogey][16]" /></td>
-										<td><input type="text" Name="gameResult[bogey][17]" /></td>
-										<td><input type="text" Name="gameResult[bogey][18]" /></td>
+										<td>{{$gameResult['bogey'][10]}}</td>
+										<td>{{$gameResult['bogey'][11]}}</td>
+										<td>{{$gameResult['bogey'][12]}}</td>
+										<td>{{$gameResult['bogey'][13]}}</td>
+										<td>{{$gameResult['bogey'][14]}}</td>
+										<td>{{$gameResult['bogey'][15]}}</td>
+										<td>{{$gameResult['bogey'][16]}}</td>
+										<td>{{$gameResult['bogey'][17]}}</td>
+										<td>{{$gameResult['bogey'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[bogey][19]" /></td>
 										<td><input type="hidden" Name="gameResult[bogey][20]" /></td>
 									</tr>
 									<tr>
 										<td>DBLBOGEY</td>
-										<td><input type="text" Name="gameResult[dblbogey][0]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][1]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][2]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][3]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][4]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][5]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][6]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][7]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][8]" /></td>
+										<td>{{$gameResult['dblbogey'][0]}}</td>
+										<td>{{$gameResult['dblbogey'][1]}}</td>
+										<td>{{$gameResult['dblbogey'][2]}}</td>
+										<td>{{$gameResult['dblbogey'][3]}}</td>
+										<td>{{$gameResult['dblbogey'][4]}}</td>
+										<td>{{$gameResult['dblbogey'][5]}}</td>
+										<td>{{$gameResult['dblbogey'][6]}}</td>
+										<td>{{$gameResult['dblbogey'][7]}}</td>
+										<td>{{$gameResult['dblbogey'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[dblbogey][9]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][10]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][11]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][12]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][13]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][14]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][15]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][16]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][17]" /></td>
-										<td><input type="text" Name="gameResult[dblbogey][18]" /></td>
+										<td>{{$gameResult['dblbogey'][10]}}</td>
+										<td>{{$gameResult['dblbogey'][11]}}</td>
+										<td>{{$gameResult['dblbogey'][12]}}</td>
+										<td>{{$gameResult['dblbogey'][13]}}</td>
+										<td>{{$gameResult['dblbogey'][14]}}</td>
+										<td>{{$gameResult['dblbogey'][15]}}</td>
+										<td>{{$gameResult['dblbogey'][16]}}</td>
+										<td>{{$gameResult['dblbogey'][17]}}</td>
+										<td>{{$gameResult['dblbogey'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[dblbogey][19]" /></td>
 										<td><input type="hidden" Name="gameResult[dblbogey][20]" /></td>
 									</tr>
 									<tr>
 										<td>OTHER</td>
-										<td><input type="text" Name="gameResult[other][0]" /></td>
-										<td><input type="text" Name="gameResult[other][1]" /></td>
-										<td><input type="text" Name="gameResult[other][2]" /></td>
-										<td><input type="text" Name="gameResult[other][3]" /></td>
-										<td><input type="text" Name="gameResult[other][4]" /></td>
-										<td><input type="text" Name="gameResult[other][5]" /></td>
-										<td><input type="text" Name="gameResult[other][6]" /></td>
-										<td><input type="text" Name="gameResult[other][7]" /></td>
-										<td><input type="text" Name="gameResult[other][8]" /></td>
+										<td>{{$gameResult['other'][0]}}</td>
+										<td>{{$gameResult['other'][1]}}</td>
+										<td>{{$gameResult['other'][2]}}</td>
+										<td>{{$gameResult['other'][3]}}</td>
+										<td>{{$gameResult['other'][4]}}</td>
+										<td>{{$gameResult['other'][5]}}</td>
+										<td>{{$gameResult['other'][6]}}</td>
+										<td>{{$gameResult['other'][7]}}</td>
+										<td>{{$gameResult['other'][8]}}</td>
 										<td><input type="hidden" Name="gameResult[other][9]" /></td>
-										<td><input type="text" Name="gameResult[other][10]" /></td>
-										<td><input type="text" Name="gameResult[other][11]" /></td>
-										<td><input type="text" Name="gameResult[other][12]" /></td>
-										<td><input type="text" Name="gameResult[other][13]" /></td>
-										<td><input type="text" Name="gameResult[other][14]" /></td>
-										<td><input type="text" Name="gameResult[other][15]" /></td>
-										<td><input type="text" Name="gameResult[other][16]" /></td>
-										<td><input type="text" Name="gameResult[other][17]" /></td>
-										<td><input type="text" Name="gameResult[other][18]" /></td>
+										<td>{{$gameResult['other'][10]}}</td>
+										<td>{{$gameResult['other'][11]}}</td>
+										<td>{{$gameResult['other'][12]}}</td>
+										<td>{{$gameResult['other'][13]}}</td>
+										<td>{{$gameResult['other'][14]}}</td>
+										<td>{{$gameResult['other'][15]}}</td>
+										<td>{{$gameResult['other'][16]}}</td>
+										<td>{{$gameResult['other'][17]}}</td>
+										<td>{{$gameResult['other'][18]}}</td>
 										<td><input type="hidden" Name="gameResult[other][19]" /></td>
 										<td><input type="hidden" Name="gameResult[other][20]" /></td>
 									</tr>
@@ -1323,10 +1323,6 @@ $asset = asset('/');
 										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[played_holes][20]" /></td>
 									</tr>
-									<tr>
-										<td colspan="22" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="submit" name="submit"/></td>
-									</tr>
-								
 							</table>
 						</div>
 					</div>

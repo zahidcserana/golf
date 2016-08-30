@@ -575,7 +575,7 @@ $asset = asset('/');
 										<td><input type="text" Name="gameResult[putt_opp_10-19][16]" /></td>
 										<td><input type="text" Name="gameResult[putt_opp_10-19][17]" /></td>
 										<td><input type="text" Name="gameResult[putt_opp_10-19][18]" /></td>
-										<td><input type="text" Name="gameResult[putt_opp_10-19][19]" /></td>
+										<td><input type="hidden" Name="gameResult[putt_opp_10-19][19]" /></td>
 										<td><input type="hidden" Name="gameResult[putt_opp_10-19][20]" /></td>
 									</tr>
 									<tr>
