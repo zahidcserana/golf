@@ -14,6 +14,12 @@ Route::get('/password_change/{id}',['as'=>'password_change', 'uses' => 'UserCont
 
 Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset']);
 
+Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');
+
+
+
+
+
 
 //shakil's User Panel
 Route::get('loginform', ['as'=>'loginform', 'uses'=>'LoginController@LoginForm']);
@@ -24,10 +30,10 @@ Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess']);
 Route::get('form', function(){return view('form');});
 Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form']);
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse']);
+Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewCourse']);
 /////    ggg
 // Middleware
 
 //Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => ['UserValidationMiddleware']]);
 //Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => 'AdminValidationMiddleware']);
 
-Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');
