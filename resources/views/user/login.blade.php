@@ -37,7 +37,7 @@
                               <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
                          </div>
                          <div class="form-group">
-                              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                              <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
                          </div>
                          <div class="form-group">
                               <label class="fn"><input type="checkbox"> <span>Remember me</span></label>

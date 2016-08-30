@@ -26,8 +26,9 @@ class users extends Model
 	{
 		 return DB::table($this->table)->where('id', $id)->update(['password'=>$password]);	
 	}
-	public function GetLogInInfo($userName, $password)
+	public function GetLogInInfo($email, $password)
 	{
-	      return DB::table($this->table)->where('email', $userName)->where('password', $password)->first();
+		//dd($password);
+	    return DB::table($this->table)->where('email', $email)->where('password', $password)->first();
 	}
 }

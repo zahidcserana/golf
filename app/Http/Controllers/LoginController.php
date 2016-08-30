@@ -23,8 +23,11 @@ class LoginController extends Controller
         $email = $request->email;
 
         $password =md5($request->password);
-        //dd($password);
+        //echo $request->password;
+        //echo "//".$password;
+        //exit;
         $emailAndPassChecking = $usersObj->GetLogInInfo($email, $password);
+        //dd($emailAndPassChecking);
         //dd($emailAndPassChecking);
         if($emailAndPassChecking==True) 
         {
