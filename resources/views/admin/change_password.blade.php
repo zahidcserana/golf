@@ -1,20 +1,19 @@
 @extends('admin.master')
 @section('admincontent')
-<div align="center">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Change Password</h1>
+                    
     <form method="POST" action="{{ url('password_reset') }}">
         {!! csrf_field() !!}
-            <table>
-                <tr>
-                    <input type="hidden" name="id" value="{{$id}}">
-                    <td>Password</td>
-                    <td><input type="password" name="password"></td>
-                </tr>
-                <tr>
-                    <td>Confirm Password</td>
-                    <td><input type="password" name="password_confirmation"></td>
-                </tr>      
-            </table>
-        <button type="submit">Register</button>
+        <input type="hidden" name="id" value="{{$id}}">
+        <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password_confirmation" class="form-control" placeholder="Enter confirm password">
+        </div>
+        
+        <button type="submit" class="btn btn-default">Update</button>
     </form>
 </div>
 @stop
