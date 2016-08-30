@@ -413,26 +413,26 @@ $asset = asset('/');
 									<tr>
 										<td>TOT_PUTT</td>
 										<td><input type="text" Name="gameResult[tot_putt][0]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][1]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][2]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][3]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][4]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][5]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][6]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][7]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][8]" /></td>
-										<td><input type="hidden" Name="gameResult[tot_put][9]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][10]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][11]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][12]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][13]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][14]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][15]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][16]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][17]" /></td>
-										<td><input type="text" Name="gameResult[tot_put][18]" /></td>
-										<td><input type="hidden" Name="gameResult[tot_put][19]" /></td>
-										<td><input type="hidden" Name="gameResult[tot_put][20]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][1]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][2]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][3]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][4]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][5]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][6]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][7]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][8]" /></td>
+										<td><input type="hidden" Name="gameResult[tot_putt][9]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][10]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][11]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][12]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][13]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][14]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][15]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][16]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][17]" /></td>
+										<td><input type="text" Name="gameResult[tot_putt][18]" /></td>
+										<td><input type="hidden" Name="gameResult[tot_putt][19]" /></td>
+										<td><input type="hidden" Name="gameResult[tot_putt][20]" /></td>
 									</tr>
 									<tr>
 										<td>TOT_FT_MADE</td>
@@ -941,48 +941,48 @@ $asset = asset('/');
 									<tr>
 										<td>PAR3</td>
 										<td><input type="text" Name="gameResult[par3][0]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par3][9]" /></td>
 										<td><input type="text" Name="gameResult[par3][10]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par3][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par3][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR3STROKES</td>
 										<td><input type="text" Name="gameResult[par3strokes][0]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par3strokes][9]" /></td>
 										<td><input type="text" Name="gameResult[par3strokes][10]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par3strokes][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par3strokes][20]" /></td>
 									</tr>
@@ -1013,144 +1013,144 @@ $asset = asset('/');
 									<tr>
 										<td>PAR4</td>
 										<td><input type="text" Name="gameResult[par4][0]" /></td>
-										<td class="center"></td>
-										<td class="center"></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par4][9]" /></td>
 										<td><input type="text" Name="gameResult[par4][10]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par4][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par4][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR4STROKES</td>
 										<td><input type="text" Name="gameResult[par4strokes][0]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="center"></td>
 										<td><input type="hidden" Name="gameResult[par4strokes][9]" /></td>
 										<td><input type="text" Name="gameResult[par4strokes][10]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par4strokes][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par4strokes][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR4SCOR</td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par4scor][9]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par4scor][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par4scor][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR5</td>
 										<td><input type="text" Name="gameResult[par5][0]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par5][9]" /></td>
 										<td><input type="text" Name="gameResult[par5][10]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par5][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par5][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR5STROKES</td>
 										<td><input type="text" Name="gameResult[par5strokes][0]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par5strokes][9]" /></td>
 										<td><input type="text" Name="gameResult[par5strokes][10]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par5strokes][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par5strokes][20]" /></td>
 									</tr>
 									<tr>
 										<td>PAR5SCOR</td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par5strokes][9]" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
-										<td class="center"><input type="text" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
 										<td><input type="hidden" Name="gameResult[par5strokes][19]" /></td>
 										<td><input type="hidden" Name="gameResult[par5strokes][20]" /></td>
 									</tr>

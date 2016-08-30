@@ -12,7 +12,7 @@
 		<div id = "menu" align="center">
 			
 			<a href="{{$asset}}">Home</a>
-			<a href="{{$asset}}form">Form Submission</a>
+			<a href="{{$asset}}form">Add Course</a>
 			<a href="{{$asset}}list">View List</a>
 			
 		</div><br><br>
