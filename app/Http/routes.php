@@ -31,6 +31,6 @@ Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@For
 
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
 
-Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewCourse']);
+Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails']);
 /////    ggg
 
