@@ -22,10 +22,11 @@ class LoginController extends Controller
         if($userNameAndPassChecking==True) 
         {
             $userId = $userNameAndPassChecking->id;
+            $userType = $userNameAndPassChecking->user_type;
             session_regenerate_id();
             $sessionId = session_id();
             Session::put('userId' , $userId);
-            //Session::put('sessionId' , $userType);
+            Session::put('userType' , $userType);
             //Session::put('customerId' , $customerId);
             //dd("hello");
             //$msg = "yes. logged in";
