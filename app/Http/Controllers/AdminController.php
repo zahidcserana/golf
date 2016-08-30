@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\admin;
 use App\Http\Requests;
-use session;
+use Session;
 
 class AdminController extends Controller
 {
@@ -20,8 +20,14 @@ class AdminController extends Controller
 		$password =md5($request->password);
 		
 		$adminCheck = $adminCheckObj->AdminCheck($name,$password);
-		if ($adminCheck) {
+		if ($adminCheck) 
+		{
+			$userId = $adminCheck->id;
+            	$userType = $adminCheck->user_type;
+            	Session::put('userId' , $userId);
+            	Session::put('userType' , $userType);
 			return redirect()->route('admin_home');
+			
 		}
 		else
 			return redirect()->route('admin');

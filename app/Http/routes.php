@@ -30,4 +30,4 @@ Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse']);
 //Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => ['UserValidationMiddleware']]);
 //Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => 'AdminValidationMiddleware']);
 
-Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');;
+Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');
