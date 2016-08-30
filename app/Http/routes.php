@@ -24,7 +24,7 @@ Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Reg
 //shakil's User Panel
 //Route::get('/', function(){return view(in)})
 Route::get('/', ['as'=>'home', 'uses'=>'LoginController@LoginForm']);
-Route::post('loginform', ['as'=>'login', 'uses'=>'LoginController@CompleteLogin']);
+Route::post('loginform', ['as'=>'loginform', 'uses'=>'LoginController@CompleteLogin']);
 //Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess']);
 //Route::get('/loginsuccess', ['as'=>'loginsuccess'], 'uses'=>'LoginController@Loginsuccess');

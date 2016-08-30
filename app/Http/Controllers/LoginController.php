@@ -13,20 +13,23 @@ class LoginController extends Controller
         if(!$sessionId)
             return view('login');
         else 
-            return view('master'); 
+        return view('index'); 
     }
 
 
     public function CompleteLogin(Request $request)
     {   //dd("Dfsdfsd");    
         $usersObj = new users;
-        $userName = $request->userName;
+        $email = $request->email;
+
         $password =md5($request->password);
-        $userNameAndPassChecking = $usersObj->GetLogInInfo($userName, $password);
-        if($userNameAndPassChecking==True) 
+        //dd($password);
+        $emailAndPassChecking = $usersObj->GetLogInInfo($email, $password);
+        //dd($emailAndPassChecking);
+        if($emailAndPassChecking==True) 
         {
-            $userId = $userNameAndPassChecking->id;
-            $userType = $userNameAndPassChecking->user_type;
+            $userId = $emailAndPassChecking->id;
+            $userType = $emailAndPassChecking->user_type;
             //session_regenerate_id();
             //$sessionId = session_id();
             Session::put('userId' , $userId);

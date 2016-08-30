@@ -1,8 +1,8 @@
+@extends('master')
+@section('content')
 <?php
   $asset = asset('/');
 ?>
-@extends('master')
-@section('content')
 <!DOCTYPE html>
 <html>
 	<head>
