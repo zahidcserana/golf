@@ -20,12 +20,3 @@ echo Session::get('customerId');
 	</tr>
 @endforeach
 </table>
-
-<?php
-Route::get('/edit_product/{productId}', ['as'=>'edit_product', 'uses'=>'AdminProductController@EditProduct']);
- public function EditProduct($productIdFromRoute)
-    {
-    	$productsObj = new products;
-		$productDetails = $productsObj->GetProductDetails($productIdFromRoute);
-    	return view('admin_edit_product', ['productDetails'=> $productDetails]);
-    }

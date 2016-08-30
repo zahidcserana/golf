@@ -34,4 +34,10 @@ class GolfCourseController extends Controller
 		return view('list', ['courseResult'=>$courseResult]);
 		
 	}
+	public function ViewDetails($courseIdFromRoute)
+	{
+		$golfCourseObj = new GolfCourse;
+		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
+		return view('course_details', ['courseDetails'=> $courseDetails]);
+	}
 }
