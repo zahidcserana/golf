@@ -15,6 +15,6 @@ class admin extends Model
 	
 	public function AdminCheck($name,$password)
 	{
-		return DB::table($this->table)->where('name', $name)->where('password',$password)->get();
+		return DB::table($this->table)->where('name', $name)->where('password',$password)->first();
 	}
 }

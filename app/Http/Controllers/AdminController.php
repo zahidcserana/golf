@@ -39,6 +39,6 @@ class AdminController extends Controller
     	public function AdminLogout()
     	{
     		session()->flush();
-		return redirect('/admin');
+		return redirect('/admin/login');
     	}
 }

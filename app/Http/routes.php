@@ -7,18 +7,16 @@ Route::get('admin/login',['as'=>'admin', 'uses' => 'AdminController@AdminLoginFo
 Route::post('admin/login',['as'=>'admin_login', 'uses' => 'AdminController@AdminLogin']);
 
 
-Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserController@RegistrationForm']);
-Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Registration']);
-
-Route::get('/password_change/{id}',['as'=>'password_change', 'uses' => 'UserController@ChangePassword']);
-
-Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset']);
+// Middleware
 
 Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');
 
+Route::get('/password_change/{id}',['as'=>'password_change', 'uses' => 'UserController@ChangePassword'])->middleware('AdminValidationMiddleware');
 
+Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset'])->middleware('AdminValidationMiddleware');
 
-
+Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserController@RegistrationForm'])->middleware('AdminValidationMiddleware');
+Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Registration'])->middleware('AdminValidationMiddleware');
 
 
 //shakil's User Panel
@@ -32,8 +30,4 @@ Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@For
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse']);
 Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewCourse']);
 /////    ggg
-// Middleware
-
-//Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => ['UserValidationMiddleware']]);
-//Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList', 'middleware' => 'AdminValidationMiddleware']);
 
