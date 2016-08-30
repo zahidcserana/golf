@@ -1,10 +1,3 @@
-<?php
-session_start();
-$asset = asset('/');
-//$datetime = date('Y-m-d H:i:s');
-echo Session::get('sessionId');
-echo Session::get('customerId');
-?>
 <table><tr><th>Course Id</th><th>Date</th><th>Action</th></tr>
 @foreach ($courseResult as $course)
 	<tr>

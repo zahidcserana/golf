@@ -38,6 +38,6 @@ class GolfCourseController extends Controller
 	{
 		$golfCourseObj = new GolfCourse;
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
-		return view('course_details', ['courseDetails'=> $courseDetails]);
+		return view('course_details', ['gameResult'=>($courseDetails->data)]);
 	}
 }
