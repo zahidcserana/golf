@@ -53,8 +53,8 @@ class LoginController extends Controller
         return view('index');
     }
     public function UserLogout()
-        {
-            session()->flush();
-        return redirect('/');
-        }
+    {
+        session()->flush();
+    return redirect('/');
+    }
 }
