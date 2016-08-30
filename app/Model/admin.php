@@ -13,8 +13,8 @@ class admin extends Model
 	protected $primaryKey = 'id';
 	public $timestamps = false;
 	
-	public function AdminCheck($name,$password)
+	public function AdminCheck($email,$password)
 	{
-		return DB::table($this->table)->where('name', $name)->where('password',$password)->first();
+		return DB::table($this->table)->where('email', $email)->where('password',$password)->first();
 	}
 }

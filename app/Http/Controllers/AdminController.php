@@ -16,10 +16,10 @@ class AdminController extends Controller
 	public function AdminLogin(Request $request)
 	{
 		$adminCheckObj = new admin;
-		$name = $request->name;
+		$email = $request->email;
 		$password =md5($request->password);
 		
-		$adminCheck = $adminCheckObj->AdminCheck($name,$password);
+		$adminCheck = $adminCheckObj->AdminCheck($email,$password);
 		if ($adminCheck) 
 		{
 			$userId = $adminCheck->id;

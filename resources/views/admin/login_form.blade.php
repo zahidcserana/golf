@@ -33,7 +33,7 @@
     <form method="POST" action="{{ url('admin/login') }}">
         {!! csrf_field() !!}
         <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Enter name">
+            <input type="text" class="form-control" name="email" placeholder="Enter name">
         </div>
         <div class="form-group">
             <input type="password" class="form-control" name="password" placeholder="Enter password">
