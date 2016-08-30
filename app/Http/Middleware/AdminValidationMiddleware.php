@@ -18,7 +18,7 @@ class AdminValidationMiddleware
     {
         $userId = Session::get('userId');
         $userType = Session::get('userType');
-        if ($userId!='' || $userType=='admin') {
+        if ($userId!='') {
             return $next($request);
         }
         return redirect()->route('admin');
