@@ -54,8 +54,8 @@
           <ul class="nav nav-sidebar">
 
             <li class="active"><a href="{{ URL::to('/admin/home') }}">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="{{route('user_view')}}">Users</a></li>
-            <li><a href="{{ URL::to('/registration_form') }}">Registration</a></li>
+            <li><a href="{{route('user_view')}}">User List</a></li>
+            <li><a href="{{ URL::to('/registration_form') }}">Create User</a></li>
             
           </ul>
         </div>

@@ -12,6 +12,10 @@ class UserController extends Controller
 	{
 		$userListObj = new users;
 		$userList = $userListObj->GetAllUser();
+		if (!$userList) {
+			$msg = "No user exists! You can add user.";
+			return redirect()->route('message', ['message'=>$msg]);
+		}
 		return view('admin.users', ['users'=>$userList]);
 	}
 	public function RegistrationForm()
@@ -40,7 +44,8 @@ class UserController extends Controller
 			$userCheckObj->password=$password;
 			$userCheckObj->email= $email;
 			$userCheckObj->save();
-			return redirect()->route('admin_home');
+			$msg = "User successfully added!";
+			return redirect()->route('message', ['message'=>$msg]);
 		}
 	}
 	public function ChangePassword($id)
