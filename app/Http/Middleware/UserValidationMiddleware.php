@@ -17,6 +17,7 @@ class UserValidationMiddleware
     {
         $userId = Session::get('userId');
         $userType = Session::get('userType');
+        
         if ($userId!='' || $userType=='user') {
             return $next($request);
         }
