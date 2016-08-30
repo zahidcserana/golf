@@ -19,6 +19,10 @@ class GolfCourse extends Model
 	{
 		return DB::table($this->table)->where('id', $courseId)->first();
 	}
+	public function GetList($userId, $number)
+ 	{
+ 	 	return DB::table($this->table)->where('user_id', $userId)->paginate($number);
+ 	}
 	/*public function GetUserName($userName)
 	{
 	      return DB::table($this->table)->where('user_name', $userName)->get();

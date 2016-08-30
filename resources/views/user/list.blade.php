@@ -1,10 +1,8 @@
-@extends('master')
+@extends('user.master')
 @section('content')
 <?php
   $asset = asset('/');
 ?>
-
-
 <div class="table-responsive">
 	<table class="table table-striped">
 		<thead>
@@ -28,5 +26,6 @@
 	    	@endforeach
 	    </tbody>
 	</table>
+	{{ $courseResult->render() }}
 </div>
 @stop

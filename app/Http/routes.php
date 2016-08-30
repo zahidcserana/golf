@@ -28,7 +28,7 @@ Route::post('loginform', ['as'=>'loginform', 'uses'=>'LoginController@CompleteLo
 //Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess']);
 //Route::get('/loginsuccess', ['as'=>'loginsuccess'], 'uses'=>'LoginController@Loginsuccess');
-Route::get('form', function(){return view('form');})->middleware('UserValidationMiddleware');
+Route::get('form', function(){return view('user.form');})->middleware('UserValidationMiddleware');
 
 Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form'])->middleware('UserValidationMiddleware');
 

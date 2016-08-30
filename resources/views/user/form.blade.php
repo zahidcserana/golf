@@ -1,7 +1,7 @@
 <?php
   $asset = asset('/');
 ?>
-@extends('master')
+@extends('user.master')
 @section('content')
 <!doctype html>
 <html class="no-js" lang="">

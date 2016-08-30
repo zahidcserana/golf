@@ -11,9 +11,9 @@ class LoginController extends Controller
     {
         $sessionId = Session::get('userId');
         if(!$sessionId)
-            return view('login');
+            return view('user.login');
         else 
-        return view('index'); 
+        return view('user.index'); 
     }
 
 
@@ -50,7 +50,7 @@ class LoginController extends Controller
     }
     public function Loginsuccess()
     {
-        return view('index');
+        return view('user.index');
     }
     public function UserLogout()
     {

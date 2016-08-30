@@ -19,25 +19,25 @@ class GolfCourseController extends Controller
 		$golfCourseObj->created_at = $datetime;
 		$golfCourseObj->updated_at = $datetime;
 		$golfCourseObj->save();
-		return view('index');
+		return view('user.index');
 	}
 
 	public function ViewCourse(Request $request)
 	{
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
-		$courseResult = $golfCourseObj->GetUserCourse($userId);
-		/*for($i=0; $i<count($courseResult); $i++)
-		{
-			echo $courseResult[$i]->data;
-		}*/
-		return view('list', ['courseResult'=>$courseResult]);
+		//$courseResult = $golfCourseObj->GetUserCourse($userId);
+		$number = 3;
+		$pagination = $golfCourseObj->GetList($userId, $number);
+   
+   		//return view('admin.products',['allProducts'=>$allProducts,'count'=> $count]);
+		return view('user.list', ['courseResult'=>$pagination]);
 		
 	}
 	public function ViewDetails($courseIdFromRoute)
 	{
 		$golfCourseObj = new GolfCourse;
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
-		return view('course_details', ['gameResult'=>($courseDetails->data)]);
+		return view('user.course_details', ['gameResult'=>($courseDetails->data)]);
 	}
 }
