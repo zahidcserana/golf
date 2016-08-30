@@ -25,9 +25,12 @@ Route::post('loginform', ['as'=>'login', 'uses'=>'LoginController@CompleteLogin'
 //Route::get('/message/{test}', ['as'=>'message', 'uses'=>'UsersController@Message']);
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess']);
 //Route::get('/loginsuccess', ['as'=>'loginsuccess'], 'uses'=>'LoginController@Loginsuccess');
-Route::get('form', function(){return view('form');});
-Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form']);
-Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse']);
-Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails']);
+Route::get('form', function(){return view('form');})->middleware('UserValidationMiddleware');
+
+Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form'])->middleware('UserValidationMiddleware');
+
+Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
+
+Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
 /////    ggg
 

@@ -1,10 +1,13 @@
+<?php
+  $asset = asset('/');
+?>
 @extends('admin_master')
-@section('admincontent')
-    <script src="lib/jquery.js"></script>
-    <script src="dist/jquery.validate.js"></script>
+@section('validate')
+@parent
+<script src="{{$asset}}js/jquery.min.js"></script>
+    <script src="{{$asset}}js/jquery.validate.min.js"></script>
     <script>
-
-    $().ready(function() {
+    $(document).ready(function() {
 
         $("#signupForm").validate({
             rules: {
@@ -17,7 +20,7 @@
                     required: true,
                     minlength: 5
                 },
-                confirm_password: {
+                password_confirmation: {
                     required: true,
                     minlength: 5,
                     equalTo: "#password"
@@ -48,25 +51,28 @@
 
     });
     </script>
+@stop
+@section('admincontent')
+    
 <div align="center">
     <form class="cmxform" id="signupForm" method="POST" action="{{ url('registration') }}">
         {!! csrf_field() !!}
             <table>
                 <tr>
                     <td>Your Name</td>
-                    <td><input type="text" name="name" value="{{ old('name') }}"></td>
+                    <td><input type="text" name="name" value="{{ old('name') }} " required></td>
                 </tr>
                 <tr>
                     <td>Your Email</td>
-                    <td><input type="text" name="email" value="{{ old('email') }}"></td>
+                    <td><input type="text" name="email" value="{{ old('email') }}" required></td>
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td><input type="password" name="password"></td>
+                    <td><input type="password" name="password" required></td>
                 </tr>
                 <tr>
                     <td>Confirm Password</td>
-                    <td><input type="password" name="password_confirmation"></td>
+                    <td><input type="password" name="password_confirmation" required></td>
                 </tr>      
             </table>
         <button type="submit">Register</button>

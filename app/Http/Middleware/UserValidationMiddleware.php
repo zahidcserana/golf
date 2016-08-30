@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-use session;
+use Session;
 use Closure;
 
 class UserValidationMiddleware
@@ -17,9 +17,9 @@ class UserValidationMiddleware
     {
         $userId = Session::get('userId');
         $userType = Session::get('userType');
-        if ($userId=='' || $userType=='') {
-            return redirect()->route('loginform');
+        if ($userId!='' || $userType=='user') {
+            return $next($request);
         }
-        return $next($request);
+        return redirect()->route('loginform');
     }
 }
