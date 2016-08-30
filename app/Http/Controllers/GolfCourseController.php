@@ -29,15 +29,30 @@ class GolfCourseController extends Controller
 		//$courseResult = $golfCourseObj->GetUserCourse($userId);
 		$number = 3;
 		$pagination = $golfCourseObj->GetList($userId, $number);
-   
+   		//dd($userId);
+   		if($pagination)
+		{
+			return view('user.list', ['courseResult'=>$pagination]);
+			
+		}
    		//return view('admin.products',['allProducts'=>$allProducts,'count'=> $count]);
-		return view('user.list', ['courseResult'=>$pagination]);
+		$msg = "No list exists!.";
+   		return redirect()->route('user_message', ['message'=>$msg]);
 		
 	}
 	public function ViewDetails($courseIdFromRoute)
 	{
 		$golfCourseObj = new GolfCourse;
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
-		return view('user.course_details', ['gameResult'=>($courseDetails->data)]);
+		//dd($courseDetails);
+		
+
+			return view('user.course_details', ['gameResult'=>($courseDetails->data)]);
 	}
+	public function Message($message)
+    {
+          $data['message'] = $message;
+          return view('user.message', $data);
+          
+    }
 }
