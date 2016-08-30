@@ -60,7 +60,9 @@ class UserController extends Controller
 			$password = md5($password);
 			$passwordChangeObj = new users;
 			$passwordChangeObj->PasswordChange($id,$password);
-			return redirect()->route('admin_home');
+			$msg = "Password changed successfully.";
+			return redirect()->route('message', ['message'=>$msg]);
+			//return redirect()->route('admin_home');
 		}
 		
 	}

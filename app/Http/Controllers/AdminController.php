@@ -41,4 +41,10 @@ class AdminController extends Controller
     		session()->flush();
 		return redirect('/admin/login');
     	}
+    	public function Message($message)
+    	{
+          	$data['message'] = $message;
+          	return view('message', $data);
+          	
+    	}
 }
