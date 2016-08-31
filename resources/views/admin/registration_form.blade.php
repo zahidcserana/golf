@@ -68,13 +68,13 @@
     <form class="cmxform" id="signupForm" method="POST" action="{{ url('registration') }}">
         {!! csrf_field() !!}
         <div class="form-group">
-            <input type="text" name="name" id="name"  class="form-control" placeholder="Enter name">
+            <input type="text" name="name" id="name"  class="form-control" placeholder="Enter name" value={{old('name')}}>
         </div>
         <div class="form-group">
-            <input type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+            <input type="text" name="email" id="email"  class="form-control" placeholder="Enter email" value={{old('email')}}>
         </div>
         <div class="form-group">
-            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+            <input type="password" name="password" id="password"  class="form-control" placeholder="Enter password">
         </div>
         <div class="form-group">
             <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="Enter confirm password">

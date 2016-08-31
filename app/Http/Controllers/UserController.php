@@ -27,7 +27,7 @@ class UserController extends Controller
 	{
 		$rules = [
 		  'name'              =>  'required',
-		  'email'             =>  'required|email',
+		  'email'             =>  'required|email|unique:users',
 		  'password'          =>  'required|min:6',
 		  'password_confirmation'  =>  'required|same:password'
 		];
@@ -48,20 +48,16 @@ class UserController extends Controller
 		$password= $request->password;
 		$confirmPassworde =  $request->password_confirmation;
 		
-		$userCheck = $userCheckObj->UserEmailCheck($email);
-		if ($userCheck) {
-			echo "Already exists!";
-		}
-		else
-		{
-			$password = md5($password);
-			$userCheckObj->name= $name;
-			$userCheckObj->password=$password;
-			$userCheckObj->email= $email;
-			$userCheckObj->save();
-			$msg = "User successfully added!";
-			return redirect()->route('message', ['message'=>$msg]);
-		}
+		//$userCheck = $userCheckObj->UserEmailCheck($email);
+		
+		$password = md5($password);
+		$userCheckObj->name= $name;
+		$userCheckObj->password=$password;
+		$userCheckObj->email= $email;
+		$userCheckObj->save();
+		$msg = "User successfully added!";
+		return redirect()->route('message', ['message'=>$msg]);
+		
 	}
 	public function ChangePassword($id,$email)
 	{
