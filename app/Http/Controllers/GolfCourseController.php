@@ -26,7 +26,7 @@ class GolfCourseController extends Controller
 	{
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
-		$number = 3;
+		$number = 5;
 		$pagination = $golfCourseObj->GetList($userId, $number);
 		$listCheck = $golfCourseObj->CheckList($userId);
    		if(($listCheck ))
