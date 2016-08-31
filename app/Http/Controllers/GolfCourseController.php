@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 use App\Model\GolfCourse;
 use Illuminate\Http\Request;
@@ -25,27 +26,24 @@ class GolfCourseController extends Controller
 	{
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
-		//$courseResult = $golfCourseObj->GetUserCourse($userId);
 		$number = 3;
 		$pagination = $golfCourseObj->GetList($userId, $number);
-   		//dd($userId);
-   		if($pagination)
+		$listCheck = $golfCourseObj->CheckList($userId);
+   		if(($listCheck ))
 		{
 			return view('user.list', ['courseResult'=>$pagination]);
-			
 		}
-   		//return view('admin.products',['allProducts'=>$allProducts,'count'=> $count]);
-		$msg = "No list exists!.";
-   		return redirect()->route('user_message', ['message'=>$msg]);
-		
+   		else
+		{
+			$msg = "No list exists!.";
+   			return redirect()->route('no_list_message', ['message'=>$msg]);
+		}
 	}
+
 	public function ViewDetails($courseIdFromRoute)
 	{
 		$golfCourseObj = new GolfCourse;
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
-		//dd($courseDetails);
-		
-
 			return view('user.course_details', ['gameResult'=>($courseDetails->data)]);
 	}
 	public function Message($message)
