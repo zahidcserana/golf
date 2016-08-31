@@ -22,7 +22,7 @@ class AdminController extends Controller
 		
 		$adminCheck = $adminCheckObj->AdminCheck($email,$password);
 		$rules = [
-	          'email'             =>  'required|email|exists:admin',
+	          'email'             =>  'required|email',
 	          'password'          =>  'required'
 	      ];
             $allInput = $request->all();
@@ -31,9 +31,15 @@ class AdminController extends Controller
 
 		if ($validator->fails()) 
 		{
-		return redirect()->route('admin')
-		        ->withErrors($validator)
-		        ->withInput();
+			return redirect()->route('admin')
+					     ->withErrors($validator)
+					     ->withInput();
+		}
+		else if (!$adminCheck) 
+		{
+			return redirect()->route('admin')
+			        	     ->withErrors('Email or Password no exist!')
+			        	     ->withInput();
 		}
      
 		if ($adminCheck) 
