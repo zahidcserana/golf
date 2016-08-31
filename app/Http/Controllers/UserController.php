@@ -66,20 +66,33 @@ class UserController extends Controller
 	public function PasswordReset(Request $request)
 	{
 		$id = $request->id;
-		$password= $request->password;
-		$confirmPassworde =  $request->password_confirmation;
-		if ($password!=$confirmPassworde) {
-			echo "Sorry! Password doesn't match!";
-		}
-		else
+		$email = $request->email;
+		
+
+		$rules = [
+		  'password'          =>  'required|min:6',
+		  'password_confirmation'  =>  'required|same:password'
+		];
+        	$allInput = $request->all();
+
+        	$validator = Validator::make($allInput,$rules);
+
+		if ($validator->fails()) 
 		{
-			$password = md5($password);
-			$passwordChangeObj = new users;
-			$passwordChangeObj->PasswordChange($id,$password);
-			$msg = "Password changed successfully.";
-			return redirect()->route('message', ['message'=>$msg]);
-			//return redirect()->route('admin_home');
+		return redirect()->route('password_change',['id'=>$id, 'email'=>$email])
+		            ->withErrors($validator)
+		            ->withInput();
 		}
+
+		$password= $request->password;
+		
+		$password = md5($password);
+		$passwordChangeObj = new users;
+		$passwordChangeObj->PasswordChange($id,$password);
+		$msg = "Password changed successfully.";
+		return redirect()->route('message', ['message'=>$msg]);
+		//return redirect()->route('admin_home');
+		
 		
 	}
 }

@@ -53,19 +53,23 @@
     </script>
 @stop
 @section('admincontent')
-
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
- 
-    <h3 class="page-header">Change Password</h3>
-                   
-    <form method="POST" id="passChange" action="{{ url('password_reset') }}">
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <h4 class="page-header">#Change Password
+                    <br><br><b>User Id: {{$id}}<br><br>
+                    User Email: {{$email}}</b><br><br><br></h4>
+    <form method="POST" id="passChange" action="{{ route('password_reset') }}">
         {!! csrf_field() !!}
-        <div class="form-group">
-            <input type="text" name="id" class="form-control" value="{{$id}}">
-        </div>
-        <div class="form-group">
-            <input type="text" name="email" class="form-control" value="{{$email}}" >
-        </div>
+        <input type="hidden" name="id" id="id" value="{{$id}}">
+         <input type="hidden" name="email" id="email" value="{{$email}}">
         <div class="form-group">
             <input type="password" id="password" name="password" class="form-control" placeholder="Enter password">
         </div>
