@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\admin;
 use App\Http\Requests;
 use Session;
+use Validator;
 
 class AdminController extends Controller
 {
@@ -20,6 +21,21 @@ class AdminController extends Controller
 		$password =md5($request->password);
 		
 		$adminCheck = $adminCheckObj->AdminCheck($email,$password);
+		$rules = [
+	          'email'             =>  'required|email|exists:admin',
+	          'password'          =>  'required'
+	      ];
+            $allInput = $request->all();
+
+            $validator = Validator::make($allInput,$rules);
+
+		if ($validator->fails()) 
+		{
+		return redirect()->route('admin')
+		        ->withErrors($validator)
+		        ->withInput();
+		}
+     
 		if ($adminCheck) 
 		{
 			$userId = $adminCheck->id;
