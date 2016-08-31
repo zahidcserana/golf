@@ -36,7 +36,7 @@ class GolfCourseController extends Controller
    		else
 		{
 			$msg = "No list exists!.";
-   			return redirect()->route('no_list_message', ['message'=>$msg]);
+   			return redirect()->route('user_message', ['message'=>$msg]);
 		}
 	}
 

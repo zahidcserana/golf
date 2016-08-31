@@ -33,7 +33,7 @@ Route::get('form', function(){return view('user.form');})->middleware('UserValid
 Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form'])->middleware('UserValidationMiddleware');
 
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
-Route::get('/no_list_message/{test}', ['as'=>'user_message', 'uses'=>'GolfCourseController@Message']);
+Route::get('/user_message/{test}', ['as'=>'user_message', 'uses'=>'GolfCourseController@Message']);
 Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails'])->middleware('UserValidationMiddleware');
 Route::get('/user_logout',['as'=>'user_logout', 'uses' => 'LoginController@UserLogout']);
 
