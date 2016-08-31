@@ -32,7 +32,7 @@
     <!-- Add your site or application content here -->
 	<div class="row">
 		<div class='col-sm-4 col-md-offset-4'>
-			<form method="POST" action="{{ url('admin/login') }}">
+			<form method="POST" action="{{ route('admin_login') }}">
 				{!! csrf_field() !!}
 				<div class="form-group">
 					<input type="text" class="form-control" name="email" placeholder="Enter name">

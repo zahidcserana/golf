@@ -13,7 +13,7 @@ Route::post('admin/login',['as'=>'admin_login', 'uses' => 'AdminController@Admin
 
 Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'])->middleware('AdminValidationMiddleware');
 
-Route::get('/password_change/{id}',['as'=>'password_change', 'uses' => 'UserController@ChangePassword'])->middleware('AdminValidationMiddleware');
+Route::get('/password_change/{id}/{email}',['as'=>'password_change', 'uses' => 'UserController@ChangePassword'])->middleware('AdminValidationMiddleware');
 
 Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset'])->middleware('AdminValidationMiddleware');
 

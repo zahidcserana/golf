@@ -13,7 +13,7 @@
 		  <td><div>{{$user->id}} </div></td>
 		  <td><div>{{$user->name}} </div></td>
 		  <td><div>{{$user->email}} </div></td>
-		  <td><div><a href="{{route('password_change',['id'=>$user->id])}}">change password</a> </div></td>
+		  <td><div><a href="{{route('password_change',['id'=>$user->id, 'email'=>$user->email])}}">change password</a> </div></td>
 		</tr>
 		@endforeach
 	</table>

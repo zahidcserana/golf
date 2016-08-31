@@ -1,10 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\users;
+use App\Http\Controllers\Controller;
 use App\Http\Requests;
+use Validator;
 
 class UserController extends Controller
 {
@@ -24,6 +25,23 @@ class UserController extends Controller
 	}
 	public function Registration(Request $request)
 	{
+		$rules = [
+		  'name'              =>  'required',
+		  'email'             =>  'required|email',
+		  'password'          =>  'required|min:6',
+		  'password_confirmation'  =>  'required|same:password'
+		];
+        	$allInput = $request->all();
+
+        	$validator = Validator::make($allInput,$rules);
+
+		if ($validator->fails()) 
+		{
+		return redirect()->route('registration_form')
+		            ->withErrors($validator)
+		            ->withInput();
+		}
+
 		$userCheckObj = new users;
 		$name = $request->name;
 		$email = $request->email;
@@ -33,9 +51,6 @@ class UserController extends Controller
 		$userCheck = $userCheckObj->UserEmailCheck($email);
 		if ($userCheck) {
 			echo "Already exists!";
-		}
-		else if ($password!=$confirmPassworde) {
-			echo "Sorry! Password doesn't match";
 		}
 		else
 		{
@@ -48,9 +63,9 @@ class UserController extends Controller
 			return redirect()->route('message', ['message'=>$msg]);
 		}
 	}
-	public function ChangePassword($id)
+	public function ChangePassword($id,$email)
 	{
-		return view('admin.change_password',['id'=>$id]);
+		return view('admin.change_password',['id'=>$id, 'email'=>$email]);
 	}
 	public function PasswordReset(Request $request)
 	{

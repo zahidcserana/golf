@@ -55,6 +55,15 @@
 @section('admincontent')
     
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+    @endif
                     
     <form class="cmxform" id="signupForm" method="POST" action="{{ url('registration') }}">
         {!! csrf_field() !!}
