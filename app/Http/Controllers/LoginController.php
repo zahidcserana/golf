@@ -26,7 +26,7 @@ class LoginController extends Controller
         
         $emailAndPassChecking = $usersObj->GetLogInInfo($email, $password);
         $rules = [
-          'email'             =>  'required|email|exists:users',
+          'email'             =>  'required|email',
           'password'          =>  'required'
         ];
             $allInput = $request->all();
@@ -38,6 +38,12 @@ class LoginController extends Controller
         return redirect()->route('home')
                     ->withErrors($validator)
                     ->withInput();
+        }
+        else if (!$emailAndPassChecking) 
+        {
+            return redirect()->route('home')
+                             ->withErrors('Email or Password no exist!')
+                             ->withInput();
         }
      
         if($emailAndPassChecking==True) 

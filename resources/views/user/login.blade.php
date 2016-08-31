@@ -43,7 +43,7 @@
                      <form action = "{{route('loginform') }}" method = "post">
                      <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
                          <div class="form-group">
-                              <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                              <input type="text" name="email" class="form-control" id="email" placeholder="Enter email">
                          </div>
                          <div class="form-group">
                               <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
