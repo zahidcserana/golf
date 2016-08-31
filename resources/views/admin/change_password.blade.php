@@ -53,12 +53,19 @@
     </script>
 @stop
 @section('admincontent')
+
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header">Change Password</h1>
-                    
+ 
+    <h3 class="page-header">Change Password</h3>
+                   
     <form method="POST" id="passChange" action="{{ url('password_reset') }}">
         {!! csrf_field() !!}
-        <input type="hidden" name="id" value="{{$id}}">
+        <div class="form-group">
+            <input type="text" name="id" class="form-control" value="{{$id}}">
+        </div>
+        <div class="form-group">
+            <input type="text" name="email" class="form-control" value="{{$email}}" >
+        </div>
         <div class="form-group">
             <input type="password" id="password" name="password" class="form-control" placeholder="Enter password">
         </div>
