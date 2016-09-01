@@ -16,10 +16,16 @@ class GolfCourseController extends Controller
 		$userId = Session::get('userId');
 		$golfCourseObj->user_id = $userId;
 		$golfCourseObj->data = json_encode($request->gameResult);
+		$golfCourseObj->location = $request->nameFromUser;
+		//$var = $request->dateFromUser;
+		$date = \DateTime::createFromFormat('m/d/Y', $request->dateFromUser);
+		$newDate = $date->format('Y-m-d');
+		$golfCourseObj->date = $newDate;
 		$golfCourseObj->created_at = $datetime;
 		$golfCourseObj->updated_at = $datetime;
 		$golfCourseObj->save();
-		return view('user.index');
+		$msg = "You have successfully submitted a round.";
+   		return redirect()->route('user_message', ['message'=>$msg]);
 	}
 
 	public function ViewCourse(Request $request)

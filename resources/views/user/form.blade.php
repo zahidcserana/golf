@@ -17,15 +17,18 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<link rel="stylesheet" href="{{$asset}}css/bootstrap.min.css">
+		<link href="{{$asset}}css/bootstrap-datepicker.css" rel="stylesheet">
 		<link rel="stylesheet" href="{{$asset}}css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{$asset}}css/style.css">
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<link href="{{$asset}}css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
 		<link href="{{$asset}}css/dashboard.css" rel="stylesheet">
+		
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 		<script src="{{$asset}}js/ie-emulation-modes-warning.js"></script>
+		
 		<style>
 			input{border:0px solid #000; margin:0; background:transparent; width:100%}
 			table tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;width: 30px;}
@@ -58,12 +61,26 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="main">
-					<h1 class="page-header">Course list</h1>
-					<div class="col-md-12">
-						<form action = "{{ url('submitForm') }}" method = "post" align="center">
+					<h1 class="page-header">Add a round</h1>
+					<form action = "{{ url('submitForm') }}" method = "post" align="center">
 						<input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
+					<div class="form-group">
+						<div class="col-md-2"><label>Location</label></div>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="nameFromUser">
+						</div>
+						<div class="col-md-2"><label>Date</label></div>
+						<div class="col-md-4">
+							<input type='text' name=dateFromUser class="form-control" id='datetimepicker1' />
+						</div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-12">
 						<div class="table-responsive">
 							<table class="table table-striped">
+									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
 										<td>1</td>
@@ -1596,13 +1613,19 @@
 								</tr>
 							</table>
 						</div>
-						</form>
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-		
+		<script src="{{$asset}}js/bootstrap.min.js"></script>
+		<script src="{{$asset}}js/bootstrap-datepicker.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function () {
+                $('#datetimepicker1').datepicker();
+            });
+        </script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				//$(".hole_par_out, .hole_par_in, .score_out, .score_in, .fir_out, .fir_in, .gir_out, .gir_in, .putt_1_out, .putt_1_in, .putt_2_out, .putt_2_in, .putt_3_out, .putt_3_in, .tot_putt_out, .tot_putt_in, .tot_ft_made_out, .tot_ft_made_in, .putt_opp_<5_out, .putt_opp_<5_in, .putt_make_<5_out, .putt_make_<5_in, .putt_opp_5-9_out, .putt_opp_5-9_in, .putt_make_5-9_out, .putt_make_5-9_in, .putt_opp_10-19_out, .putt_opp_10-19_in, .putt_make_10-19_out, .putt_make_10-19_in, .putt_opp_20-29_out, .putt_opp_20-29_in, .putt_make_20-29_out, .putt_make_20-29_in, .putt_opp_30+_out, .putt_opp_30+_in, .putt_make_30+_out").keydown(function(event) {
