@@ -50,24 +50,7 @@ $gameResult = json_decode($gameResult, true);
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<!-- Add your site or application content here -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Golf</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Logout</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		
 		<div class="container-fluid">
 			<div class="row">
 				<div class="main">
@@ -77,7 +60,7 @@ $gameResult = json_decode($gameResult, true);
 							<table class="table table-striped">
 							
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
-										<td>5/14/2016</td>
+										<td></td>
 										<td>1</td>
 										<td>2</td>
 										<td>3</td>
@@ -247,28 +230,29 @@ $gameResult = json_decode($gameResult, true);
 									</tr>
 									<tr>
 										<td>PUTT_1</td>
-										<td>{{$gameResult['put_1'][0]}}</td>
-										<td>{{$gameResult['put_1'][1]}}</td>
-										<td>{{$gameResult['put_1'][2]}}</td>
-										<td>{{$gameResult['put_1'][3]}}</td>
-										<td>{{$gameResult['put_1'][4]}}</td>
-										<td>{{$gameResult['put_1'][5]}}</td>
-										<td>{{$gameResult['put_1'][6]}}</td>
-										<td>{{$gameResult['put_1'][7]}}</td>
-										<td>{{$gameResult['put_1'][8]}}</td>
-										<td>{{$gameResult['put_1'][9]}}</td>
-										<td>{{$gameResult['put_1'][10]}}</td>
-										<td>{{$gameResult['put_1'][11]}}</td>
-										<td>{{$gameResult['put_1'][12]}}</td>
-										<td>{{$gameResult['put_1'][13]}}</td>
-										<td>{{$gameResult['put_1'][14]}}</td>
-										<td>{{$gameResult['put_1'][15]}}</td>
-										<td>{{$gameResult['put_1'][16]}}</td>
-										<td>{{$gameResult['put_1'][17]}}</td>
-										<td>{{$gameResult['put_1'][18]}}</td>
-										<td>{{$gameResult['put_1'][19]}}</td>
-										<td>{{$gameResult['put_1'][20]}}</td>
+										<td>{{$gameResult['putt_1'][0]}}</td>
+										<td>{{$gameResult['putt_1'][1]}}</td>
+										<td>{{$gameResult['putt_1'][2]}}</td>
+										<td>{{$gameResult['putt_1'][3]}}</td>
+										<td>{{$gameResult['putt_1'][4]}}</td>
+										<td>{{$gameResult['putt_1'][5]}}</td>
+										<td>{{$gameResult['putt_1'][6]}}</td>
+										<td>{{$gameResult['putt_1'][7]}}</td>
+										<td>{{$gameResult['putt_1'][8]}}</td>
+										<td>{{$gameResult['putt_1'][9]}}</td>
+										<td>{{$gameResult['putt_1'][10]}}</td>
+										<td>{{$gameResult['putt_1'][11]}}</td>
+										<td>{{$gameResult['putt_1'][12]}}</td>
+										<td>{{$gameResult['putt_1'][13]}}</td>
+										<td>{{$gameResult['putt_1'][14]}}</td>
+										<td>{{$gameResult['putt_1'][15]}}</td>
+										<td>{{$gameResult['putt_1'][16]}}</td>
+										<td>{{$gameResult['putt_1'][17]}}</td>
+										<td>{{$gameResult['putt_1'][18]}}</td>
+										<td>{{$gameResult['putt_1'][19]}}</td>
+										<td>{{$gameResult['putt_1'][20]}}</td>
 									</tr>
+
 									<tr>
 										<td>DIST_AFT_PUTT_1</td>
 										<td class="black"></td>
@@ -520,7 +504,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_5-9'][6]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][7]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_5-9][9]" /></td>
+										<td>{{$gameResult['putt_opp_5-9'][9]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][10]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][11]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][12]}}</td>
@@ -530,8 +514,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_5-9'][16]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][17]}}</td>
 										<td>{{$gameResult['putt_opp_5-9'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_5-9][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_opp_5-9][20]" /></td>
+										<td>{{$gameResult['putt_opp_5-9'][19]}}</td>
+										<td>{{$gameResult['putt_opp_5-9'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_5-9</td>
@@ -544,7 +528,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_5-9'][6]}}</td>
 										<td>{{$gameResult['putt_make_5-9'][7]}}</td>
 										<td>{{$gameResult['putt_make_5-9'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_5-9][9]" /></td>
+										<td>{{$gameResult['putt_make_5-9'][9]}}</td>
 									    <td>{{$gameResult['putt_make_5-9'][10]}}</td>
 										<td>{{$gameResult['putt_make_5-9'][11]}}</td>
 										<td>{{$gameResult['putt_make_5-9'][12]}}</td>
@@ -554,8 +538,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_5-9'][16]}}</td>
 										<td>{{$gameResult['putt_make_5-9'][17]}}</td>
 										<td>{{$gameResult['putt_make_5-9'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_5-9][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_make_5-9][20]" /></td>
+										<td>{{$gameResult['putt_make_5-9'][19]}}</td>
+										<td>{{$gameResult['putt_make_5-9'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_10-19</td>
@@ -568,7 +552,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_10-19'][6]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][7]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_10-19][9]" /></td>
+										<td>{{$gameResult['putt_opp_10-19'][9]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][10]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][11]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][12]}}</td>
@@ -578,8 +562,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_10-19'][16]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][17]}}</td>
 										<td>{{$gameResult['putt_opp_10-19'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_10-19][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_opp_10-19][20]" /></td>
+										<td>{{$gameResult['putt_opp_10-19'][19]}}</td>
+										<td>{{$gameResult['putt_opp_10-19'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_10-19</td>
@@ -592,7 +576,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_10-19'][6]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][7]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_10-19][9]" /></td>
+										<td>{{$gameResult['putt_make_10-19'][9]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][10]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][11]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][12]}}</td>
@@ -602,8 +586,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_10-19'][16]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][17]}}</td>
 										<td>{{$gameResult['putt_make_10-19'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_10-19][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_make_10-19][20]" /></td>
+										<td>{{$gameResult['putt_make_10-19'][19]}}</td>
+										<td>{{$gameResult['putt_make_10-19'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_20-29</td>
@@ -616,7 +600,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_20-29'][6]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][7]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_20-29][9]" /></td>
+										<td>{{$gameResult['putt_opp_20-29'][9]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][10]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][11]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][12]}}</td>
@@ -626,8 +610,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_20-29'][16]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][17]}}</td>
 										<td>{{$gameResult['putt_opp_20-29'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_20-29][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_opp_20-29][20]" /></td>
+										<td>{{$gameResult['putt_opp_20-29'][19]}}</td>
+										<td>{{$gameResult['putt_opp_20-29'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_20-29</td>
@@ -640,7 +624,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_20-29'][6]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][7]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_20-29][9]" /></td>
+										<td>{{$gameResult['putt_make_20-29'][9]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][10]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][11]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][12]}}</td>
@@ -650,8 +634,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_20-29'][16]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][17]}}</td>
 										<td>{{$gameResult['putt_make_20-29'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_20-29][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_make_20-29][20]" /></td>
+										<td>{{$gameResult['putt_make_20-29'][19]}}</td>
+										<td>{{$gameResult['putt_make_20-29'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_30+</td>
@@ -664,7 +648,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_30+'][6]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][7]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_30+][9]" /></td>
+										<td>{{$gameResult['putt_opp_30+'][9]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][10]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][11]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][12]}}</td>
@@ -674,8 +658,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_opp_30+'][16]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][17]}}</td>
 										<td>{{$gameResult['putt_opp_30+'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_opp_30+][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_opp_30+][20]" /></td>
+										<td>{{$gameResult['putt_opp_30+'][19]}}</td>
+										<td>{{$gameResult['putt_opp_30+'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PUTT_MAKE_30+</td>
@@ -688,7 +672,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_30+'][6]}}</td>
 										<td>{{$gameResult['putt_make_30+'][7]}}</td>
 										<td>{{$gameResult['putt_make_30+'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_30+][9]" /></td>
+										<td>{{$gameResult['putt_make_30+'][9]}}</td>
 										<td>{{$gameResult['putt_make_30+'][10]}}</td>
 										<td>{{$gameResult['putt_make_30+'][11]}}</td>
 										<td>{{$gameResult['putt_make_30+'][12]}}</td>
@@ -698,8 +682,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['putt_make_30+'][16]}}</td>
 										<td>{{$gameResult['putt_make_30+'][17]}}</td>
 										<td>{{$gameResult['putt_make_30+'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[putt_make_30+][19]" /></td>
-										<td><input type="hidden" Name="gameResult[putt_make_30+][20]" /></td>
+										<td>{{$gameResult['putt_make_30+'][19]}}</td>
+										<td>{{$gameResult['putt_make_30+'][20]}}</td>
 									</tr>
 									<tr>
 										<td>NOGIR_DIST_PUTT_1</td>
@@ -784,7 +768,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['scrambl_opp'][6]}}</td>
 										<td>{{$gameResult['scrambl_opp'][7]}}</td>
 										<td>{{$gameResult['scrambl_opp'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[scrambl_opp][9]" /></td>
+										<td>{{$gameResult['scrambl_opp'][9]}}</td>
 										<td>{{$gameResult['scrambl_opp'][10]}}</td>
 										<td>{{$gameResult['scrambl_opp'][11]}}</td>	
 										<td>{{$gameResult['scrambl_opp'][12]}}</td>
@@ -794,8 +778,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['scrambl_opp'][16]}}</td>
 										<td>{{$gameResult['scrambl_opp'][17]}}</td>
 										<td>{{$gameResult['scrambl_opp'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[scrambl_opp][19]" /></td>
-										<td><input type="hidden" Name="gameResult[scrambl_opp][20]" /></td>
+										<td>{{$gameResult['scrambl_opp'][19]}}</td>
+										<td>{{$gameResult['scrambl_opp'][20]}}</td>
 									</tr>
 									<tr>
 										<td>SCRAMBL_SAV</td>
@@ -808,7 +792,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['scrambl_sav'][6]}}</td>
 										<td>{{$gameResult['scrambl_sav'][7]}}</td>
 										<td>{{$gameResult['scrambl_sav'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[scrambl_sav][9]" /></td>
+										<td>{{$gameResult['scrambl_sav'][9]}}</td>
 										<td>{{$gameResult['scrambl_sav'][10]}}</td>
 										<td>{{$gameResult['scrambl_sav'][11]}}</td>
 										<td>{{$gameResult['scrambl_sav'][12]}}</td>
@@ -818,8 +802,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['scrambl_sav'][16]}}</td>
 										<td>{{$gameResult['scrambl_sav'][17]}}</td>
 										<td>{{$gameResult['scrambl_sav'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[scrambl_sav][19]" /></td>
-										<td><input type="hidden" Name="gameResult[scrambl_sav][20]" /></td>
+										<td>{{$gameResult['scrambl_sav'][19]}}</td>
+										<td>{{$gameResult['scrambl_sav'][20]}}</td>
 									</tr>
 									<tr>
 										<td>SCRAMBL%</td>
@@ -856,7 +840,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['sand_opp'][6]}}</td>
 										<td>{{$gameResult['sand_opp'][7]}}</td>
 										<td>{{$gameResult['sand_opp'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[sand_opp][9]" /></td>
+										<td>{{$gameResult['sand_opp'][9]}}</td>
 										<td>{{$gameResult['sand_opp'][10]}}</td>
 										<td>{{$gameResult['sand_opp'][11]}}</td>
 										<td>{{$gameResult['sand_opp'][12]}}</td>
@@ -866,8 +850,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['sand_opp'][16]}}</td>
 										<td>{{$gameResult['sand_opp'][17]}}</td>
 										<td>{{$gameResult['sand_opp'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[sand_opp][19]" /></td>
-										<td><input type="hidden" Name="gameResult[sand_opp][20]" /></td>
+										<td>{{$gameResult['sand_opp'][19]}}</td>
+										<td>{{$gameResult['sand_opp'][20]}}</td>
 									</tr>
 									<tr>
 										<td>SAND_SAV</td>
@@ -880,7 +864,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['sand_sav'][6]}}</td>
 										<td>{{$gameResult['sand_sav'][7]}}</td>
 										<td>{{$gameResult['sand_sav'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[sand_sav][9]" /></td>
+										<td>{{$gameResult['sand_sav'][9]}}</td>
 										<td>{{$gameResult['sand_sav'][10]}}</td>
 										<td>{{$gameResult['sand_sav'][11]}}</td>
 										<td>{{$gameResult['sand_sav'][12]}}</td>
@@ -890,8 +874,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['sand_sav'][16]}}</td>
 										<td>{{$gameResult['sand_sav'][17]}}</td>
 										<td>{{$gameResult['sand_sav'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[sand_sav][19]" /></td>
-										<td><input type="hidden" Name="gameResult[sand_sav][20]" /></td>
+										<td>{{$gameResult['sand_sav'][19]}}</td>
+										<td>{{$gameResult['sand_sav'][20]}}</td>
 									</tr>
 									<tr>
 										<td>SAND%</td>
@@ -928,7 +912,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['penalties'][6]}}</td>
 										<td>{{$gameResult['penalties'][7]}}</td>
 										<td>{{$gameResult['penalties'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[penalties][9]" /></td>
+										<td>{{$gameResult['penalties'][9]}}</td>
 										<td>{{$gameResult['penalties'][10]}}</td>
 										<td>{{$gameResult['penalties'][11]}}</td>
 										<td>{{$gameResult['penalties'][12]}}</td>
@@ -938,12 +922,12 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['penalties'][16]}}</td>
 										<td>{{$gameResult['penalties'][17]}}</td>
 										<td>{{$gameResult['penalties'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[penalties][19]" /></td>
-										<td><input type="hidden" Name="gameResult[penalties][20]" /></td>
+										<td>{{$gameResult['penalties'][19]}}</td>
+										<td>{{$gameResult['penalties'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR3</td>
-										<td><input type="text" Name="gameResult[par3][0]" /></td>
+										<td>{{$gameResult['par3'][0]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -952,8 +936,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par3][9]" /></td>
-										<td><input type="text" Name="gameResult[par3][10]" /></td>
+										<td>{{$gameResult['par3'][9]}}</td>
+										<td>{{$gameResult['par3'][10]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -962,12 +946,12 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par3][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par3][20]" /></td>
+										<td>{{$gameResult['par3'][19]}}</td>
+										<td>{{$gameResult['par3'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR3STROKES</td>
-										<td><input type="text" Name="gameResult[par3strokes][0]" /></td>
+										<td>{{$gameResult['par3strokes'][0]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -976,8 +960,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par3strokes][9]" /></td>
-										<td><input type="text" Name="gameResult[par3strokes][10]" /></td>
+										<td>{{$gameResult['par3strokes'][9]}}</td>
+										<td>{{$gameResult['par3strokes'][10]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -986,8 +970,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par3strokes][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par3strokes][20]" /></td>
+										<td>{{$gameResult['par3strokes'][19]}}</td>
+										<td>{{$gameResult['par3strokes'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR3SCOR</td>
@@ -1015,7 +999,7 @@ $gameResult = json_decode($gameResult, true);
 									</tr>
 									<tr>
 										<td>PAR4</td>
-										<td><input type="text" Name="gameResult[par4][0]" /></td>
+										<td>{{$gameResult['par4'][0]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1024,8 +1008,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par4][9]" /></td>
-										<td><input type="text" Name="gameResult[par4][10]" /></td>
+										<td>{{$gameResult['par4'][9]}}</td>
+										<td>{{$gameResult['par4'][10]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1034,12 +1018,12 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par4][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par4][20]" /></td>
+										<td>{{$gameResult['par4'][19]}}</td>
+										<td>{{$gameResult['par4'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR4STROKES</td>
-										<td><input type="text" Name="gameResult[par4strokes][0]" /></td>
+										<td>{{$gameResult['par4strokes'][0]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1048,8 +1032,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="center"></td>
-										<td><input type="hidden" Name="gameResult[par4strokes][9]" /></td>
-										<td><input type="text" Name="gameResult[par4strokes][10]" /></td>
+										<td>{{$gameResult['par4strokes'][9]}}</td>
+										<td>{{$gameResult['par4strokes'][10]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1058,8 +1042,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par4strokes][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par4strokes][20]" /></td>
+										<td>{{$gameResult['par4strokes'][19]}}</td>
+										<td>{{$gameResult['par4strokes'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR4SCOR</td>
@@ -1087,7 +1071,7 @@ $gameResult = json_decode($gameResult, true);
 									</tr>
 									<tr>
 										<td>PAR5</td>
-										<td><input type="text" Name="gameResult[par5][0]" /></td>
+										<td>{{$gameResult['par5'][0]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1096,8 +1080,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par5][9]" /></td>
-										<td><input type="text" Name="gameResult[par5][10]" /></td>
+										<td>{{$gameResult['par5'][9]}}</td>
+										<td>{{$gameResult['par5'][10]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1106,12 +1090,12 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par5][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par5][20]" /></td>
+										<td>{{$gameResult['par5'][19]}}</td>
+										<td>{{$gameResult['par5'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR5STROKES</td>
-										<td><input type="text" Name="gameResult[par5strokes][0]" /></td>
+										<td>{{$gameResult['par5strokes'][0]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1120,8 +1104,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par5strokes][9]" /></td>
-										<td><input type="text" Name="gameResult[par5strokes][10]" /></td>
+										<td>{{$gameResult['par5strokes'][9]}}</td>
+										<td>{{$gameResult['par5strokes'][10]}}</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1130,8 +1114,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par5strokes][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par5strokes][20]" /></td>
+										<td>{{$gameResult['par5strokes'][19]}}</td>
+										<td>{{$gameResult['par5strokes'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR5SCOR</td>
@@ -1168,7 +1152,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['eagle'][6]}}</td>
 										<td>{{$gameResult['eagle'][7]}}</td>
 										<td>{{$gameResult['eagle'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[eagle][9]" /></td>
+										<td>{{$gameResult['eagle'][9]}}</td>
 										<td>{{$gameResult['eagle'][10]}}</td>
 										<td>{{$gameResult['eagle'][11]}}</td>
 										<td>{{$gameResult['eagle'][12]}}</td>
@@ -1178,8 +1162,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['eagle'][16]}}</td>
 										<td>{{$gameResult['eagle'][17]}}</td>
 										<td>{{$gameResult['eagle'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[eagle][19]" /></td>
-										<td><input type="hidden" Name="gameResult[eagle][20]" /></td>
+										<td>{{$gameResult['eagle'][19]}}</td>
+										<td>{{$gameResult['eagle'][20]}}</td>
 									</tr>
 									<tr>
 										<td>BIRDIE</td>
@@ -1192,7 +1176,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['birdie'][6]}}</td>
 										<td>{{$gameResult['birdie'][7]}}</td>
 										<td>{{$gameResult['birdie'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[birdie][9]" /></td>
+										<td>{{$gameResult['birdie'][9]}}</td>
 										<td>{{$gameResult['birdie'][10]}}</td>
 										<td>{{$gameResult['birdie'][11]}}</td>
 										<td>{{$gameResult['birdie'][12]}}</td>
@@ -1202,8 +1186,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['birdie'][16]}}</td>
 										<td>{{$gameResult['birdie'][17]}}</td>
 										<td>{{$gameResult['birdie'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[birdie][19]" /></td>
-										<td><input type="hidden" Name="gameResult[birdie][20]" /></td>
+										<td>{{$gameResult['birdie'][19]}}</td>
+										<td>{{$gameResult['birdie'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PAR</td>
@@ -1216,7 +1200,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['par'][6]}}</td>
 										<td>{{$gameResult['par'][7]}}</td>
 										<td>{{$gameResult['par'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[par][9]" /></td>
+										<td>{{$gameResult['par'][9]}}</td>
 										<td>{{$gameResult['par'][10]}}</td>
 										<td>{{$gameResult['par'][11]}}</td>
 										<td>{{$gameResult['par'][12]}}</td>
@@ -1226,8 +1210,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['par'][16]}}</td>
 										<td>{{$gameResult['par'][17]}}</td>
 										<td>{{$gameResult['par'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[par][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par][20]" /></td>
+										<td>{{$gameResult['par'][19]}}</td>
+										<td>{{$gameResult['par'][20]}}</td>
 									</tr>
 									<tr>
 										<td>BOGEY</td>
@@ -1240,7 +1224,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['bogey'][6]}}</td>
 										<td>{{$gameResult['bogey'][7]}}</td>
 										<td>{{$gameResult['bogey'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[bogey][9]" /></td>
+										<td>{{$gameResult['bogey'][9]}}</td>
 										<td>{{$gameResult['bogey'][10]}}</td>
 										<td>{{$gameResult['bogey'][11]}}</td>
 										<td>{{$gameResult['bogey'][12]}}</td>
@@ -1250,8 +1234,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['bogey'][16]}}</td>
 										<td>{{$gameResult['bogey'][17]}}</td>
 										<td>{{$gameResult['bogey'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[bogey][19]" /></td>
-										<td><input type="hidden" Name="gameResult[bogey][20]" /></td>
+										<td>{{$gameResult['bogey'][19]}}</td>
+										<td>{{$gameResult['bogey'][20]}}</td>
 									</tr>
 									<tr>
 										<td>DBLBOGEY</td>
@@ -1264,7 +1248,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['dblbogey'][6]}}</td>
 										<td>{{$gameResult['dblbogey'][7]}}</td>
 										<td>{{$gameResult['dblbogey'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[dblbogey][9]" /></td>
+										<td>{{$gameResult['dblbogey'][9]}}</td>
 										<td>{{$gameResult['dblbogey'][10]}}</td>
 										<td>{{$gameResult['dblbogey'][11]}}</td>
 										<td>{{$gameResult['dblbogey'][12]}}</td>
@@ -1274,8 +1258,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['dblbogey'][16]}}</td>
 										<td>{{$gameResult['dblbogey'][17]}}</td>
 										<td>{{$gameResult['dblbogey'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[dblbogey][19]" /></td>
-										<td><input type="hidden" Name="gameResult[dblbogey][20]" /></td>
+										<td>{{$gameResult['dblbogey'][19]}}</td>
+										<td>{{$gameResult['dblbogey'][20]}}</td>
 									</tr>
 									<tr>
 										<td>OTHER</td>
@@ -1288,7 +1272,7 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['other'][6]}}</td>
 										<td>{{$gameResult['other'][7]}}</td>
 										<td>{{$gameResult['other'][8]}}</td>
-										<td><input type="hidden" Name="gameResult[other][9]" /></td>
+										<td>{{$gameResult['other'][9]}}</td>
 										<td>{{$gameResult['other'][10]}}</td>
 										<td>{{$gameResult['other'][11]}}</td>
 										<td>{{$gameResult['other'][12]}}</td>
@@ -1298,8 +1282,8 @@ $gameResult = json_decode($gameResult, true);
 										<td>{{$gameResult['other'][16]}}</td>
 										<td>{{$gameResult['other'][17]}}</td>
 										<td>{{$gameResult['other'][18]}}</td>
-										<td><input type="hidden" Name="gameResult[other][19]" /></td>
-										<td><input type="hidden" Name="gameResult[other][20]" /></td>
+										<td>{{$gameResult['other'][19]}}</td>
+										<td>{{$gameResult['other'][20]}}</td>
 									</tr>
 									<tr>
 										<td>PLAYED HOLES</td>
@@ -1346,3 +1330,4 @@ $gameResult = json_decode($gameResult, true);
 		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 	</body>
 </html>
+@stop

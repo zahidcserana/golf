@@ -54,8 +54,8 @@
           <ul class="nav nav-sidebar">
 
             <li class="active"><a href="{{ URL::to('/') }}">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="{{$asset}}form">Add Course</a></li>
-            <li><a href="{{$asset}}list">View List</a></li>
+            <li><a href="{{$asset}}form">Add Round</a></li>
+            <li><a href="{{$asset}}list">Round List</a></li>
             
             
           </ul>
