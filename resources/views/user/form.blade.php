@@ -2986,7 +2986,7 @@
     			$('.putt_make_30_out').on("change, keyup" , MakePercentage30);
     			$('.putt_opp_30_out').on("change, keyup" , MakePercentage30);
     			$('.putt_opp_30_in').on("change, keyup" , MakePercentage30);
-
+  
     		});
 		</script>
 	</body>
