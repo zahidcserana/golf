@@ -1311,6 +1311,160 @@ $gameResult = json_decode($gameResult, true);
 									</tr>
 							</table>
 						</div>
+
+						<br>
+						<br>
+						<br>
+						<div class="table-responsive">
+							<table class="table">
+								<tr style="background: chocolate;">
+									<th>PAR 3 SCORING</th>
+									<th>PAR 4 SCORING</th>
+									<th>PAR 5 SCORING</th>
+									<th>#PAR3</th>
+									<th>#PAR4</th>
+									<th>#PAR5</th>
+								</tr>
+								<tr>
+									<td>3.50</td>
+									<td>4.50</td>
+									<td>4.20</td>
+									<td>4</td>
+									<td>10</td>
+									<td>4</td>
+								</tr>
+								<tr style="background: red;">
+									<th>EAGLES</th>
+									<th>BIRDIES</th>
+									<th>PARS</th>
+									<th>BOGEYS</th>
+									<th>DBOGEYS</th>
+									<th>OTHERS</th>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>10</td>
+									<td>5</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr style="background: deepskyblue;">
+									<th>FAIRWAYS</th>
+									<th>FIR%</th>
+									<th>GREENS</th>
+									<th>GIR%</th>
+									<th>PLAYED HOLES</th>
+									<th># 18 HOLE RDS</th>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>36%</td>
+									<td>13</td>
+									<td>72%</td>
+									<td>18</td>
+									<td>1</td>
+								</tr>
+								<tr style="background: brown;">
+									<th>SCRAMBLE OPP</th>
+									<th>SCRAMBL SAV</th>
+									<th>SCRAMBLE %</th>
+									<th>SAND SAVE OPP</th>
+									<th>SAND SAVES</th>
+									<th>SAND SAVE %</th>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>2</td>
+									<td>40%</td>
+									<td>2</td>
+									<td>2</td>
+									<td>100%</td>
+								</tr>
+								<tr style="background: yellow;">
+									<th>MISSED GIR</th>
+									<th>PUTT 1 NOGIR</th>
+									<th>AVG DIST. CHIP</th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>39</td>
+									<td>7.80</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr style="background: green;">
+									<th>TOTAL PUTTS</th>
+									<th>PUTTS/HOLE</th>
+									<th>AVG. SCORE</th>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>33</td>
+									<td>1.83</td>
+									<td>74.00</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th style="background: rgba(0,191,255,1);">Putts < 5'</th>
+									<th style="background: rgba(0,191,255,0.8);">Putts 5' < 9'</th>
+									<th  style="background: rgba(0,191,255,0.6);">Putts 10' < 19'</th>
+									<th style="background: rgba(0,191,255,0.4);">Putts 20' < 29'</th>
+									<th style="background: rgba(0,191,255,0.2);">Putts 30'+</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>17</td>
+									<td>3</td>
+									<td>7</td>
+									<td>9</td>
+									<td>2</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th style="background: rgba(0,191,255,1);">Putts Made < 5'</th>
+									<th style="background: rgba(0,191,255,0.8);">Putts Made 5' < 9'</th>
+									<th style="background: rgba(0,191,255,0.6);">Putts Made 10' < 19'</th>
+									<th style="background: rgba(0,191,255,0.4);">Putts Made 20' < 29'</th>
+									<th style="background: rgba(0,191,255,0.2);">Putts Made 30'+</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>15</td>
+									<td>1</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th style="background: rgba(0,191,255,1);">Make % < 5'</th>
+									<th style="background: rgba(0,191,255,0.8);">Make % 5' < 9'</th>
+									<th style="background: rgba(0,191,255,0.6);">Make % 10' < 19'</th>
+									<th style="background: rgba(0,191,255,0.4);">Make % 20' < 29'</th>
+									<th style="background: rgba(0,191,255,0.2);">Make % 30'+</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td>88%</td>
+									<td>33%</td>
+									<td>4%</td>
+									<td>2%</td>
+									<td>1%</td>
+									<td></td>
+								</tr>
+							
+							</table>
+						</div>
+
 					</div>
 					
 				</div>
@@ -1323,11 +1477,7 @@ $gameResult = json_decode($gameResult, true);
 		<script src="js/holder.min.js"></script>
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
 		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-		<script>
-		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-		ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-		</script>
-		<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	
 	</body>
 </html>
 @stop
