@@ -540,27 +540,27 @@
 			
 									<tr>
 										<td>PUTT_MAKE_&lt;5</td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][0]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][1]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][2]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][3]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][4]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][5]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][6]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][7]" /></td>
-										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][8]" /></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][0]" id='putt_make_5_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][1]" id='putt_make_5_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][2]" id='putt_make_5_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][3]" id='putt_make_5_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][4]" id='putt_make_5_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][5]" id='putt_make_5_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][6]" id='putt_make_5_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][7]" id='putt_make_5_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][8]" id='putt_make_5_out_8' readonly="readonly"/></td>
 
 										<td><input id ="putt_make_5_out_sum" readonly="readonly" Name="gameResult[putt_make_<5][out_sum]" /></td>
 
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][9]" /></td>
-										<td class="numeric"><input class="putt_make_5_in" type="text" Name="gameResult[putt_make_<5][input][10]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][11]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][12]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][13]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][14]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][15]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][16]" /></td>
-										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][17]" /></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][9]" id='putt_make_5_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in" type="text" Name="gameResult[putt_make_<5][input][10]" id='putt_make_5_in_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][11]" id='putt_make_5_in_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][12]" id='putt_make_5_in_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][13]" id='putt_make_5_in_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][14]" id='putt_make_5_in_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][15]" id='putt_make_5_in_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][16]" id='putt_make_5_in_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][17]" id='putt_make_5_in_8' readonly="readonly"/></td>
 										
 										<td><input id="putt_make_5_in_sum" readonly="readonly" Name="gameResult[putt_make_<5][in_sum]" /></td>
 										<td><input id="putt_make_5_tot" readonly="readonly" Name="gameResult[putt_make_<5][tot]" /></td>
@@ -568,27 +568,27 @@
 
 									<tr>
 										<td>PUTT_OPP_5-9</td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][0]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][1]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][2]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][3]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][4]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][5]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][6]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][7]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][8]" /></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][0]" id='putt_opp_5_9_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][1]" id='putt_opp_5_9_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][2]" id='putt_opp_5_9_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][3]" id='putt_opp_5_9_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][4]" id='putt_opp_5_9_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][5]" id='putt_opp_5_9_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][6]" id='putt_opp_5_9_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][7]" id='putt_opp_5_9_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][8]" id='putt_opp_5_9_out_8' readonly="readonly"/></td>
 
-										<td><input id="putt_opp_5_9_out_sum" readonly="readonly" Name="gameResult[putt_opp_5-9][out_sum]" /></td>
+										<td><input id="putt_opp_5_9_out_sum" readonly="readonly" Name="gameResult[putt_opp_5-9][out_sum]" id='putt_opp_5_9_in_8' readonly="readonly"/></td>
 
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][9]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][10]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][11]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][12]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][13]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][14]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][15]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][16]" /></td>
-										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][17]" /></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][9]" id='putt_opp_5_9_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][10]" id='putt_opp_5_9_in_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][11]" id='putt_opp_5_9_in_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][12]" id='putt_opp_5_9_in_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][13]" id='putt_opp_5_9_in_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][14]" id='putt_opp_5_9_in_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][15]" id='putt_opp_5_9_in_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][16]" id='putt_opp_5_9_in_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][17]" id='putt_opp_5_9_in_8' readonly="readonly"/></td>
 										
 										
 										<td><input id="putt_opp_5_9_in_sum" readonly="readonly" Name="gameResult[putt_opp_5-9][in_sum]" /></td>
@@ -597,27 +597,27 @@
 
 									<tr>
 										<td>PUTT_MAKE_5-9</td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][0]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][1]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][2]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][3]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][4]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][5]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][6]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][7]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][8]" /></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][0]" id='putt_make_5_9_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][1]" id='putt_make_5_9_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][2]" id='putt_make_5_9_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][3]" id='putt_make_5_9_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][4]" id='putt_make_5_9_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][5]" id='putt_make_5_9_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][6]" id='putt_make_5_9_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][7]" id='putt_make_5_9_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][8]" id='putt_make_5_9_out_8' readonly="readonly"/></td>
 
 										<td><input id="putt_make_5_9_out_sum" readonly="readonly" Name="gameResult[putt_make_5-9][out_sum]" /></td>
 
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][9]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][10]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][11]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][12]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][13]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][14]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][15]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][16]" /></td>
-										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][17]" /></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][9]" id='putt_make_5_9_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][10]" id='putt_make_5_9_in_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][11]" id='putt_make_5_9_in_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][12]" id='putt_make_5_9_in_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][13]" id='putt_make_5_9_in_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][14]" id='putt_make_5_9_in_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][15]" id='putt_make_5_9_in_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][16]" id='putt_make_5_9_in_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][17]" id='putt_make_5_9_in_8' readonly="readonly"/></td>
 										
 										<td><input id="putt_make_5_9_in_sum" readonly="readonly" Name="gameResult[putt_make_5-9][in_sum]" /></td>
 										<td><input id="putt_make_5_9_tot" readonly="readonly" Name="gameResult[putt_make_5-9][tot]" /></td>
@@ -625,27 +625,28 @@
 
 									<tr>
 										<td>PUTT_OPP_10-19</td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][0]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][1]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][2]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][3]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][4]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][5]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][6]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][7]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][8]" /></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][0]" id='putt_opp_10_19_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][1]" id='putt_opp_10_19_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][2]" id='putt_opp_10_19_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][3]" id='putt_opp_10_19_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][4]" id='putt_opp_10_19_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][5]" id='putt_opp_10_19_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][6]" id='putt_opp_10_19_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][7]" id='putt_opp_10_19_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][8]" id='putt_opp_10_19_out_8' readonly="readonly"/></td>
 
 										<td><input id="putt_opp_10_19_out_sum" readonly="readonly" Name="gameResult[putt_opp_10-19][out_sum]" /></td>
 
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][10]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][11]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][12]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][13]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][14]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][15]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][16]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][17]" /></td>
-										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][18]" /></td>
+										
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][9]" id='putt_opp_10_19_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][10]" id='putt_opp_10_19_in_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][11]" id='putt_opp_10_19_in_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][12]" id='putt_opp_10_19_in_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][13]" id='putt_opp_10_19_in_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][14]" id='putt_opp_10_19_in_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][15]" id='putt_opp_10_19_in_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][16]" id='putt_opp_10_19_in_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][17]" id='putt_opp_10_19_in_8' readonly="readonly"/></td>
 										
 										<td><input id="putt_opp_10_19_in_sum" readonly="readonly" Name="gameResult[putt_opp_10-19][in_sum]" /></td>
 										<td><input id="putt_opp_10_19_tot" readonly="readonly" Name="gameResult[putt_opp_10-19][tot]" /></td>
@@ -653,27 +654,27 @@
 
 									<tr>
 										<td>PUTT_MAKE_10-19</td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][0]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][1]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][2]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][3]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][4]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][5]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][6]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][7]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][8]" /></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][0]" id='putt_make_10_19_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][1]" id='putt_make_10_19_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][2]" id='putt_make_10_19_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][3]" id='putt_make_10_19_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][4]" id='putt_make_10_19_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][5]" id='putt_make_10_19_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][6]" id='putt_make_10_19_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][7]" id='putt_make_10_19_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][8]" id='putt_make_10_19_out_8' readonly="readonly"/></td>
 
 										<td><input id="putt_make_10_19_out_sum" readonly="readonly" Name="gameResult[putt_make_10-19][out_sum]" /></td>
 
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][9]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][10]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][11]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][12]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][13]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][14]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][15]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][16]" /></td>
-										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][17]" /></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][9]" id='putt_make_10_19_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][10]" id='putt_make_10_19_in_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][11]" id='putt_make_10_19_in_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][12]" id='putt_make_10_19_in_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][13]" id='putt_make_10_19_in_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][14]" id='putt_make_10_19_in_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][15]" id='putt_make_10_19_in_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][16]" id='putt_make_10_19_in_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][17]" id='putt_make_10_19_in_8' readonly="readonly"/></td>
 										
 										<td><input id="putt_make_10_19_in_sum" readonly="readonly" Name="gameResult[putt_make_10-19][in_sum]" /></td>
 										<td><input id="putt_make_10_19_tot" readonly="readonly" Name="gameResult[putt_make_10-19][tot]" /></td>
@@ -681,27 +682,27 @@
 									
 									<tr>
 										<td>PUTT_OPP_20-29</td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][0]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][1]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][2]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][3]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][4]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][5]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][6]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][7]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][8]" /></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][0]" id='putt_opp_20_29_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][1]" id='putt_opp_20_29_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][2]" id='putt_opp_20_29_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][3]" id='putt_opp_20_29_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][4]" id='putt_opp_20_29_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][5]" id='putt_opp_20_29_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][6]" id='putt_opp_20_29_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][7]" id='putt_opp_20_29_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][8]" id='putt_opp_20_29_out_8' readonly="readonly"/></td>
 
 										<td><input id="putt_opp_20_29_out_sum" readonly="readonly" Name="gameResult[putt_opp_20-29][out_sum]" /></td>
 
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][10]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][11]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][12]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][13]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][14]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][15]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][16]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][17]" /></td>
-										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][18]" /></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][10]" id='putt_opp_20_29_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][11]" id='putt_opp_20_29_in_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][12]" id='putt_opp_20_29_in_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][13]" id='putt_opp_20_29_in_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][14]" id='putt_opp_20_29_in_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][15]" id='putt_opp_20_29_in_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][16]" id='putt_opp_20_29_in_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][17]" id='putt_opp_20_29_in_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][18]" id='putt_opp_20_29_in_8' readonly="readonly"/></td>
 										
 										<td><input id="putt_opp_20_29_in_sum" readonly="readonly" Name="gameResult[putt_opp_20-29][19]" /></td>
 										<td><input id="putt_opp_20_29_tot" readonly="readonly" Name="gameResult[putt_opp_20-29][20]" /></td>
@@ -709,55 +710,55 @@
 
 									<tr>
 										<td>PUTT_MAKE_20-29</td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][0]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][1]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][2]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][3]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][4]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][5]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][6]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][7]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][8]" /></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][0]" id="putt_make_20_29_out_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][1]" id="putt_make_20_29_out_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][2]" id="putt_make_20_29_out_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][3]" id="putt_make_20_29_out_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][4]" id="putt_make_20_29_out_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][5]" id="putt_make_20_29_out_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][6]" id="putt_make_20_29_out_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][7]" id="putt_make_20_29_out_7" readonly="readonly" /></td>
+										<td class="numeric"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][8]" id="putt_make_20_29_out_8" readonly="readonly"/></td>
 
 										<td><input id="putt_make_20_29_out_sum" readonly="readonly" Name="gameResult[putt_make_20-29][out_sum]" /></td>
 
 
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][9]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][10]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][11]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][12]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][13]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][14]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][15]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][16]" /></td>
-										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][17]" /></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][9]" id="putt_make_20_29_in_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][10]" id="putt_make_20_29_in_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][11]" id="putt_make_20_29_in_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][12]" id="putt_make_20_29_in_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][13]" id="putt_make_20_29_in_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][14]" id="putt_make_20_29_in_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][15]" id="putt_make_20_29_in_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][16]" id="putt_make_20_29_in_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][17]" id="putt_make_20_29_in_8" readonly="readonly"/></td>
 
 										<td><input id="putt_make_20_29_in_sum" readonly="readonly" Name="gameResult[putt_make_20-29][in_sum]" /></td>
 										<td><input id="putt_make_20_29_tot" readonly="readonly" Name="gameResult[putt_make_20-29][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_30+</td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][0]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][1]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][2]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][3]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][4]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][5]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][6]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][7]" /></td>
-										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][8]" /></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][0]" id="putt_opp_30_out_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][1]" id="putt_opp_30_out_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][2]" id="putt_opp_30_out_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][3]" id="putt_opp_30_out_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][4]" id="putt_opp_30_out_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][5]" id="putt_opp_30_out_5" readonly="readonly" /></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][6]" id="putt_opp_30_out_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][7]" id="putt_opp_30_out_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][8]" id="putt_opp_30_out_8" readonly="readonly"/></td>
 
 										<td><input id ="putt_opp_30_out_sum" readonly="readonly" Name="gameResult[putt_opp_30+][out_sum]" /></td>
 
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][9]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in" type="text" Name="gameResult[putt_opp_30+][input][10]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][11]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][12]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][13]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][14]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][15]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][16]" /></td>
-										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][17]" /></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][9]" id="putt_opp_30_in_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in" type="text" Name="gameResult[putt_opp_30+][input][10]" id="putt_opp_30_in_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][11]" id="putt_opp_30_in_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][12]" id="putt_opp_30_in_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][13]" id="putt_opp_30_in_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][14]" id="putt_opp_30_in_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][15]" id="putt_opp_30_in_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][16]" id="putt_opp_30_in_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][17]" id="putt_opp_30_in_8" readonly="readonly"/></td>
 										
 										<td><input id="putt_opp_30_in_sum" readonly="readonly" Name="gameResult[putt_opp_30+][in_sum]" /></td>
 										<td><input id="putt_opp_30_tot" readonly="readonly" Name="gameResult[putt_opp_30+][tot]" /></td>
@@ -765,27 +766,27 @@
 
 									<tr>
 										<td>PUTT_Make_30+</td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][0]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][1]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][2]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][3]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][4]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][5]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][6]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][7]" /></td>
-										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][8]" /></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][0]" id="putt_make_30_out_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][1]" id="putt_make_30_out_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][2]" id="putt_make_30_out_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][3]" id="putt_make_30_out_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][4]" id="putt_make_30_out_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][5]" id="putt_make_30_out_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][6]" id="putt_make_30_out_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][7]" id="putt_make_30_out_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][8]" id="putt_make_30_out_8" readonly="readonly"/></td>
 
-										<td><input id ="putt_make_30_out_sum" readonly="readonly" Name="gameResult[putt_make_30+][out_sum]" /></td>
+										<td><input id ="putt_make_30_out_sum" readonly="readonly" Name="gameResult[putt_make_30+][out_sum]" id="putt_make_30_in_0" readonly="readonly"/></td>
 
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][9]" /></td>
-										<td class="numeric"><input class="putt_make_30_in" type="text" Name="gameResult[putt_make_30+][input][10]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][11]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][12]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][13]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][14]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][15]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][16]" /></td>
-										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][17]" /></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][9]" id="putt_make_30_in_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in" type="text" Name="gameResult[putt_make_30+][input][10]" id="putt_make_30_in_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][11]" id="putt_make_30_in_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][12]" id="putt_make_30_in_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][13]" id="putt_make_30_in_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][14]" id="putt_make_30_in_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][15]" id="putt_make_30_in_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][16]" id="putt_make_30_in_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][17]" id="putt_make_30_in_8" readonly="readonly"/></td>
 										
 										<td><input id="putt_make_30_in_sum" readonly="readonly" Name="gameResult[putt_make_30+][in_sum]" /></td>
 										<td><input id="putt_make_30_tot" readonly="readonly" Name="gameResult[putt_make_30+][tot]" /></td>
@@ -802,7 +803,7 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][out_sum]" /></td>
+										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][out_sum]" id='nogir_dist_putt_1_out_sum'/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -812,8 +813,8 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][in_sum]" /></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][tot]" /></td>
+										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][in_sum]" id='nogir_dist_putt_1_in_sum'/></td>
+										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][tot]" id='nogir_dist_putt_1_tot' /></td>
 									</tr>
 									<tr>
 										<td>NO_GIR</td>
@@ -826,7 +827,7 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input id="no_gir_out" readonly="readonly" Name="gameResult[no_gir][out_sum]" /></td>
+										<td><input readonly="readonly" Name="gameResult[no_gir][out_sum]" id='no_gir_out_sum'/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -836,8 +837,8 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input id="no_gir_in" readonly="readonly" Name="gameResult[no_gir][in_sum]" /></td>
-										<td><input id="no_gir_tot" readonly="readonly" Name="gameResult[no_gir][tot]" /></td>
+										<td><input readonly="readonly" Name="gameResult[no_gir][in_sum]" id='no_gir_in_sum'/></td>
+										<td><input readonly="readonly" Name="gameResult[no_gir][tot]" id='no_gir_tot'/></td>
 									</tr>
 									<tr>
 										<td>AVG_DIST_HOL_NOGIR</td>
@@ -850,7 +851,7 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][out_sum]" /></td>
+										<td><input type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][out_sum]" id="avg_dist_hol_nogir_out_sum"/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -860,33 +861,33 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][in_sum]" /></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][tot]" /></td>
+										<td><input type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][in_sum]" id="avg_dist_hol_nogir_in_sum"/></td>
+										<td><input type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][tot]" id="avg_dist_hol_nogir_tot" /></td>
 									</tr>
 									
 									<tr>
 										<td>SCRAMBL_OPP</td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][0]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][1]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][2]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][3]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][4]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][5]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][6]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][7]" /></td>
-										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][8]" /></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][0]" id='scrambl_opp_out_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][1]" id='scrambl_opp_out_1' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][2]" id='scrambl_opp_out_2' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][3]" id='scrambl_opp_out_3' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][4]" id='scrambl_opp_out_4' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][5]" id='scrambl_opp_out_5' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][6]" id='scrambl_opp_out_6' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][7]" id='scrambl_opp_out_7' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][8]" id='scrambl_opp_out_8' readonly="readonly"/></td>
 
 										<td><input id ="scrambl_opp_out_sum" readonly="readonly" Name="gameResult[scrambl_opp][out_sum]" /></td>
 
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][9]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in" type="text" Name="gameResult[scrambl_opp][input][10]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][11]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][12]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][13]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][14]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][15]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][16]" /></td>
-										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][17]" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][9]" id='scrambl_opp_in_0' readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_opp_in" type="text" Name="gameResult[scrambl_opp][input][10]" id='scrambl_opp_in_1' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][11]" id='scrambl_opp_in_2' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][12]" id='scrambl_opp_in_3' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][13]" id='scrambl_opp_in_4' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][14]" id='scrambl_opp_in_5' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][15]" id='scrambl_opp_in_6' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][16]" id='scrambl_opp_in_7' readonly="readonly" /></td>
+										<td class="numeric"><input class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][17]" id='scrambl_opp_in_8' readonly="readonly" /></td>
 										
 										<td><input id="scrambl_opp_in_sum" readonly="readonly" Name="gameResult[scrambl_opp][in_sum]" /></td>
 										<td><input id="scrambl_opp_tot" readonly="readonly" Name="gameResult[scrambl_opp][tot]" /></td>
@@ -894,27 +895,27 @@
 
 									<tr>
 										<td>SCRAMBL_SAV</td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][0]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][1]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][2]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][3]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][4]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][5]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][6]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][7]" /></td>
-										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][8]" /></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][0]" id="scrambl_sav_out_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][1]" id="scrambl_sav_out_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][2]" id="scrambl_sav_out_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][3]" id="scrambl_sav_out_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][4]" id="scrambl_sav_out_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][5]" id="scrambl_sav_out_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][6]" id="scrambl_sav_out_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][7]" id="scrambl_sav_out_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][8]" id="scrambl_sav_out_8" readonly="readonly"/></td>
 
 										<td><input id ="scrambl_sav_out_sum" readonly="readonly" Name="gameResult[scrambl_sav][out_sum]" /></td>
 
-										<td class="numeric"><input class="scrambl_sav_in" type="text" Name="gameResult[scrambl_sav][input][10]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][11]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][12]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][13]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][14]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][15]" /></td>[input]
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][16]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][17]" /></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][18]" /></td>
+										<td class="numeric"><input class="scrambl_sav_in" type="text" Name="gameResult[scrambl_sav][input][10]" id="scrambl_sav_in_0"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][11]" id="scrambl_sav_in_1"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][12]" id="scrambl_sav_in_2"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][13]" id="scrambl_sav_in_3"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][14]" id="scrambl_sav_in_4"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][15]" id="scrambl_sav_in_5"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][16]" id="scrambl_sav_in_6"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][17]" id="scrambl_sav_in_7"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][18]" id="scrambl_sav_in_8"/></td>
 										
 										<td><input id="scrambl_sav_in_sum" readonly="readonly" Name="gameResult[scrambl_sav][in_sum]" /></td>
 										<td><input id="scrambl_sav_tot" readonly="readonly" Name="gameResult[scrambl_sav][tot]" /></td>
@@ -1640,7 +1641,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="{{$asset}}js/jquery.min.js"></script>
 		<script src="{{$asset}}js/bootstrap.min.js"></script>
 		<script src="{{$asset}}js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript">

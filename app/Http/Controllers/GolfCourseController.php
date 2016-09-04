@@ -17,10 +17,14 @@ class GolfCourseController extends Controller
 		$golfCourseObj->user_id = $userId;
 		$golfCourseObj->data = json_encode($request->gameResult);
 		$golfCourseObj->location = $request->nameFromUser;
-		//$var = $request->dateFromUser;
-		$date = \DateTime::createFromFormat('m/d/Y', $request->dateFromUser);
+		
+		if(strlen($request->dateFromUser)>0)
+			$date = \DateTime::createFromFormat('m/d/Y', $request->dateFromUser);
+		else
+			$date = new \DateTime();
 		$newDate = $date->format('Y-m-d');
 		$golfCourseObj->date = $newDate;
+		
 		$golfCourseObj->created_at = $datetime;
 		$golfCourseObj->updated_at = $datetime;
 		$golfCourseObj->save();
