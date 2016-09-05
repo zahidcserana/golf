@@ -255,7 +255,7 @@ $(document).ready(function() {
 	$(".putt_3_out").on("change, keyup" ,CheckPutt3);
 
 
-	function SandOpp()
+	/*function SandOpp()
 	{
 		var inSum = 0;
 		$('.sand_opp_in').each(function(){
@@ -279,7 +279,7 @@ $(document).ready(function() {
 		$("#sand_opp_out_sum").val(outSum);
 
 		var totalSum = inSum+outSum;
-		$("#sand_opp_tot").val(totalSum);
+		//$("#sand_opp_tot").val(totalSum);
 		$("#sand_opp_equation").val(totalSum);
 	}
 
@@ -316,7 +316,7 @@ $(document).ready(function() {
 	}
 
 	$('.sand_sav_in').on("change, keyup" , SandSav);
-	$(".sand_sav_out").on("change, keyup" ,SandSav);
+	$(".sand_sav_out").on("change, keyup" ,SandSav);*/
 
 	function Penalties()
 	{
@@ -617,6 +617,7 @@ $(document).ready(function() {
 			   outSum = outSum + number;
 			}
 		});
+
 
 		$("#par_out_sum").val(outSum);
 
@@ -1990,15 +1991,14 @@ $(document).ready(function() {
 		else
 			averageDistInSum = Math.round( girDtistriBuitionIn * 10 / totalGirInHole) / 10;
 
-		var averageDistInTot;
+		var averageDistTot;
 		if(totalGirHoleTot==0)
-			averageDistInTot = 0;
+			averageDistTot = 0;
 		else
-			averageDistInTot = Math.round( totalGirHoleTot * 10 / totalGirHoleTot) / 10;
-
+			averageDistTot = Math.round( girDtistriBuitionTot * 10 / totalGirHoleTot) / 10;
 		$("#avg_dist_hol_nogir_out_sum").val(averageDistOutSum);
 		$("#avg_dist_hol_nogir_in_sum").val(averageDistInSum);
-		$("#avg_dist_hol_nogir_in_sum").val(averageDistInSum);
+		$("#avg_dist_hol_nogir_tot").val(averageDistTot);
 	}
 
 	$('.gir_out').on("change, keyup" , CalculateNoGirDistPutt1);
@@ -2029,18 +2029,19 @@ $(document).ready(function() {
 		{
 			var girOutValue = girOutList[index];
 			var opositeValue;
-			if( !isNan(girOutValue) && GetNumericValue(girOutValue)==0 )
+			if( !isNaN(girOutValue) && GetNumericValue(girOutValue)==0 )
 				opositeValue = 1;
 			else 
 				opositeValue = 0;
+
 			$("#scrambl_opp_out_"+index).val(opositeValue);
 			oppositeValueSumOut = oppositeValueSumOut + opositeValue;
 			///////////////calculate scramblSavOut
 			var scramblSavOut;
 			if( opositeValue==1 )
 			{
-				var holePairOutValue = isNan(holePairOutList[index])?0:GetNumericValue(holePairOutList[index]);
-				var scoreOutValue = isNan(scoreOutList[index])?0:GetNumericValue(scoreOutList[index]);
+				var holePairOutValue = isNaN(holePairOutList[index])?0:GetNumericValue(holePairOutList[index]);
+				var scoreOutValue = isNaN(scoreOutList[index])?0:GetNumericValue(scoreOutList[index]);
 				
 				scramblSavOut = (scoreOutValue<=holePairOutValue)?1:0;
 				scramblSavOutSum = scramblSavOutSum  + scramblSavOut;
@@ -2071,7 +2072,7 @@ $(document).ready(function() {
 		{
 			var girInValue = girInList[index];
 			var opositeValue;
-			if( !isNan(girInValue) && GetNumericValue(girInValue)==0 )
+			if( !isNaN(girInValue) && GetNumericValue(girInValue)==0 )
 				opositeValue = 1;
 			else 
 				opositeValue = 0;
@@ -2082,8 +2083,8 @@ $(document).ready(function() {
 			var scramblSavIn;
 			if( opositeValue==1 )
 			{
-				var holePairInValue = isNan(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
-				var scoreInValue = isNan(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
+				var holePairInValue = isNaN(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
+				var scoreInValue = isNaN(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
 				
 				scramblSavIn = (scoreInValue<=holePairInValue)?1:0;
 				scramblSavInSum = scramblSavInSum  + scramblSavIn;
@@ -2104,9 +2105,143 @@ $(document).ready(function() {
 		$("#scrambl_sav_in_sum").val(scramblSavInSum); 
 		$("#scrambl_sav_tot").val(scramblSavInTot);
 		$("#scramble_sav_equation").val(scramblSavInTot);
+
+		if(oppositeValueSumOut==0)
+			$("#scrambl_percentage_out_sum").val(0);
+		else
+			$("#scrambl_percentage_out_sum").val((scramblSavOut/oppositeValueSumOut*100).toFixed(0));
+
+		if(oppositeValueSumIn==0)
+			$("#scrambl_percentage_in_sum").val(0);
+		else
+			$("#scrambl_percentage_in_sum").val((scramblSavInSum/oppositeValueSumIn*100).toFixed(0));
+		if(oppositeValueSumTot==0)
+			$("#scrambl_percentage_sum").val(0);
+		else
+			$("#scrambl_percentage_sum").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0));
 	}
 	$('.gir_out').on("change, keyup" , CalculateScrambleRows);
 	$('.gir_in').on("change, keyup" , CalculateScrambleRows);
+
+	function CalculateSandRows()
+	{
+		//debugger;
+		var sandOppInSum = 0;
+		$('.sand_opp_in').each(function(){
+			var number = GetNumericValue(this.value);
+			if(isInt(number))
+			{
+			   sandOppInSum = sandOppInSum + number;
+			}
+		});
+		$("#sand_opp_in_sum").val(sandOppInSum);
+
+		var sandOppOutSum = 0;
+		$('.sand_opp_out').each(function(){
+			var number = GetNumericValue(this.value);
+			if(isInt(number))
+			{
+			   sandOppOutSum = sandOppOutSum + number;
+			}
+		});
+
+		$("#sand_opp_out_sum").val(sandOppOutSum);
+
+		var totalSandOppSum = sandOppInSum + sandOppOutSum;
+		$("#sand_opp_tot").val(totalSandOppSum);
+
+		var sandOppOutList = [];
+		$('.sand_opp_out').each(function(){
+			sandOppOutList.push( $(this).val() );
+		});
+
+		var holePairOutList = []; 
+		$('.hole_par_out').each(function(){
+			holePairOutList.push( $(this).val() );
+		});
+
+		var scoreOutList = []; 
+		$('.score_out').each(function(){
+			scoreOutList.push( $(this).val() );
+		});
+
+		var sandSavOutSum=0;
+		for(var index=0;index<9;index++)
+		{
+			var sandSavOut;
+			
+			if( sandOppOutList[index]==1 )
+			{
+				var holePairOutValue = isNaN(holePairOutList[index])?0:GetNumericValue(holePairOutList[index]);
+				var scoreOutValue = isNaN(scoreOutList[index])?0:GetNumericValue(scoreOutList[index]);
+				sandSavOut = (scoreOutValue<=holePairOutValue)?1:0;
+				sandSavOutSum = sandSavOutSum  + sandSavOut;
+			}
+			else
+				sandSavOut = "";
+			$("#sand_sav_out_"  + index).val(sandSavOut);
+		}
+		$("#sand_sav_out_sum").val(sandSavOutSum);
+
+
+		var sandOppInList = [];
+		$('.sand_opp_in').each(function(){
+			sandOppInList.push( $(this).val() );
+		});
+
+		var holePairInList = []; 
+		$('.hole_par_in').each(function(){
+			holePairInList.push( $(this).val() );
+		});
+
+		var scoreInList = []; 
+		$('.score_in').each(function(){
+			scoreInList.push( $(this).val() );
+		});
+		var sandSavInSum=0;
+		for(var index=0;index<9;index++)
+		{
+			var sandSavIn;
+			
+			if( sandOppInList[index]==1 )
+			{
+				var holePairInValue = isNaN(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
+				var scoreInValue = isNaN(scoreInList[index])?0:GetNumericValue(scoreInList[index]);
+				sandSavIn = (scoreInValue<=holePairInValue)?1:0;
+				sandSavInSum = sandSavInSum  + sandSavIn;
+			}
+			else
+				sandSavIn = "";
+			$("#sand_sav_in_"  + index).val(sandSavIn);
+
+		}
+		$("#sand_sav_in_sum").val(sandSavInSum);
+		var sandSavSum = sandSavOutSum + sandSavInSum;
+		$("#sand_sav_tot").val(sandSavSum);
+
+		if(sandOppOutSum==0)
+			$("#sand_percentage_out_sum").val(0);
+		else
+			$("#sand_percentage_out_sum").val((sandSavOutSum/sandOppOutSum*100).toFixed(0));
+
+		if(sandOppInSum==0)
+			$("#sand_percentage_in_sum").val(0);
+		else
+			$("#sand_percentage_in_sum").val((sandSavInSum/sandOppInSum*100).toFixed(0));
+
+		if(totalSandOppSum==0)
+			$("#sand_percentage_sum").val(0);
+		else
+			$("#sand_percentage_sum").val((sandSavSum/totalSandOppSum*100).toFixed(0));
+	}
+
+	$('.sand_opp_in').on("change, keyup" , CalculateSandRows);
+	$(".sand_opp_out").on("change, keyup" ,CalculateSandRows);
+	//$('.sand_opp_in').on("change, keyup" , CalculateSandRows);
+	//$(".sand_opp_out").on("change, keyup" ,CalculateSandRows);
+
+
+
 });
 
 

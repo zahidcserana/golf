@@ -907,15 +907,15 @@
 
 										<td><input id ="scrambl_sav_out_sum" readonly="readonly" Name="gameResult[scrambl_sav][out_sum]" /></td>
 
-										<td class="numeric"><input class="scrambl_sav_in" type="text" Name="gameResult[scrambl_sav][input][10]" id="scrambl_sav_in_0"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][11]" id="scrambl_sav_in_1"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][12]" id="scrambl_sav_in_2"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][13]" id="scrambl_sav_in_3"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][14]" id="scrambl_sav_in_4"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][15]" id="scrambl_sav_in_5"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][16]" id="scrambl_sav_in_6"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][17]" id="scrambl_sav_in_7"/></td>
-										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][18]" id="scrambl_sav_in_8"/></td>
+										<td class="numeric"><input class="scrambl_sav_in" type="text" Name="gameResult[scrambl_sav][input][10]" id="scrambl_sav_in_0" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][11]" id="scrambl_sav_in_1" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][12]" id="scrambl_sav_in_2" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][13]" id="scrambl_sav_in_3" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][14]" id="scrambl_sav_in_4" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][15]" id="scrambl_sav_in_5" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][16]" id="scrambl_sav_in_6" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][17]" id="scrambl_sav_in_7" readonly="readonly"/></td>
+										<td class="numeric"><input class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][18]" id="scrambl_sav_in_8" readonly="readonly"/></td>
 										
 										<td><input id="scrambl_sav_in_sum" readonly="readonly" Name="gameResult[scrambl_sav][in_sum]" /></td>
 										<td><input id="scrambl_sav_tot" readonly="readonly" Name="gameResult[scrambl_sav][tot]" /></td>
@@ -932,7 +932,7 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[scrambl%][out_sum]" /></td>
+										<td><input type="text" id="scrambl_percentage_out_sum" readonly="readonly" Name="gameResult[scrambl%][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -942,33 +942,33 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[scrambl%][in_sum]" /></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[scrambl%][tot]" /></td>
+										<td><input type="text" id="scrambl_percentage_in_sum" readonly="readonly" Name="gameResult[scrambl%][in_sum]" /></td>
+										<td><input type="text" id="scrambl_percentage_sum" readonly="readonly" Name="gameResult[scrambl%][tot]" /></td>
 									</tr>
 									
 									<tr>
 										<td>SAND_OPP</td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][0]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][1]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][2]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][3]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][4]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][5]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][6]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][7]" /></td>
-										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][8]" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][0]" id="sand_opp_out_0" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][1]" id="sand_opp_out_1" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][2]" id="sand_opp_out_2" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][3]" id="sand_opp_out_3" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][4]" id="sand_opp_out_4" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][5]" id="sand_opp_out_5" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][6]" id="sand_opp_out_6" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][7]" id="sand_opp_out_7" /></td>
+										<td class="numeric"><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][8]" id="sand_opp_out_8" /></td>
 
 										<td><input id ="sand_opp_out_sum" readonly="readonly" Name="gameResult[sand_opp][out_sum]" /></td>
 
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][9]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][10]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][11]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][12]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][13]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][14]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][15]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][16]" /></td>
-										<td class="numeric"><input class="sand_opp_in"  type="text" Name="gameResult[sand_opp][input][17]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_0" Name="gameResult[sand_opp][input][9]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_1" Name="gameResult[sand_opp][input][10]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_2" Name="gameResult[sand_opp][input][11]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_3" Name="gameResult[sand_opp][input][12]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_4" Name="gameResult[sand_opp][input][13]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_5" Name="gameResult[sand_opp][input][14]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_6" Name="gameResult[sand_opp][input][15]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_7" Name="gameResult[sand_opp][input][16]" /></td>
+										<td class="numeric"><input class="sand_opp_in"  type="text" id="sand_opp_in_8" Name="gameResult[sand_opp][input][17]" /></td>
 										
 										<td><input id="sand_opp_in_sum" readonly="readonly" Name="gameResult[sand_opp][in_sum]" /></td>
 										<td><input id="sand_opp_tot" readonly="readonly" Name="gameResult[sand_opp][tot]" /></td>
@@ -976,27 +976,27 @@
 
 									<tr>
 										<td>SAND_SAV</td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][0]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][1]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][2]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][3]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][4]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][5]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][6]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][7]" /></td>
-										<td class="numeric"><input class="sand_sav_out" type="text" Name="gameResult[sand_sav][input][8]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_0" readonly="readonly" Name="gameResult[sand_sav][input][0]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_1" readonly="readonly"  Name="gameResult[sand_sav][input][1]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_2" readonly="readonly"  Name="gameResult[sand_sav][input][2]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_3" readonly="readonly"  Name="gameResult[sand_sav][input][3]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_4" readonly="readonly"  Name="gameResult[sand_sav][input][4]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_5" readonly="readonly"  Name="gameResult[sand_sav][input][5]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_6" readonly="readonly"  Name="gameResult[sand_sav][input][6]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_7" readonly="readonly"  Name="gameResult[sand_sav][input][7]" /></td>
+										<td class="numeric"><input class="sand_sav_out" type="text" id="sand_sav_out_8" readonly="readonly"  Name="gameResult[sand_sav][input][8]" /></td>
 
 										<td><input id ="sand_sav_out_sum" readonly="readonly" Name="gameResult[sand_sav][out_sum]" /></td>
 
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][9]" /></td>
-										<td class="numeric"><input class="sand_sav_in" type="text" Name="gameResult[sand_sav][input][10]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][11]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][12]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][13]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][14]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][15]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][16]" /></td>
-										<td class="numeric"><input class="sand_sav_in"  type="text" Name="gameResult[sand_sav][input][17]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_0" readonly="readonly"  Name="gameResult[sand_sav][input][9]" /></td>
+										<td class="numeric"><input class="sand_sav_in" type="text" id="sand_sav_in_1" readonly="readonly" Name="gameResult[sand_sav][input][10]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_2" readonly="readonly" Name="gameResult[sand_sav][input][11]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_3" readonly="readonly" Name="gameResult[sand_sav][input][12]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_4" readonly="readonly" Name="gameResult[sand_sav][input][13]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_5" readonly="readonly" Name="gameResult[sand_sav][input][14]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_6" readonly="readonly" Name="gameResult[sand_sav][input][15]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_7" readonly="readonly" Name="gameResult[sand_sav][input][16]" /></td>
+										<td class="numeric"><input class="sand_sav_in"  type="text" id="sand_sav_in_8" readonly="readonly" Name="gameResult[sand_sav][input][17]" /></td>
 										
 										<td><input id="sand_sav_in_sum" readonly="readonly" Name="gameResult[sand_sav][in_sum]" /></td>
 										<td><input id="sand_sav_tot" readonly="readonly" Name="gameResult[sand_sav][tot]" /></td>
@@ -1014,7 +1014,9 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[sand%][out_sum]" /></td>
+										<td><input type="text" id="sand_percentage_out_sum" readonly="readonly" Name="gameResult[sand%][out_sum]" /></td>
+										<td class="black"></td>
+										<td class="black"></td>  
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1022,10 +1024,9 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[sand%][in_sum]" /></td>
-										<td><input type="text" readonly="readonly" Name="gameResult[sand%][tot]" /></td>
+										
+										<td><input type="text" id="sand_percentage_in_sum"  readonly="readonly" Name="gameResult[sand%][in_sum]" /></td>
+										<td><input type="text" id="sand_percentage_sum"  readonly="readonly" Name="gameResult[sand%][tot]" /></td>
 									</tr>
 									
 									<tr>
