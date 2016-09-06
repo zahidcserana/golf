@@ -54,7 +54,9 @@ class GolfCourseController extends Controller
 	{
 		$golfCourseObj = new GolfCourse;
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
-			return view('user.course_details', ['gameResult'=>($courseDetails->data)]);
+		$gameData = $courseDetails->data;
+		$gameResults = json_decode($gameData, true);
+		return view('user.course_details', ['gameResult'=>$gameResults, 'dates'=>$courseDetails->date, 'locationName'=>$courseDetails->location]);
 	}
 	public function Message($message)
     {

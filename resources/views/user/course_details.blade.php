@@ -2,8 +2,9 @@
 @section('content')
 <?php
 $asset = asset('/');
-$gameResult = json_decode($gameResult, true);
+
 ?>
+
 <!doctype html>
 <html class="no-js" lang="">
 	<head>
@@ -18,15 +19,18 @@ $gameResult = json_decode($gameResult, true);
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<link rel="stylesheet" href="{{$asset}}css/bootstrap.min.css">
+		<link href="{{$asset}}css/bootstrap-datepicker.css" rel="stylesheet">
 		<link rel="stylesheet" href="{{$asset}}css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{$asset}}css/style.css">
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<link href="{{$asset}}css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
 		<link href="{{$asset}}css/dashboard.css" rel="stylesheet">
+		
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 		<script src="{{$asset}}js/ie-emulation-modes-warning.js"></script>
+		
 		<style>
 			input{border:0px solid #000; margin:0; background:transparent; width:100%}
 			table tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;width: 30px;}
@@ -36,14 +40,22 @@ $gameResult = json_decode($gameResult, true);
 			/*table tr:first-child{background:#006400; color:#fff;font-weight: bold;}*/
 			table tr:nth-child(even){background:#fff;}
 			table tr:nth-child(odd){background:#ddd;}
-			
+			td.numeric{
+			    padding: 8px 0px !important;
+			}
 			.black{
 				background: #000;
 			}
 			.pink{
 				background: #FFB6C1;
 			}
+			.ash{
+				background:#ddd;
+			}
 		</style>
+		<head>
+    		
+		</head>
 	</head>
 	<body>
 		<!--[if lt IE 8]>
@@ -54,11 +66,26 @@ $gameResult = json_decode($gameResult, true);
 		<div class="container-fluid">
 			<div class="row">
 				<div class="main">
-					<h1 class="page-header">Round list</h1>
+					<h3 class="page-header">You can edit here</h3>
+					<form action = "{{ url('editForm/') }}" method = "post" align="center">
+						<input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
+					<div class="form-group">
+						<div class="col-md-2"><label>Location</label></div>
+						<div class="col-md-4">
+							{{$locationName}}
+						</div>
+						<div class="col-md-2"><label>Date</label></div>
+						<div class="col-md-4">
+							{{$dates}}
+						</div>
+					</div>
+					<br>
+					<br>
+					<br>
 					<div class="col-md-12">
 						<div class="table-responsive">
 							<table class="table table-striped">
-							
+									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
 										<td>1</td>
@@ -85,101 +112,121 @@ $gameResult = json_decode($gameResult, true);
 									</tr>
 									<tr>
 										<td>HOLE_PAR</td>
-										<td class="pink">{{$gameResult['hole_pair'][0]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][1]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][2]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][3]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][4]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][5]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][6]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][7]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][8]}}</td>
 
-										<td>{{$gameResult['hole_pair'][9]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][10]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][11]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][12]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][13]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][14]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][15]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][16]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][17]}}</td>
-										<td class="pink">{{$gameResult['hole_pair'][18]}}</td>
-										<td>{{$gameResult['hole_pair'][19]}}</td>
-										<td>{{$gameResult['hole_pair'][20]}}</td>
+										<td class="numeric pink"><input value="{{$gameResult['hole_pair']['input'][0]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][0]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][1]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][1]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][2]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][2]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][3]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][3]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][4]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][4]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][5]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][5]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][6]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][6]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][7]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][7]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][8]}}" class=hole_par_out type="text" Name="gameResult[hole_pair][input][8]" /></td>
+
+										<td><input value="{{$gameResult['hole_pair']['out_sum']}}"" id="hole_par_out_sum" readonly="readonly" Name="gameResult[hole_pair][out_sum]" /></td>
+
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][9]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][9]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][10]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][10]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][11]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][11]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][12]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][12]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][13]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][13]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][14]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][14]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][15]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][15]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][16]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][16]" /></td>
+										<td class="numeric  pink"><input value="{{$gameResult['hole_pair']['input'][17]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][17]" /></td>
+										
+										<td><input value="{{$gameResult['hole_pair']['in_sum']}}" id="hole_par_in_sum" readonly="readonly" Name="gameResult[hole_pair][in_sum]" /></td>
+
+										<td><input value="{{$gameResult['hole_pair']['tot']}}" id="hole_par_tot" readonly="readonly" Name="gameResult[hole_pair][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>SCORE</td>
-										<td>{{$gameResult['score'][0]}}</td>
-										<td>{{$gameResult['score'][1]}}</td>
-										<td>{{$gameResult['score'][2]}}</td>
-										<td>{{$gameResult['score'][3]}}</td>
-										<td>{{$gameResult['score'][4]}}</td>
-										<td>{{$gameResult['score'][5]}}</td>
-										<td>{{$gameResult['score'][6]}}</td>
-										<td>{{$gameResult['score'][7]}}</td>
-										<td>{{$gameResult['score'][8]}}</td>
-										<td>{{$gameResult['score'][9]}}</td>
-										<td>{{$gameResult['score'][10]}}</td>
-										<td>{{$gameResult['score'][11]}}</td>
-										<td>{{$gameResult['score'][12]}}</td>
-										<td>{{$gameResult['score'][13]}}</td>
-										<td>{{$gameResult['score'][14]}}</td>
-										<td>{{$gameResult['score'][15]}}</td>
-										<td>{{$gameResult['score'][16]}}</td>
-										<td>{{$gameResult['score'][17]}}</td>
-										<td>{{$gameResult['score'][18]}}</td>
-										<td>{{$gameResult['score'][19]}}</td>
-										<td>{{$gameResult['score'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][0]}}" class=" score_out" type="text" Name="gameResult[score][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][1]}}" class=" score_out" type="text" Name="gameResult[score][input][1]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][2]}}" class=" score_out" type="text" Name="gameResult[score][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][3]}}" class=" score_out" type="text" Name="gameResult[score][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][4]}}" class=" score_out" type="text" Name="gameResult[score][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][5]}}" class=" score_out" type="text" Name="gameResult[score][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][6]}}" class=" score_out" type="text" Name="gameResult[score][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][7]}}" class=" score_out" type="text" Name="gameResult[score][input][7]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][8]}}" class=" score_out" type="text" Name="gameResult[score][input][8]" /></td>
+
+										<td><input value="{{$gameResult['score']['out_sum']}}" id="score_out_sum" readonly="readonly" Name="gameResult[score][out_sum]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['score']['input'][9]}}" class=" score_in" type="text" Name="gameResult[score][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][10]}}" class=" score_in" type="text" Name="gameResult[score][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][11]}}" class=" score_in" type="text" Name="gameResult[score][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][12]}}" class=" score_in" type="text" Name="gameResult[score][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][13]}}" class=" score_in" type="text" Name="gameResult[score][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][14]}}" class=" score_in" type="text" Name="gameResult[score][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][15]}}" class=" score_in" type="text" Name="gameResult[score][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][16]}}" class=" score_in" type="text" Name="gameResult[score][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult['score']['input'][17]}}" class=" score_in" type="text" Name="gameResult[score][input][17]" /></td>
+										
+										<td><input value="{{$gameResult['score']['in_sum']}}" id ="score_in_sum" readonly="readonly" Name="gameResult[score][in_sum]" /></td>
+										<td><input value="{{$gameResult['score']['tot']}}" id="score_tot" Name="gameResult[score][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>FIR</td>
-										<td>{{$gameResult['fir'][0]}}</td>
-										<td>{{$gameResult['fir'][1]}}</td>
-										<td>{{$gameResult['fir'][2]}}</td>
-										<td>{{$gameResult['fir'][3]}}</td>
-										<td>{{$gameResult['fir'][4]}}</td>
-										<td>{{$gameResult['fir'][5]}}</td>
-										<td>{{$gameResult['fir'][6]}}</td>
-										<td>{{$gameResult['fir'][7]}}</td>
-										<td>{{$gameResult['fir'][8]}}</td>
-										<td>{{$gameResult['fir'][9]}}</td>
-										<td>{{$gameResult['fir'][10]}}</td>
-										<td>{{$gameResult['fir'][11]}}</td>
-										<td>{{$gameResult['fir'][12]}}</td>
-										<td>{{$gameResult['fir'][13]}}</td>
-										<td>{{$gameResult['fir'][14]}}</td>
-										<td>{{$gameResult['fir'][15]}}</td>
-										<td>{{$gameResult['fir'][16]}}</td>
-										<td>{{$gameResult['fir'][17]}}</td>
-										<td>{{$gameResult['fir'][18]}}</td>
-										<td>{{$gameResult['fir'][19]}}</td>
-										<td>{{$gameResult['fir'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][0]}}" class="fir_out" type="text" Name="gameResult[fir][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][1]}}" class="fir_out" type="text" Name="gameResult[fir][input][1]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][2]}}" class="fir_out" type="text" Name="gameResult[fir][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][3]}}" class="fir_out" type="text" Name="gameResult[fir][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][4]}}" class="fir_out" type="text" Name="gameResult[fir][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][5]}}" class="fir_out" type="text" Name="gameResult[fir][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][6]}}" class="fir_out" type="text" Name="gameResult[fir][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][7]}}" class="fir_out" type="text" Name="gameResult[fir][input][7]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][8]}}" class="fir_out" type="text" Name="gameResult[fir][input][8]" /></td>
+
+										<td><input value="{{$gameResult['fir']['out_sum']}}" id ="fir_out_sum" readonly="readonly" Name="gameResult[fir][out_sum]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][9]}}" class="fir_in"  type="text" Name="gameResult[fir][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][10]}}" class="fir_in" type="text" Name="gameResult[fir][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][11]}}" class="fir_in"  type="text" Name="gameResult[fir][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][12]}}" class="fir_in"  type="text" Name="gameResult[fir][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][13]}}" class="fir_in"  type="text" Name="gameResult[fir][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][14]}}" class="fir_in"  type="text" Name="gameResult[fir][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][15]}}" class="fir_in"  type="text" Name="gameResult[fir][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][16]}}" class="fir_in"  type="text" Name="gameResult[fir][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult['fir']['input'][17]}}" class="fir_in"  type="text" Name="gameResult[fir][input][17]" /></td>
+										
+										<td><input value="{{$gameResult['fir']['in_sum']}}" id="fir_in_sum" readonly="readonly" Name="gameResult[fir][in_sum]" /></td>
+										<td><input value="{{$gameResult['fir']['tot']}}" id="fir_tot" readonly="readonly" Name="gameResult[fir][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>GIR</td>
-										<td>{{$gameResult['gir'][0]}}</td>
-										<td>{{$gameResult['gir'][1]}}</td>
-										<td>{{$gameResult['gir'][2]}}</td>
-										<td>{{$gameResult['gir'][3]}}</td>
-										<td>{{$gameResult['gir'][4]}}</td>
-										<td>{{$gameResult['gir'][5]}}</td>
-										<td>{{$gameResult['gir'][6]}}</td>
-										<td>{{$gameResult['gir'][7]}}</td>
-										<td>{{$gameResult['gir'][8]}}</td>
-										<td>{{$gameResult['gir'][9]}}</td>
-										<td>{{$gameResult['gir'][10]}}</td>
-										<td>{{$gameResult['gir'][11]}}</td>
-										<td>{{$gameResult['gir'][12]}}</td>
-										<td>{{$gameResult['gir'][13]}}</td>
-										<td>{{$gameResult['gir'][14]}}</td>
-										<td>{{$gameResult['gir'][15]}}</td>
-										<td>{{$gameResult['gir'][16]}}</td>
-										<td>{{$gameResult['gir'][17]}}</td>
-										<td>{{$gameResult['gir'][18]}}</td>
-										<td>{{$gameResult['gir'][19]}}</td>
-										<td>{{$gameResult['gir'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][0]}}" class="gir_out" type="text" Name="gameResult[gir][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][1]}}" class="gir_out" type="text" Name="gameResult[gir][input][1]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][2]}}" class="gir_out" type="text" Name="gameResult[gir][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][3]}}" class="gir_out" type="text" Name="gameResult[gir][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][4]}}" class="gir_out" type="text" Name="gameResult[gir][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][5]}}" class="gir_out" type="text" Name="gameResult[gir][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][6]}}" class="gir_out" type="text" Name="gameResult[gir][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][7]}}" class="gir_out" type="text" Name="gameResult[gir][input][7]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][8]}}" class="gir_out" type="text" Name="gameResult[gir][input][8]" /></td>
+
+										<td><input value="{{$gameResult['gir']['out_sum']}}" id ="gir_out_sum" readonly="readonly" Name="gameResult[gir][out_sum]" /></td>
+
+										
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][9]}}" class="gir_in"  type="text" Name="gameResult[gir][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][10]}}" class="gir_in" type="text" Name="gameResult[gir][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][11]}}" class="gir_in"  type="text" Name="gameResult[gir][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][12]}}" class="gir_in"  type="text" Name="gameResult[gir][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][13]}}" class="gir_in"  type="text" Name="gameResult[gir][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][14]}}" class="gir_in"  type="text" Name="gameResult[gir][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][15]}}" class="gir_in"  type="text" Name="gameResult[gir][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult['gir']['input'][16]}}" class="gir_in"  type="text" Name="gameResult[gir][input][16]" /></td>
+										<td class="numeric"><input value="{{$gameResult['gir']['input'][17]}}" class="gir_in"  type="text" Name="gameResult[gir][input][17]" /></td>
+										
+										<td><input value="{{$gameResult['gir']['in_sum']}}" id="gir_in_sum" readonly="readonly" Name="gameResult[gir][in_sum]" /></td>
+										<td><input value="{{$gameResult['gir']['tot']}}" id="gir_tot" readonly="readonly" Name="gameResult[gir][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>GIR_DIST_PUTT_1</td>
 										<td class="black"></td>
@@ -191,7 +238,9 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[gir_dist_put_1][9]" /></td>
+
+										<td><input value="{{$gameResult['gir_dist_putt_1']['out_sum']}}" type="text" id="gir_dist_putt_1_out_sum" Name="gameResult[gir_dist_putt_1][out_sum]" readonly="readonly"/></td>
+
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -201,9 +250,11 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[gir_dist_put_1][19]" /></td>
-										<td><input type="hidden" Name="gameResult[gir_dist_put_1][20]" /></td>
+
+										<td><input value="{{$gameResult['gir_dist_putt_1']['in_sum']}}" type="text" id="gir_dist_putt_1_in_sum" Name="gameResult[gir_dist_putt_1][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['gir_dist_putt_1']['tot']}}" type="text" id="gir_dist_putt_1_tot" Name="gameResult[gir_dist_putt_1][tot]" readonly="readonly"/></td>
 									</tr>
+
 									<tr>
 										<td>AVG_DIST_HOL_GIR</td>
 										<td class="black"></td>
@@ -215,7 +266,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hol_gir][9]" /></td>
+										<td><input value="{{$gameResult['avg_dist_hol_gir']['out_sum']}}" id='avg_dist_hol_gir_out' type="text" Name="gameResult[avg_dist_hol_gir][out_sum]" readonly="readonly"/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -225,32 +276,38 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hol_gir][19]" /></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hol_gir][20]" /></td>
+
+										<td><input value="{{$gameResult['avg_dist_hol_gir']['in_sum']}}" id='avg_dist_hol_gir_in' type="text" Name="gameResult[avg_dist_hol_gir][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['avg_dist_hol_gir']['tot']}}" type="text" id='avg_dist_hol_gir_tot' Name="gameResult[avg_dist_hol_gir][tot]" readonly="readonly"/></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_1</td>
-										<td>{{$gameResult['putt_1'][0]}}</td>
-										<td>{{$gameResult['putt_1'][1]}}</td>
-										<td>{{$gameResult['putt_1'][2]}}</td>
-										<td>{{$gameResult['putt_1'][3]}}</td>
-										<td>{{$gameResult['putt_1'][4]}}</td>
-										<td>{{$gameResult['putt_1'][5]}}</td>
-										<td>{{$gameResult['putt_1'][6]}}</td>
-										<td>{{$gameResult['putt_1'][7]}}</td>
-										<td>{{$gameResult['putt_1'][8]}}</td>
-										<td>{{$gameResult['putt_1'][9]}}</td>
-										<td>{{$gameResult['putt_1'][10]}}</td>
-										<td>{{$gameResult['putt_1'][11]}}</td>
-										<td>{{$gameResult['putt_1'][12]}}</td>
-										<td>{{$gameResult['putt_1'][13]}}</td>
-										<td>{{$gameResult['putt_1'][14]}}</td>
-										<td>{{$gameResult['putt_1'][15]}}</td>
-										<td>{{$gameResult['putt_1'][16]}}</td>
-										<td>{{$gameResult['putt_1'][17]}}</td>
-										<td>{{$gameResult['putt_1'][18]}}</td>
-										<td>{{$gameResult['putt_1'][19]}}</td>
-										<td>{{$gameResult['putt_1'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][0]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][1]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][1]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][2]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][3]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][4]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][5]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][6]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][7]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][7]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][8]}}" class="putt_1_out" type="text" Name="gameResult[putt_1][input][8]" /></td>
+
+										<td><input value="{{$gameResult['putt_1']['out_sum']}}" id ="putt_1_out_sum" readonly="readonly" Name="gameResult[putt_1][out_sum]" readonly="readonly" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][9]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][10]}}" class="putt_1_in" type="text" Name="gameResult[putt_1][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][11]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][12]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][13]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][14]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][15]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][16]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_1']['input'][17]}}" class="putt_1_in"  type="text" Name="gameResult[putt_1][input][17]" /></td>
+										
+										
+										<td><input value="{{$gameResult['putt_1']['in_sum']}}" id="putt_1_in_sum" readonly="readonly" Name="gameResult[putt_1][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['putt_1']['tot']}}" id="putt_1_tot" readonly="readonly" Name="gameResult[putt_1][tot]" readonly="readonly"/></td>
 									</tr>
 
 									<tr>
@@ -264,7 +321,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[dist_aft_putt_1][9]" /></td>
+										<td><input value="{{$gameResult['dist_aft_putt_1']['out_sum']}}" type="text" id='dist_aft_putt_1_out_sum' Name="gameResult[dist_aft_putt_1][out_sum]" readonly="readonly"/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -274,8 +331,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[dist_aft_putt_1][19]" /></td>
-										<td><input type="hidden" Name="gameResult[dist_aft_putt_1][20]" /></td>
+										<td><input value="{{$gameResult['dist_aft_putt_1']['in_sum']}}" type="text" id='dist_aft_putt_1_in_sum' Name="gameResult[dist_aft_putt_1][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['dist_aft_putt_1']['tot']}}" type="text" id='dist_aft_putt_1_tot' Name="gameResult[dist_aft_putt_1][tot]" readonly="readonly"/></td>
 									</tr>
 									<tr>
 										<td>NUM_PUTT_2</td>
@@ -288,7 +345,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[num_putt_2][9]" /></td>
+										<td><input value="{{$gameResult['num_putt_2']['out_sum']}}"  type="text" id='num_putt_2_out_sum' Name="gameResult[num_putt_2][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -298,8 +355,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[num_putt_2][19]" /></td>
-										<td><input type="hidden" Name="gameResult[num_putt_2][20]" /></td>
+										<td><input  value="{{$gameResult['num_putt_2']['in_sum']}}" type="text" id='num_putt_2_in_sum' Name="gameResult[num_putt_2][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['num_putt_2']['tot']}}"  type="text" id='num_putt_2_tot' Name="gameResult[num_putt_2][tot]" readonly="readonly"/></td>
 									</tr>
 									<tr>
 										<td>AVG_DIST_HOL_PUTT1</td>
@@ -312,7 +369,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hole_putt1][9]" /></td>
+										<td><input value="{{$gameResult['avg_dist_hole_putt1']['out_sum']}}" type="text" id="avg_dist_hole_putt1_out_sum" Name="gameResult[avg_dist_hole_putt1][out_sum]" readonly="readonly"/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -322,32 +379,35 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hole_putt1][19]" /></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hole_putt1][20]" /></td>
+										<td><input value="{{$gameResult['avg_dist_hole_putt1']['in_sum']}}" type="text" id="avg_dist_hole_putt1_in_sum" Name="gameResult[avg_dist_hole_putt1][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['avg_dist_hole_putt1']['tot']}}" type="text" id="avg_dist_hole_putt1_tot" Name="gameResult[avg_dist_hole_putt1][tot]" readonly="readonly"/></td>
 									</tr>
 									<tr>
 										<td>PUTT_2</td>
-										<td>{{$gameResult['putt_2'][0]}}</td>
-										<td>{{$gameResult['putt_2'][1]}}</td>
-										<td>{{$gameResult['putt_2'][2]}}</td>
-										<td>{{$gameResult['putt_2'][3]}}</td>
-										<td>{{$gameResult['putt_2'][4]}}</td>
-										<td>{{$gameResult['putt_2'][5]}}</td>
-										<td>{{$gameResult['putt_2'][6]}}</td>
-										<td>{{$gameResult['putt_2'][7]}}</td>
-										<td>{{$gameResult['putt_2'][8]}}</td>
-										<td>{{$gameResult['putt_2'][9]}}</td>
-										<td>{{$gameResult['putt_2'][10]}}</td>
-										<td>{{$gameResult['putt_2'][11]}}</td>
-										<td>{{$gameResult['putt_2'][12]}}</td>
-										<td>{{$gameResult['putt_2'][13]}}</td>
-										<td>{{$gameResult['putt_2'][14]}}</td>
-										<td>{{$gameResult['putt_2'][15]}}</td>
-										<td>{{$gameResult['putt_2'][16]}}</td>
-										<td>{{$gameResult['putt_2'][17]}}</td>
-										<td>{{$gameResult['putt_2'][18]}}</td>
-										<td>{{$gameResult['putt_2'][19]}}</td>
-										<td>{{$gameResult['putt_2'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][0]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][1]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][1]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][2]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][3]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][4]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][5]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][6]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][7]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][7]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][8]}}" class="putt_2_out" type="text" Name="gameResult[putt_2][input][8]" /></td>
+
+										<td><input value="{{$gameResult['putt_2']['out_sum']}}" id ="putt_2_out_sum" readonly="readonly" Name="gameResult[putt_2][out_sum]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][10]}}" class="putt_2_in" type="text" Name="gameResult[putt_2][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][11]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][12]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][13]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][14]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][15]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][16]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][17]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][17]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_2']['input'][18]}}" class="putt_2_in"  type="text" Name="gameResult[putt_2][input][18]" /></td>
+			
+										<td><input value="{{$gameResult['putt_2']['out_sum']}}" id="putt_2_in_sum" readonly="readonly" Name="gameResult[putt_2][in_sum]" /></td>
+										<td><input value="{{$gameResult['putt_2']['in_sum']}}" id="putt_2_tot" readonly="readonly" Name="gameResult[putt_2][tot]" /></td>
 									</tr>
 									<tr>
 										<td>NUM_PUTT_3</td>
@@ -360,7 +420,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[num_putt_3][9]" /></td>
+										<td><input value="{{$gameResult['num_putt_3']['out_sum']}}" type="text" id='num_putt_3_out_sum' Name="gameResult[num_putt_3][out_sum]" readonly="readonly"/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -370,321 +430,378 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[num_putt_3][19]" /></td>
-										<td><input type="hidden" Name="gameResult[num_putt_3][20]" /></td>
+										<td><input value="{{$gameResult['num_putt_3']['in_sum']}}" type="text" id='num_putt_3_in_sum' Name="gameResult[num_putt_3][in_sum]" readonly="readonly"/></td>
+										<td><input value="{{$gameResult['num_putt_3']['tot']}}" type="text" id='num_putt_3_tot' Name="gameResult[num_putt_3][tot]" readonly="readonly"/></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_3</td>
-										<td>{{$gameResult['putt_3'][0]}}</td>
-										<td>{{$gameResult['putt_3'][1]}}</td>
-										<td>{{$gameResult['putt_3'][2]}}</td>
-										<td>{{$gameResult['putt_3'][3]}}</td>
-										<td>{{$gameResult['putt_3'][4]}}</td>
-										<td>{{$gameResult['putt_3'][5]}}</td>
-										<td>{{$gameResult['putt_3'][6]}}</td>
-										<td>{{$gameResult['putt_3'][7]}}</td>
-										<td>{{$gameResult['putt_3'][8]}}</td>
-										<td>{{$gameResult['putt_3'][9]}}</td>
-										<td>{{$gameResult['putt_3'][10]}}</td>
-										<td>{{$gameResult['putt_3'][11]}}</td>
-										<td>{{$gameResult['putt_3'][12]}}</td>
-										<td>{{$gameResult['putt_3'][13]}}</td>
-										<td>{{$gameResult['putt_3'][14]}}</td>
-										<td>{{$gameResult['putt_3'][15]}}</td>
-										<td>{{$gameResult['putt_3'][16]}}</td>
-										<td>{{$gameResult['putt_3'][17]}}</td>
-										<td>{{$gameResult['putt_3'][18]}}</td>
-										<td>{{$gameResult['putt_3'][19]}}</td>
-										<td>{{$gameResult['putt_3'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][0]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][1]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][1]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][2]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][3]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][4]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][5]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][6]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][7]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][7]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][8]}}" class="putt_3_out" type="text" Name="gameResult[putt_3][input][8]" /></td>
+
+										<td><input value="{{$gameResult['putt_3']['out_sum']}}" id ="putt_3_out_sum" readonly="readonly" Name="gameResult[putt_3][out_sum]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][9]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][10]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][11]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][12]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][13]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][14]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][15]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][16]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult['putt_3']['input'][17]}}" class="putt_3_in"  type="text" Name="gameResult[putt_3][input][17]" /></td>
+										
+										<td><input value="{{$gameResult['putt_3']['in_sum']}}" id="putt_3_in_sum" readonly="readonly" Name="gameResult[putt_3][in_sum]" /></td>
+										<td><input value="{{$gameResult['putt_3']['tot']}}" id="putt_3_tot" readonly="readonly" Name="gameResult[putt_3][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>TOT_PUTT</td>
-										<td>{{$gameResult['tot_putt'][0]}}</td>
-										<td>{{$gameResult['tot_putt'][1]}}</td>
-										<td>{{$gameResult['tot_putt'][2]}}</td>
-										<td>{{$gameResult['tot_putt'][3]}}</td>
-										<td>{{$gameResult['tot_putt'][4]}}</td>
-										<td>{{$gameResult['tot_putt'][5]}}</td>
-										<td>{{$gameResult['tot_putt'][6]}}</td>
-										<td>{{$gameResult['tot_putt'][7]}}</td>
-										<td>{{$gameResult['tot_putt'][8]}}</td>
-										<td>{{$gameResult['tot_putt'][9]}}</td>
-										<td>{{$gameResult['tot_putt'][10]}}</td>
-										<td>{{$gameResult['tot_putt'][11]}}</td>
-										<td>{{$gameResult['tot_putt'][12]}}</td>
-										<td>{{$gameResult['tot_putt'][13]}}</td>
-										<td>{{$gameResult['tot_putt'][14]}}</td>
-										<td>{{$gameResult['tot_putt'][15]}}</td>
-										<td>{{$gameResult['tot_putt'][16]}}</td>
-										<td>{{$gameResult['tot_putt'][17]}}</td>
-										<td>{{$gameResult['tot_putt'][18]}}</td>
-										<td>{{$gameResult['tot_putt'][19]}}</td>
-										<td>{{$gameResult['tot_putt'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][0]}}" id='tot_putt_out_0' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][1]}}" id='tot_putt_out_1' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][2]}}" id='tot_putt_out_2' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][3]}}" id='tot_putt_out_3' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][4]}}" id='tot_putt_out_4' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][5]}}" id='tot_putt_out_5' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][6]}}" id='tot_putt_out_6' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][7]}}" id='tot_putt_out_7' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][8]}}" id='tot_putt_out_8' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][8]" /></td>
+
+										<td><input value="{{$gameResult['tot_putt']['out_sum']}}" id ="tot_putt_out_sum" readonly="readonly" Name="gameResult[tot_putt][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][9]}}" id='tot_putt_in_0' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][10]}}" id='tot_putt_in_1' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][11]}}" id='tot_putt_in_2' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][12]}}" id='tot_putt_in_3' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][13]}}" id='tot_putt_in_4' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][14]}}" id='tot_putt_in_5' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][15]}}" id='tot_putt_in_6' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][16]}}" id='tot_putt_in_7' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_putt']['input'][17]}}" id='tot_putt_in_8' readonly="readonly" class="tot_putt_in"  type="text" Name="gameResult[tot_putt][input][17]" /></td>
+										
+										<td><input value="{{$gameResult['tot_putt']['in_sum']}}" id="tot_putt_in_sum" readonly="readonly" Name="gameResult[tot_putt][in_sum]" /></td>
+										<td><input value="{{$gameResult['tot_putt']['tot']}}" id="tot_putt_tot" readonly="readonly" Name="gameResult[tot_putt][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>TOT_FT_MADE</td>
-										<td>{{$gameResult['tot_ft_made'][0]}}</td>
-										<td>{{$gameResult['tot_ft_made'][1]}}</td>
-										<td>{{$gameResult['tot_ft_made'][2]}}</td>
-										<td>{{$gameResult['tot_ft_made'][3]}}</td>
-										<td>{{$gameResult['tot_ft_made'][4]}}</td>
-										<td>{{$gameResult['tot_ft_made'][5]}}</td>
-										<td>{{$gameResult['tot_ft_made'][6]}}</td>
-										<td>{{$gameResult['tot_ft_made'][7]}}</td>
-										<td>{{$gameResult['tot_ft_made'][8]}}</td>
-										<td>{{$gameResult['tot_ft_made'][9]}}</td>
-										<td>{{$gameResult['tot_ft_made'][10]}}</td>
-										<td>{{$gameResult['tot_ft_made'][11]}}</td>
-										<td>{{$gameResult['tot_ft_made'][12]}}</td>
-										<td>{{$gameResult['tot_ft_made'][13]}}</td>
-										<td>{{$gameResult['tot_ft_made'][14]}}</td>
-										<td>{{$gameResult['tot_ft_made'][15]}}</td>
-										<td>{{$gameResult['tot_ft_made'][16]}}</td>
-										<td>{{$gameResult['tot_ft_made'][17]}}</td>
-									    <td>{{$gameResult['tot_ft_made'][18]}}</td>
-										<td>{{$gameResult['tot_ft_made'][19]}}</td>
-										<td>{{$gameResult['tot_ft_made'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][0]}}" id='tot_ft_made_out_0' readonly="readonly" class="tot_ft_made_out" type="text" Name="gameResult[tot_ft_made][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][1]}}" class="tot_ft_made_out" id='tot_ft_made_out_1' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][2]}}" class="tot_ft_made_out" id='tot_ft_made_out_2' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][3]}}" class="tot_ft_made_out" id='tot_ft_made_out_3' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][4]}}" class="tot_ft_made_out" id='tot_ft_made_out_4' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][5]}}" class="tot_ft_made_out" id='tot_ft_made_out_5' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][6]}}" class="tot_ft_made_out" type="text" id='tot_ft_made_out_6' readonly="readonly" Name="gameResult[tot_ft_made][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][7]}}" class="tot_ft_made_out" id='tot_ft_made_out_7' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][8]}}" class="tot_ft_made_out" type="text" Name="gameResult[tot_ft_made][input][8]" id='tot_ft_made_out_8' readonly="readonly" /></td>
+
+										<td><input value="{{$gameResult['tot_ft_made']['out_sum']}}" id ="tot_ft_made_out_sum" readonly="readonly" Name="gameResult[tot_ft_made][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][9]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][9]" id='tot_ft_made_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][10]}}" class="tot_ft_made_in" type="text" Name="gameResult[tot_ft_made][input][10]" id='tot_ft_made_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][11]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][11]" id='tot_ft_made_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][12]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][12]" id='tot_ft_made_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][13]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][13]" id='tot_ft_made_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][14]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][14]" id='tot_ft_made_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][15]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][15]" id='tot_ft_made_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][16]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][16]" id='tot_ft_made_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['tot_ft_made']['input'][17]}}" class="tot_ft_made_in"  type="text" Name="gameResult[tot_ft_made][input][17]" id='tot_ft_made_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult['tot_ft_made']['in_sum']}}" id="tot_ft_made_in_sum" readonly="readonly" Name="gameResult[tot_ft_made][in_sum]" /></td>
+										<td><input value="{{$gameResult['tot_ft_made']['tot']}}" id="tot_ft_made_tot" readonly="readonly" Name="gameResult[tot_ft_made][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_OPP_&lt;5</td>
-										<td>{{$gameResult['putt_opp_<5'][0]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][1]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][2]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][3]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][4]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][5]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][6]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][7]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][8]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][9]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][10]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][11]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][12]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][13]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][14]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][15]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][16]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][17]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][18]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][19]}}</td>
-										<td>{{$gameResult['putt_opp_<5'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][0]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][0]" id='putt_opp_5_out_0' readonly="readonly" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][1]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][1]" id='putt_opp_5_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][2]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][2]" id='putt_opp_5_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][3]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][3]" id='putt_opp_5_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][4]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][4]" id='putt_opp_5_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][5]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][5]" id='putt_opp_5_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][6]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][6]" id='putt_opp_5_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][7]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][7]" id='putt_opp_5_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][8]}}" class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_<5][input][8]" id='putt_opp_5_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult['putt_opp_<5']['out_sum']}}" id ="putt_opp_5_out_sum" readonly="readonly" Name="gameResult[putt_opp_<5][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][10]}}" class="putt_opp_5_in" type="text" Name="gameResult[putt_opp_<5][input][10]" id='putt_opp_5_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][11]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][11]" id='putt_opp_5_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][12]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][12]" id='putt_opp_5_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][13]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][13]" id='putt_opp_5_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][14]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][14]" id='putt_opp_5_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][15]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][15]" id='putt_opp_5_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][16]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][16]" id='putt_opp_5_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][17]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][17]" id='putt_opp_5_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult['putt_opp_<5']['input'][18]}}" class="putt_opp_5_in"  type="text" Name="gameResult[putt_opp_<5][input][18]" id='putt_opp_5_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_opp_<5"]["in_sum"]}}" id="putt_opp_5_in_sum" readonly="readonly" Name="gameResult[putt_opp_<5][in_sum]" /></td>
+
+										<td><input value="{{$gameResult["putt_opp_<5"]["tot"]}}" id="putt_opp_5_tot" readonly="readonly" Name="gameResult[putt_opp_<5][tot]" /></td>
 									</tr>
+			
 									<tr>
 										<td>PUTT_MAKE_&lt;5</td>
-										<td>{{$gameResult['putt_make_<5'][0]}}</td>
-										<td>{{$gameResult['putt_make_<5'][1]}}</td>
-										<td>{{$gameResult['putt_make_<5'][2]}}</td>
-										<td>{{$gameResult['putt_make_<5'][3]}}</td>
-										<td>{{$gameResult['putt_make_<5'][4]}}</td>
-										<td>{{$gameResult['putt_make_<5'][5]}}</td>
-										<td>{{$gameResult['putt_make_<5'][6]}}</td>
-										<td>{{$gameResult['putt_make_<5'][7]}}</td>
-										<td>{{$gameResult['putt_make_<5'][8]}}</td>
-										<td>{{$gameResult['putt_make_<5'][9]}}</td>
-										<td>{{$gameResult['putt_make_<5'][10]}}</td>
-										<td>{{$gameResult['putt_make_<5'][11]}}</td>
-										<td>{{$gameResult['putt_make_<5'][12]}}</td>
-										<td>{{$gameResult['putt_make_<5'][13]}}</td>
-										<td>{{$gameResult['putt_make_<5'][14]}}</td>
-										<td>{{$gameResult['putt_make_<5'][15]}}</td>
-										<td>{{$gameResult['putt_make_<5'][16]}}</td>
-										<td>{{$gameResult['putt_make_<5'][17]}}</td>
-										<td>{{$gameResult['putt_make_<5'][18]}}</td>
-										<td>{{$gameResult['putt_make_<5'][19]}}</td>
-										<td>{{$gameResult['putt_make_<5'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][0]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][0]" id='putt_make_5_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][1]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][1]" id='putt_make_5_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][2]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][2]" id='putt_make_5_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][3]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][3]" id='putt_make_5_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][4]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][4]" id='putt_make_5_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][5]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][5]" id='putt_make_5_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][6]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][6]" id='putt_make_5_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][7]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][7]" id='putt_make_5_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][8]}}" class="putt_make_5_out" type="text" Name="gameResult[putt_make_<5][input][8]" id='putt_make_5_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_opp_<5"]["out_sum"]}}" id ="putt_make_5_out_sum" readonly="readonly" Name="gameResult[putt_make_<5][out_sum]" /></td>
+										
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][10]}}" class="putt_make_5_in" type="text" Name="gameResult[putt_make_<5][input][10]" id='putt_make_5_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][11]}}" class="putt_make_5_in" type="text" Name="gameResult[putt_make_<5][input][11]" id='putt_make_5_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][12]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][12]" id='putt_make_5_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][13]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][13]" id='putt_make_5_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][14]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][14]" id='putt_make_5_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][15]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][15]" id='putt_make_5_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][16]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][16]" id='putt_make_5_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][17]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][17]" id='putt_make_5_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_<5"]["input"][18]}}" class="putt_make_5_in"  type="text" Name="gameResult[putt_make_<5][input][18]" id='putt_make_5_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_opp_<5"]["in_sum"]}}" id="putt_make_5_in_sum" readonly="readonly" Name="gameResult[putt_make_<5][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_opp_<5"]["tot"]}}" id="putt_make_5_tot" readonly="readonly" Name="gameResult[putt_make_<5][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_OPP_5-9</td>
-										<td>{{$gameResult['putt_opp_5-9'][0]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][1]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][2]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][3]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][4]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][5]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][6]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][7]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][8]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][9]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][10]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][11]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][12]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][13]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][14]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][15]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][16]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][17]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][18]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][19]}}</td>
-										<td>{{$gameResult['putt_opp_5-9'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][0]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][0]" id='putt_opp_5_9_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][1]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][1]" id='putt_opp_5_9_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][2]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][2]" id='putt_opp_5_9_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][3]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][3]" id='putt_opp_5_9_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][4]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][4]" id='putt_opp_5_9_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][5]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][5]" id='putt_opp_5_9_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][6]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][6]" id='putt_opp_5_9_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][7]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][7]" id='putt_opp_5_9_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][8]}}" class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][8]" id='putt_opp_5_9_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_opp_5-9"]["out_sum"]}}" id="putt_opp_5_9_out_sum" readonly="readonly" Name="gameResult[putt_opp_5-9][out_sum]" id='putt_opp_5_9_in_8' readonly="readonly"/></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][9]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][9]" id='putt_opp_5_9_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][10]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][10]" id='putt_opp_5_9_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][11]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][11]" id='putt_opp_5_9_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][12]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][12]" id='putt_opp_5_9_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][13]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][13]" id='putt_opp_5_9_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][14]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][14]" id='putt_opp_5_9_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][15]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][15]" id='putt_opp_5_9_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][16]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][16]" id='putt_opp_5_9_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_5-9"]["input"][17]}}" class="putt_opp_5_9_in" type="text" Name="gameResult[putt_opp_5-9][input][17]" id='putt_opp_5_9_in_8' readonly="readonly"/></td>
+										
+										
+										<td><input value="{{$gameResult["putt_opp_5-9"]["in_sum"]}}" id="putt_opp_5_9_in_sum" readonly="readonly" Name="gameResult[putt_opp_5-9][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_opp_5-9"]["tot"]}}" id="putt_opp_5_9_tot" readonly="readonly" Name="gameResult[putt_opp_5-9][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_MAKE_5-9</td>
-										<td>{{$gameResult['putt_make_5-9'][0]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][1]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][2]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][3]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][4]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][5]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][6]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][7]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][8]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][9]}}</td>
-									    <td>{{$gameResult['putt_make_5-9'][10]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][11]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][12]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][13]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][14]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][15]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][16]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][17]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][18]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][19]}}</td>
-										<td>{{$gameResult['putt_make_5-9'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][0]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][0]" id='putt_make_5_9_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][1]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][1]" id='putt_make_5_9_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][2]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][2]" id='putt_make_5_9_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][3]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][3]" id='putt_make_5_9_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][4]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][4]" id='putt_make_5_9_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][5]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][5]" id='putt_make_5_9_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][6]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][6]" id='putt_make_5_9_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][7]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][7]" id='putt_make_5_9_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][8]}}" class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][8]" id='putt_make_5_9_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_make_5-9"]["out_sum"]}}" id="putt_make_5_9_out_sum" readonly="readonly" Name="gameResult[putt_make_5-9][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][9]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][9]" id='putt_make_5_9_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][10]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][10]" id='putt_make_5_9_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][11]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][11]" id='putt_make_5_9_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][12]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][12]" id='putt_make_5_9_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][13]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][13]" id='putt_make_5_9_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][14]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][14]" id='putt_make_5_9_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][15]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][15]" id='putt_make_5_9_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][16]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][16]" id='putt_make_5_9_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_5-9"]["input"][17]}}" class="putt_make_5_9_in" type="text" Name="gameResult[putt_make_5-9][input][17]" id='putt_make_5_9_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_make_5-9"]["in_sum"]}}" id="putt_make_5_9_in_sum" readonly="readonly" Name="gameResult[putt_make_5-9][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_make_5-9"]["tot"]}}" id="putt_make_5_9_tot" readonly="readonly" Name="gameResult[putt_make_5-9][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_OPP_10-19</td>
-										<td>{{$gameResult['putt_opp_10-19'][0]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][1]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][2]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][3]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][4]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][5]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][6]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][7]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][8]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][9]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][10]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][11]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][12]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][13]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][14]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][15]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][16]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][17]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][18]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][19]}}</td>
-										<td>{{$gameResult['putt_opp_10-19'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][0]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][0]" id='putt_opp_10_19_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][1]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][1]" id='putt_opp_10_19_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][2]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][2]" id='putt_opp_10_19_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][3]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][3]" id='putt_opp_10_19_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][4]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][4]" id='putt_opp_10_19_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][5]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][5]" id='putt_opp_10_19_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][6]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][6]" id='putt_opp_10_19_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][7]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][7]" id='putt_opp_10_19_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][8]}}" class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][8]" id='putt_opp_10_19_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_opp_10-19"]["out_sum"]}}" id="putt_opp_10_19_out_sum" readonly="readonly" Name="gameResult[putt_opp_10-19][out_sum]" /></td>
+
+										
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][9]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][9]" id='putt_opp_10_19_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][10]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][10]" id='putt_opp_10_19_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][11]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][11]" id='putt_opp_10_19_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][12]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][12]" id='putt_opp_10_19_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][13]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][13]" id='putt_opp_10_19_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][14]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][14]" id='putt_opp_10_19_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][15]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][15]" id='putt_opp_10_19_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][16]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][16]" id='putt_opp_10_19_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_10-19"]["input"][17]}}" class="putt_opp_10_19_in" type="text" Name="gameResult[putt_opp_10-19][input][17]" id='putt_opp_10_19_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_opp_10-19"]["in_sum"]}}" id="putt_opp_10_19_in_sum" readonly="readonly" Name="gameResult[putt_opp_10-19][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_opp_10-19"]["tot"]}}" id="putt_opp_10_19_tot" readonly="readonly" Name="gameResult[putt_opp_10-19][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_MAKE_10-19</td>
-										<td>{{$gameResult['putt_make_10-19'][0]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][1]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][2]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][3]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][4]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][5]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][6]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][7]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][8]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][9]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][10]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][11]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][12]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][13]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][14]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][15]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][16]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][17]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][18]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][19]}}</td>
-										<td>{{$gameResult['putt_make_10-19'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][0]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][0]" id='putt_make_10_19_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][1]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][1]" id='putt_make_10_19_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][2]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][2]" id='putt_make_10_19_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][3]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][3]" id='putt_make_10_19_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][4]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][4]" id='putt_make_10_19_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][5]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][5]" id='putt_make_10_19_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][6]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][6]" id='putt_make_10_19_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][7]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][7]" id='putt_make_10_19_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][8]}}" class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][8]" id='putt_make_10_19_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_make_10-19"]["out_sum"]}}" id="putt_make_10_19_out_sum" readonly="readonly" Name="gameResult[putt_make_10-19][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][9]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][9]" id='putt_make_10_19_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][10]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][10]" id='putt_make_10_19_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][11]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][11]" id='putt_make_10_19_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][12]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][12]" id='putt_make_10_19_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][13]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][13]" id='putt_make_10_19_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][14]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][14]" id='putt_make_10_19_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][15]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][15]" id='putt_make_10_19_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][16]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][16]" id='putt_make_10_19_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_10-19"]["input"][17]}}" class="putt_make_10_19_in" type="text" Name="gameResult[putt_make_10-19][input][17]" id='putt_make_10_19_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_make_10-19"]["in_sum"]}}" id="putt_make_10_19_in_sum" readonly="readonly" Name="gameResult[putt_make_10-19][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_make_10-19"]["tot"]}}" id="putt_make_10_19_tot" readonly="readonly" Name="gameResult[putt_make_10-19][tot]" /></td>
 									</tr>
+									
 									<tr>
 										<td>PUTT_OPP_20-29</td>
-										<td>{{$gameResult['putt_opp_20-29'][0]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][1]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][2]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][3]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][4]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][5]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][6]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][7]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][8]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][9]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][10]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][11]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][12]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][13]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][14]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][15]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][16]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][17]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][18]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][19]}}</td>
-										<td>{{$gameResult['putt_opp_20-29'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][0]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][0]" id='putt_opp_20_29_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][1]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][1]" id='putt_opp_20_29_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][2]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][2]" id='putt_opp_20_29_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][3]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][3]" id='putt_opp_20_29_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][4]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][4]" id='putt_opp_20_29_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][5]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][5]" id='putt_opp_20_29_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][6]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][6]" id='putt_opp_20_29_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][7]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][7]" id='putt_opp_20_29_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][8]}}" class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][8]" id='putt_opp_20_29_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_opp_20-29"]["out_sum"]}}" id="putt_opp_20_29_out_sum" readonly="readonly" Name="gameResult[putt_opp_20-29][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][10]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][10]" id='putt_opp_20_29_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][11]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][11]" id='putt_opp_20_29_in_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][12]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][12]" id='putt_opp_20_29_in_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][13]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][13]" id='putt_opp_20_29_in_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][14]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][14]" id='putt_opp_20_29_in_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][15]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][15]" id='putt_opp_20_29_in_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][16]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][16]" id='putt_opp_20_29_in_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][17]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][17]" id='putt_opp_20_29_in_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_20-29"]["input"][18]}}" class="putt_opp_20_29_in" type="text" Name="gameResult[putt_opp_20-29][input][18]" id='putt_opp_20_29_in_8' readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_opp_20-29"][19]}}" id="putt_opp_20_29_in_sum" readonly="readonly" Name="gameResult[putt_opp_20-29][19]" /></td>
+										<td><input value="{{$gameResult["putt_opp_20-29"][20]}}" id="putt_opp_20_29_tot" readonly="readonly" Name="gameResult[putt_opp_20-29][20]" /></td>
 									</tr>
+
 									<tr>
 										<td>PUTT_MAKE_20-29</td>
-										<td>{{$gameResult['putt_make_20-29'][0]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][1]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][2]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][3]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][4]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][5]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][6]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][7]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][8]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][9]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][10]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][11]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][12]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][13]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][14]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][15]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][16]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][17]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][18]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][19]}}</td>
-										<td>{{$gameResult['putt_make_20-29'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][0]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][0]" id="putt_make_20_29_out_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][1]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][1]" id="putt_make_20_29_out_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][2]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][2]" id="putt_make_20_29_out_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][3]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][3]" id="putt_make_20_29_out_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][4]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][4]" id="putt_make_20_29_out_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][5]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][5]" id="putt_make_20_29_out_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][6]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][6]" id="putt_make_20_29_out_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][7]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][7]" id="putt_make_20_29_out_7" readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][8]}}" class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][8]" id="putt_make_20_29_out_8" readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_make_20-29"]["out_sum"]}}" id="putt_make_20_29_out_sum" readonly="readonly" Name="gameResult[putt_make_20-29][out_sum]" /></td>
+
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][9]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][9]" id="putt_make_20_29_in_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][10]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][10]" id="putt_make_20_29_in_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][11]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][11]" id="putt_make_20_29_in_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][12]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][12]" id="putt_make_20_29_in_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][13]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][13]" id="putt_make_20_29_in_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][14]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][14]" id="putt_make_20_29_in_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][15]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][15]" id="putt_make_20_29_in_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][16]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][16]" id="putt_make_20_29_in_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_20-29"]["input"][17]}}" class="putt_make_20_29_in" type="text" Name="gameResult[putt_make_20-29][input][17]" id="putt_make_20_29_in_8" readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_make_20-29"]["in_sum"]}}" id="putt_make_20_29_in_sum" readonly="readonly" Name="gameResult[putt_make_20-29][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_make_20-29"]["tot"]}}" id="putt_make_20_29_tot" readonly="readonly" Name="gameResult[putt_make_20-29][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PUTT_OPP_30+</td>
-										<td>{{$gameResult['putt_opp_30+'][0]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][1]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][2]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][3]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][4]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][5]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][6]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][7]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][8]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][9]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][10]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][11]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][12]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][13]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][14]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][15]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][16]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][17]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][18]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][19]}}</td>
-										<td>{{$gameResult['putt_opp_30+'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][0]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][0]" id="putt_opp_30_out_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][1]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][1]" id="putt_opp_30_out_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][2]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][2]" id="putt_opp_30_out_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][3]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][3]" id="putt_opp_30_out_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][4]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][4]" id="putt_opp_30_out_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][5]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][5]" id="putt_opp_30_out_5" readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][6]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][6]" id="putt_opp_30_out_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][7]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][7]" id="putt_opp_30_out_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][8]}}" class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30+][input][8]" id="putt_opp_30_out_8" readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_opp_30+"]["out_sum"]}}" id ="putt_opp_30_out_sum" readonly="readonly" Name="gameResult[putt_opp_30+][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][9]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][9]" id="putt_opp_30_in_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][10]}}" class="putt_opp_30_in" type="text" Name="gameResult[putt_opp_30+][input][10]" id="putt_opp_30_in_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][11]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][11]" id="putt_opp_30_in_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][12]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][12]" id="putt_opp_30_in_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][13]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][13]" id="putt_opp_30_in_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][14]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][14]" id="putt_opp_30_in_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][15]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][15]" id="putt_opp_30_in_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][16]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][16]" id="putt_opp_30_in_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_opp_30+"]["input"][17]}}" class="putt_opp_30_in"  type="text" Name="gameResult[putt_opp_30+][input][17]" id="putt_opp_30_in_8" readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_opp_30+"]["in_sum"]}}" id="putt_opp_30_in_sum" readonly="readonly" Name="gameResult[putt_opp_30+][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_opp_30+"]["tot"]}}" id="putt_opp_30_tot" readonly="readonly" Name="gameResult[putt_opp_30+][tot]" /></td>
 									</tr>
+
 									<tr>
-										<td>PUTT_MAKE_30+</td>
-										<td>{{$gameResult['putt_make_30+'][0]}}</td>
-										<td>{{$gameResult['putt_make_30+'][1]}}</td>
-										<td>{{$gameResult['putt_make_30+'][2]}}</td>
-										<td>{{$gameResult['putt_make_30+'][3]}}</td>
-										<td>{{$gameResult['putt_make_30+'][4]}}</td>
-										<td>{{$gameResult['putt_make_30+'][5]}}</td>
-										<td>{{$gameResult['putt_make_30+'][6]}}</td>
-										<td>{{$gameResult['putt_make_30+'][7]}}</td>
-										<td>{{$gameResult['putt_make_30+'][8]}}</td>
-										<td>{{$gameResult['putt_make_30+'][9]}}</td>
-										<td>{{$gameResult['putt_make_30+'][10]}}</td>
-										<td>{{$gameResult['putt_make_30+'][11]}}</td>
-										<td>{{$gameResult['putt_make_30+'][12]}}</td>
-										<td>{{$gameResult['putt_make_30+'][13]}}</td>
-										<td>{{$gameResult['putt_make_30+'][14]}}</td>
-										<td>{{$gameResult['putt_make_30+'][15]}}</td>
-										<td>{{$gameResult['putt_make_30+'][16]}}</td>
-										<td>{{$gameResult['putt_make_30+'][17]}}</td>
-										<td>{{$gameResult['putt_make_30+'][18]}}</td>
-										<td>{{$gameResult['putt_make_30+'][19]}}</td>
-										<td>{{$gameResult['putt_make_30+'][20]}}</td>
+										<td>PUTT_Make_30+</td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][0]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][0]" id="putt_make_30_out_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][1]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][1]" id="putt_make_30_out_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][2]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][2]" id="putt_make_30_out_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][3]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][3]" id="putt_make_30_out_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][4]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][4]" id="putt_make_30_out_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][5]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][5]" id="putt_make_30_out_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][6]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][6]" id="putt_make_30_out_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][7]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][7]" id="putt_make_30_out_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][8]}}" class="putt_make_30_out" type="text" Name="gameResult[putt_make_30+][input][8]" id="putt_make_30_out_8" readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["putt_make_30+"]["out_sum"]}}" id ="putt_make_30_out_sum" readonly="readonly" Name="gameResult[putt_make_30+][out_sum]" id="putt_make_30_in_0" readonly="readonly"/></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][9]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][9]" id="putt_make_30_in_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][10]}}" class="putt_make_30_in" type="text" Name="gameResult[putt_make_30+][input][10]" id="putt_make_30_in_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][11]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][11]" id="putt_make_30_in_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][12]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][12]" id="putt_make_30_in_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][13]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][13]" id="putt_make_30_in_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][14]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][14]" id="putt_make_30_in_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][15]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][15]" id="putt_make_30_in_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][16]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][16]" id="putt_make_30_in_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["putt_make_30+"]["input"][17]}}" class="putt_make_30_in"  type="text" Name="gameResult[putt_make_30+][input][17]" id="putt_make_30_in_8" readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["putt_make_30+"]["in_sum"]}}" id="putt_make_30_in_sum" readonly="readonly" Name="gameResult[putt_make_30+][in_sum]" /></td>
+										<td><input value="{{$gameResult["putt_make_30+"]["tot"]}}" id="putt_make_30_tot" readonly="readonly" Name="gameResult[putt_make_30+][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>NOGIR_DIST_PUTT_1</td>
 										<td class="black"></td>
@@ -696,7 +813,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[nogir_dist_putt_1][9]" /></td>
+										<td><input value="{{$gameResult["nogir_dist_putt_1"]["out_sum"]}}" type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][out_sum]" id='nogir_dist_putt_1_out_sum'/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -706,8 +823,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[nogir_dist_putt_1][19]" /></td>
-										<td><input type="hidden" Name="gameResult[nogir_dist_putt_1][20]" /></td>
+										<td><input value="{{$gameResult["nogir_dist_putt_1"]["in_sum"]}}" type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][in_sum]" id='nogir_dist_putt_1_in_sum'/></td>
+										<td><input value="{{$gameResult["nogir_dist_putt_1"]["tot"]}}" type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][tot]" id='nogir_dist_putt_1_tot' /></td>
 									</tr>
 									<tr>
 										<td>NO_GIR</td>
@@ -720,7 +837,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[no_gir][9]" /></td>
+										<td><input value="{{$gameResult["no_gir"]["out_sum"]}}"  readonly="readonly" Name="gameResult[no_gir][out_sum]" id='no_gir_out_sum'/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -730,8 +847,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[no_gir][19]" /></td>
-										<td><input type="hidden" Name="gameResult[no_gir][20]" /></td>
+										<td><input value="{{$gameResult["no_gir"]["in_sum"]}}"  readonly="readonly" Name="gameResult[no_gir][in_sum]" id='no_gir_in_sum'/></td>
+										<td><input value="{{$gameResult["no_gir"]["tot"]}}" readonly="readonly" Name="gameResult[no_gir][tot]" id='no_gir_tot'/></td>
 									</tr>
 									<tr>
 										<td>AVG_DIST_HOL_NOGIR</td>
@@ -744,7 +861,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hol_nogir][9]" /></td>
+										<td><input value="{{$gameResult["avg_dist_hol_nogir"]["out_sum"]}}" type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][out_sum]" id="avg_dist_hol_nogir_out_sum"/></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -754,57 +871,66 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hol_nogir][19]" /></td>
-										<td><input type="hidden" Name="gameResult[avg_dist_hol_nogir][20]" /></td>
+										<td><input value="{{$gameResult["avg_dist_hol_nogir"]["in_sum"]}}" type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][in_sum]" id="avg_dist_hol_nogir_in_sum"/></td>
+										<td><input value="{{$gameResult["avg_dist_hol_nogir"]["tot"]}}" type="text" readonly="readonly" Name="gameResult[avg_dist_hol_nogir][tot]" id="avg_dist_hol_nogir_tot" /></td>
 									</tr>
+									
 									<tr>
 										<td>SCRAMBL_OPP</td>
-										<td>{{$gameResult['scrambl_opp'][0]}}</td>
-										<td>{{$gameResult['scrambl_opp'][1]}}</td>
-										<td>{{$gameResult['scrambl_opp'][2]}}</td>
-										<td>{{$gameResult['scrambl_opp'][3]}}</td>
-										<td>{{$gameResult['scrambl_opp'][4]}}</td>
-										<td>{{$gameResult['scrambl_opp'][5]}}</td>
-										<td>{{$gameResult['scrambl_opp'][6]}}</td>
-										<td>{{$gameResult['scrambl_opp'][7]}}</td>
-										<td>{{$gameResult['scrambl_opp'][8]}}</td>
-										<td>{{$gameResult['scrambl_opp'][9]}}</td>
-										<td>{{$gameResult['scrambl_opp'][10]}}</td>
-										<td>{{$gameResult['scrambl_opp'][11]}}</td>	
-										<td>{{$gameResult['scrambl_opp'][12]}}</td>
-										<td>{{$gameResult['scrambl_opp'][13]}}</td>
-										<td>{{$gameResult['scrambl_opp'][14]}}</td>
-										<td>{{$gameResult['scrambl_opp'][15]}}</td>
-										<td>{{$gameResult['scrambl_opp'][16]}}</td>
-										<td>{{$gameResult['scrambl_opp'][17]}}</td>
-										<td>{{$gameResult['scrambl_opp'][18]}}</td>
-										<td>{{$gameResult['scrambl_opp'][19]}}</td>
-										<td>{{$gameResult['scrambl_opp'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][0]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][0]" id='scrambl_opp_out_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][1]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][1]" id='scrambl_opp_out_1' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][2]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][2]" id='scrambl_opp_out_2' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][3]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][3]" id='scrambl_opp_out_3' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][4]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][4]" id='scrambl_opp_out_4' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][5]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][5]" id='scrambl_opp_out_5' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][6]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][6]" id='scrambl_opp_out_6' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][7]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][7]" id='scrambl_opp_out_7' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][8]}}" class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][8]" id='scrambl_opp_out_8' readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["scrambl_opp"]["out_sum"]}}" id ="scrambl_opp_out_sum" readonly="readonly" Name="gameResult[scrambl_opp][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][9]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][9]" id='scrambl_opp_in_0' readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][10]}}" class="scrambl_opp_in" type="text" Name="gameResult[scrambl_opp][input][10]" id='scrambl_opp_in_1' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][11]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][11]" id='scrambl_opp_in_2' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][12]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][12]" id='scrambl_opp_in_3' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][13]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][13]" id='scrambl_opp_in_4' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][14]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][14]" id='scrambl_opp_in_5' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][15]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][15]" id='scrambl_opp_in_6' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][16]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][16]" id='scrambl_opp_in_7' readonly="readonly" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_opp"]["input"][17]}}" class="scrambl_opp_in"  type="text" Name="gameResult[scrambl_opp][input][17]" id='scrambl_opp_in_8' readonly="readonly" /></td>
+										
+										<td><input value="{{$gameResult["scrambl_opp"]["in_sum"]}}" id="scrambl_opp_in_sum" readonly="readonly" Name="gameResult[scrambl_opp][in_sum]" /></td>
+										<td><input value="{{$gameResult["scrambl_opp"]["tot"]}}" id="scrambl_opp_tot" readonly="readonly" Name="gameResult[scrambl_opp][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>SCRAMBL_SAV</td>
-										<td>{{$gameResult['scrambl_sav'][0]}}</td>
-										<td>{{$gameResult['scrambl_sav'][1]}}</td>
-										<td>{{$gameResult['scrambl_sav'][2]}}</td>
-										<td>{{$gameResult['scrambl_sav'][3]}}</td>
-										<td>{{$gameResult['scrambl_sav'][4]}}</td>
-										<td>{{$gameResult['scrambl_sav'][5]}}</td>
-										<td>{{$gameResult['scrambl_sav'][6]}}</td>
-										<td>{{$gameResult['scrambl_sav'][7]}}</td>
-										<td>{{$gameResult['scrambl_sav'][8]}}</td>
-										<td>{{$gameResult['scrambl_sav'][9]}}</td>
-										<td>{{$gameResult['scrambl_sav'][10]}}</td>
-										<td>{{$gameResult['scrambl_sav'][11]}}</td>
-										<td>{{$gameResult['scrambl_sav'][12]}}</td>
-										<td>{{$gameResult['scrambl_sav'][13]}}</td>
-										<td>{{$gameResult['scrambl_sav'][14]}}</td>
-										<td>{{$gameResult['scrambl_sav'][15]}}</td>
-										<td>{{$gameResult['scrambl_sav'][16]}}</td>
-										<td>{{$gameResult['scrambl_sav'][17]}}</td>
-										<td>{{$gameResult['scrambl_sav'][18]}}</td>
-										<td>{{$gameResult['scrambl_sav'][19]}}</td>
-										<td>{{$gameResult['scrambl_sav'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][0]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][0]" id="scrambl_sav_out_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][1]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][1]" id="scrambl_sav_out_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][2]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][2]" id="scrambl_sav_out_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][3]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][3]" id="scrambl_sav_out_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][4]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][4]" id="scrambl_sav_out_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][5]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][5]" id="scrambl_sav_out_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][6]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][6]" id="scrambl_sav_out_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][7]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][7]" id="scrambl_sav_out_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][8]}}" class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][8]" id="scrambl_sav_out_8" readonly="readonly"/></td>
+
+										<td><input value="{{$gameResult["scrambl_sav"]["out_sum"]}}" id="scrambl_opp_tot" id ="scrambl_sav_out_sum" readonly="readonly" Name="gameResult[scrambl_sav][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][10]}}" class="scrambl_sav_in" type="text" Name="gameResult[scrambl_sav][input][10]" id="scrambl_sav_in_0" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][11]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][11]" id="scrambl_sav_in_1" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][12]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][12]" id="scrambl_sav_in_2" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][13]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][13]" id="scrambl_sav_in_3" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][14]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][14]" id="scrambl_sav_in_4" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][15]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][15]" id="scrambl_sav_in_5" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][16]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][16]" id="scrambl_sav_in_6" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][17]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][17]" id="scrambl_sav_in_7" readonly="readonly"/></td>
+										<td class="numeric ash"><input value="{{$gameResult["scrambl_sav"]["input"][18]}}" class="scrambl_sav_in"  type="text" Name="gameResult[scrambl_sav][input][18]" id="scrambl_sav_in_8" readonly="readonly"/></td>
+										
+										<td><input value="{{$gameResult["scrambl_sav"]["in_sum"]}}" id="scrambl_sav_in_sum" readonly="readonly" Name="gameResult[scrambl_sav][in_sum]" /></td>
+										<td><input value="{{$gameResult["scrambl_sav"]["tot"]}}" id="scrambl_sav_tot" readonly="readonly" Name="gameResult[scrambl_sav][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>SCRAMBL%</td>
 										<td class="black"></td>
@@ -816,7 +942,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[scrambl%][9]" /></td>
+										<td><input value="{{$gameResult["scrambl%"]["out_sum"]}}" type="text" id="scrambl_percentage_out_sum" readonly="readonly" Name="gameResult[scrambl%][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -826,57 +952,66 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[scrambl%][19]" /></td>
-										<td><input type="hidden" Name="gameResult[scrambl%][20]" /></td>
+										<td><input value="{{$gameResult["scrambl%"]["in_sum"]}}" type="text" id="scrambl_percentage_in_sum" readonly="readonly" Name="gameResult[scrambl%][in_sum]" /></td>
+										<td><input value="{{$gameResult["scrambl%"]["tot"]}}" type="text" id="scrambl_percentage_sum" readonly="readonly" Name="gameResult[scrambl%][tot]" /></td>
 									</tr>
+									
 									<tr>
 										<td>SAND_OPP</td>
-										<td>{{$gameResult['sand_opp'][0]}}</td>
-										<td>{{$gameResult['sand_opp'][1]}}</td>
-										<td>{{$gameResult['sand_opp'][2]}}</td>
-										<td>{{$gameResult['sand_opp'][3]}}</td>
-										<td>{{$gameResult['sand_opp'][4]}}</td>
-										<td>{{$gameResult['sand_opp'][5]}}</td>
-										<td>{{$gameResult['sand_opp'][6]}}</td>
-										<td>{{$gameResult['sand_opp'][7]}}</td>
-										<td>{{$gameResult['sand_opp'][8]}}</td>
-										<td>{{$gameResult['sand_opp'][9]}}</td>
-										<td>{{$gameResult['sand_opp'][10]}}</td>
-										<td>{{$gameResult['sand_opp'][11]}}</td>
-										<td>{{$gameResult['sand_opp'][12]}}</td>
-										<td>{{$gameResult['sand_opp'][13]}}</td>
-										<td>{{$gameResult['sand_opp'][14]}}</td>
-										<td>{{$gameResult['sand_opp'][15]}}</td>
-										<td>{{$gameResult['sand_opp'][16]}}</td>
-										<td>{{$gameResult['sand_opp'][17]}}</td>
-										<td>{{$gameResult['sand_opp'][18]}}</td>
-										<td>{{$gameResult['sand_opp'][19]}}</td>
-										<td>{{$gameResult['sand_opp'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][0]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][0]" id="sand_opp_out_0" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][1]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][1]" id="sand_opp_out_1" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][2]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][2]" id="sand_opp_out_2" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][3]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][3]" id="sand_opp_out_3" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][4]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][4]" id="sand_opp_out_4" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][5]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][5]" id="sand_opp_out_5" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][6]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][6]" id="sand_opp_out_6" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][7]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][7]" id="sand_opp_out_7" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][8]}}" class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][8]" id="sand_opp_out_8" /></td>
+
+										<td><input value="{{$gameResult["sand_opp"]["out_sum"]}}" id ="sand_opp_out_sum" readonly="readonly" Name="gameResult[sand_opp][out_sum]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][9]}}" class="sand_opp_in"  type="text" id="sand_opp_in_0" Name="gameResult[sand_opp][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][10]}}" class="sand_opp_in"  type="text" id="sand_opp_in_1" Name="gameResult[sand_opp][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][11]}}" class="sand_opp_in"  type="text" id="sand_opp_in_2" Name="gameResult[sand_opp][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][12]}}" class="sand_opp_in"  type="text" id="sand_opp_in_3" Name="gameResult[sand_opp][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][13]}}" class="sand_opp_in"  type="text" id="sand_opp_in_4" Name="gameResult[sand_opp][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][14]}}" class="sand_opp_in"  type="text" id="sand_opp_in_5" Name="gameResult[sand_opp][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][15]}}" class="sand_opp_in"  type="text" id="sand_opp_in_6" Name="gameResult[sand_opp][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_opp"]["input"][16]}}" class="sand_opp_in"  type="text" id="sand_opp_in_7" Name="gameResult[sand_opp][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][17]}}" class="sand_opp_in"  type="text" id="sand_opp_in_8" Name="gameResult[sand_opp][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["sand_opp"]["in_sum"]}}" id="sand_opp_in_sum" readonly="readonly" Name="gameResult[sand_opp][in_sum]" /></td>
+										<td><input value="{{$gameResult["sand_opp"]["tot"]}}" id="sand_opp_tot" readonly="readonly" Name="gameResult[sand_opp][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>SAND_SAV</td>
-										<td>{{$gameResult['sand_sav'][0]}}</td>
-										<td>{{$gameResult['sand_sav'][1]}}</td>
-										<td>{{$gameResult['sand_sav'][2]}}</td>
-										<td>{{$gameResult['sand_sav'][3]}}</td>
-										<td>{{$gameResult['sand_sav'][4]}}</td>
-										<td>{{$gameResult['sand_sav'][5]}}</td>
-										<td>{{$gameResult['sand_sav'][6]}}</td>
-										<td>{{$gameResult['sand_sav'][7]}}</td>
-										<td>{{$gameResult['sand_sav'][8]}}</td>
-										<td>{{$gameResult['sand_sav'][9]}}</td>
-										<td>{{$gameResult['sand_sav'][10]}}</td>
-										<td>{{$gameResult['sand_sav'][11]}}</td>
-										<td>{{$gameResult['sand_sav'][12]}}</td>
-										<td>{{$gameResult['sand_sav'][13]}}</td>
-										<td>{{$gameResult['sand_sav'][14]}}</td>
-										<td>{{$gameResult['sand_sav'][15]}}</td>
-										<td>{{$gameResult['sand_sav'][16]}}</td>
-										<td>{{$gameResult['sand_sav'][17]}}</td>
-										<td>{{$gameResult['sand_sav'][18]}}</td>
-										<td>{{$gameResult['sand_sav'][19]}}</td>
-										<td>{{$gameResult['sand_sav'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][0]}}" class="sand_sav_out" type="text" id="sand_sav_out_0" readonly="readonly" Name="gameResult[sand_sav][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][1]}}" class="sand_sav_out" type="text" id="sand_sav_out_1" readonly="readonly"  Name="gameResult[sand_sav][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][2]}}" class="sand_sav_out" type="text" id="sand_sav_out_2" readonly="readonly"  Name="gameResult[sand_sav][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][3]}}" class="sand_sav_out" type="text" id="sand_sav_out_3" readonly="readonly"  Name="gameResult[sand_sav][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][4]}}" class="sand_sav_out" type="text" id="sand_sav_out_4" readonly="readonly"  Name="gameResult[sand_sav][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][5]}}" class="sand_sav_out" type="text" id="sand_sav_out_5" readonly="readonly"  Name="gameResult[sand_sav][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][6]}}" class="sand_sav_out" type="text" id="sand_sav_out_6" readonly="readonly"  Name="gameResult[sand_sav][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][7]}}" class="sand_sav_out" type="text" id="sand_sav_out_7" readonly="readonly"  Name="gameResult[sand_sav][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][8]}}" class="sand_sav_out" type="text" id="sand_sav_out_8" readonly="readonly"  Name="gameResult[sand_sav][input][8]" /></td>
+										<td><input value="{{$gameResult["sand_sav"]["out_sum"]}}" id ="sand_sav_out_sum" readonly="readonly" Name="gameResult[sand_sav][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][9]}}" class="sand_sav_in"  type="text" id="sand_sav_in_0" readonly="readonly"  Name="gameResult[sand_sav][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][10]}}" class="sand_sav_in" type="text" id="sand_sav_in_1" readonly="readonly" Name="gameResult[sand_sav][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][11]}}" class="sand_sav_in"  type="text" id="sand_sav_in_2" readonly="readonly" Name="gameResult[sand_sav][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][12]}}" class="sand_sav_in"  type="text" id="sand_sav_in_3" readonly="readonly" Name="gameResult[sand_sav][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][13]}}" class="sand_sav_in"  type="text" id="sand_sav_in_4" readonly="readonly" Name="gameResult[sand_sav][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][14]}}" class="sand_sav_in"  type="text" id="sand_sav_in_5" readonly="readonly" Name="gameResult[sand_sav][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][15]}}" class="sand_sav_in"  type="text" id="sand_sav_in_6" readonly="readonly" Name="gameResult[sand_sav][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][16]}}" class="sand_sav_in"  type="text" id="sand_sav_in_7" readonly="readonly" Name="gameResult[sand_sav][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["sand_sav"]["input"][17]}}" class="sand_sav_in"  type="text" id="sand_sav_in_8" readonly="readonly" Name="gameResult[sand_sav][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["sand_sav"]["in_sum"]}}" id="sand_sav_in_sum" readonly="readonly" Name="gameResult[sand_sav][in_sum]" /></td>
+										<td><input value="{{$gameResult["sand_sav"]["tot"]}}" id="sand_sav_tot" readonly="readonly" Name="gameResult[sand_sav][tot]" /></td>
 									</tr>
+
+
 									<tr>
 										<td>SAND%</td>
 										<td class="black"></td>
@@ -888,7 +1023,9 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[sand%][9]" /></td>
+										<td><input value="{{$gameResult["sand%"]["out_sum"]}}" type="text" id="sand_percentage_out_sum" readonly="readonly" Name="gameResult[sand%][out_sum]" /></td>
+										<td class="black"></td>
+										<td class="black"></td>  
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -896,38 +1033,42 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[sand%][19]" /></td>
-										<td><input type="hidden" Name="gameResult[sand%][20]" /></td>
+										
+										<td><input value="{{$gameResult["sand%"]["in_sum"]}}" type="text" id="sand_percentage_in_sum"  readonly="readonly" Name="gameResult[sand%][in_sum]" /></td>
+										<td><input value="{{$gameResult["sand%"]["tot"]}}" type="text" id="sand_percentage_sum"  readonly="readonly" Name="gameResult[sand%][tot]" /></td>
 									</tr>
+									
 									<tr>
 										<td>PENALTIES</td>
-										<td>{{$gameResult['penalties'][0]}}</td>
-										<td>{{$gameResult['penalties'][1]}}</td>
-										<td>{{$gameResult['penalties'][2]}}</td>
-										<td>{{$gameResult['penalties'][3]}}</td>
-										<td>{{$gameResult['penalties'][4]}}</td>
-										<td>{{$gameResult['penalties'][5]}}</td>
-										<td>{{$gameResult['penalties'][6]}}</td>
-										<td>{{$gameResult['penalties'][7]}}</td>
-										<td>{{$gameResult['penalties'][8]}}</td>
-										<td>{{$gameResult['penalties'][9]}}</td>
-										<td>{{$gameResult['penalties'][10]}}</td>
-										<td>{{$gameResult['penalties'][11]}}</td>
-										<td>{{$gameResult['penalties'][12]}}</td>
-										<td>{{$gameResult['penalties'][13]}}</td>
-										<td>{{$gameResult['penalties'][14]}}</td>
-										<td>{{$gameResult['penalties'][15]}}</td>
-										<td>{{$gameResult['penalties'][16]}}</td>
-										<td>{{$gameResult['penalties'][17]}}</td>
-										<td>{{$gameResult['penalties'][18]}}</td>
-										<td>{{$gameResult['penalties'][19]}}</td>
-										<td>{{$gameResult['penalties'][20]}}</td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][0]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][0]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][1]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][1]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][2]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][2]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][3]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][3]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][4]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][4]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][5]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][5]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][6]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][6]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][7]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][7]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][8]}}" class="penalties_out" type="text" Name="gameResult[penalties][input][8]" /></td>
+
+										<td><input value="{{$gameResult["penalties"]["out_sum"]}}" id ="penalties_out_sum" readonly="readonly" Name="gameResult[penalties][out_sum]" /></td>
+
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][9]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][9]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][10]}}" class="penalties_in" type="text" Name="gameResult[penalties][input][10]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][11]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][11]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][12]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][12]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][13]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][13]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][14]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][14]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][15]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][15]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][16]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult["penalties"]["input"][17]}}" class="penalties_in"  type="text" Name="gameResult[penalties][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["penalties"]["in_sum"]}}" id="penalties_in_sum" readonly="readonly" Name="gameResult[penalties][in_sum]" /></td>
+										<td><input value="{{$gameResult["penalties"]["tot"]}}" id="penalties_tot" readonly="readonly" Name="gameResult[penalties][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PAR3</td>
-										<td>{{$gameResult['par3'][0]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par3"]["input"][0]}}"  id="par3_out" readonly="readonly" type="text" Name="gameResult[par3][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -936,8 +1077,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par3'][9]}}</td>
-										<td>{{$gameResult['par3'][10]}}</td>
+										<td><input value="{{$gameResult["par3"]["out_sum"]}}"  id="par3_out_sum" readonly="readonly" Name="gameResult[par3][out_sum]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par3"]["tot"]}}"  id="par3_in" readonly="readonly" type="text" Name="gameResult[par3][input][1]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -946,12 +1087,13 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par3'][19]}}</td>
-										<td>{{$gameResult['par3'][20]}}</td>
+										<td><input value="{{$gameResult["par3"]["in_sum"]}}"  id="par3_in_sum" readonly="readonly" Name="gameResult[par3][in_sum]" /></td>
+										<td><input value="{{$gameResult["par3"]["tot"]}}"  id="par3_tot" readonly="readonly" Name="gameResult[par3][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PAR3STROKES</td>
-										<td>{{$gameResult['par3strokes'][0]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par3strokes"]["input"][0]}}" id="par3strokes_out" readonly="readonly"  type="text" Name="gameResult[par3strokes][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -960,8 +1102,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par3strokes'][9]}}</td>
-										<td>{{$gameResult['par3strokes'][10]}}</td>
+										<td><input value="{{$gameResult["par3strokes"]["out_sum"]}}" id="par3strokes_out_sum" readonly="readonly" type="text"  Name="gameResult[par3strokes][out_sum]" /></td>
+										<td class="numeric ash"><input id="par3strokes_in" readonly="readonly" type="text" Name="gameResult[par3strokes][input][1]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -970,8 +1112,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par3strokes'][19]}}</td>
-										<td>{{$gameResult['par3strokes'][20]}}</td>
+										<td><input value="{{$gameResult["par3strokes"]["in_sum"]}}" id="par3strokes_in_sum" readonly="readonly" Name="gameResult[par3strokes][in_sum]" /></td>
+										<td><input value="{{$gameResult["par3strokes"]["tot"]}}" id="par3strokes_tot" readonly="readonly" Name="gameResult[par3strokes][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PAR3SCOR</td>
@@ -984,7 +1126,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par3strokes][9]" /></td>
+										<td><input value="{{$gameResult["par3scor"]["out_sum"]}}" id="par3_score_out_sum" type="text" readonly="readonly" Name="gameResult[par3scor][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -994,12 +1136,12 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par3strokes][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par3strokes][20]" /></td>
+										<td><input value="{{$gameResult["par3scor"]["in_sum"]}}" id="par3_score_in_sum" type="text" readonly="readonly" Name="gameResult[par3scor][in_sum]" /></td>
+										<td><input value="{{$gameResult["par3scor"]["tot"]}}" id="par3_score_tot" type="text" readonly="readonly" Name="gameResult[par3scor][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PAR4</td>
-										<td>{{$gameResult['par4'][0]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par4"]["input"][0]}}" id="par4_out" readonly="readonly" type="text" Name="gameResult[par4][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1008,8 +1150,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par4'][9]}}</td>
-										<td>{{$gameResult['par4'][10]}}</td>
+										<td><input value="{{$gameResult["par4"]["out_sum"]}}" id="par4_out_sum" readonly="readonly" Name="gameResult[par4][out_sum]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par4"]["in_sum"]}}" id="par4_in" readonly="readonly" type="text" Name="gameResult[par4][input][1]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1018,22 +1160,13 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par4'][19]}}</td>
-										<td>{{$gameResult['par4'][20]}}</td>
+										<td><input value="{{$gameResult["par4"]["in_sum"]}}" id="par4_in_sum" readonly="readonly" Name="gameResult[par4][in_sum]" /></td>
+										<td><input value="{{$gameResult["par4"]["tot"]}}" id="par4_tot" readonly="readonly" Name="gameResult[par4][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PAR4STROKES</td>
-										<td>{{$gameResult['par4strokes'][0]}}</td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td class="black"></td>
-										<td class="center"></td>
-										<td>{{$gameResult['par4strokes'][9]}}</td>
-										<td>{{$gameResult['par4strokes'][10]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par4strokes"]["input"][0]}}" id="par4strokes_out" readonly="readonly"  type="text" Name="gameResult[par4strokes][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1042,8 +1175,18 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par4strokes'][19]}}</td>
-										<td>{{$gameResult['par4strokes'][20]}}</td>
+										<td><input value="{{$gameResult["par4strokes"]["out_sum"]}}" id="par4strokes_out_sum" readonly="readonly" type="text"  Name="gameResult[par4strokes][out_sum]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par4strokes"]["input"][1]}}" id="par4strokes_in" readonly="readonly" type="text" Name="gameResult[par4strokes][input][1]" /></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td class="black"></td>
+										<td><input value="{{$gameResult["par4strokes"]["out_sum"]}}" id="par4strokes_in_sum" readonly="readonly" Name="gameResult[par4strokes][in_sum]" /></td>
+										<td><input value="{{$gameResult["par4strokes"]["tot"]}}" id="par4strokes_tot" readonly="readonly" Name="gameResult[par4strokes][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PAR4SCOR</td>
@@ -1056,7 +1199,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par4scor][9]" /></td>
+										<td><input value="{{$gameResult["par4scor"]["out_sum"]}}"  id="par4_score_out_sum" type="text" readonly="readonly" Name="gameResult[par4scor][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1066,12 +1209,12 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par4scor][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par4scor][20]" /></td>
+										<td><input value="{{$gameResult["par4scor"]["in_sum"]}}"  id="par4_score_in_sum" type="text" readonly="readonly" Name="gameResult[par4scor][in_sum]" /></td>
+										<td><input value="{{$gameResult["par4scor"]["tot"]}}"  id="par4_score_tot" type="text" readonly="readonly" Name="gameResult[par4scor][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PAR5</td>
-										<td>{{$gameResult['par5'][0]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par5"]["input"][0]}}" id="par5_out" readonly="readonly" type="text" Name="gameResult[par5][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1080,8 +1223,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par5'][9]}}</td>
-										<td>{{$gameResult['par5'][10]}}</td>
+										<td><input value="{{$gameResult["par5"]["out_sum"]}}" id="par5_out_sum" readonly="readonly" Name="gameResult[par5][out_sum]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par5"]["input"][1]}}"  id="par5_in" readonly="readonly" type="text" Name="gameResult[par5][input][1]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1090,12 +1233,13 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par5'][19]}}</td>
-										<td>{{$gameResult['par5'][20]}}</td>
+										<td><input value="{{$gameResult["par5"]["in_sum"]}}"  id="par5_in_sum" readonly="readonly" Name="gameResult[par5][in_sum]" /></td>
+										<td><input value="{{$gameResult["par5"]["tot"]}}"  id="par5_tot" readonly="readonly" Name="gameResult[par5][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PAR5STROKES</td>
-										<td>{{$gameResult['par5strokes'][0]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par4strokes"]["input"][0]}}" id="par5strokes_out" readonly="readonly"  type="text" Name="gameResult[par5strokes][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1104,8 +1248,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par5strokes'][9]}}</td>
-										<td>{{$gameResult['par5strokes'][10]}}</td>
+										<td><input value="{{$gameResult["par4strokes"]["out_sum"]}}" id="par5strokes_out_sum" readonly="readonly" type="text"  Name="gameResult[par5strokes][out_sum]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par4strokes"]["input"][1]}}"  id="par5strokes_in" readonly="readonly" type="text" Name="gameResult[par5strokes][input][1]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1114,8 +1258,8 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td>{{$gameResult['par5strokes'][19]}}</td>
-										<td>{{$gameResult['par5strokes'][20]}}</td>
+										<td><input value="{{$gameResult["par4strokes"]["in_sum"]}}"  id="par5strokes_in_sum" readonly="readonly" Name="gameResult[par5strokes][in_sum]" /></td>
+										<td><input value="{{$gameResult["par4strokes"]["tot"]}}"  id="par5strokes_tot" readonly="readonly" Name="gameResult[par5strokes][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PAR5SCOR</td>
@@ -1128,7 +1272,7 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par5strokes][9]" /></td>
+										<td><input value="{{$gameResult["par5scor"]["out_sum"]}}"  id="par5_score_out_sum" type="text" readonly="readonly" Name="gameResult[par5scor][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1138,152 +1282,177 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[par5strokes][19]" /></td>
-										<td><input type="hidden" Name="gameResult[par5strokes][20]" /></td>
+										<td><input value="{{$gameResult["par5scor"]["in_sum"]}}"  id="par5_score_in_sum" type="text" readonly="readonly" Name="gameResult[par5scor][in_sum]" /></td>
+										<td><input value="{{$gameResult["par5scor"]["tot"]}}"  id="par5_score_tot" type="text" readonly="readonly" Name="gameResult[par5scor][tot]" /></td>
 									</tr>
+									
 									<tr>
 										<td>EAGLE</td>
-										<td>{{$gameResult['eagle'][0]}}</td>
-										<td>{{$gameResult['eagle'][1]}}</td>
-										<td>{{$gameResult['eagle'][2]}}</td>
-										<td>{{$gameResult['eagle'][3]}}</td>
-										<td>{{$gameResult['eagle'][4]}}</td>
-										<td>{{$gameResult['eagle'][5]}}</td>
-										<td>{{$gameResult['eagle'][6]}}</td>
-										<td>{{$gameResult['eagle'][7]}}</td>
-										<td>{{$gameResult['eagle'][8]}}</td>
-										<td>{{$gameResult['eagle'][9]}}</td>
-										<td>{{$gameResult['eagle'][10]}}</td>
-										<td>{{$gameResult['eagle'][11]}}</td>
-										<td>{{$gameResult['eagle'][12]}}</td>
-										<td>{{$gameResult['eagle'][13]}}</td>
-										<td>{{$gameResult['eagle'][14]}}</td>
-										<td>{{$gameResult['eagle'][15]}}</td>
-										<td>{{$gameResult['eagle'][16]}}</td>
-										<td>{{$gameResult['eagle'][17]}}</td>
-										<td>{{$gameResult['eagle'][18]}}</td>
-										<td>{{$gameResult['eagle'][19]}}</td>
-										<td>{{$gameResult['eagle'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][0]}}" id="eagle_out_0" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][1]}}" id="eagle_out_1" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][2]}}" id="eagle_out_2" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][3]}}" id="eagle_out_3" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][4]}}" id="eagle_out_4" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][5]}}" id="eagle_out_5" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][6]}}" id="eagle_out_6" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][7]}}" id="eagle_out_7" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][8]}}" id="eagle_out_8" readonly="readonly" class="eagle_out" type="text" Name="gameResult[eagle][input][8]" /></td>
+
+										<td><input value="{{$gameResult["eagle"]["out_sum"]}}" id ="eagle_out_sum" readonly="readonly" Name="gameResult[eagle][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][9]}}" id="eagle_in_0" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][10]}}" id="eagle_in_1" readonly="readonly"  class="eagle_in" type="text" Name="gameResult[eagle][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][11]}}" id="eagle_in_2" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][12]}}" id="eagle_in_3" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][13]}}" id="eagle_in_4" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][14]}}" id="eagle_in_5" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][15]}}" id="eagle_in_6" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][16]}}" id="eagle_in_7" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["eagle"]["input"][17]}}" id="eagle_in_8" readonly="readonly"  class="eagle_in"  type="text" Name="gameResult[eagle][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["eagle"]["in_sum"]}}" id="eagle_in_sum" readonly="readonly" Name="gameResult[eagle][in_sum]" /></td>
+										<td><input value="{{$gameResult["eagle"]["tot"]}}" id="eagle_tot" readonly="readonly" Name="gameResult[eagle][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>BIRDIE</td>
-										<td>{{$gameResult['birdie'][0]}}</td>
-										<td>{{$gameResult['birdie'][1]}}</td>
-										<td>{{$gameResult['birdie'][2]}}</td>
-										<td>{{$gameResult['birdie'][3]}}</td>
-										<td>{{$gameResult['birdie'][4]}}</td>
-										<td>{{$gameResult['birdie'][5]}}</td>
-										<td>{{$gameResult['birdie'][6]}}</td>
-										<td>{{$gameResult['birdie'][7]}}</td>
-										<td>{{$gameResult['birdie'][8]}}</td>
-										<td>{{$gameResult['birdie'][9]}}</td>
-										<td>{{$gameResult['birdie'][10]}}</td>
-										<td>{{$gameResult['birdie'][11]}}</td>
-										<td>{{$gameResult['birdie'][12]}}</td>
-										<td>{{$gameResult['birdie'][13]}}</td>
-										<td>{{$gameResult['birdie'][14]}}</td>
-										<td>{{$gameResult['birdie'][15]}}</td>
-										<td>{{$gameResult['birdie'][16]}}</td>
-										<td>{{$gameResult['birdie'][17]}}</td>
-										<td>{{$gameResult['birdie'][18]}}</td>
-										<td>{{$gameResult['birdie'][19]}}</td>
-										<td>{{$gameResult['birdie'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][0]}}" id="birdie_out_0" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][1]}}" id="birdie_out_1" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][2]}}" id="birdie_out_2" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][3]}}" id="birdie_out_3" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][4]}}" id="birdie_out_4" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][5]}}" id="birdie_out_5" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][6]}}" id="birdie_out_6" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][7]}}" id="birdie_out_7" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][8]}}" id="birdie_out_8" readonly="readonly" class="birdie_out" type="text" Name="gameResult[birdie][input][8]" /></td>
+
+										<td><input value="{{$gameResult["birdie"]["out_sum"]}}" id ="birdie_out_sum" readonly="readonly" Name="gameResult[birdie][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][9]}}" id="birdie_in_0" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][10]}}" id="birdie_in_1" readonly="readonly" class="birdie_in" type="text" Name="gameResult[birdie][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][11]}}" id="birdie_in_2" readonly="readonly" class="birdie_in" type="text" Name="gameResult[birdie][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][12]}}" id="birdie_in_3" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][13]}}" id="birdie_in_4" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][14]}}" id="birdie_in_5" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][15]}}" id="birdie_in_6" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][16]}}" id="birdie_in_7" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["birdie"]["input"][17]}}" id="birdie_in_8" readonly="readonly" class="birdie_in"  type="text" Name="gameResult[birdie][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["birdie"]["in_sum"]}}" id="birdie_in_sum" readonly="readonly" Name="gameResult[birdie][in_sum]" /></td>
+										<td><input value="{{$gameResult["birdie"]["tot"]}}" id="birdie_tot" readonly="readonly" Name="gameResult[birdie][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>PAR</td>
-										<td>{{$gameResult['par'][0]}}</td>
-										<td>{{$gameResult['par'][1]}}</td>
-										<td>{{$gameResult['par'][2]}}</td>
-										<td>{{$gameResult['par'][3]}}</td>
-										<td>{{$gameResult['par'][4]}}</td>
-										<td>{{$gameResult['par'][5]}}</td>
-										<td>{{$gameResult['par'][6]}}</td>
-										<td>{{$gameResult['par'][7]}}</td>
-										<td>{{$gameResult['par'][8]}}</td>
-										<td>{{$gameResult['par'][9]}}</td>
-										<td>{{$gameResult['par'][10]}}</td>
-										<td>{{$gameResult['par'][11]}}</td>
-										<td>{{$gameResult['par'][12]}}</td>
-										<td>{{$gameResult['par'][13]}}</td>
-										<td>{{$gameResult['par'][14]}}</td>
-										<td>{{$gameResult['par'][15]}}</td>
-										<td>{{$gameResult['par'][16]}}</td>
-										<td>{{$gameResult['par'][17]}}</td>
-										<td>{{$gameResult['par'][18]}}</td>
-										<td>{{$gameResult['par'][19]}}</td>
-										<td>{{$gameResult['par'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][0]}}" id="par_out_0" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][1]}}" id="par_out_1" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][2]}}" id="par_out_2" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][3]}}" id="par_out_3" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][4]}}" id="par_out_4" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][5]}}" id="par_out_5" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][6]}}" id="par_out_6" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][7]}}" id="par_out_7" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][8]}}" id="par_out_8" readonly="readonly" class="par_out" type="text" Name="gameResult[par][input][8]" /></td>
+
+										<td><input value="{{$gameResult["par"]["out_sum"]}}" id ="par_out_sum" readonly="readonly" Name="gameResult[par][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][9]}}" id="par_in_0" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][10]}}" id="par_in_1" readonly="readonly" class="par_in" type="text" Name="gameResult[par][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][11]}}" id="par_in_2" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][12]}}" id="par_in_3" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][13]}}" id="par_in_4" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][14]}}" id="par_in_5" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][15]}}" id="par_in_6" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["par"]["input"][16]}}" id="par_in_7" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][16]" /></td>
+										<td class="numeric ash"><input  value="{{$gameResult["par"]["input"][17]}}"id="par_in_8" readonly="readonly" class="par_in"  type="text" Name="gameResult[par][input][17]" /></td>
+									
+										
+										<td><input value="{{$gameResult["par"]["in_sum"]}}" id="par_in_sum" readonly="readonly" Name="gameResult[par][in_sum]" /></td>
+										<td><input value="{{$gameResult["par"]["tot"]}}" id="par_tot" readonly="readonly" Name="gameResult[par][tot]" /></td>
 									</tr>
+
+									
 									<tr>
 										<td>BOGEY</td>
-										<td>{{$gameResult['bogey'][0]}}</td>
-										<td>{{$gameResult['bogey'][1]}}</td>
-										<td>{{$gameResult['bogey'][2]}}</td>
-										<td>{{$gameResult['bogey'][3]}}</td>
-										<td>{{$gameResult['bogey'][4]}}</td>
-										<td>{{$gameResult['bogey'][5]}}</td>
-										<td>{{$gameResult['bogey'][6]}}</td>
-										<td>{{$gameResult['bogey'][7]}}</td>
-										<td>{{$gameResult['bogey'][8]}}</td>
-										<td>{{$gameResult['bogey'][9]}}</td>
-										<td>{{$gameResult['bogey'][10]}}</td>
-										<td>{{$gameResult['bogey'][11]}}</td>
-										<td>{{$gameResult['bogey'][12]}}</td>
-										<td>{{$gameResult['bogey'][13]}}</td>
-										<td>{{$gameResult['bogey'][14]}}</td>
-										<td>{{$gameResult['bogey'][15]}}</td>
-										<td>{{$gameResult['bogey'][16]}}</td>
-										<td>{{$gameResult['bogey'][17]}}</td>
-										<td>{{$gameResult['bogey'][18]}}</td>
-										<td>{{$gameResult['bogey'][19]}}</td>
-										<td>{{$gameResult['bogey'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][0]}}" id="bogey_out_0" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][1]}}" id="bogey_out_1" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][2]}}" id="bogey_out_2" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][3]}}" id="bogey_out_3" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][4]}}" id="bogey_out_4" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][5]}}" id="bogey_out_5" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][6]}}" id="bogey_out_6" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][7]}}" id="bogey_out_7" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][8]}}" id="bogey_out_8" readonly="readonly" class="bogey_out" type="text" Name="gameResult[bogey][input][8]" /></td>
+
+										<td><input value="{{$gameResult["bogey"]["out_sum"]}}" id ="bogey_out_sum" readonly="readonly" Name="gameResult[bogey][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][9]}}" id="bogey_in_0" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][10]}}" id="bogey_in_1" readonly="readonly" class="bogey_in" type="text" Name="gameResult[bogey][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][11]}}" id="bogey_in_2" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][12]}}" id="bogey_in_3" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][13]}}" id="bogey_in_4" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][14]}}" id="bogey_in_5" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][15]}}" id="bogey_in_6" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][16]}}" id="bogey_in_7" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["bogey"]["input"][17]}}" id="bogey_in_8" readonly="readonly" class="bogey_in"  type="text" Name="gameResult[bogey][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["bogey"]["in_sum"]}}" id="bogey_in_sum" readonly="readonly" Name="gameResult[bogey][in_sum]" /></td>
+										<td><input value="{{$gameResult["bogey"]["tot"]}}" id="bogey_tot" readonly="readonly" Name="gameResult[bogey][tot]" /></td>
 									</tr>
+
 									<tr>
 										<td>DBLBOGEY</td>
-										<td>{{$gameResult['dblbogey'][0]}}</td>
-										<td>{{$gameResult['dblbogey'][1]}}</td>
-										<td>{{$gameResult['dblbogey'][2]}}</td>
-										<td>{{$gameResult['dblbogey'][3]}}</td>
-										<td>{{$gameResult['dblbogey'][4]}}</td>
-										<td>{{$gameResult['dblbogey'][5]}}</td>
-										<td>{{$gameResult['dblbogey'][6]}}</td>
-										<td>{{$gameResult['dblbogey'][7]}}</td>
-										<td>{{$gameResult['dblbogey'][8]}}</td>
-										<td>{{$gameResult['dblbogey'][9]}}</td>
-										<td>{{$gameResult['dblbogey'][10]}}</td>
-										<td>{{$gameResult['dblbogey'][11]}}</td>
-										<td>{{$gameResult['dblbogey'][12]}}</td>
-										<td>{{$gameResult['dblbogey'][13]}}</td>
-										<td>{{$gameResult['dblbogey'][14]}}</td>
-										<td>{{$gameResult['dblbogey'][15]}}</td>
-										<td>{{$gameResult['dblbogey'][16]}}</td>
-										<td>{{$gameResult['dblbogey'][17]}}</td>
-										<td>{{$gameResult['dblbogey'][18]}}</td>
-										<td>{{$gameResult['dblbogey'][19]}}</td>
-										<td>{{$gameResult['dblbogey'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][0]}}" id="dblbogey_out_0" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][1]}}" id="dblbogey_out_1" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][2]}}" id="dblbogey_out_2" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][3]}}" id="dblbogey_out_3" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][4]}}" id="dblbogey_out_4" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][5]}}" id="dblbogey_out_5" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][6]}}" id="dblbogey_out_6" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][7]}}" id="dblbogey_out_7" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][8]}}" id="dblbogey_out_8" readonly="readonly" class="dblbogey_out" type="text" Name="gameResult[dblbogey][input][8]" /></td>
+
+										<td><input value="{{$gameResult["dblbogey"]["out_sum"]}}" id ="dblbogey_out_sum" readonly="readonly" Name="gameResult[dblbogey][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][9]}}" id="dblbogey_in_0" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][10]}}" id="dblbogey_in_1" readonly="readonly" class="dblbogey_in" type="text" Name="gameResult[dblbogey][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][11]}}" id="dblbogey_in_2" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][12]}}" id="dblbogey_in_3" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][13]}}" id="dblbogey_in_4" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][14]}}" id="dblbogey_in_5" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][15]}}" id="dblbogey_in_6" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][16]}}" id="dblbogey_in_7" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["dblbogey"]["input"][17]}}" id="dblbogey_in_8" readonly="readonly" class="dblbogey_in"  type="text" Name="gameResult[dblbogey][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["dblbogey"]["in_sum"]}}" id="dblbogey_in_sum" readonly="readonly" Name="gameResult[dblbogey][in_sum]" /></td>
+										<td><input value="{{$gameResult["dblbogey"]["tot"]}}" id="dblbogey_tot" readonly="readonly" Name="gameResult[dblbogey][tot]" /></td>
 									</tr>
 									<tr>
 										<td>OTHER</td>
-										<td>{{$gameResult['other'][0]}}</td>
-										<td>{{$gameResult['other'][1]}}</td>
-										<td>{{$gameResult['other'][2]}}</td>
-										<td>{{$gameResult['other'][3]}}</td>
-										<td>{{$gameResult['other'][4]}}</td>
-										<td>{{$gameResult['other'][5]}}</td>
-										<td>{{$gameResult['other'][6]}}</td>
-										<td>{{$gameResult['other'][7]}}</td>
-										<td>{{$gameResult['other'][8]}}</td>
-										<td>{{$gameResult['other'][9]}}</td>
-										<td>{{$gameResult['other'][10]}}</td>
-										<td>{{$gameResult['other'][11]}}</td>
-										<td>{{$gameResult['other'][12]}}</td>
-										<td>{{$gameResult['other'][13]}}</td>
-										<td>{{$gameResult['other'][14]}}</td>
-										<td>{{$gameResult['other'][15]}}</td>
-										<td>{{$gameResult['other'][16]}}</td>
-										<td>{{$gameResult['other'][17]}}</td>
-										<td>{{$gameResult['other'][18]}}</td>
-										<td>{{$gameResult['other'][19]}}</td>
-										<td>{{$gameResult['other'][20]}}</td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][0]}}" id="other_out_0" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][0]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][1]}}" id="other_out_1" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][1]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][2]}}" id="other_out_2" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][2]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][3]}}" id="other_out_3" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][3]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][4]}}" id="other_out_4" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][4]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][5]}}" id="other_out_5" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][5]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][6]}}" id="other_out_6" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][6]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][7]}}" id="other_out_7" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][7]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][8]}}" id="other_out_8" readonly="readonly" class="other_out" type="text" Name="gameResult[other][input][8]" /></td>
+
+										<td><input value="{{$gameResult["other"]["out_sum"]}}" id ="other_out_sum" readonly="readonly" Name="gameResult[other][out_sum]" /></td>
+
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][9]}}" id="other_in_0" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][9]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][10]}}" id="other_in_1" readonly="readonly" class="other_in" type="text" Name="gameResult[other][input][10]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][11]}}" id="other_in_2" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][11]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][12]}}" id="other_in_3" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][12]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][13]}}" id="other_in_4" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][13]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][14]}}" id="other_in_5" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][14]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][15]}}" id="other_in_6" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][15]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][16]}}" id="other_in_7" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][16]" /></td>
+										<td class="numeric ash"><input value="{{$gameResult["other"]["input"][17]}}" id="other_in_8" readonly="readonly" class="other_in"  type="text" Name="gameResult[other][input][17]" /></td>
+										
+										<td><input value="{{$gameResult["other"]["in_sum"]}}" id="other_in_sum" readonly="readonly" Name="gameResult[other][in_sum]" /></td>
+										<td><input value="{{$gameResult["other"]["tot"]}}" id="other_tot" readonly="readonly" Name="gameResult[other][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PLAYED HOLES</td>
@@ -1307,11 +1476,10 @@ $gameResult = json_decode($gameResult, true);
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input type="hidden" Name="gameResult[played_holes][20]" /></td>
+										<td><input value="{{$gameResult["played_holes"]["tot"]}}" id="played_holes_tot" readonly="readonly" Name="gameResult[played_holes][tot]" /></td>
 									</tr>
 							</table>
 						</div>
-
 						<br>
 						<br>
 						<br>
@@ -1326,12 +1494,12 @@ $gameResult = json_decode($gameResult, true);
 									<th>#PAR5</th>
 								</tr>
 								<tr>
-									<td>3.50</td>
-									<td>4.50</td>
-									<td>4.20</td>
-									<td>4</td>
-									<td>10</td>
-									<td>4</td>
+									<td><input id="par3_scoring" readonly="readonly" name="gameResult[par3_scoring][0]"></td>
+									<td><input id="par4_scoring" readonly="readonly" name="gameResult[par4_scoring][0]"></td>
+									<td><input id="par5_scoring" readonly="readonly" name="gameResult[par5_scoring][0]"></td>
+									<td><input id="hash_par3" readonly="readonly" name="gameResult[hash_par3][0]"></td>
+									<td><input id="hash_par4" readonly="readonly" name="gameResult[hash_par4][0]"></td>
+									<td><input id="hash_par5" readonly="readonly" name="gameResult[hash_par5][0]"></td>
 								</tr>
 								<tr style="background: red;">
 									<th>EAGLES</th>
@@ -1342,12 +1510,12 @@ $gameResult = json_decode($gameResult, true);
 									<th>OTHERS</th>
 								</tr>
 								<tr>
-									<td></td>
-									<td></td>
-									<td>10</td>
-									<td>5</td>
-									<td>0</td>
-									<td>0</td>
+									<td><input id="eagles" readonly="readonly" name="gameResult[eagles][0]"></td>
+									<td><input id="birdies" readonly="readonly" name="gameResult[birdies][0]"></td>
+									<td><input id="pars" readonly="readonly" name="gameResult[pars][0]"></td>
+									<td><input id="bogeys" readonly="readonly" name="gameResult[bogeys][0]"></td>
+									<td><input id="dblbogeys" readonly="readonly" name="gameResult[dblbogeys][0]"></td>
+									<td><input id="others" readonly="readonly" name="gameResult[others][0]"></td>
 								</tr>
 								<tr style="background: deepskyblue;">
 									<th>FAIRWAYS</th>
@@ -1358,12 +1526,12 @@ $gameResult = json_decode($gameResult, true);
 									<th># 18 HOLE RDS</th>
 								</tr>
 								<tr>
-									<td>5</td>
-									<td>36%</td>
-									<td>13</td>
-									<td>72%</td>
-									<td>18</td>
-									<td>1</td>
+									<td><input id="fairways" readonly="readonly" name="gameResult[fairways][0]"></td>
+									<td><input id="fir_percentage" readonly="readonly" name="gameResult[fir_percentage][0]"></td>
+									<td><input id="greens" readonly="readonly" name="gameResult[greens][0]"></td>
+									<td><input id="gir_percentage" readonly="readonly" name="gameResult[gir_percentage][0]"></td>
+									<td><input id="played_holes_equation" readonly="readonly" name="gameResult[played_holes_equation][0]"></td>
+									<td><input id="hole_rds_18" readonly="readonly" name="gameResult[hole_rds_18][0]"></td>
 								</tr>
 								<tr style="background: brown;">
 									<th>SCRAMBLE OPP</th>
@@ -1374,12 +1542,12 @@ $gameResult = json_decode($gameResult, true);
 									<th>SAND SAVE %</th>
 								</tr>
 								<tr>
-									<td>5</td>
-									<td>2</td>
-									<td>40%</td>
-									<td>2</td>
-									<td>2</td>
-									<td>100%</td>
+									<td><input id="scramble_opp_equation" readonly="readonly" name="gameResult[scramble_opp_equation][0]"></td>
+									<td><input id="scramble_sav_equation" readonly="readonly" name="gameResult[scramble_sav_equation][0]"></td>
+									<td><input id="scramble_percentage" readonly="readonly" name="gameResult[scramble_percentage][0]"></td>
+									<td><input id="sand_opp_equation" readonly="readonly" name="gameResult[sand_opp_equation][0]"></td>
+									<td><input id="sand_sav_equation" readonly="readonly" name="gameResult[sand_sav_equation][0]"></td>
+									<td><input id="sand_sav_percentage" readonly="readonly" name="gameResult[sand_sav_percentage][0]"></td>
 								</tr>
 								<tr style="background: yellow;">
 									<th>MISSED GIR</th>
@@ -1390,9 +1558,9 @@ $gameResult = json_decode($gameResult, true);
 									<th></th>
 								</tr>
 								<tr>
-									<td>5</td>
-									<td>39</td>
-									<td>7.80</td>
+									<td><input id="missed_gir" readonly="readonly" name="gameResult[missed_gir][0]"></td>
+									<td><input id="put_1_nogir" readonly="readonly" name="gameResult[put_1_nogir][0]"></td>
+									<td><input id="avg_dist_chip" readonly="readonly" name="gameResult[avg_dist_chip][0]"></td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -1406,9 +1574,9 @@ $gameResult = json_decode($gameResult, true);
 									<th></th>
 								</tr>
 								<tr>
-									<td>33</td>
-									<td>1.83</td>
-									<td>74.00</td>
+									<td><input id="total_putts" readonly="readonly" name="gameResult[total_putts][0]"></td>
+									<td><input id="putts_div_hole" readonly="readonly" name="gameResult[putts_div_hole][0]"></td>
+									<td><input id="avg_score" readonly="readonly" name="gameResult[avg_score][0]"></td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -1422,11 +1590,15 @@ $gameResult = json_decode($gameResult, true);
 									<th></th>
 								</tr>
 								<tr>
-									<td>17</td>
-									<td>3</td>
-									<td>7</td>
-									<td>9</td>
-									<td>2</td>
+									<td><input id="putt_opp_5_equation" readonly="readonly" name="gameResult[putt_opp_5_equation][0]"></td>
+									<td><input id="putt_opp_5_9_equation" readonly="readonly" name="gameResult[putt_opp_5_9_equation
+									][0]"></td>
+									<td><input id="putt_opp_10_19_equation" readonly="readonly" name="gameResult[putt_opp_10_19_equation
+									][0]"></td>
+									<td><input id="putt_opp_20_29_equation" readonly="readonly" name="gameResult[putt_opp_20_29_equation
+									][0]"></td>
+									<td><input id="putt_opp_30_equation" readonly="readonly" name="gameResult[putt_opp_30_equation
+									][0]"></td>
 									<td></td>
 								</tr>
 								<tr>
@@ -1438,11 +1610,15 @@ $gameResult = json_decode($gameResult, true);
 									<th></th>
 								</tr>
 								<tr>
-									<td>15</td>
-									<td>1</td>
-									<td>2</td>
-									<td>0</td>
-									<td>0</td>
+									<td><input id="putt_make_5_equation" readonly="readonly" name="gameResult[putt_make_5_equation][0]"></td>
+									<td><input id="putt_make_5_9_equation" readonly="readonly" name="gameResult[putt_make_5_9_equation
+									][0]"></td>
+									<td><input id="putt_make_10_19_equation" readonly="readonly" name="gameResult[putt_make_10_19_equation
+									][0]"></td>
+									<td><input id="putt_make_20_29_equation" readonly="readonly" name="gameResult[putt_make_20_29_equation
+									][0]"></td>
+									<td><input id="putt_make_30_equation" readonly="readonly" name="gameResult[putt_make_30_equation
+									][0]"></td>
 									<td></td>
 								</tr>
 								<tr>
@@ -1454,30 +1630,36 @@ $gameResult = json_decode($gameResult, true);
 									<th></th>
 								</tr>
 								<tr>
-									<td>88%</td>
-									<td>33%</td>
-									<td>4%</td>
-									<td>2%</td>
-									<td>1%</td>
+									<td><input id="make_percentage_5" readonly="readonly" name="gameResult[make_percentage_5][0]"></td>
+									<td><input id="make_percentage_5_9" readonly="readonly" name="gameResult[make_percentage_5_9
+									][0]"></td>
+									<td><input id="make_percentage_10_19" readonly="readonly" name="gameResult[make_percentage_10_19
+									][0]"></td>
+									<td><input id="make_percentage_20_29" readonly="readonly" name="gameResult[make_percentage_20_29
+									][0]"></td>
+									<td><input id="make_percentage_30" readonly="readonly" name="gameResult[make_percentage_30
+									][0]"></td>
 									<td></td>
 								</tr>
-							
+								<tr>
+									<td colspan="6" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="Edit" name="submit"/></td>
+								</tr>
 							</table>
 						</div>
-
 					</div>
-					
+					</form>
 				</div>
 			</div>
 		</div>
-		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/holder.min.js"></script>
-		<script src="js/ie10-viewport-bug-workaround.js"></script>
-		<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-	
+		<script src="{{$asset}}js/jquery.min.js"></script>
+		<script src="{{$asset}}js/bootstrap.min.js"></script>
+		<script src="{{$asset}}js/bootstrap-datepicker.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function () {
+                $('#datetimepicker1').datepicker();
+            });
+        </script>
+		<script type="text/javascript" src="{{$asset}}custom_js/formulas.js"></script>
 	</body>
 </html>
 @stop
