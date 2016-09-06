@@ -1059,7 +1059,7 @@
 
 									<tr>
 										<td>PAR3</td>
-										<td class="numeric"><input class="par3_out" type="text" Name="gameResult[par3][input][0]" /></td>
+										<td class="numeric"><input id="par3_out" readonly="readonly" type="text" Name="gameResult[par3][input][0]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1069,7 +1069,7 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td><input id="par3_out_sum" readonly="readonly" Name="gameResult[par3][out_sum]" /></td>
-										<td class="numeric"><input class="par3_in" type="text" Name="gameResult[par3][input][1]" /></td>
+										<td class="numeric"><input id="par3_in" readonly="readonly" type="text" Name="gameResult[par3][input][1]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>

@@ -348,7 +348,7 @@ $(document).ready(function() {
 	$('.penalties_in').on("change, keyup" , Penalties);
 	$(".penalties_out").on("change, keyup" ,Penalties);
 
-	function Par3()
+	/*function Par3()
 	{
 		var inSum = 0;
 		$('.par3_in').each(function(){
@@ -533,7 +533,7 @@ $(document).ready(function() {
 
 	}
 	$('.par5strokes_in').on("change, keyup" , PAR5STROKES);
-	$(".par5strokes_out").on("change, keyup" ,PAR5STROKES);
+	$(".par5strokes_out").on("change, keyup" ,PAR5STROKES);*/
 
 	function EAGLE()
 	{
@@ -2240,6 +2240,31 @@ $(document).ready(function() {
 	//$('.sand_opp_in').on("change, keyup" , CalculateSandRows);
 	//$(".sand_opp_out").on("change, keyup" ,CalculateSandRows);
 
+	function CalculateAllParStrokesAndParScors()
+	{
+		var holePairOutList = []; 
+		$('.hole_par_out').each(function(){
+			holePairOutList.push( $(this).val() );
+		});
+		//debugger;
+		var par3Out=0;
+		debugger;
+		for(var index=0; index<9; index++)
+		{
+			if( holePairOutList[index]==3 )
+			{
+				par3Out = par3Out + 1;
+			}
+			document.write(par3Out);
+			$("#par3_out").val(par3Out);
+
+		}
+		//document.write(par3Out);
+		
+
+	}
+	$('.hole_par_in').on("change, keyup" , CalculateAllParStrokesAndParScors);
+	$(".hole_par_out").on("change, keyup" ,CalculateAllParStrokesAndParScors);
 
 
 });
