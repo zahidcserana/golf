@@ -1660,6 +1660,25 @@ $asset = asset('/');
             });
         </script>
 		<script type="text/javascript" src="{{$asset}}custom_js/formulas.js"></script>
+		<script>
+			$(document).ready(function(){
+				window.setInterval(function(){
+				  SetToken()
+				}, 60000);
+			});
+			
+			function SetToken()
+			{
+				$.ajax({
+					url: "{{route("get_csrf_token")}}"
+				})
+			  .done(function( data ) {
+				  var dataJson = JSON.parse();
+				  $( "input[value='_token']" ).val(dataJson.token);
+				//alert( "Data Saved: " + msg );
+			  });
+			}
+		</script>
 	</body>
 </html>
 @stop

@@ -69,4 +69,10 @@ class LoginController extends Controller
         session()->flush();
         return redirect('/');
     }
+	
+	public function GetCSRFToken()
+	{
+		$retArr = array('success'=>true,'token'=>csrf_token());
+		echo json_encode($retArr);
+	}
 }

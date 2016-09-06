@@ -37,5 +37,7 @@ Route::get('/user_message/{test}', ['as'=>'user_message', 'uses'=>'GolfCourseCon
 Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails'])->middleware('UserValidationMiddleware');
 Route::get('/user_logout',['as'=>'user_logout', 'uses' => 'LoginController@UserLogout']);
 
+Route::get('/get_csrf_token', ['as'=>'get_csrf_token', 'uses'=>'LoginController@GetCSRFToken'])->middleware('UserValidationMiddleware');
+
 /////    ggg
 
