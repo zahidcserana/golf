@@ -3,15 +3,45 @@
 ?>
 @extends('user.master')
 @section('content')
-
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <h1 class="page-header">User profile</h1>
 
 <div class="row">
+	
 	<div class="col-md-2">
 		<a class="thumbnail">
-			<img src="{{$asset}}image/{{$userProfile->photo}}" alt="...">
+			<img src="{{$asset}}image/{{$userProfile->photo}}" id="image_upload" alt="..." >
+
 		</a>
+		<a href="javascript:void(0)" id="change_picture">Change</a>
 	</div>
+	
+	<form  id="form" action=" " method="post" enctype="multipart/form-data"  style="display: none;">
+		
+		<input type="file" id="file" name="file">
+		
+		
+	</form>
+	<script >
+		$(document).ready(function()
+		{ 
+			$("#change_picture").click(function()
+			{ 
+				$( "#file" ).click();
+				
+			   
+			});
+		});
+
+		$( "#file" ).change(function(){
+			var reader = new FileReader();
+               	reader.onload = function (e) {
+                  $('#image_upload').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(this.files[0]);
+		});
+    	</script>
+
 	<div class="col-md-10">
 		<div class="table-responsive">
 			<table class="table table-striped" id="user_profile_table">
