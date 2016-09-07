@@ -4,7 +4,6 @@
 $asset = asset('/');
 
 ?>
-
 <!doctype html>
 <html class="no-js" lang="">
 	<head>
@@ -1494,12 +1493,12 @@ $asset = asset('/');
 									<th>#PAR5</th>
 								</tr>
 								<tr>
-									<td><input id="par3_scoring" readonly="readonly" name="gameResult[par3_scoring][0]"></td>
-									<td><input id="par4_scoring" readonly="readonly" name="gameResult[par4_scoring][0]"></td>
-									<td><input id="par5_scoring" readonly="readonly" name="gameResult[par5_scoring][0]"></td>
-									<td><input id="hash_par3" readonly="readonly" name="gameResult[hash_par3][0]"></td>
-									<td><input id="hash_par4" readonly="readonly" name="gameResult[hash_par4][0]"></td>
-									<td><input id="hash_par5" readonly="readonly" name="gameResult[hash_par5][0]"></td>
+									<td><input value="{{$summaryResult['par3_scoring'][0]}}" id="par3_scoring" readonly="readonly" name="summaryResult[par3_scoring][0]"></td>
+									<td><input value="{{$summaryResult['par4_scoring'][0]}}" id="par4_scoring" readonly="readonly" name="summaryResult[par4_scoring][0]"></td>
+									<td><input value="{{$summaryResult['par5_scoring'][0]}}" id="par5_scoring" readonly="readonly" name="summaryResult[par5_scoring][0]"></td>
+									<td><input value="{{$summaryResult['hash_par3'][0]}}" id="hash_par3" readonly="readonly" name="summaryResult[hash_par3][0]"></td>
+									<td><input value="{{$summaryResult['hash_par4'][0]}}" id="hash_par4" readonly="readonly" name="summaryResult[hash_par4][0]"></td>
+									<td><input value="{{$summaryResult['hash_par5'][0]}}" id="hash_par5" readonly="readonly" name="summaryResult[hash_par5][0]"></td>
 								</tr>
 								<tr style="background: red;">
 									<th>EAGLES</th>
@@ -1510,12 +1509,12 @@ $asset = asset('/');
 									<th>OTHERS</th>
 								</tr>
 								<tr>
-									<td><input id="eagles" readonly="readonly" name="gameResult[eagles][0]"></td>
-									<td><input id="birdies" readonly="readonly" name="gameResult[birdies][0]"></td>
-									<td><input id="pars" readonly="readonly" name="gameResult[pars][0]"></td>
-									<td><input id="bogeys" readonly="readonly" name="gameResult[bogeys][0]"></td>
-									<td><input id="dblbogeys" readonly="readonly" name="gameResult[dblbogeys][0]"></td>
-									<td><input id="others" readonly="readonly" name="gameResult[others][0]"></td>
+									<td><input value="{{$summaryResult['eagles'][0]}}" id="eagles" readonly="readonly" name="summaryResult[eagles][0]"></td>
+									<td><input value="{{$summaryResult['birdies'][0]}}" id="birdies" readonly="readonly" name="summaryResult[birdies][0]"></td>
+									<td><input value="{{$summaryResult['pars'][0]}}" id="pars" readonly="readonly" name="summaryResult[pars][0]"></td>
+									<td><input value="{{$summaryResult['bogeys'][0]}}" id="bogeys" readonly="readonly" name="summaryResult[bogeys][0]"></td>
+									<td><input value="{{$summaryResult['dblbogeys'][0]}}" id="dblbogeys" readonly="readonly" name="summaryResult[dblbogeys][0]"></td>
+									<td><input value="{{$summaryResult['others'][0]}}" id="others" readonly="readonly" name="summaryResult[others][0]"></td>
 								</tr>
 								<tr style="background: deepskyblue;">
 									<th>FAIRWAYS</th>
@@ -1526,12 +1525,12 @@ $asset = asset('/');
 									<th># 18 HOLE RDS</th>
 								</tr>
 								<tr>
-									<td><input id="fairways" readonly="readonly" name="gameResult[fairways][0]"></td>
-									<td><input id="fir_percentage" readonly="readonly" name="gameResult[fir_percentage][0]"></td>
-									<td><input id="greens" readonly="readonly" name="gameResult[greens][0]"></td>
-									<td><input id="gir_percentage" readonly="readonly" name="gameResult[gir_percentage][0]"></td>
-									<td><input id="played_holes_equation" readonly="readonly" name="gameResult[played_holes_equation][0]"></td>
-									<td><input id="hole_rds_18" readonly="readonly" name="gameResult[hole_rds_18][0]"></td>
+									<td><input value="{{$summaryResult['fairways'][0]}}" id="fairways" readonly="readonly" name="summaryResult[fairways][0]"></td>
+									<td><input value="{{$summaryResult['fir_percentage'][0]}}" id="fir_percentage" readonly="readonly" name="summaryResult[fir_percentage][0]"></td>
+									<td><input value="{{$summaryResult['greens'][0]}}" id="greens" readonly="readonly" name="summaryResult[greens][0]"></td>
+									<td><input value="{{$summaryResult['gir_percentage'][0]}}" id="gir_percentage" readonly="readonly" name="summaryResult[gir_percentage][0]"></td>
+									<td><input value="{{$summaryResult['played_holes_equation'][0]}}" id="played_holes_equation" readonly="readonly" name="summaryResult[played_holes_equation][0]"></td>
+									<td><input value="{{$summaryResult['hole_rds_18'][0]}}" id="hole_rds_18" readonly="readonly" name="summaryResult[hole_rds_18][0]"></td>
 								</tr>
 								<tr style="background: brown;">
 									<th>SCRAMBLE OPP</th>
@@ -1542,12 +1541,12 @@ $asset = asset('/');
 									<th>SAND SAVE %</th>
 								</tr>
 								<tr>
-									<td><input id="scramble_opp_equation" readonly="readonly" name="gameResult[scramble_opp_equation][0]"></td>
-									<td><input id="scramble_sav_equation" readonly="readonly" name="gameResult[scramble_sav_equation][0]"></td>
-									<td><input id="scramble_percentage" readonly="readonly" name="gameResult[scramble_percentage][0]"></td>
-									<td><input id="sand_opp_equation" readonly="readonly" name="gameResult[sand_opp_equation][0]"></td>
-									<td><input id="sand_sav_equation" readonly="readonly" name="gameResult[sand_sav_equation][0]"></td>
-									<td><input id="sand_sav_percentage" readonly="readonly" name="gameResult[sand_sav_percentage][0]"></td>
+									<td><input value="{{$summaryResult['scramble_opp_equation'][0]}}" id="scramble_opp_equation" readonly="readonly" name="summaryResult[scramble_opp_equation][0]"></td>
+									<td><input value="{{$summaryResult['scramble_sav_equation'][0]}}" id="scramble_sav_equation" readonly="readonly" name="summaryResult[scramble_sav_equation][0]"></td>
+									<td><input value="{{$summaryResult['scramble_percentage'][0]}}" id="scramble_percentage" readonly="readonly" name="summaryResult[scramble_percentage][0]"></td>
+									<td><input value="{{$summaryResult['sand_opp_equation'][0]}}" id="sand_opp_equation" readonly="readonly" name="summaryResult[sand_opp_equation][0]"></td>
+									<td><input value="{{$summaryResult['sand_sav_equation'][0]}}" id="sand_sav_equation" readonly="readonly" name="summaryResult[sand_sav_equation][0]"></td>
+									<td><input value="{{$summaryResult['sand_sav_percentage'][0]}}" id="sand_sav_percentage" readonly="readonly" name="summaryResult[sand_sav_percentage][0]"></td>
 								</tr>
 								<tr style="background: yellow;">
 									<th>MISSED GIR</th>
@@ -1558,9 +1557,9 @@ $asset = asset('/');
 									<th></th>
 								</tr>
 								<tr>
-									<td><input id="missed_gir" readonly="readonly" name="gameResult[missed_gir][0]"></td>
-									<td><input id="put_1_nogir" readonly="readonly" name="gameResult[put_1_nogir][0]"></td>
-									<td><input id="avg_dist_chip" readonly="readonly" name="gameResult[avg_dist_chip][0]"></td>
+									<td><input value="{{$summaryResult['missed_gir'][0]}}" id="missed_gir" readonly="readonly" name="summaryResult[missed_gir][0]"></td>
+									<td><input value="{{$summaryResult['put_1_nogir'][0]}}" id="put_1_nogir" readonly="readonly" name="summaryResult[put_1_nogir][0]"></td>
+									<td><input value="{{$summaryResult['avg_dist_chip'][0]}}" id="avg_dist_chip" readonly="readonly" name="summaryResult[avg_dist_chip][0]"></td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -1574,9 +1573,9 @@ $asset = asset('/');
 									<th></th>
 								</tr>
 								<tr>
-									<td><input id="total_putts" readonly="readonly" name="gameResult[total_putts][0]"></td>
-									<td><input id="putts_div_hole" readonly="readonly" name="gameResult[putts_div_hole][0]"></td>
-									<td><input id="avg_score" readonly="readonly" name="gameResult[avg_score][0]"></td>
+									<td><input value="{{$summaryResult['total_putts'][0]}}" id="total_putts" readonly="readonly" name="summaryResult[total_putts][0]"></td>
+									<td><input value="{{$summaryResult['putts_div_hole'][0]}}" id="putts_div_hole" readonly="readonly" name="summaryResult[putts_div_hole][0]"></td>
+									<td><input value="{{$summaryResult['avg_score'][0]}}" id="avg_score" readonly="readonly" name="summaryResult[avg_score][0]"></td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -1590,11 +1589,11 @@ $asset = asset('/');
 									<th></th>
 								</tr>
 								<tr>
-									<td><input id="putt_opp_5_equation" readonly="readonly" name="gameResult[putt_opp_5_equation][0]"></td>
-									<td><input id="putt_opp_5_9_equation" readonly="readonly" name="gameResult[putt_opp_5_9_equation][0]"></td>
-									<td><input id="putt_opp_10_19_equation" readonly="readonly" name="gameResult[putt_opp_10_19_equation][0]"></td>
-									<td><input id="putt_opp_20_29_equation" readonly="readonly" name="gameResult[putt_opp_20_29_equation][0]"></td>
-									<td><input id="putt_opp_30_equation" readonly="readonly" name="gameResult[putt_opp_30_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_opp_5_equation'][0]}}" id="putt_opp_5_equation" readonly="readonly" name="summaryResult[putt_opp_5_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_opp_5_9_equation'][0]}}" id="putt_opp_5_9_equation" readonly="readonly" name="summaryResult[putt_opp_5_9_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_opp_10_19_equation'][0]}}" id="putt_opp_10_19_equation" readonly="readonly" name="summaryResult[putt_opp_10_19_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_opp_20_29_equation'][0]}}" id="putt_opp_20_29_equation" readonly="readonly" name="summaryResult[putt_opp_20_29_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_opp_30_equation'][0]}}" id="putt_opp_30_equation" readonly="readonly" name="summaryResult[putt_opp_30_equation][0]"></td>
 									<td></td>
 								</tr>
 								<tr>
@@ -1606,11 +1605,11 @@ $asset = asset('/');
 									<th></th>
 								</tr>
 								<tr>
-									<td><input id="putt_make_5_equation" readonly="readonly" name="gameResult[putt_make_5_equation][0]"></td>
-									<td><input id="putt_make_5_9_equation" readonly="readonly" name="gameResult[putt_make_5_9_equation][0]"></td>
-									<td><input id="putt_make_10_19_equation" readonly="readonly" name="gameResult[putt_make_10_19_equation][0]"></td>
-									<td><input id="putt_make_20_29_equation" readonly="readonly" name="gameResult[putt_make_20_29_equation][0]"></td>
-									<td><input id="putt_make_30_equation" readonly="readonly" name="gameResult[putt_make_30_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_make_5_equation'][0]}}" id="putt_make_5_equation" readonly="readonly" name="summaryResult[putt_make_5_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_make_5_9_equation'][0]}}" id="putt_make_5_9_equation" readonly="readonly" name="summaryResult[putt_make_5_9_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_make_10_19_equation'][0]}}" id="putt_make_10_19_equation" readonly="readonly" name="summaryResult[putt_make_10_19_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_make_20_29_equation'][0]}}" id="putt_make_20_29_equation" readonly="readonly" name="summaryResult[putt_make_20_29_equation][0]"></td>
+									<td><input value="{{$summaryResult['putt_make_30_equation'][0]}}" id="putt_make_30_equation" readonly="readonly" name="summaryResult[putt_make_30_equation][0]"></td>
 									<td></td>
 								</tr>
 								<tr>
@@ -1622,11 +1621,11 @@ $asset = asset('/');
 									<th></th>
 								</tr>
 								<tr>
-									<td><input id="make_percentage_5" readonly="readonly" name="gameResult[make_percentage_5][0]"></td>
-									<td><input id="make_percentage_5_9" readonly="readonly" name="gameResult[make_percentage_5_9][0]"></td>
-									<td><input id="make_percentage_10_19" readonly="readonly" name="gameResult[make_percentage_10_19][0]"></td>
-									<td><input id="make_percentage_20_29" readonly="readonly" name="gameResult[make_percentage_20_29][0]"></td>
-									<td><input id="make_percentage_30" readonly="readonly" name="gameResult[make_percentage_30][0]"></td>
+									<td><input value="{{$summaryResult['make_percentage_5'][0]}}" id="make_percentage_5" readonly="readonly" name="summaryResult[make_percentage_5][0]"></td>
+									<td><input value="{{$summaryResult['make_percentage_5_9'][0]}}" id="make_percentage_5_9" readonly="readonly" name="summaryResult[make_percentage_5_9][0]"></td>
+									<td><input value="{{$summaryResult['make_percentage_10_19'][0]}}" id="make_percentage_10_19" readonly="readonly" name="summaryResult[make_percentage_10_19][0]"></td>
+									<td><input value="{{$summaryResult['make_percentage_20_29'][0]}}" id="make_percentage_20_29" readonly="readonly" name="summaryResult[make_percentage_20_29][0]"></td>
+									<td><input value="{{$summaryResult['make_percentage_30'][0]}}" id="make_percentage_30" readonly="readonly" name="summaryResult[make_percentage_30][0]"></td>
 									<td></td>
 								</tr>
 								<tr>

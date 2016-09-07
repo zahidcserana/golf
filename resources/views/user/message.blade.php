@@ -2,7 +2,7 @@
 @section('content')
     
         
-         <div align="center"><h2>{{$message}}</h2></div>
+         <div align="center"><h4>{{$message}}</h4></div>
 @stop
 
    

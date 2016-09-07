@@ -15,9 +15,9 @@ class GolfCourse extends Model
 	{
 		return DB::table($this->table)->where('user_id', $userId)->get();
 	}
-	public function GetCourse($courseId)
+	public function GetCourse($courseId, $userId)
 	{
-		return DB::table($this->table)->where('id', $courseId)->first();
+		return DB::table($this->table)->where('id', $courseId)->where('user_id', $userId)->first();
 	}
 	public function GetList($userId, $number)
  	{
@@ -27,9 +27,9 @@ class GolfCourse extends Model
  	{
  	 	return DB::table($this->table)->where('user_id', $userId)->get();
  	}
- 	public function UpdateCourse($courseIdFromRoute, $editedData)
+ 	public function UpdateCourse($courseIdFromRoute, $editedData, $editedSummaryData)
  	{
- 	 	return DB::table($this->table)->where('id', $courseIdFromRoute)->update(['data'=> $editedData]);
+ 	 	return DB::table($this->table)->where('id', $courseIdFromRoute)->update(['data'=> $editedData, 'summary_data'=> $editedSummaryData]);
  	}
 	/*public function GetUserName($userName)
 	{
