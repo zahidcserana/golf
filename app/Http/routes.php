@@ -16,7 +16,7 @@ Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserContr
 Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Registration'])->middleware('AdminValidationMiddleware');
 
 
-//Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@ProfileView'])->middleware('UserValidationMiddleware');
+Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@ProfileView'])->middleware('UserValidationMiddleware');
 
 
 

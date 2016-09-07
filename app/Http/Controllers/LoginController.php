@@ -53,7 +53,7 @@ class LoginController extends Controller
 
             Session::put('userId' , $userId);
             Session::put('userType' , $userType);
-            return redirect()->route('index');
+            return redirect()->route('profile_view');
         }
         else
             return redirect()->route('home');
