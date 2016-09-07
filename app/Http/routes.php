@@ -15,16 +15,14 @@ Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController
 Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserController@RegistrationForm'])->middleware('AdminValidationMiddleware');
 Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Registration'])->middleware('AdminValidationMiddleware');
 
-<<<<<<< HEAD
-Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@ProfileView'])->middleware('UserValidationMiddleware');
+
+//Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@ProfileView'])->middleware('UserValidationMiddleware');
 
 
 
-//shakil's User Panel
-//Route::get('/', function(){return view(in)})
-=======
+
 //User Panel
->>>>>>> ce06e15eba52b1f138e715ae2e1392013475049e
+
 Route::get('/', ['as'=>'home', 'uses'=>'LoginController@LoginForm']);
 Route::post('loginform', ['as'=>'loginform', 'uses'=>'LoginController@CompleteLogin']);
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess'])->middleware('UserValidationMiddleware');
