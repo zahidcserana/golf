@@ -10,17 +10,15 @@
 	
 	<div class="col-md-2">
 		<a class="thumbnail">
-			<img src="{{$asset}}image/{{$userProfile->photo}}" id="image_upload" alt="..." >
-
+			<img src="{{$asset}}images/{{$userProfile->photo}}" id="image_upload" alt="..." >
 		</a>
 		<a href="javascript:void(0)" id="change_picture">Change</a>
+		<a href="javascript:void(0)" id="save" style="display: none;">Save</a>
+		<a href="javascript:void(0)" id="discard" style="display: none;">Discard</a>
 	</div>
-	
-	<form  id="form" action=" " method="post" enctype="multipart/form-data"  style="display: none;">
-		
-		<input type="file" id="file" name="file">
-		
-		
+	<form  id="form" action=" {{route('change_picture')}} " method="post" enctype="multipart/form-data"  style="display: none;">
+		{{csrf_field()}}
+		<input type="file" id="file" name="file" value="file">
 	</form>
 	<script >
 		$(document).ready(function()
@@ -28,18 +26,33 @@
 			$("#change_picture").click(function()
 			{ 
 				$( "#file" ).click();
-				
-			   
+			});
+			$( "#file" ).change(function()
+			{
+			var reader = new FileReader();
+               	reader.onload = function (e) {
+                  	$('#image_upload').attr('src', e.target.result);
+                  	//$("#form").submit();
+                  	$("#save").show();
+                  	$("#discard").show();
+                  	$("#change_picture").hide();
+			};
+			reader.readAsDataURL(this.files[0]);
+			
+			});
+			$( "#save" ).click(function()
+			{
+				$("#form").submit();
+			});
+			$( "#discard" ).click(function()
+			{
+				$("#change_picture").show();
+				$("#save").hide();
+                  	$("#discard").hide();
 			});
 		});
 
-		$( "#file" ).change(function(){
-			var reader = new FileReader();
-               	reader.onload = function (e) {
-                  $('#image_upload').attr('src', e.target.result);
-                };
-                reader.readAsDataURL(this.files[0]);
-		});
+		
     	</script>
 
 	<div class="col-md-10">

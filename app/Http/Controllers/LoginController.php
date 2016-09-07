@@ -14,7 +14,7 @@ class LoginController extends Controller
         if(!$sessionId)
             return view('user.login');
         else 
-        return view('user.index'); 
+         return redirect()->route('profile_view'); 
     }
 
     public function CompleteLogin(Request $request)
@@ -61,7 +61,7 @@ class LoginController extends Controller
 
     public function Loginsuccess()
     {
-        return view('user.index');
+         return redirect()->route('profile_view');
     }
 
     public function UserLogout()

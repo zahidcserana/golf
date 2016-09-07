@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Validator;
 use Session;
+use Input;
+use Uuid;
 
 class UserController extends Controller
 {
@@ -101,5 +103,26 @@ class UserController extends Controller
 		$userProfile = $userProfileObj->GetProfilePhoto($userId);
 		//$photo = $userProfile->photo;
 		return view('user.user_profile',['userProfile'=>$userProfile]);
+	}
+	public function ChangePicture(Request $request)
+	{
+		$userId = Session::get('userId');
+		$asset = asset('/');
+	     	if(Input::hasFile('file'))
+	     	{
+			   
+			$file = Input::file('file');
+			$name = $file->getClientOriginalName();
+			$temp = explode('.',$name);
+			$extention = array_pop($temp);
+			
+			$fileName = Uuid::generate(1);
+			$fileName = $fileName.".".$extention;
+
+		     	$newImg = $file->move('images', $fileName);
+		     	$imageChangeObj = new users;
+		     	$imageChange = $imageChangeObj->UpdateImage($userId,$fileName);
+		    	return redirect()->route('home');
+	     	}
 	}
 }

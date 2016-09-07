@@ -18,6 +18,8 @@ Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Reg
 
 Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@ProfileView'])->middleware('UserValidationMiddleware');
 
+Route::post('/change_picture',['as'=>'change_picture', 'uses' => 'UserController@ChangePicture'])->middleware('UserValidationMiddleware');
+
 
 
 
