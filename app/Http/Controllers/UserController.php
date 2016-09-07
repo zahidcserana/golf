@@ -92,7 +92,9 @@ class UserController extends Controller
 		$msg = "Password changed successfully.";
 		return redirect()->route('message', ['message'=>$msg]);
 		//return redirect()->route('admin_home');
-		
-		
+	}
+	public function ProfileView()
+	{
+		return view('user.user_profile');
 	}
 }
