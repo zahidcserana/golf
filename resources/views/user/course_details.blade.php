@@ -1660,7 +1660,7 @@ $asset = asset('/');
 					url: "{{route("get_csrf_token")}}"
 				})
 			  .done(function( data ) {
-				  var dataJson = JSON.parse();
+				  var dataJson = JSON.parse(data);
 				  $( "input[value='_token']" ).val(dataJson.token);
 				//alert( "Data Saved: " + msg );
 			  });
