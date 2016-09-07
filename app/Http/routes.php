@@ -20,9 +20,6 @@ Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController
 Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserController@RegistrationForm'])->middleware('AdminValidationMiddleware');
 Route::post('/registration',['as'=>'registration', 'uses' => 'UserController@Registration'])->middleware('AdminValidationMiddleware');
 
-Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@ProfileView'])->middleware('UserValidationMiddleware');
-
-
 
 //shakil's User Panel
 //Route::get('/', function(){return view(in)})

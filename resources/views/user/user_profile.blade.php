@@ -1,3 +1,6 @@
+<?php
+  $asset = asset('/');
+?>
 @extends('user.master')
 @section('content')
 
@@ -6,7 +9,7 @@
 <div class="row">
 	<div class="col-md-2">
 		<a class="thumbnail">
-			<img src="image/avater.png" alt="...">
+			<img src="{{$asset}}image/{{$userProfile->photo}}" alt="...">
 		</a>
 	</div>
 	<div class="col-md-10">
@@ -189,5 +192,5 @@
 		</table>
 	</div>
 </div>
-		
+
 @stop
