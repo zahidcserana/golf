@@ -94,12 +94,12 @@
 				<th>#PAR5</th>
 			</tr>
 			<tr>
-				<td><input id="par3_scoring" readonly="readonly" name="gameResult[par3_scoring][0]"></td>
-				<td><input id="par4_scoring" readonly="readonly" name="gameResult[par4_scoring][0]"></td>
-				<td><input id="par5_scoring" readonly="readonly" name="gameResult[par5_scoring][0]"></td>
-				<td><input id="hash_par3" readonly="readonly" name="gameResult[hash_par3][0]"></td>
-				<td><input id="hash_par4" readonly="readonly" name="gameResult[hash_par4][0]"></td>
-				<td><input id="hash_par5" readonly="readonly" name="gameResult[hash_par5][0]"></td>
+				<td>{{$status->avg_par3_scoring}} </td>
+				<td>{{$status->avg_par4_scoring}}</td>
+				<td>{{$status->avg_par5_scoring}}</td>
+				<td>{{$status->avg_hash_par3}}</td>
+				<td>{{$status->avg_hash_par4}}</td>
+				<td>{{$status->avg_hash_par5}}</td>
 			</tr>
 			<tr style="background: red;">
 				<th>EAGLES</th>
@@ -110,12 +110,14 @@
 				<th>OTHERS</th>
 			</tr>
 			<tr>
-				<td><input id="eagles" readonly="readonly" name="gameResult[eagles][0]"></td>
-				<td><input id="birdies" readonly="readonly" name="gameResult[birdies][0]"></td>
-				<td><input id="pars" readonly="readonly" name="gameResult[pars][0]"></td>
-				<td><input id="bogeys" readonly="readonly" name="gameResult[bogeys][0]"></td>
-				<td><input id="dblbogeys" readonly="readonly" name="gameResult[dblbogeys][0]"></td>
-				<td><input id="others" readonly="readonly" name="gameResult[others][0]"></td>
+
+				<td>{{$status->avg_eagles}} </td>
+				<td>{{$status->avg_birdies}}</td>
+				<td>{{$status->avg_pars}}</td>
+				<td>{{$status->avg_bogeys}}</td>
+				<td>{{$status->avg_dblbogeys}}</td>
+				<td>{{$status->avg_others}}</td>
+
 			</tr>
 			<tr style="background: deepskyblue;">
 				<th>FAIRWAYS</th>
@@ -126,12 +128,12 @@
 				<th># 18 HOLE RDS</th>
 			</tr>
 			<tr>
-				<td><input id="fairways" readonly="readonly" name="gameResult[fairways][0]"></td>
-				<td><input id="fir_percentage" readonly="readonly" name="gameResult[fir_percentage][0]"></td>
-				<td><input id="greens" readonly="readonly" name="gameResult[greens][0]"></td>
-				<td><input id="gir_percentage" readonly="readonly" name="gameResult[gir_percentage][0]"></td>
-				<td><input id="played_holes_equation" readonly="readonly" name="gameResult[played_holes_equation][0]"></td>
-				<td><input id="hole_rds_18" readonly="readonly" name="gameResult[hole_rds_18][0]"></td>
+				<td>{{$status->avg_fairways}} </td>
+				<td>{{$status->avg_fir_percentage}}</td>
+				<td>{{$status->avg_greens}}</td>
+				<td>{{$status->avg_gir_percentage}}</td>
+				<td>{{$status->avg_played_holes_equation}}</td>
+				<td>{{$status->avg_hole_rds_18}}</td>
 			</tr>
 			<tr style="background: brown;">
 				<th>SCRAMBLE OPP</th>
@@ -142,12 +144,12 @@
 				<th>SAND SAVE %</th>
 			</tr>
 			<tr>
-				<td><input id="scramble_opp_equation" readonly="readonly" name="gameResult[scramble_opp_equation][0]"></td>
-				<td><input id="scramble_sav_equation" readonly="readonly" name="gameResult[scramble_sav_equation][0]"></td>
-				<td><input id="scramble_percentage" readonly="readonly" name="gameResult[scramble_percentage][0]"></td>
-				<td><input id="sand_opp_equation" readonly="readonly" name="gameResult[sand_opp_equation][0]"></td>
-				<td><input id="sand_sav_equation" readonly="readonly" name="gameResult[sand_sav_equation][0]"></td>
-				<td><input id="sand_sav_percentage" readonly="readonly" name="gameResult[sand_sav_percentage][0]"></td>
+				<td>{{$status->avg_scramble_opp_equation}} </td>
+				<td>{{$status->avg_scramble_sav_equation}}</td>
+				<td>{{$status->avg_scramble_percentage}}</td>
+				<td>{{$status->avg_sand_opp_equation}}</td>
+				<td>{{$status->avg_sand_sav_equation}}</td>
+				<td>{{$status->avg_sand_sav_percentage}}</td>
 			</tr>
 			<tr style="background: yellow;">
 				<th>MISSED GIR</th>
@@ -158,9 +160,9 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input id="missed_gir" readonly="readonly" name="gameResult[missed_gir][0]"></td>
-				<td><input id="put_1_nogir" readonly="readonly" name="gameResult[put_1_nogir][0]"></td>
-				<td><input id="avg_dist_chip" readonly="readonly" name="gameResult[avg_dist_chip][0]"></td>
+				<td>{{$status->avg_missed_gir}} </td>
+				<td>{{$status->avg_put_1_nogir}}</td>
+				<td>{{$status->avg_avg_dist_chip}}</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -174,9 +176,9 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input id="total_putts" readonly="readonly" name="gameResult[total_putts][0]"></td>
-				<td><input id="putts_div_hole" readonly="readonly" name="gameResult[putts_div_hole][0]"></td>
-				<td><input id="avg_score" readonly="readonly" name="gameResult[avg_score][0]"></td>
+				<td>{{$status->avg_total_putts}} </td>
+				<td>{{$status->avg_putts_div_hole}}</td>
+				<td>{{$status->avg_avg_score}}</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -190,12 +192,12 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input id="putt_opp_5_equation" readonly="readonly" name="gameResult[putt_opp_5_equation][0]"></td>
-				<td><input id="putt_opp_5_9_equation" readonly="readonly" name="gameResult[putt_opp_5_9_equation][0]"></td>
-				<td><input id="putt_opp_10_19_equation" readonly="readonly" name="gameResult[putt_opp_10_19_equation][0]"></td>
-				<td><input id="putt_opp_20_29_equation" readonly="readonly" name="gameResult[putt_opp_20_29_equation][0]"></td>
-				<td><input id="putt_opp_30_equation" readonly="readonly" name="gameResult[putt_opp_30_equation][0]"></td>
-				<td></td>
+				<td>{{$status->avg_putt_opp_5_equation}} </td>
+				<td>{{$status->avg_putt_opp_5_9_equation}}</td>
+				<td>{{$status->avg_putt_opp_10_19_equation}}</td>
+				<td>{{$status->avg_putt_opp_20_29_equation}}</td>
+				<td>{{$status->avg_putt_opp_30_equation}}</td>
+				
 			</tr>
 			<tr>
 				<th style="background: rgba(0,191,255,1);">Putts Made < 5'</th>
@@ -206,12 +208,12 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input id="putt_make_5_equation" readonly="readonly" name="gameResult[putt_make_5_equation][0]"></td>
-				<td><input id="putt_make_5_9_equation" readonly="readonly" name="gameResult[putt_make_5_9_equation][0]"></td>
-				<td><input id="putt_make_10_19_equation" readonly="readonly" name="gameResult[putt_make_10_19_equation][0]"></td>
-				<td><input id="putt_make_20_29_equation" readonly="readonly" name="gameResult[putt_make_20_29_equation][0]"></td>
-				<td><input id="putt_make_30_equation" readonly="readonly" name="gameResult[putt_make_30_equation][0]"></td>
-				<td></td>
+				<td>{{$status->avg_putt_make_5_equation}} </td>
+				<td>{{$status->avg_putt_make_5_9_equation}}</td>
+				<td>{{$status->avg_putt_make_10_19_equation}}</td>
+				<td>{{$status->avg_putt_make_20_29_equation}}</td>
+				<td>{{$status->avg_putt_make_30_equation}}</td>
+
 			</tr>
 			<tr>
 				<th style="background: rgba(0,191,255,1);">Make % < 5'</th>
@@ -222,16 +224,13 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td><input id="make_percentage_5" readonly="readonly" name="gameResult[make_percentage_5][0]"></td>
-				<td><input id="make_percentage_5_9" readonly="readonly" name="gameResult[make_percentage_5_9][0]"></td>
-				<td><input id="make_percentage_10_19" readonly="readonly" name="gameResult[make_percentage_10_19][0]"></td>
-				<td><input id="make_percentage_20_29" readonly="readonly" name="gameResult[make_percentage_20_29][0]"></td>
-				<td><input id="make_percentage_30" readonly="readonly" name="gameResult[make_percentage_30][0]"></td>
-				<td></td>
+				<td>{{$status->avg_make_percentage_5}} </td>
+				<td>{{$status->avg_make_percentage_5_9}}</td>
+				<td>{{$status->avg_make_percentage_10_19}}</td>
+				<td>{{$status->avg_make_percentage_20_29}}</td>
+				<td>{{$status->avg_make_percentage_30}}</td>
 			</tr>
-			<tr>
-				<td colspan="6" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="submit" name="submit"/></td>
-			</tr>
+			
 		</table>
 	</div>
 </div>

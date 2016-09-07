@@ -3,12 +3,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\users;
+use App\Model\GolfCourse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Validator;
 use Session;
 use Input;
 use Uuid;
+
 
 class UserController extends Controller
 {
@@ -101,8 +103,12 @@ class UserController extends Controller
 		$userId = Session::get('userId');
 		$userProfileObj = new users;
 		$userProfile = $userProfileObj->GetProfilePhoto($userId);
-		//$photo = $userProfile->photo;
-		return view('user.user_profile',['userProfile'=>$userProfile]);
+		$statusObj = new GolfCourse();
+		$status = $statusObj->GetState($userId);
+		//echo "<pre>";
+		//var_dump($status->avg_par3_scoring);
+		//echo "</pre>";
+		return view('user.user_profile',['userProfile'=>$userProfile, 'status'=>$status]);
 	}
 	public function ChangePicture(Request $request)
 	{
