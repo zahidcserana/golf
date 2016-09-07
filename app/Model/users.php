@@ -31,4 +31,8 @@ class users extends Model
 		//dd($password);
 	    return DB::table($this->table)->where('email', $email)->where('password', $password)->first();
 	}
+	public function GetProfilePhoto($userId)
+	{
+		return DB::table($this->table)->where('id', $userId)->first();
+	}
 }

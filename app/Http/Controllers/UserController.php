@@ -6,6 +6,7 @@ use App\Model\users;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Validator;
+use Session;
 
 class UserController extends Controller
 {
@@ -92,7 +93,13 @@ class UserController extends Controller
 		$msg = "Password changed successfully.";
 		return redirect()->route('message', ['message'=>$msg]);
 		//return redirect()->route('admin_home');
-		
-		
+	}
+	public function ProfileView()
+	{
+		$userId = Session::get('userId');
+		$userProfileObj = new users;
+		$userProfile = $userProfileObj->GetProfilePhoto($userId);
+		//$photo = $userProfile->photo;
+		return view('user.user_profile',['userProfile'=>$userProfile]);
 	}
 }
