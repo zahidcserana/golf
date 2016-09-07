@@ -8,9 +8,8 @@ use App\Http\Requests;
 
 class GolfCourseController extends Controller
 {
-    public function Form(Request $request)
+    public function Form( Request $request )
 	{
-
 		$golfCourseObj = new GolfCourse;
 		$datetime = date('Y-m-d H:i:s');
 		$userId = Session::get('userId');
@@ -22,6 +21,7 @@ class GolfCourseController extends Controller
 			$date = \DateTime::createFromFormat('m/d/Y', $request->dateFromUser);
 		else
 			$date = new \DateTime();
+
 		$newDate = $date->format('Y-m-d');
 		$golfCourseObj->date = $newDate;
 		
@@ -32,7 +32,7 @@ class GolfCourseController extends Controller
    		return redirect()->route('user_message', ['message'=>$msg]);
 	}
 
-	public function ViewCourse(Request $request)
+	public function ViewCourse( Request $request )
 	{
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
@@ -45,23 +45,33 @@ class GolfCourseController extends Controller
 		}
    		else
 		{
-			$msg = "No list exists!.";
+			$msg = "No list exists!";
    			return redirect()->route('user_message', ['message'=>$msg]);
 		}
 	}
 
-	public function ViewDetails($courseIdFromRoute)
+	public function ViewDetails( $courseIdFromRoute )
 	{
 		$golfCourseObj = new GolfCourse;
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute);
 		$gameData = $courseDetails->data;
 		$gameResults = json_decode($gameData, true);
-		return view('user.course_details', ['gameResult'=>$gameResults, 'dates'=>$courseDetails->date, 'locationName'=>$courseDetails->location]);
+		return view('user.course_details', ['gameResult'=>$gameResults, 'dates'=>$courseDetails->date, 'locationName'=>$courseDetails->location, 'courseId'=>$courseIdFromRoute]);
 	}
-	public function Message($message)
+
+	public function EditForm(Request $request , $courseIdFromRoute )
+	{
+		$golfCourseObj = new GolfCourse;
+		$editedData = json_encode($request->gameResult);
+		$golfCourseObj->UpdateCourse($courseIdFromRoute, $editedData);
+		$msg = "You have successfully updated a round.";
+   		return redirect()->route('user_message', ['message'=>$msg]);
+		//echo $courseIdFromRoute;
+	}
+
+	public function Message( $message )
     {
-          $data['message'] = $message;
-          return view('user.message', $data);
-          
+         $data['message'] = $message;
+         return view('user.message', $data);
     }
 }

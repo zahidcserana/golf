@@ -27,6 +27,10 @@ class GolfCourse extends Model
  	{
  	 	return DB::table($this->table)->where('user_id', $userId)->get();
  	}
+ 	public function UpdateCourse($courseIdFromRoute, $editedData)
+ 	{
+ 	 	return DB::table($this->table)->where('id', $courseIdFromRoute)->update(['data'=> $editedData]);
+ 	}
 	/*public function GetUserName($userName)
 	{
 	      return DB::table($this->table)->where('user_name', $userName)->get();

@@ -67,7 +67,7 @@ $asset = asset('/');
 			<div class="row">
 				<div class="main">
 					<h3 class="page-header">You can edit here</h3>
-					<form action = "{{ url('editForm/') }}" method = "post" align="center">
+					<form action = "{{ route('editForm', ['course_id'=>$courseId]) }}" method = "post" align="center">
 						<input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 					<div class="form-group">
 						<div class="col-md-2"><label>Location</label></div>
@@ -84,7 +84,7 @@ $asset = asset('/');
 					<br>
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table table-striped">
+							<table class="table">
 									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
@@ -1591,14 +1591,10 @@ $asset = asset('/');
 								</tr>
 								<tr>
 									<td><input id="putt_opp_5_equation" readonly="readonly" name="gameResult[putt_opp_5_equation][0]"></td>
-									<td><input id="putt_opp_5_9_equation" readonly="readonly" name="gameResult[putt_opp_5_9_equation
-									][0]"></td>
-									<td><input id="putt_opp_10_19_equation" readonly="readonly" name="gameResult[putt_opp_10_19_equation
-									][0]"></td>
-									<td><input id="putt_opp_20_29_equation" readonly="readonly" name="gameResult[putt_opp_20_29_equation
-									][0]"></td>
-									<td><input id="putt_opp_30_equation" readonly="readonly" name="gameResult[putt_opp_30_equation
-									][0]"></td>
+									<td><input id="putt_opp_5_9_equation" readonly="readonly" name="gameResult[putt_opp_5_9_equation][0]"></td>
+									<td><input id="putt_opp_10_19_equation" readonly="readonly" name="gameResult[putt_opp_10_19_equation][0]"></td>
+									<td><input id="putt_opp_20_29_equation" readonly="readonly" name="gameResult[putt_opp_20_29_equation][0]"></td>
+									<td><input id="putt_opp_30_equation" readonly="readonly" name="gameResult[putt_opp_30_equation][0]"></td>
 									<td></td>
 								</tr>
 								<tr>
@@ -1611,14 +1607,10 @@ $asset = asset('/');
 								</tr>
 								<tr>
 									<td><input id="putt_make_5_equation" readonly="readonly" name="gameResult[putt_make_5_equation][0]"></td>
-									<td><input id="putt_make_5_9_equation" readonly="readonly" name="gameResult[putt_make_5_9_equation
-									][0]"></td>
-									<td><input id="putt_make_10_19_equation" readonly="readonly" name="gameResult[putt_make_10_19_equation
-									][0]"></td>
-									<td><input id="putt_make_20_29_equation" readonly="readonly" name="gameResult[putt_make_20_29_equation
-									][0]"></td>
-									<td><input id="putt_make_30_equation" readonly="readonly" name="gameResult[putt_make_30_equation
-									][0]"></td>
+									<td><input id="putt_make_5_9_equation" readonly="readonly" name="gameResult[putt_make_5_9_equation][0]"></td>
+									<td><input id="putt_make_10_19_equation" readonly="readonly" name="gameResult[putt_make_10_19_equation][0]"></td>
+									<td><input id="putt_make_20_29_equation" readonly="readonly" name="gameResult[putt_make_20_29_equation][0]"></td>
+									<td><input id="putt_make_30_equation" readonly="readonly" name="gameResult[putt_make_30_equation][0]"></td>
 									<td></td>
 								</tr>
 								<tr>
@@ -1631,14 +1623,10 @@ $asset = asset('/');
 								</tr>
 								<tr>
 									<td><input id="make_percentage_5" readonly="readonly" name="gameResult[make_percentage_5][0]"></td>
-									<td><input id="make_percentage_5_9" readonly="readonly" name="gameResult[make_percentage_5_9
-									][0]"></td>
-									<td><input id="make_percentage_10_19" readonly="readonly" name="gameResult[make_percentage_10_19
-									][0]"></td>
-									<td><input id="make_percentage_20_29" readonly="readonly" name="gameResult[make_percentage_20_29
-									][0]"></td>
-									<td><input id="make_percentage_30" readonly="readonly" name="gameResult[make_percentage_30
-									][0]"></td>
+									<td><input id="make_percentage_5_9" readonly="readonly" name="gameResult[make_percentage_5_9][0]"></td>
+									<td><input id="make_percentage_10_19" readonly="readonly" name="gameResult[make_percentage_10_19][0]"></td>
+									<td><input id="make_percentage_20_29" readonly="readonly" name="gameResult[make_percentage_20_29][0]"></td>
+									<td><input id="make_percentage_30" readonly="readonly" name="gameResult[make_percentage_30][0]"></td>
 									<td></td>
 								</tr>
 								<tr>

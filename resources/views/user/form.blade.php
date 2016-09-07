@@ -62,7 +62,7 @@
 			<div class="row">
 				<div class="main">
 					<h1 class="page-header">Add a round</h1>
-					<form action = "{{ url('submitForm') }}" method = "post" align="center">
+					<form action = "{{ route('submitForm') }}" method = "post" align="center">
 						<input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 					<div class="form-group">
 						<div class="col-md-2"><label>Location</label></div>
@@ -79,7 +79,7 @@
 					<br>
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table table-striped">
+							<table class="table">
 									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
@@ -1621,7 +1621,7 @@
 									<td></td>
 								</tr>
 								<tr>
-									<td colspan="6" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="submit" name="submit"/></td>
+									<td colspan="6" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="Submit" name="submit"/></td>
 								</tr>
 							</table>
 						</div>
