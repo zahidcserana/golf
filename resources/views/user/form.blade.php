@@ -102,7 +102,7 @@
 										<td>16</td>
 										<td>17</td>
 										<td>18</td>
-										<td>IN</td>
+										<td>&nbsp;&nbsp;IN&nbsp;&nbsp;</td>
 										<td>TOT</td>
 									</tr>
 									<tr>

@@ -1564,7 +1564,8 @@ $(document).ready(function() {
 		$('.score_out').each(function(){
 			scoreOutList.push( $(this).val() );
 		});
-
+		
+		debugger;
 		var oppositeValueSumOut = 0;
 		var scramblSavOutSum = 0;
 		for(var index=0;index<9;index++)
@@ -1610,6 +1611,7 @@ $(document).ready(function() {
 
 		var oppositeValueSumIn = 0;
 		var scramblSavInSum = 0;
+		//debugger;
 		for(var index=0;index<9;index++)
 		{
 			var girInValue = girInList[index];
@@ -1626,7 +1628,7 @@ $(document).ready(function() {
 			if( opositeValue==1 )
 			{
 				var holePairInValue = isNaN(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
-				var scoreInValue = isNaN(holePairInList[index])?0:GetNumericValue(holePairInList[index]);
+				var scoreInValue = isNaN(scoreInList[index])?0:GetNumericValue(scoreInList[index]);
 				
 				scramblSavIn = (scoreInValue<=holePairInValue)?1:0;
 				scramblSavInSum = scramblSavInSum  + scramblSavIn;
@@ -1642,28 +1644,32 @@ $(document).ready(function() {
 		$("#scrambl_opp_tot").val(oppositeValueSumTot);
 		$("#scramble_opp_equation").val(oppositeValueSumTot);
 
-		var scramblSavInTot = scramblSavInSum + scramblSavOut;
-		$("#scrambl_sav_out_sum").val(scramblSavOut);
+		var scramblSavInTot = scramblSavInSum + scramblSavOutSum;
+		$("#scrambl_sav_out_sum").val(scramblSavOutSum);
 		$("#scrambl_sav_in_sum").val(scramblSavInSum); 
 		$("#scrambl_sav_tot").val(scramblSavInTot);
 		$("#scramble_sav_equation").val(scramblSavInTot);
 
-		$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(2));
+		$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(2) + "%");
 
 		if(oppositeValueSumOut==0)
 			$("#scrambl_percentage_out_sum").val(0);
 		else
-			$("#scrambl_percentage_out_sum").val((scramblSavOut/oppositeValueSumOut*100).toFixed(0));
+			$("#scrambl_percentage_out_sum").val((scramblSavOutSum/oppositeValueSumOut*100).toFixed(0) + "%");
 
 		if(oppositeValueSumIn==0)
 			$("#scrambl_percentage_in_sum").val(0);
 		else
-			$("#scrambl_percentage_in_sum").val((scramblSavInSum/oppositeValueSumIn*100).toFixed(0));
+			$("#scrambl_percentage_in_sum").val((scramblSavInSum/oppositeValueSumIn*100).toFixed(0) + "%");
 		if(oppositeValueSumTot==0)
 			$("#scrambl_percentage_sum").val(0);
 		else
-			$("#scrambl_percentage_sum").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0));
+			$("#scrambl_percentage_sum").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0) + "%");
 	}
+	$('.hole_par_out').on("change, keyup" , CalculateScrambleRows);
+	$('.hole_par_in').on("change, keyup" , CalculateScrambleRows);
+	$('.score_in').on("change, keyup" , CalculateScrambleRows);
+	$('.score_out').on("change, keyup" , CalculateScrambleRows);
 	$('.gir_out').on("change, keyup" , CalculateScrambleRows);
 	$('.gir_in').on("change, keyup" , CalculateScrambleRows);
 
@@ -1744,6 +1750,7 @@ $(document).ready(function() {
 			scoreInList.push( $(this).val() );
 		});
 		var sandSavInSum=0;
+		debugger;
 		for(var index=0;index<9;index++)
 		{
 			var sandSavIn;
@@ -1771,17 +1778,17 @@ $(document).ready(function() {
 		if(sandOppOutSum==0)
 			$("#sand_percentage_out_sum").val(0);
 		else
-			$("#sand_percentage_out_sum").val((sandSavOutSum/sandOppOutSum*100).toFixed(0));
+			$("#sand_percentage_out_sum").val((sandSavOutSum/sandOppOutSum*100).toFixed(0) + '%');
 
 		if(sandOppInSum==0)
 			$("#sand_percentage_in_sum").val(0);
 		else
-			$("#sand_percentage_in_sum").val((sandSavInSum/sandOppInSum*100).toFixed(0));
+			$("#sand_percentage_in_sum").val((sandSavInSum/sandOppInSum*100).toFixed(0) + '%');
 
 		if(totalSandOppSum==0)
 			$("#sand_percentage_sum").val(0);
 		else
-			$("#sand_percentage_sum").val((sandSavSum/totalSandOppSum*100).toFixed(0));
+			$("#sand_percentage_sum").val((sandSavSum/totalSandOppSum*100).toFixed(0) + '%');
 	}
 
 	$('.sand_opp_in').on("change, keyup" , CalculateSandRows);
