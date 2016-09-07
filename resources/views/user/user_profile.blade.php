@@ -10,7 +10,7 @@
 	
 	<div class="col-md-2">
 		<a class="thumbnail">
-			<img src="{{$asset}}images/{{$userProfile->photo}}" id="image_upload" alt="..." >
+			<img src="{{$asset}}images/{{ strlen($userProfile->photo)>0?$userProfile->photo:'avator.png'}}" id="image_upload" alt="..." >
 		</a>
 		<a href="javascript:void(0)" id="change_picture">Change</a>
 		<a href="javascript:void(0)" id="save" style="display: none;">Save</a>
@@ -60,20 +60,16 @@
 			<table class="table table-striped" id="user_profile_table">
 				<tbody>
 					<tr>
-						<td>Name</td>
-						<td>: Lorem ipsum</td>
+						<td>Name:</td>
+						<td> {{$userProfile->name}}</td>
 					</tr>
 					<tr>
-						<td>Email</td>
-						<td>: loremip@mail.com</td>
+						<td>Email:</td>
+						<td> {{$userProfile->email}}</td>
 					</tr>
 					<tr>
-						<td>Join Date</td>
-						<td>: 20-10-2016</td>
-					</tr>
-					<tr>
-						<td>Address</td>
-						<td>: 123, lorem ipsum, london, USA</td>
+						<td>Join Date:</td>
+						<td><?php $dateParts = explode(' ', $userProfile->created_at); echo  $dateParts[0];?></td>
 					</tr>
 				</tbody>
 			</table>

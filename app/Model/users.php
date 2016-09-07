@@ -11,7 +11,6 @@ class users extends Model
 	protected $table = 'users';
 	protected $fillable = ['id','name','password'];
 	protected $primaryKey = 'id';
-	public $timestamps = false;
 
 	public function GetAllUser()
 	{
