@@ -2,9 +2,24 @@
   $asset = asset('/');
 ?>
 @extends('user.master')
-@section('profile')
+@section('content')
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<h1 class="page-header">User profile</h1>
 
+<div class="row">
+	
+	<div class="col-md-2">
+		<a class="thumbnail">
+			<img src="{{$asset}}images/{{ strlen($userProfile->photo)>0?$userProfile->photo:'avator.png'}}" id="image_upload" alt="..." >
+		</a>
+		<a href="javascript:void(0)" id="change_picture">Change</a>
+		<a href="javascript:void(0)" id="save" style="display: none;">Save</a>
+		<a href="javascript:void(0)" id="discard" style="display: none;">Discard</a>
+	</div>
+	<form  id="form" action=" {{route('change_picture')}} " method="post" enctype="multipart/form-data"  style="display: none;">
+		{{csrf_field()}}
+		<input type="file" id="file" name="file" value="file">
+	</form>
 	<script >
 		$(document).ready(function()
 		{ 
@@ -39,25 +54,6 @@
 
 		
     	</script>
-@stop
-@section('content')
-<h1 class="page-header">User profile</h1>
-
-<div class="row">
-	
-	<div class="col-md-2">
-		<a class="thumbnail">
-			<img src="{{$asset}}images/{{ strlen($userProfile->photo)>0?$userProfile->photo:'avator.png'}}" id="image_upload" alt="..." >
-		</a>
-		<a href="javascript:void(0)" id="change_picture">Change</a>
-		<a href="javascript:void(0)" id="save" style="display: none;">Save</a>
-		<a href="javascript:void(0)" id="discard" style="display: none;">Discard</a>
-	</div>
-	<form  id="form" action=" {{route('change_picture')}} " method="post" enctype="multipart/form-data"  style="display: none;">
-		{{csrf_field()}}
-		<input type="file" id="file" name="file" value="file">
-	</form>
-
 
 	<div class="col-md-10">
 		<div class="table-responsive">

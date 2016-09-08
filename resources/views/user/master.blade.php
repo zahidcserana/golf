@@ -70,6 +70,5 @@
       </div>
     </div>
     @yield('validate')
-    @yield('profile')
   </body>
 </html>
