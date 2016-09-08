@@ -30,9 +30,10 @@ Route::post('loginform', ['as'=>'loginform', 'uses'=>'LoginController@CompleteLo
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess'])->middleware('UserValidationMiddleware');
 Route::get('form', function(){return view('user.form');})->middleware('UserValidationMiddleware');
 Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form'])->middleware('UserValidationMiddleware');
-Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
+Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourseList'])->middleware('UserValidationMiddleware');
 Route::get('/user_message/{test}', ['as'=>'user_message', 'uses'=>'GolfCourseController@Message']);
-Route::get('/course_details/{course_id}', ['as'=>'course_details', 'uses'=>'GolfCourseController@ViewDetails'])->middleware('UserValidationMiddleware');
+Route::get('/course_edit/{course_id}', ['as'=>'course_edit', 'uses'=>'GolfCourseController@EditCourse'])->middleware('UserValidationMiddleware');
+Route::get('/course_view/{course_id}', ['as'=>'course_view', 'uses'=>'GolfCourseController@ViewCourse'])->middleware('UserValidationMiddleware');
 Route::get('/user_logout',['as'=>'user_logout', 'uses' => 'LoginController@UserLogout']);
 Route::post('/editForm/{course_id}', ['as'=>'editForm', 'uses'=>'GolfCourseController@EditForm'])->middleware('UserValidationMiddleware');
 Route::get('/get_csrf_token', ['as'=>'get_csrf_token', 'uses'=>'LoginController@GetCSRFToken'])->middleware('UserValidationMiddleware');

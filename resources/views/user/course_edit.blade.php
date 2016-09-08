@@ -31,14 +31,13 @@ $asset = asset('/');
 		<script src="{{$asset}}js/ie-emulation-modes-warning.js"></script>
 		
 		<style>
-			input{border:0px solid #000; margin:0; background:transparent; width:100%}
+			input{border:0px solid #000; margin:0; background:transparent; width:100%;text-align: center;}
 			table tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;width: 30px;}
 			table{background: #fff none repeat scroll 0 0;
 				border-left: 1px solid #ddd;
 				border-top: 1px solid #ddd;}
 			/*table tr:first-child{background:#006400; color:#fff;font-weight: bold;}*/
-			table tr:nth-child(even){background:#fff;}
-			table tr:nth-child(odd){background:#ddd;}
+
 			td.numeric{
 			    padding: 8px 0px !important;
 			}
@@ -49,7 +48,7 @@ $asset = asset('/');
 				background: #FFB6C1;
 			}
 			.ash{
-				background:#ddd;
+				background:#808080;
 			}
 		</style>
 		<head>
@@ -71,7 +70,8 @@ $asset = asset('/');
 					<div class="form-group">
 						<div class="col-md-2"><label>Location</label></div>
 						<div class="col-md-4">
-							{{$locationName}}
+							<input type="text" value={{$locationName}} class="form-control" name="editedLocationName">
+							
 						</div>
 						<div class="col-md-2"><label>Date</label></div>
 						<div class="col-md-4">
@@ -164,7 +164,7 @@ $asset = asset('/');
 										<td class="numeric "><input value="{{$gameResult['score']['input'][17]}}" class=" score_in" type="text" Name="gameResult[score][input][17]" /></td>
 										
 										<td><input value="{{$gameResult['score']['in_sum']}}" id ="score_in_sum" readonly="readonly" Name="gameResult[score][in_sum]" /></td>
-										<td><input value="{{$gameResult['score']['tot']}}" id="score_tot" Name="gameResult[score][tot]" /></td>
+										<td><input value="{{$gameResult['score']['tot']}}" id="score_tot" readonly="readonly" Name="gameResult[score][tot]" /></td>
 									</tr>
 
 									<tr>
@@ -976,7 +976,7 @@ $asset = asset('/');
 										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][13]}}" class="sand_opp_in"  type="text" id="sand_opp_in_4" Name="gameResult[sand_opp][input][13]" /></td>
 										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][14]}}" class="sand_opp_in"  type="text" id="sand_opp_in_5" Name="gameResult[sand_opp][input][14]" /></td>
 										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][15]}}" class="sand_opp_in"  type="text" id="sand_opp_in_6" Name="gameResult[sand_opp][input][15]" /></td>
-										<td class="numeric ash"><input value="{{$gameResult["sand_opp"]["input"][16]}}" class="sand_opp_in"  type="text" id="sand_opp_in_7" Name="gameResult[sand_opp][input][16]" /></td>
+										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][16]}}" class="sand_opp_in"  type="text" id="sand_opp_in_7" Name="gameResult[sand_opp][input][16]" /></td>
 										<td class="numeric "><input value="{{$gameResult["sand_opp"]["input"][17]}}" class="sand_opp_in"  type="text" id="sand_opp_in_8" Name="gameResult[sand_opp][input][17]" /></td>
 										
 										<td><input value="{{$gameResult["sand_opp"]["in_sum"]}}" id="sand_opp_in_sum" readonly="readonly" Name="gameResult[sand_opp][in_sum]" /></td>

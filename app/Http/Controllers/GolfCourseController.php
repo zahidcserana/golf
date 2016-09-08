@@ -16,7 +16,7 @@ class GolfCourseController extends Controller
 		$golfCourseObj->user_id = $userId;
 		$golfCourseObj->data = json_encode($request->gameResult);
 		$golfCourseObj->summary_data = json_encode($request->summaryResult);
-		$golfCourseObj->location = $request->nameFromUser;
+		$golfCourseObj->location = $request->locationName;
 
 		$golfCourseObj->par3_scoring = $request->summaryResult['par3_scoring'][0];
 		$golfCourseObj->par4_scoring = $request->summaryResult['par4_scoring'][0];
@@ -79,7 +79,7 @@ class GolfCourseController extends Controller
    		return redirect()->route('user_message', ['message'=>$msg]);
 	}
 
-	public function ViewCourse( Request $request )
+	public function ViewCourseList( Request $request )
 	{
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
@@ -97,7 +97,7 @@ class GolfCourseController extends Controller
 		}
 	}
 
-	public function ViewDetails( $courseIdFromRoute )
+	public function EditCourse( $courseIdFromRoute )
 	{
 		$golfCourseObj = new GolfCourse;
 		$userId = Session::get('userId');
@@ -112,16 +112,36 @@ class GolfCourseController extends Controller
 		$summaryData = $courseDetails->summary_data;
 		$summaryResults = json_decode($summaryData, true);
 		$gameResults = json_decode($gameData, true);
-		return view('user.course_details', ['summaryResult'=>$summaryResults, 'gameResult'=>$gameResults, 'dates'=>$courseDetails->date, 'locationName'=>$courseDetails->location, 'courseId'=>$courseIdFromRoute]);
+		return view('user.course_edit', ['summaryResult'=>$summaryResults, 'gameResult'=>$gameResults, 'dates'=>$courseDetails->date, 'locationName'=>$courseDetails->location, 'courseId'=>$courseIdFromRoute]);
+	}
+
+	public function ViewCourse( $courseIdFromRoute )
+	{
+		$golfCourseObj = new GolfCourse;
+		$userId = Session::get('userId');
+		//dd($userId);
+		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute, $userId);
+		if(!$courseDetails)
+		{
+			$msg = "Try again.";
+   			return redirect()->route('user_message', ['message'=>$msg]);
+		}
+		$gameData = $courseDetails->data;
+		$summaryData = $courseDetails->summary_data;
+		$summaryResults = json_decode($summaryData, true);
+		$gameResults = json_decode($gameData, true);
+		return view('user.course_view', ['summaryResult'=>$summaryResults, 'gameResult'=>$gameResults, 'dates'=>$courseDetails->date, 'locationName'=>$courseDetails->location, 'courseId'=>$courseIdFromRoute]);
 	}
 
 	public function EditForm(Request $request , $courseIdFromRoute )
 	{
 		$golfCourseObj = new GolfCourse;
+		$locationName = $request->editedLocationName;
+		//dd($locationName);
 		$editedData = json_encode($request->gameResult);
 		$editedSummaryData = json_encode($request->summaryResult);
 
-		$golfCourseObj->UpdateCourse($courseIdFromRoute, $editedData, $editedSummaryData);
+		$golfCourseObj->UpdateCourse($courseIdFromRoute, $editedData, $editedSummaryData, $locationName);
 		$msg = "You have successfully updated a round.";
    		return redirect()->route('user_message', ['message'=>$msg]);
 		//echo $courseIdFromRoute;

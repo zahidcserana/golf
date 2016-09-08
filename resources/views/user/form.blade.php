@@ -66,7 +66,7 @@
 					<div class="form-group">
 						<div class="col-md-2"><label>Location</label></div>
 						<div class="col-md-4">
-							<input type="text" class="form-control" name="nameFromUser">
+							<input type="text" class="form-control" name="locationName">
 						</div>
 						<div class="col-md-2"><label>Date</label></div>
 						<div class="col-md-4">

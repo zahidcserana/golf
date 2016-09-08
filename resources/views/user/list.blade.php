@@ -21,7 +21,7 @@
 				?>
 	    		<td>{{$course->location}}</td>	
 	    		<td>{{$course->date}}</td>	
-	    		<td><a href="{{route('course_details', ['course_id'=>$course->id])}}">Details</a></td>	
+	    		<td><a href="{{route('course_view', ['course_id'=>$course->id])}}">Details</a> | <a href="{{route('course_edit', ['course_id'=>$course->id])}}">Modify</a></td>	
 	    	</tr>
 	    	@endforeach
 	    </tbody>
