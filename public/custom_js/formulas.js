@@ -22,20 +22,16 @@ $(document).ready(function() {
 		var inSum = 0;
 		$('.hole_par_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   inSum = inSum + number;
-			}
 		});
 		$("#hole_par_in_sum").val(inSum);
 
 		var outSum = 0;
 		$('.hole_par_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   outSum = outSum + number;
-			}
 		});
 
 		$("#hole_par_out_sum").val(outSum);
@@ -55,12 +51,10 @@ $(document).ready(function() {
 			var number = GetNumericValue(this.value);
 			//if((this.value)!="")
 				
-			if(isInt(number))
-			{
+			//if(isInt(number))
 				if(number>0)
 					nonBlank = nonBlank + 1; 
 				inSum = inSum + number;
-			}
 		});
 		$("#score_in_sum").val(inSum);
 
@@ -68,12 +62,10 @@ $(document).ready(function() {
 		$('.score_out').each(function(){
 			var number = GetNumericValue(this.value);
 			//document.write(number);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 				if(number>0)
 					nonBlank = nonBlank + 1;
 				outSum = outSum + number;
-			}
 		});
 
 		$("#score_out_sum").val(outSum);
@@ -97,20 +89,16 @@ $(document).ready(function() {
 		var inSum = 0;
 		$('.fir_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   inSum = inSum + number;
-			}
 		});
 		$("#fir_in_sum").val(inSum);
 
 		var outSum = 0;
 		$('.fir_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   outSum = outSum + number;
-			}
 		});
 
 		$("#fir_out_sum").val(outSum);
@@ -131,11 +119,9 @@ $(document).ready(function() {
 			var number = GetNumericValue(this.value);
 			if((this.value)=='0')
 				countZeroGir = countZeroGir + 1;
-			if(isInt(number))
-			{
+			//if(isInt(number))
 				//countGir = countGir + 1;
 				inSum = inSum + number;
-			}
 		});
 		$("#gir_in_sum").val(inSum);
 
@@ -144,11 +130,9 @@ $(document).ready(function() {
 			var number = GetNumericValue(this.value);
 			if((this.value)=='0')
 				countZeroGir = countZeroGir + 1;
-			if(isInt(number))
-			{
+			//if(isInt(number))
 				//countGir = countGir + 1;
 				outSum = outSum + number;
-			}
 		});
 
 		$("#gir_out_sum").val(outSum);
@@ -167,7 +151,7 @@ $(document).ready(function() {
 		var inSum = 0;
 		$('.putt_1_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
+			//if(isInt(number))
 			{
 			   inSum = inSum + number;
 			}
@@ -177,7 +161,7 @@ $(document).ready(function() {
 		var outSum = 0;
 		$('.putt_1_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
+			//if(isInt(number))
 			{
 			   outSum = outSum + number;
 			}
@@ -196,20 +180,16 @@ $(document).ready(function() {
 		var inSum = 0;
 		$('.putt_2_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   inSum = inSum + number;
-			}
 		});
 		$("#putt_2_in_sum").val(inSum);
 
 		var outSum = 0;
 		$('.putt_2_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   outSum = outSum + number;
-			}
 		});
 
 		$("#putt_2_out_sum").val(outSum);
@@ -226,20 +206,16 @@ $(document).ready(function() {
 		var inSum = 0;
 		$('.putt_3_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   inSum = inSum + number;
-			}
 		});
 		$("#putt_3_in_sum").val(inSum);
 
 		var outSum = 0;
 		$('.putt_3_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   outSum = outSum + number;
-			}
 		});
 
 		$("#putt_3_out_sum").val(outSum);
@@ -256,20 +232,16 @@ $(document).ready(function() {
 		var inSum = 0;
 		$('.penalties_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   inSum = inSum + number;
-			}
 		});
 		$("#penalties_in_sum").val(inSum);
 
 		var outSum = 0;
 		$('.penalties_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   outSum = outSum + number;
-			}
 		});
 
 		$("#penalties_out_sum").val(outSum);
@@ -348,7 +320,7 @@ $(document).ready(function() {
 			$("#fir_percentage").val("");
 		else
 		{
-			var fir_percentage = (fairways / (par4_tot + par5_tot) * 100).toFixed(0);
+			var fir_percentage = ((fairways / (par4_tot + par5_tot) * 100).toFixed(0) + "%");
 			$("#fir_percentage").val(fir_percentage);
 		}
 	}
@@ -370,7 +342,7 @@ $(document).ready(function() {
 			$("#gir_percentage").val("");
 		else
 		{
-			var gir_percentage = (greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(0);
+			var gir_percentage = ((greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(0)+ "%");
 			$("#gir_percentage").val(gir_percentage);
 		}
 	}
@@ -565,19 +537,19 @@ $(document).ready(function() {
 		if(numPut2Out==0)
 			averagePut2Out = 0;
 		else
-			averagePut2Out = Math.round( put2OutSum * 10 / numPut2Out) / 10;
+			averagePut2Out = ( put2OutSum  / numPut2Out).toFixed(2);
 
 		var averagePut2In;
 		if(numPut2In==0)
 			averagePut2In = 0;
 		else
-			averagePut2In = Math.round( put2InSum * 10 /numPut2In) / 10;
+			averagePut2In = ( put2InSum  / numPut2In).toFixed(2);
 
 		var averagePut2Tot;
 		if( numPut2Tot==0 )
 			averagePut2Tot = 0;
 		else
-			averagePut2Tot = Math.round( put2Sumtot * 10 /numPut2Tot) / 10;
+			averagePut2Tot = ( put2Sumtot / numPut2Tot).toFixed(2);
 
 		$("#avg_dist_hole_putt1_out_sum").val(averagePut2Out);
 		$("#avg_dist_hole_putt1_in_sum").val(averagePut2In);
@@ -691,11 +663,12 @@ $(document).ready(function() {
 		$("#tot_putt_tot").val(totalPutTotTot);
 		$("#total_putts").val(totalPutTotTot);
 
+		var played_holes_tot = GetNumericValue(document.getElementById("played_holes_tot").value);
 		if(played_holes_tot==0)
 			$("#putts_div_hole").val(0);
 		else
 		{
-			var played_holes_tot = GetNumericValue(document.getElementById("played_holes_tot").value);
+			
 			$("#putts_div_hole").val((totalPutTotTot/played_holes_tot).toFixed(2));
 		}
 
@@ -880,7 +853,7 @@ $(document).ready(function() {
 			$("#make_percentage_5").val(0);
 		else
 		{
-			var make_percentage_5 = ((totalputMake5Tot / totalputOpp5Tot)*100).toFixed(0);
+			var make_percentage_5 = ((totalputMake5Tot / totalputOpp5Tot*100).toFixed(0)+ "%");
 			$("#make_percentage_5").val(make_percentage_5);
 		}
 		////PUTT_OPP_5-9	
@@ -1018,7 +991,7 @@ $(document).ready(function() {
 			$("#make_percentage_5_9").val(0);
 		else
 		{
-			var make_percentage_5_9 = ((totalputMake59Tot / totalputOpp59Tot)*100).toFixed(0);
+			var make_percentage_5_9 = ((totalputMake59Tot / totalputOpp59Tot*100).toFixed(0) + "%");
 			$("#make_percentage_5_9").val(make_percentage_5_9);
 		}
 
@@ -1158,7 +1131,7 @@ $(document).ready(function() {
 			$("#make_percentage_10_19").val(0);
 		else
 		{
-			var make_percentage_10_19 = ((totalputMake1019Tot / totalputOpp1019Tot)*100).toFixed(0);
+			var make_percentage_10_19 = ((totalputMake1019Tot / totalputOpp1019Tot*100).toFixed(0) + "%");
 			$("#make_percentage_10_19").val(make_percentage_10_19);
 		}
 		//////PUTT_OPP_20-29
@@ -1296,7 +1269,7 @@ $(document).ready(function() {
 			$("#make_percentage_20_29").val(0);
 		else
 		{
-			var make_percentage_20_29 = ((totalputMake2029Tot / totalputOpp2029Tot)*100).toFixed(0);
+			var make_percentage_20_29 = ((totalputMake2029Tot / totalputOpp2029Tot*100).toFixed(0)+ "%");
 			$("#make_percentage_20_29").val(make_percentage_20_29);
 		}
 
@@ -1435,7 +1408,7 @@ $(document).ready(function() {
 			$("#make_percentage_30").val(0);
 		else
 		{
-			var make_percentage_30 = ((totalputMake30InTot / totalputOpp30Tot)*100).toFixed(0);
+			var make_percentage_30 = ((totalputMake30InTot / totalputOpp30Tot*100).toFixed(0)+ "%");
 			$("#make_percentage_30").val(make_percentage_30);	
 		}
 	}
@@ -1565,7 +1538,7 @@ $(document).ready(function() {
 			scoreOutList.push( $(this).val() );
 		});
 		
-		debugger;
+		//debugger;
 		var oppositeValueSumOut = 0;
 		var scramblSavOutSum = 0;
 		for(var index=0;index<9;index++)
@@ -1650,7 +1623,7 @@ $(document).ready(function() {
 		$("#scrambl_sav_tot").val(scramblSavInTot);
 		$("#scramble_sav_equation").val(scramblSavInTot);
 
-		$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(2) + "%");
+		$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0) + "%");
 
 		if(oppositeValueSumOut==0)
 			$("#scrambl_percentage_out_sum").val(0);
@@ -1679,20 +1652,16 @@ $(document).ready(function() {
 		var sandOppInSum = 0;
 		$('.sand_opp_in').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   sandOppInSum = sandOppInSum + number;
-			}
 		});
 		$("#sand_opp_in_sum").val(sandOppInSum);
 
 		var sandOppOutSum = 0;
 		$('.sand_opp_out').each(function(){
 			var number = GetNumericValue(this.value);
-			if(isInt(number))
-			{
+			//if(isInt(number))
 			   sandOppOutSum = sandOppOutSum + number;
-			}
 		});
 
 		$("#sand_opp_out_sum").val(sandOppOutSum);
@@ -1750,7 +1719,7 @@ $(document).ready(function() {
 			scoreInList.push( $(this).val() );
 		});
 		var sandSavInSum=0;
-		debugger;
+		//debugger;
 		for(var index=0;index<9;index++)
 		{
 			var sandSavIn;
@@ -1772,11 +1741,11 @@ $(document).ready(function() {
 		$("#sand_sav_tot").val(sandSavSum);
 		$("#sand_sav_equation").val(sandSavSum);
 
-		var sand_sav_percentage = ((sandSavSum/totalSandOppSum)*100).toFixed(0);
+		var sand_sav_percentage = ((sandSavSum / totalSandOppSum * 100).toFixed(0) +"%");
 		$("#sand_sav_percentage").val(sand_sav_percentage);
 
 		if(sandOppOutSum==0)
-			$("#sand_percentage_out_sum").val(0);
+			$("#sand_percentage_out_sum").val((0)+ '%');
 		else
 			$("#sand_percentage_out_sum").val((sandSavOutSum/sandOppOutSum*100).toFixed(0) + '%');
 
