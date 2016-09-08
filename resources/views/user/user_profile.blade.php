@@ -2,24 +2,9 @@
   $asset = asset('/');
 ?>
 @extends('user.master')
-@section('content')
+@section('profile')
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<h1 class="page-header">User profile</h1>
 
-<div class="row">
-	
-	<div class="col-md-2">
-		<a class="thumbnail">
-			<img src="{{$asset}}images/{{ strlen($userProfile->photo)>0?$userProfile->photo:'avator.png'}}" id="image_upload" alt="..." >
-		</a>
-		<a href="javascript:void(0)" id="change_picture">Change</a>
-		<a href="javascript:void(0)" id="save" style="display: none;">Save</a>
-		<a href="javascript:void(0)" id="discard" style="display: none;">Discard</a>
-	</div>
-	<form  id="form" action=" {{route('change_picture')}} " method="post" enctype="multipart/form-data"  style="display: none;">
-		{{csrf_field()}}
-		<input type="file" id="file" name="file" value="file">
-	</form>
 	<script >
 		$(document).ready(function()
 		{ 
@@ -50,10 +35,49 @@
 				$("#save").hide();
                   	$("#discard").hide();
 			});
-		});
-
-		
+		});		
     	</script>
+@stop
+@section('edit_name')
+<script src="{{$asset}}js/jquery.min.js"></script>
+<link href="{{$asset}}css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="{{$asset}}js/bootstrap.min.js"></script>
+<link href="{{$asset}}css/bootstrap-editable.css" rel="stylesheet" type="text/css">
+<script src="{{$asset}}js/bootstrap-editable.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$.fn.editable.defaults.mode = 'inline';
+			//$('#stdid').editable();
+			
+			$('#stdname').editable({
+				type:'text',
+				url:'{{route('edit_name')}}',
+				pk:1
+			});
+	
+		});
+	</script>
+@stop
+
+@section('content')
+<h1 class="page-header">User profile</h1>
+
+<div class="row">
+	
+	<div class="col-md-2">
+		<a class="thumbnail">
+			<img src="{{$asset}}images/{{ strlen($userProfile->photo)>0?$userProfile->photo:'avator.png'}}" id="image_upload" alt="..." >
+		</a>
+		<a href="javascript:void(0)" id="change_picture">Change</a>
+		<a href="javascript:void(0)" id="save" style="display: none;">Save</a>
+		<a href="javascript:void(0)" id="discard" style="display: none;">Discard</a>
+	</div>
+	<form  id="form" action=" {{route('change_picture')}} " method="post" enctype="multipart/form-data"  style="display: none;">
+		{{csrf_field()}}
+		<input type="file" id="file" name="file" value="file">
+	</form>
+
 
 	<div class="col-md-10">
 		<div class="table-responsive">
@@ -61,7 +85,7 @@
 				<tbody>
 					<tr>
 						<td>Name:</td>
-						<td> {{$userProfile->name}}</td>
+						<td> <a href="#" id="stdname">{{$userProfile->name}}</a> </td>
 					</tr>
 					<tr>
 						<td>Email:</td>
@@ -166,7 +190,7 @@
 			<tr style="background: green;">
 				<th>TOTAL PUTTS</th>
 				<th>PUTTS/HOLE</th>
-				<th>SCORE</th>
+				<th>AVG. SCORE</th>
 				<th></th>
 				<th></th>
 				<th></th>

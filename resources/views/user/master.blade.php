@@ -70,5 +70,7 @@
       </div>
     </div>
     @yield('validate')
+    @yield('profile')
+    @yield('edit_name')
   </body>
 </html>
