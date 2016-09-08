@@ -136,7 +136,7 @@ class UserController extends Controller
 		$userId = Session::get('userId');
 
 		$name = $request->value;
-		
+
 		$profileUpdateObj = new users;
 		$profileUpdateObj->UpdateName($userId, $name);
 

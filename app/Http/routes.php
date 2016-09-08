@@ -31,7 +31,11 @@ Route::post('/edit_name',['as'=>'edit_name', 'uses' => 'UserController@EditName'
 Route::get('/', ['as'=>'home', 'uses'=>'LoginController@LoginForm']);
 Route::post('loginform', ['as'=>'loginform', 'uses'=>'LoginController@CompleteLogin']);
 Route::get('/index', ['as'=>'index', 'uses'=>'LoginController@Loginsuccess'])->middleware('UserValidationMiddleware');
-Route::get('form', function(){return view('user.form');})->middleware('UserValidationMiddleware');
+//Route::get('form', function(){return view('user.form');})->middleware('UserValidationMiddleware');
+
+Route::get('/form', ['as'=>'form', 'uses'=>'GolfCourseController@HomeForm'])->middleware('UserValidationMiddleware');
+
+
 Route::post('submitForm', ['as'=>'submitForm', 'uses'=>'GolfCourseController@Form'])->middleware('UserValidationMiddleware');
 Route::get('list', ['as'=>'list', 'uses'=>'GolfCourseController@ViewCourseList'])->middleware('UserValidationMiddleware');
 Route::get('/user_message/{test}', ['as'=>'user_message', 'uses'=>'GolfCourseController@Message']);

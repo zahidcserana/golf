@@ -8,7 +8,12 @@ use App\Http\Requests;
 
 class GolfCourseController extends Controller
 {
-    public function Form( Request $request )
+	public function HomeForm()
+	{
+		return view('user.form');
+
+	}
+    	public function Form( Request $request )
 	{
 		$golfCourseObj = new GolfCourse;
 		$datetime = date('Y-m-d H:i:s');

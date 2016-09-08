@@ -1,5 +1,8 @@
 <?php
   $asset = asset('/');
+  use Illuminate\Routing\Route;
+  $route = \Request::route()->getName();
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -46,7 +49,13 @@
           <a class="navbar-brand" href="#">Golf</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right resNavHide">
+            <li><a href="{{route('user_logout')}}">Logout</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right resNavShow">
+            <li><a href="{{ URL::to('/') }}">Home</a></li>
+            <li><a href="{{$asset}}form">Add Round</a></li>
+            <li><a href="{{$asset}}list">Round List</a></li>
             <li><a href="{{route('user_logout')}}">Logout</a></li>
           </ul>
         </div>
@@ -56,11 +65,15 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
+            
 
-            <li class="active"><a href="{{ URL::to('/') }}">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="{{$asset}}form">Add Round</a></li>
-            <li><a href="{{$asset}}list">Round List</a></li>
-           
+             <li <?php echo $route=='profile_view'?'class="active"':'' ?> ><a href="{{ URL::to('/') }}">Home<span class="sr-only">(current)</span></a></li>
+
+
+            <li <?php echo $route=='form'?'class="active"':'' ?> ><a href="{{$asset}}form">Add Round<span class="sr-only">(current)</span></a></li>
+
+            <li <?php echo $route=='list'?'class="active"':'' ?> ><a href="{{$asset}}list">Add Round<span class="sr-only">(current)</span></a></li>
+
             
           </ul>
         </div>
