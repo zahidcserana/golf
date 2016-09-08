@@ -460,20 +460,20 @@ $(document).ready(function() {
 		if(totalGirOutHole==0)
 			averageGirOut = 0;
 		else
-			averageGirOut = Math.round( girDtistriBuitionOut * 10 /totalGirOutHole ) /10;
+			averageGirOut = Math.round( girDtistriBuitionOut * 100 /totalGirOutHole ) /100;
 
 		var averageGirIn;
 		if(totalGirInHole==0)
 			averageGirIn = 0;
 		else
-			averageGirIn = Math.round( girDtistriBuitionIn * 10 /totalGirInHole ) /10;
+			averageGirIn = Math.round( girDtistriBuitionIn * 100 /totalGirInHole ) /100;
 
 		var totalGirHoleTot = totalGirInHole+totalGirOutHole;
 		var averageGirTot;    				
 		if(totalGirHoleTot==0)
 			averageGirTot = 0;
 		else
-			averageGirTot = Math.round( girDtistriBuitionTot * 10 /totalGirHoleTot ) /10;
+			averageGirTot = Math.round( girDtistriBuitionTot * 100 /totalGirHoleTot ) /100;
 
 		$("#gir_dist_putt_1_out_sum").val(girDtistriBuitionOut);
 		$("#gir_dist_putt_1_in_sum").val(girDtistriBuitionIn);
@@ -1530,19 +1530,19 @@ $(document).ready(function() {
 		if(totalGirOutHole==0)
 			averageDistOutSum = 0;
 		else
-			averageDistOutSum = Math.round( girDtistriBuitionOut * 10 / totalGirOutHole) / 10;
+			averageDistOutSum = Math.round( girDtistriBuitionOut * 100 / totalGirOutHole) / 100;
 
 		var averageDistInSum;
 		if( totalGirInHole==0 )
 			averageDistInSum = 0;
 		else
-			averageDistInSum = Math.round( girDtistriBuitionIn * 10 / totalGirInHole) / 10;
+			averageDistInSum = Math.round( girDtistriBuitionIn * 100 / totalGirInHole) / 100;
 
 		var averageDistTot;
 		if(totalGirHoleTot==0)
 			averageDistTot = 0;
 		else
-			averageDistTot = Math.round( girDtistriBuitionTot * 10 / totalGirHoleTot) / 10;
+			averageDistTot = Math.round( girDtistriBuitionTot * 100 / totalGirHoleTot) / 100;
 		$("#avg_dist_hol_nogir_out_sum").val(averageDistOutSum);
 		$("#avg_dist_hol_nogir_in_sum").val(averageDistInSum);
 		$("#avg_dist_hol_nogir_tot").val(averageDistTot);

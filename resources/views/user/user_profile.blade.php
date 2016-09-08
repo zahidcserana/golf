@@ -111,12 +111,12 @@
 				<th>#PAR5</th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_par3_scoring}} </td>
-				<td>{{$status->avg_par4_scoring}}</td>
-				<td>{{$status->avg_par5_scoring}}</td>
-				<td>{{$status->avg_hash_par3}}</td>
-				<td>{{$status->avg_hash_par4}}</td>
-				<td>{{$status->avg_hash_par5}}</td>
+				<td>{{$stats['par3_scoring']['avg']}} </td>
+				<td>{{$stats['par4_scoring']['avg']}}</td>
+				<td>{{$stats['par5_scoring']['avg']}}</td>
+				<td>{{$stats['hash_par3']['avg']}}</td>
+				<td>{{$stats['hash_par4']['avg']}}</td>
+				<td>{{$stats['hash_par5']['avg']}}</td>
 			</tr>
 			<tr style="background: red;">
 				<th>EAGLES</th>
@@ -128,12 +128,12 @@
 			</tr>
 			<tr>
 
-				<td>{{$status->avg_eagles}} </td>
-				<td>{{$status->avg_birdies}}</td>
-				<td>{{$status->avg_pars}}</td>
-				<td>{{$status->avg_bogeys}}</td>
-				<td>{{$status->avg_dblbogeys}}</td>
-				<td>{{$status->avg_others}}</td>
+				<td>{{$stats['eagles']['avg']}} </td>
+				<td>{{$stats['birdies']['avg']}}</td>
+				<td>{{$stats['pars']['avg']}}</td>
+				<td>{{$stats['bogeys']['avg']}}</td>
+				<td>{{$stats['dblbogeys']['avg']}}</td>
+				<td>{{$stats['others']['avg']}}</td>
 
 			</tr>
 			<tr style="background: deepskyblue;">
@@ -145,12 +145,12 @@
 				<th># 18 HOLE RDS</th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_fairways}} </td>
-				<td>{{$status->avg_fir_percentage}}</td>
-				<td>{{$status->avg_greens}}</td>
-				<td>{{$status->avg_gir_percentage}}</td>
-				<td>{{$status->avg_played_holes_equation}}</td>
-				<td>{{$status->avg_hole_rds_18}}</td>
+				<td>{{$stats['fairways']['avg']}} </td>
+				<td>{{$stats['fir_percentage']['avg']}}%</td>
+				<td>{{$stats['greens']['avg']}}</td>
+				<td>{{$stats['gir_percentage']['avg']}}%</td>
+				<td>{{$stats['played_holes_equation']['avg']}}%</td>
+				<td>{{$stats['hole_rds_18']['avg']}}</td>
 			</tr>
 			<tr style="background: brown;">
 				<th>SCRAMBLE OPP</th>
@@ -161,12 +161,12 @@
 				<th>SAND SAVE %</th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_scramble_opp_equation}} </td>
-				<td>{{$status->avg_scramble_sav_equation}}</td>
-				<td>{{$status->avg_scramble_percentage}}</td>
-				<td>{{$status->avg_sand_opp_equation}}</td>
-				<td>{{$status->avg_sand_sav_equation}}</td>
-				<td>{{$status->avg_sand_sav_percentage}}</td>
+				<td>{{$stats['scramble_opp_equation']['avg']}} </td>
+				<td>{{$stats['scramble_sav_equation']['avg']}}</td>
+				<td>{{$stats['scramble_percentage']['avg']}}%</td>
+				<td>{{$stats['sand_opp_equation']['avg']}}</td>
+				<td>{{$stats['sand_sav_equation']['avg']}}</td>
+				<td>{{$stats['sand_sav_percentage']['avg']}}%</td>
 			</tr>
 			<tr style="background: yellow;">
 				<th>MISSED GIR</th>
@@ -177,9 +177,9 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_missed_gir}} </td>
-				<td>{{$status->avg_put_1_nogir}}</td>
-				<td>{{$status->avg_avg_dist_chip}}</td>
+				<td>{{$stats['missed_gir']['avg']}} </td>
+				<td>{{$stats['put_1_nogir']['avg']}}</td>
+				<td>{{$stats['avg_dist_chip']['avg']}}</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -193,9 +193,9 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_total_putts}} </td>
-				<td>{{$status->avg_putts_div_hole}}</td>
-				<td>{{$status->avg_avg_score}}</td>
+				<td>{{$stats['total_putts']['avg']}} </td>
+				<td>{{$stats['putts_div_hole']['avg']}}</td>
+				<td>{{$stats['avg_score']['avg']}}</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -209,11 +209,11 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_putt_opp_5_equation}} </td>
-				<td>{{$status->avg_putt_opp_5_9_equation}}</td>
-				<td>{{$status->avg_putt_opp_10_19_equation}}</td>
-				<td>{{$status->avg_putt_opp_20_29_equation}}</td>
-				<td>{{$status->avg_putt_opp_30_equation}}</td>
+				<td>{{$stats['putt_opp_5_equation']['avg']}} </td>
+				<td>{{$stats['putt_opp_5_9_equation']['avg']}}</td>
+				<td>{{$stats['putt_opp_10_19_equation']['avg']}}</td>
+				<td>{{$stats['putt_opp_20_29_equation']['avg']}}</td>
+				<td>{{$stats['putt_opp_30_equation']['avg']}}</td>
 				
 			</tr>
 			<tr>
@@ -225,11 +225,11 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_putt_make_5_equation}} </td>
-				<td>{{$status->avg_putt_make_5_9_equation}}</td>
-				<td>{{$status->avg_putt_make_10_19_equation}}</td>
-				<td>{{$status->avg_putt_make_20_29_equation}}</td>
-				<td>{{$status->avg_putt_make_30_equation}}</td>
+				<td>{{$stats['putt_make_5_equation']['avg']}} </td>
+				<td>{{$stats['putt_make_5_9_equation']['avg']}}</td>
+				<td>{{$stats['putt_make_10_19_equation']['avg']}}</td>
+				<td>{{$stats['putt_make_20_29_equation']['avg']}}</td>
+				<td>{{$stats['putt_make_30_equation']['avg']}}</td>
 
 			</tr>
 			<tr>
@@ -241,11 +241,11 @@
 				<th></th>
 			</tr>
 			<tr>
-				<td>{{$status->avg_make_percentage_5}} </td>
-				<td>{{$status->avg_make_percentage_5_9}}</td>
-				<td>{{$status->avg_make_percentage_10_19}}</td>
-				<td>{{$status->avg_make_percentage_20_29}}</td>
-				<td>{{$status->avg_make_percentage_30}}</td>
+				<td>{{$stats['make_percentage_5']['avg']}}%</td>
+				<td>{{$stats['make_percentage_5_9']['avg']}}%</td>
+				<td>{{$stats['make_percentage_10_19']['avg']}}%</td>
+				<td>{{$stats['make_percentage_20_29']['avg']}}%</td>
+				<td>{{$stats['make_percentage_30']['avg']}}%</td>
 			</tr>
 			
 		</table>

@@ -110,7 +110,12 @@ class GolfCourseController extends Controller
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute, $userId);
 		if(!$courseDetails)
 		{
-			$msg = "Try again.";
+			$msg = "Round you want to view,does not exists.";
+   			return redirect()->route('user_message', ['message'=>$msg]);
+		}
+		if($courseDetails->user_id!=Session::get('userId'))
+		{
+			$msg = "You don't have any permission to view this round.";
    			return redirect()->route('user_message', ['message'=>$msg]);
 		}
 		$gameData = $courseDetails->data;
@@ -128,7 +133,12 @@ class GolfCourseController extends Controller
 		$courseDetails = $golfCourseObj->GetCourse($courseIdFromRoute, $userId);
 		if(!$courseDetails)
 		{
-			$msg = "Try again.";
+			$msg = "Round you want to view,does not exists.";
+   			return redirect()->route('user_message', ['message'=>$msg]);
+		}
+		if($courseDetails->user_id!=Session::get('userId'))
+		{
+			$msg = "You don't have any permission to view this round.";
    			return redirect()->route('user_message', ['message'=>$msg]);
 		}
 		$gameData = $courseDetails->data;

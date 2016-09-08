@@ -41,7 +41,7 @@ class GolfCourse extends Model
  	}
  	public function GetState($userId)
  	{
- 		$query = "SELECT avg(par3_scoring) as avg_par3_scoring,
+ 		/*$query = "SELECT avg(par3_scoring) as avg_par3_scoring,
 		avg(par4_scoring) as avg_par4_scoring,
 		avg(par5_scoring) as avg_par5_scoring,
 		avg(hash_par3) as avg_hash_par3,
@@ -86,8 +86,38 @@ class GolfCourse extends Model
 		avg(make_percentage_10_19) as avg_make_percentage_10_19,
 		avg(make_percentage_20_29) as avg_make_percentage_20_29,
 		avg(make_percentage_30) as avg_make_percentage_30 FROM golf_course where user_id = ?";
+		$rowList = DB::select($query, [$userId]);*/
+		$query = "select * from golf_course where user_id = ?";
 		$rowList = DB::select($query, [$userId]);
-		return $rowList[0];
+		$varriableList = array('par3_scoring' , 'par4_scoring', 'par5_scoring', 'hash_par3', 'hash_par4', 'hash_par5', 'eagles', 'birdies', 'pars', 'bogeys', 'dblbogeys', 'others', 'fairways', 'fir_percentage', 'greens', 'gir_percentage', 'played_holes_equation', 'hole_rds_18', 'scramble_opp_equation', 'scramble_sav_equation', 'scramble_percentage', 'sand_opp_equation', 'sand_sav_equation', 'sand_sav_percentage', 'missed_gir', 'put_1_nogir', 'avg_dist_chip', 'total_putts', 'putts_div_hole', 'avg_score', 'putt_opp_5_equation', 'putt_opp_5_9_equation', 'putt_opp_10_19_equation','putt_opp_20_29_equation', 'putt_opp_30_equation', 'putt_make_5_equation', 'putt_make_5_9_equation', 'putt_make_10_19_equation', 'putt_make_20_29_equation', 'putt_make_30_equation', 'make_percentage_5', 'make_percentage_5_9', 'make_percentage_10_19', 'make_percentage_20_29', 'make_percentage_30' );
+		$statAverage = array();
+		
+		foreach($varriableList as $aVarriable)
+		{
+			$statAverage[$aVarriable]=array('sum'=>0,'count'=>0);
+		}
+		foreach($rowList as $row)
+		{
+			foreach($varriableList as $aVarriable)
+			{
+				$str = $row->$aVarriable;
+				$str = trim(str_replace('%','',$str));
+				if( strlen($str)>0 && is_numeric($str) )
+				{
+					$numericValue = is_int($str)?intval($str):floatval($str);
+					$statAverage[$aVarriable]['sum'] += $numericValue;
+					$statAverage[$aVarriable]['count']++;
+				}
+			}
+		}
+		foreach($statAverage as &$aStat )
+		{
+			if($aStat['count']!=0)
+				$aStat['avg'] = round($aStat['sum']/$aStat['count']);
+			else
+				$aStat['avg'] = "";
+		}
+		return $statAverage;
 
  	}
 }

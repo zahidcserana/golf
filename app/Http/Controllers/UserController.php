@@ -104,11 +104,11 @@ class UserController extends Controller
 		$userProfileObj = new users;
 		$userProfile = $userProfileObj->GetProfilePhoto($userId);
 		$statusObj = new GolfCourse();
-		$status = $statusObj->GetState($userId);
+		$stats = $statusObj->GetState($userId);
 		//echo "<pre>";
 		//var_dump($status->avg_par3_scoring);
 		//echo "</pre>";
-		return view('user.user_profile',['userProfile'=>$userProfile, 'status'=>$status]);
+		return view('user.user_profile',['userProfile'=>$userProfile, 'stats'=>$stats]);
 	}
 	public function ChangePicture(Request $request)
 	{

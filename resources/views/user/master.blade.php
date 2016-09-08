@@ -72,7 +72,7 @@
 
             <li <?php echo $route=='form'?'class="active"':'' ?> ><a href="{{$asset}}form">Add Round<span class="sr-only">(current)</span></a></li>
 
-            <li <?php echo $route=='list'?'class="active"':'' ?> ><a href="{{$asset}}list">Add Round<span class="sr-only">(current)</span></a></li>
+            <li <?php echo $route=='list'?'class="active"':'' ?> ><a href="{{$asset}}list">Round List<span class="sr-only">(current)</span></a></li>
 
             
           </ul>

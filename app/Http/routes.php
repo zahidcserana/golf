@@ -1,5 +1,9 @@
 <?php  
 Route::get('/message/{test}', ['as'=>'message', 'uses'=>'AdminController@Message']);
+
+Route::get('/admin', function () {
+    return redirect()->route('admin');
+});
 Route::get('/admin/home',['as'=>'admin_home', 'uses' => 'AdminController@AdminHome']);
 Route::get('/admin_logout',['as'=>'admin_logout', 'uses' => 'AdminController@AdminLogout']);
 Route::get('admin/login',['as'=>'admin', 'uses' => 'AdminController@AdminLoginForm']);
