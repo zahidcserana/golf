@@ -30,14 +30,13 @@
 		<script src="{{$asset}}js/ie-emulation-modes-warning.js"></script>
 		
 		<style>
-			input{border:0px solid #000; margin:0; background:transparent; width:100%}
+			input{border:0px solid #000; margin:0; background:transparent; width:100%;text-align: center;}
 			table tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;width: 30px;}
 			table{background: #fff none repeat scroll 0 0;
 				border-left: 1px solid #ddd;
 				border-top: 1px solid #ddd;}
 			/*table tr:first-child{background:#006400; color:#fff;font-weight: bold;}*/
-			table tr:nth-child(even){background:#fff;}
-			table tr:nth-child(odd){background:#ddd;}
+			
 			td.numeric {
 			    padding: 8px 0px !important;
 			}
@@ -48,7 +47,7 @@
 				background: #FFB6C1;
 			}
 			.ash{
-				background:#ddd;
+				background:#808080;
 			}
 		</style>
 	</head>
@@ -159,7 +158,7 @@
 										<td class="numeric "><input class=" score_in" type="text" Name="gameResult[score][input][17]" /></td>
 										
 										<td><input id ="score_in_sum" readonly="readonly" Name="gameResult[score][in_sum]" /></td>
-										<td><input id="score_tot" Name="gameResult[score][tot]" /></td>
+										<td><input id="score_tot" readonly="readonly" Name="gameResult[score][tot]" /></td>
 									</tr>
 
 									<tr>

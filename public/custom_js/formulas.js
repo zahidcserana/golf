@@ -317,7 +317,7 @@ $(document).ready(function() {
 		var par4_tot = GetNumericValue(document.getElementById("par4_tot").value);
 		var par5_tot = GetNumericValue(document.getElementById("par5_tot").value);
 		if((par4_tot + par5_tot)==0)
-			$("#fir_percentage").val("");
+			$("#fir_percentage").val(0);
 		else
 		{
 			var fir_percentage = ((fairways / (par4_tot + par5_tot) * 100).toFixed(0) + "%");
@@ -339,7 +339,7 @@ $(document).ready(function() {
 		var par4_tot = GetNumericValue(document.getElementById("par4_tot").value);
 		var par5_tot = GetNumericValue(document.getElementById("par5_tot").value);
 		if(( par3_tot + par4_tot + par5_tot)==0)
-			$("#gir_percentage").val("");
+			$("#gir_percentage").val(0);
 		else
 		{
 			var gir_percentage = ((greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(0)+ "%");

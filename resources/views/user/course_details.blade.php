@@ -1567,7 +1567,7 @@ $asset = asset('/');
 								<tr style="background: green;">
 									<th>TOTAL PUTTS</th>
 									<th>PUTTS/HOLE</th>
-									<th>AVG. SCORE</th>
+									<th>SCORE</th>
 									<th></th>
 									<th></th>
 									<th></th>
