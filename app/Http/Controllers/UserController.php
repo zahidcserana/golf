@@ -131,4 +131,14 @@ class UserController extends Controller
 		    	return redirect()->route('home');
 	     	}
 	}
+	public function EditName(Request $request)
+	{
+		$userId = Session::get('userId');
+
+		$name = $request->value;
+		
+		$profileUpdateObj = new users;
+		$profileUpdateObj->UpdateName($userId, $name);
+
+	}
 }

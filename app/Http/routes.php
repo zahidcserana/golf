@@ -20,6 +20,9 @@ Route::get('/profile_view',['as'=>'profile_view', 'uses' => 'UserController@Prof
 
 Route::post('/change_picture',['as'=>'change_picture', 'uses' => 'UserController@ChangePicture'])->middleware('UserValidationMiddleware');
 
+Route::post('/edit_name',['as'=>'edit_name', 'uses' => 'UserController@EditName'])->middleware('UserValidationMiddleware');
+
+
 
 
 

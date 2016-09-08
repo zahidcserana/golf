@@ -2,8 +2,12 @@
   $asset = asset('/');
 ?>
 @extends('user.master')
-@section('profile')
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+@section('html_header')
+	@parent
+	<script src="{{$asset}}js/jquery.min.js"></script>
+	<link href="{{$asset}}css/bootstrap-editable.css" rel="stylesheet" type="text/css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="{{$asset}}js/bootstrap-editable.min.js"></script>
 
 	<script >
 		$(document).ready(function()
@@ -37,28 +41,21 @@
 			});
 		});		
     	</script>
-@stop
-@section('edit_name')
-<script src="{{$asset}}js/jquery.min.js"></script>
-<link href="{{$asset}}css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<script src="{{$asset}}js/bootstrap.min.js"></script>
-<link href="{{$asset}}css/bootstrap-editable.css" rel="stylesheet" type="text/css">
-<script src="{{$asset}}js/bootstrap-editable.min.js"></script>
-
+		
 	<script>
 		$(document).ready(function(){
 			$.fn.editable.defaults.mode = 'inline';
-			//$('#stdid').editable();
 			
 			$('#stdname').editable({
 				type:'text',
 				url:'{{route('edit_name')}}',
-				pk:1
+				pk:1,
+				params:{ '_token':'{{ csrf_token() }}'}
 			});
 	
 		});
 	</script>
-@stop
+@endsection
 
 @section('content')
 <h1 class="page-header">User profile</h1>

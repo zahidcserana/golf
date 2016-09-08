@@ -38,4 +38,9 @@ class users extends Model
 	{
 		return DB::table($this->table)->where('id', $userId)->update(['photo'=>$fileName]);	
 	}
+	public function UpdateName($userId, $name)
+	{
+		return DB::table($this->table)->where('id', $userId)->update(['name'=>$name]);	
+
+	}
 }
