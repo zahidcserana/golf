@@ -69,7 +69,7 @@
 					</tr>
 					<tr>
 						<td>Join Date:</td>
-						<td><?php $dateParts = explode(' ', $userProfile->created_at); echo  $dateParts[0];?></td>
+						<td>{{$userProfile->created_at}}</td>
 					</tr>
 				</tbody>
 			</table>
