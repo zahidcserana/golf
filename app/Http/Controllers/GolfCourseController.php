@@ -16,7 +16,7 @@ class GolfCourseController extends Controller
 		$golfCourseObj->user_id = $userId;
 		$golfCourseObj->data = json_encode($request->gameResult);
 		$golfCourseObj->summary_data = json_encode($request->summaryResult);
-		$golfCourseObj->location = $request->locationName;
+		$golfCourseObj->location = $request->nameFromUser;
 
 		$golfCourseObj->par3_scoring = $request->summaryResult['par3_scoring'][0];
 		$golfCourseObj->par4_scoring = $request->summaryResult['par4_scoring'][0];
@@ -136,15 +136,35 @@ class GolfCourseController extends Controller
 	public function EditForm(Request $request , $courseIdFromRoute )
 	{
 		$golfCourseObj = new GolfCourse;
-		$locationName = $request->editedLocationName;
-		//dd($locationName);
+		$editedLocation = $request->nameFromUser;
+		//dd($editedLocation);
 		$editedData = json_encode($request->gameResult);
 		$editedSummaryData = json_encode($request->summaryResult);
 
-		$golfCourseObj->UpdateCourse($courseIdFromRoute, $editedData, $editedSummaryData, $locationName);
+		$golfCourseObj->UpdateCourse($courseIdFromRoute, $editedData, $editedSummaryData, $editedLocation);
 		$msg = "You have successfully updated a round.";
    		return redirect()->route('user_message', ['message'=>$msg]);
 		//echo $courseIdFromRoute;
+	}
+
+
+	public function Delete( $courseIdFromRoute )
+	{
+		$golfCourseObj = new GolfCourse;
+		$golfCourseObj->DeleteCourse($courseIdFromRoute);
+		$userId = Session::get('userId');
+		$number = 5;
+		$pagination = $golfCourseObj->GetList($userId, $number);
+		$listCheck = $golfCourseObj->CheckList($userId);
+   		if(($listCheck ))
+		{
+			return view('user.list', ['courseResult'=>$pagination]);
+		}
+   		else
+		{
+			$msg = "No list exists!";
+   			return redirect()->route('user_message', ['message'=>$msg]);
+		}
 	}
 
 	public function Message( $message )

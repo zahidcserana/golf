@@ -21,11 +21,24 @@
 				?>
 	    		<td>{{$course->location}}</td>	
 	    		<td>{{$course->date}}</td>	
-	    		<td><a href="{{route('course_view', ['course_id'=>$course->id])}}">Details</a> | <a href="{{route('course_edit', ['course_id'=>$course->id])}}">Modify</a></td>	
+	    		<td><a href="{{route('course_view', ['course_id'=>$course->id])}}">Details</a> | <a href="{{route('course_edit', ['course_id'=>$course->id])}}">Modify</a> | <a href="{{route('delete', ['course_id'=>$course->id])}}" title="Delete" onclick="return checkDelete();">Delete</a></td>	
 	    	</tr>
 	    	@endforeach
 	    </tbody>
 	</table>
 	{{ $courseResult->render() }}
 </div>
+ <script type="text/javascript">
+            function checkDelete()
+            {
+                var chk=confirm('Are You Sure to Delete This ? ');
+                if(chk)
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        </script>
 @stop

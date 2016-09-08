@@ -4,17 +4,33 @@ $(document).ready(function() {
 	{
 		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && e.ctrlKey === true) || (e.keyCode == 67 && e.ctrlKey === true) || (e.keyCode == 88 && e.ctrlKey === true) || (e.keyCode >= 35 && e.keyCode <= 39)) 
 		{
-			return;
+			return true;
 		}
 		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) 
 		{
-			e.preventDefault();
+			return false;
 		}
 	});
 
 	function isInt(n){
 		return Number(n) === n && n % 1 === 0;
 	}
+
+	function CheckHolePairLength(e)
+	{
+		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && e.ctrlKey === true) || (e.keyCode == 67 && e.ctrlKey === true) || (e.keyCode == 88 && e.ctrlKey === true) || (e.keyCode >= 35 && e.keyCode <= 39)) 
+		{
+			return true;
+		}
+		var curVal = $(this).val();
+		if( curVal.length==1 )
+			return false;
+		else
+			return true;
+
+	} 
+	$('.hole_par_in').on("keydown" , CheckHolePairLength);
+	$(".hole_par_out").on("keydown" ,CheckHolePairLength);
 
 	
 	function CheckHolePair()
@@ -29,9 +45,9 @@ $(document).ready(function() {
 
 		var outSum = 0;
 		$('.hole_par_out').each(function(){
+			
 			var number = GetNumericValue(this.value);
-			//if(isInt(number))
-			   outSum = outSum + number;
+			outSum = outSum + number;
 		});
 
 		$("#hole_par_out_sum").val(outSum);
@@ -42,6 +58,22 @@ $(document).ready(function() {
 
 	$('.hole_par_in').on("change, keyup" , CheckHolePair);
 	$(".hole_par_out").on("change, keyup" ,CheckHolePair);
+
+	function CheckScoreLength(e)
+	{
+		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && e.ctrlKey === true) || (e.keyCode == 67 && e.ctrlKey === true) || (e.keyCode == 88 && e.ctrlKey === true) || (e.keyCode >= 35 && e.keyCode <= 39)) 
+		{
+			return true;
+		}
+		var curVal = $(this).val();
+		if( curVal.length==2 )
+			return false;
+		else
+			return true;
+
+	} 
+	$('.score_in').on("keydown" , CheckScoreLength);
+	$(".score_out").on("keydown" ,CheckScoreLength);
 
 	function CheckScore()
 	{
@@ -2435,6 +2467,9 @@ $(document).ready(function() {
 
 function GetNumericValue(str)
 {
+	if((typeof str === 'string' || str instanceof String) && str.endsWith("."))
+		str = str.replace('.','');
+	
 	if(str.length==0)
 		return 0;
 	if(/^([0-9]+)$/.test(str))

@@ -66,7 +66,7 @@
 					<div class="form-group">
 						<div class="col-md-2"><label>Location</label></div>
 						<div class="col-md-4">
-							<input type="text" class="form-control" name="locationName">
+							<input type="text" class="form-control" name="nameFromUser">
 						</div>
 						<div class="col-md-2"><label>Date</label></div>
 						<div class="col-md-4">
@@ -105,7 +105,7 @@
 										<td>TOT</td>
 									</tr>
 									<tr>
-										<td>HOLE_PAR</td>
+										<td>HOLE PAR</td>
 										<td class="numeric  pink"><input class=hole_par_out type="text" Name="gameResult[hole_pair][input][0]" /></td>
 										<td class="numeric  pink"><input class=hole_par_out type="text" Name="gameResult[hole_pair][input][1]" /></td>
 										<td class="numeric  pink"><input class=hole_par_out type="text" Name="gameResult[hole_pair][input][2]" /></td>
@@ -219,7 +219,7 @@
 									</tr>
 
 									<tr>
-										<td>GIR_DIST_PUTT_1</td>
+										<td>GIR DIST PUTT 1</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -247,7 +247,7 @@
 									</tr>
 
 									<tr>
-										<td>AVG_DIST_HOL_GIR</td>
+										<td>AVG DIST HOL GIR</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -273,7 +273,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_1</td>
+										<td>PUTT 1</td>
 										<td class="numeric "><input class="putt_1_out" type="text" Name="gameResult[putt_1][input][0]" /></td>
 										<td class="numeric "><input class="putt_1_out" type="text" Name="gameResult[putt_1][input][1]" /></td>
 										<td class="numeric "><input class="putt_1_out" type="text" Name="gameResult[putt_1][input][2]" /></td>
@@ -302,7 +302,7 @@
 									</tr>
 
 									<tr>
-										<td>DIST_AFT_PUTT_1</td>
+										<td>DIST AFT PUTT 1</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -326,7 +326,7 @@
 										<td><input type="text" id='dist_aft_putt_1_tot' Name="gameResult[dist_aft_putt_1][tot]" readonly="readonly"/></td>
 									</tr>
 									<tr>
-										<td>NUM_PUTT_2</td>
+										<td>NUM PUTT 2</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -350,7 +350,7 @@
 										<td><input type="text" id='num_putt_2_tot' Name="gameResult[num_putt_2][tot]" readonly="readonly"/></td>
 									</tr>
 									<tr>
-										<td>AVG_DIST_HOL_PUTT1</td>
+										<td>AVG DIST HOL PUTT1</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -374,7 +374,7 @@
 										<td><input type="text" id="avg_dist_hole_putt1_tot" Name="gameResult[avg_dist_hole_putt1][tot]" readonly="readonly"/></td>
 									</tr>
 									<tr>
-										<td>PUTT_2</td>
+										<td>PUTT 2</td>
 										<td class="numeric "><input class="putt_2_out" type="text" Name="gameResult[putt_2][input][0]" /></td>
 										<td class="numeric "><input class="putt_2_out" type="text" Name="gameResult[putt_2][input][1]" /></td>
 										<td class="numeric "><input class="putt_2_out" type="text" Name="gameResult[putt_2][input][2]" /></td>
@@ -401,7 +401,7 @@
 										<td><input id="putt_2_tot" readonly="readonly" Name="gameResult[putt_2][tot]" /></td>
 									</tr>
 									<tr>
-										<td>NUM_PUTT_3</td>
+										<td>NUM PUTT 3</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -426,7 +426,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_3</td>
+										<td>PUTT 3</td>
 										<td class="numeric "><input class="putt_3_out" type="text" Name="gameResult[putt_3][input][0]" /></td>
 										<td class="numeric "><input class="putt_3_out" type="text" Name="gameResult[putt_3][input][1]" /></td>
 										<td class="numeric "><input class="putt_3_out" type="text" Name="gameResult[putt_3][input][2]" /></td>
@@ -454,7 +454,7 @@
 									</tr>
 
 									<tr>
-										<td>TOT_PUTT</td>
+										<td>TOT PUTT</td>
 										<td class="numeric ash"><input id='tot_putt_out_0' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][0]" /></td>
 										<td class="numeric ash"><input id='tot_putt_out_1' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][1]" /></td>
 										<td class="numeric ash"><input id='tot_putt_out_2' readonly="readonly" class="tot_putt_out" type="text" Name="gameResult[tot_putt][input][2]" /></td>
@@ -483,7 +483,7 @@
 									</tr>
 
 									<tr>
-										<td>TOT_FT_MADE</td>
+										<td>TOT FT MADE</td>
 										<td class="numeric ash"><input id='tot_ft_made_out_0' readonly="readonly" class="tot_ft_made_out" type="text" Name="gameResult[tot_ft_made][input][0]" /></td>
 										<td class="numeric ash"><input class="tot_ft_made_out" id='tot_ft_made_out_1' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][1]" /></td>
 										<td class="numeric ash"><input class="tot_ft_made_out" id='tot_ft_made_out_2' readonly="readonly" type="text" Name="gameResult[tot_ft_made][input][2]" /></td>
@@ -511,7 +511,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_OPP_&lt;5</td>
+										<td>PUTT OPP &lt;5</td>
 										<td class="numeric ash"><input class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_5][input][0]" id='putt_opp_5_out_0' readonly="readonly" /></td>
 										<td class="numeric ash"><input class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_5][input][1]" id='putt_opp_5_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_5_out" type="text" Name="gameResult[putt_opp_5][input][2]" id='putt_opp_5_out_2' readonly="readonly"/></td>
@@ -539,7 +539,7 @@
 									</tr>
 			
 									<tr>
-										<td>PUTT_MAKE_&lt;5</td>
+										<td>PUTT MAKE &lt;5</td>
 										<td class="numeric ash"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_5][input][0]" id='putt_make_5_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_5][input][1]" id='putt_make_5_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_5_out" type="text" Name="gameResult[putt_make_5][input][2]" id='putt_make_5_out_2' readonly="readonly"/></td>
@@ -567,7 +567,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_OPP_5-9</td>
+										<td>PUTT OPP 5-9</td>
 										<td class="numeric ash"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][0]" id='putt_opp_5_9_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][1]" id='putt_opp_5_9_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_5_9_out" type="text" Name="gameResult[putt_opp_5-9][input][2]" id='putt_opp_5_9_out_2' readonly="readonly"/></td>
@@ -596,7 +596,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_MAKE_5-9</td>
+										<td>PUTT MAKE 5-9</td>
 										<td class="numeric ash"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][0]" id='putt_make_5_9_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][1]" id='putt_make_5_9_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_5_9_out" type="text" Name="gameResult[putt_make_5-9][input][2]" id='putt_make_5_9_out_2' readonly="readonly"/></td>
@@ -624,7 +624,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_OPP_10-19</td>
+										<td>PUTT OPP 10-19</td>
 										<td class="numeric ash"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][0]" id='putt_opp_10_19_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][1]" id='putt_opp_10_19_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_10_19_out" type="text" Name="gameResult[putt_opp_10-19][input][2]" id='putt_opp_10_19_out_2' readonly="readonly"/></td>
@@ -653,7 +653,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_MAKE_10-19</td>
+										<td>PUTT MAKE 10-19</td>
 										<td class="numeric ash"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][0]" id='putt_make_10_19_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][1]" id='putt_make_10_19_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_10_19_out" type="text" Name="gameResult[putt_make_10-19][input][2]" id='putt_make_10_19_out_2' readonly="readonly"/></td>
@@ -681,7 +681,7 @@
 									</tr>
 									
 									<tr>
-										<td>PUTT_OPP_20-29</td>
+										<td>PUTT OPP 20-29</td>
 										<td class="numeric ash"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][0]" id='putt_opp_20_29_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][1]" id='putt_opp_20_29_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_20_29_out" type="text" Name="gameResult[putt_opp_20-29][input][2]" id='putt_opp_20_29_out_2' readonly="readonly"/></td>
@@ -709,7 +709,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_MAKE_20-29</td>
+										<td>PUTT MAKE 20-29</td>
 										<td class="numeric ash"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][0]" id="putt_make_20_29_out_0" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][1]" id="putt_make_20_29_out_1" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_20_29_out" type="text" Name="gameResult[putt_make_20-29][input][2]" id="putt_make_20_29_out_2" readonly="readonly"/></td>
@@ -737,7 +737,7 @@
 										<td><input id="putt_make_20_29_tot" readonly="readonly" Name="gameResult[putt_make_20-29][tot]" /></td>
 									</tr>
 									<tr>
-										<td>PUTT_OPP_30+</td>
+										<td>PUTT OPP 30+</td>
 										<td class="numeric ash"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30][input][0]" id="putt_opp_30_out_0" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30][input][1]" id="putt_opp_30_out_1" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_opp_30_out" type="text" Name="gameResult[putt_opp_30][input][2]" id="putt_opp_30_out_2" readonly="readonly"/></td>
@@ -765,7 +765,7 @@
 									</tr>
 
 									<tr>
-										<td>PUTT_Make_30+</td>
+										<td>PUTT Make 30+</td>
 										<td class="numeric ash"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30][input][0]" id="putt_make_30_out_0" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30][input][1]" id="putt_make_30_out_1" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="putt_make_30_out" type="text" Name="gameResult[putt_make_30][input][2]" id="putt_make_30_out_2" readonly="readonly"/></td>
@@ -793,7 +793,7 @@
 									</tr>
 
 									<tr>
-										<td>NOGIR_DIST_PUTT_1</td>
+										<td>NOGIR DIST PUTT 1</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -817,7 +817,7 @@
 										<td><input type="text" readonly="readonly" Name="gameResult[nogir_dist_putt_1][tot]" id='nogir_dist_putt_1_tot' /></td>
 									</tr>
 									<tr>
-										<td>NO_GIR</td>
+										<td>NO GIR</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -841,7 +841,7 @@
 										<td><input readonly="readonly" Name="gameResult[no_gir][tot]" id='no_gir_tot'/></td>
 									</tr>
 									<tr>
-										<td>AVG_DIST_HOL_NOGIR</td>
+										<td>AVG DIST HOL NOGIR</td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -866,7 +866,7 @@
 									</tr>
 									
 									<tr>
-										<td>SCRAMBL_OPP</td>
+										<td>SCRAMBL OPP</td>
 										<td class="numeric ash"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][0]" id='scrambl_opp_out_0' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][1]" id='scrambl_opp_out_1' readonly="readonly"/></td>
 										<td class="numeric ash"><input class="scrambl_opp_out" type="text" Name="gameResult[scrambl_opp][input][2]" id='scrambl_opp_out_2' readonly="readonly"/></td>
@@ -894,7 +894,7 @@
 									</tr>
 
 									<tr>
-										<td>SCRAMBL_SAV</td>
+										<td>SCRAMBL SAV</td>
 										<td class="numeric ash"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][0]" id="scrambl_sav_out_0" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][1]" id="scrambl_sav_out_1" readonly="readonly"/></td>
 										<td class="numeric ash"><input class="scrambl_sav_out" type="text" Name="gameResult[scrambl_sav][input][2]" id="scrambl_sav_out_2" readonly="readonly"/></td>
@@ -947,7 +947,7 @@
 									</tr>
 									
 									<tr>
-										<td>SAND_OPP</td>
+										<td>SAND OPP</td>
 										<td class="numeric "><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][0]" id="sand_opp_out_0" /></td>
 										<td class="numeric "><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][1]" id="sand_opp_out_1" /></td>
 										<td class="numeric "><input class="sand_opp_out" type="text" Name="gameResult[sand_opp][input][2]" id="sand_opp_out_2" /></td>
@@ -975,7 +975,7 @@
 									</tr>
 
 									<tr>
-										<td>SAND_SAV</td>
+										<td>SAND SAV</td>
 										<td class="numeric ash"><input class="sand_sav_out" type="text" id="sand_sav_out_0" readonly="readonly" Name="gameResult[sand_sav][input][0]" /></td>
 										<td class="numeric ash"><input class="sand_sav_out" type="text" id="sand_sav_out_1" readonly="readonly"  Name="gameResult[sand_sav][input][1]" /></td>
 										<td class="numeric ash"><input class="sand_sav_out" type="text" id="sand_sav_out_2" readonly="readonly"  Name="gameResult[sand_sav][input][2]" /></td>
@@ -1634,7 +1634,7 @@
 		<script src="{{$asset}}js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript">
             $(document).ready(function () {
-                $('#datetimepicker1').datepicker();
+                $('#datetimepicker1').datepicker({endDate:'0d'});
             });
         </script>
 		<script type="text/javascript" src="{{$asset}}custom_js/formulas.js"></script>
