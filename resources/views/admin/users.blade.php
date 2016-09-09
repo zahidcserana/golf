@@ -36,7 +36,7 @@
   	<script type="text/javascript">
             function MakeAdmin()
             {
-                var chk=confirm('Are You Sure ? ');
+                var chk=confirm('Do you really want to proceed this action?');
                 if(chk)
                 {
                     return true;
@@ -47,7 +47,7 @@
             }
             function Downgrade()
             {
-                var chk=confirm('Are You Sure ? ');
+                var chk=confirm('Do you really want to proceed this action?');
                 if(chk)
                 {
                     return true;

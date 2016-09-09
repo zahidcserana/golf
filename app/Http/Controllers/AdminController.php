@@ -74,10 +74,10 @@ class AdminController extends Controller
     		$type = 'admin';
     		$makingAdminObj = new users;
     		$makingAdmin = $makingAdminObj->MakeAdmin($id,$type);
+    		
     		Session::flash('message', 'Action successfully completed!'); 
     		return redirect()->route('user_view');
-    		//$msg = "Action successfully completed.";
-		//return redirect()->route('message', ['message'=>$msg]);
+    		
     	}
     	public function DowngradeToUser($id,$email)
     	{
@@ -85,11 +85,7 @@ class AdminController extends Controller
     		$downgradeToUserObj = new users;
     		$downgradeToUser = $downgradeToUserObj->DowngradeToUser($id,$type);
     		
-    		
     		Session::flash('message', 'Action successfully completed!'); 
-		return redirect()->route('user_view');
-			           
-		//$msg = "Action successfully completed.";
-		//return redirect()->route('message', ['message'=>$msg]);
+		return redirect()->route('user_view');           
     	}
 }
