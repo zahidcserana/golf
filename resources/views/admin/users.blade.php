@@ -2,7 +2,7 @@
 @section('admincontent')
 <br /><br />
 	@if(Session::has('message'))
-	<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+		<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
 	@endif
 	<table class="table">
 		<thead>
