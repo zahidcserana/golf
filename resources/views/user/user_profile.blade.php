@@ -16,23 +16,27 @@
 			{ 
 				$( "#file" ).click();
 			});
+
 			$( "#file" ).change(function()
 			{
-			var reader = new FileReader();
-               	reader.onload = function (e) {
-                  	$('#image_upload').attr('src', e.target.result);
-                  	//$("#form").submit();
-                  	$("#save").show();
-                  	$("#discard").show();
-                  	$("#change_picture").hide();
-			};
-			reader.readAsDataURL(this.files[0]);
+				var reader = new FileReader();
+	               	reader.onload = function (e) 
+	               	{
+	                  	$('#image_upload').attr('src', e.target.result);
+	                  	//$("#form").submit();
+	                  	$("#save").show();
+	                  	$("#discard").show();
+	                  	$("#change_picture").hide();
+				};
+				reader.readAsDataURL(this.files[0]);
 			
 			});
+
 			$( "#save" ).click(function()
 			{
 				$("#form").submit();
 			});
+
 			$( "#discard" ).click(function()
 			{
 				$("#change_picture").show();
@@ -43,7 +47,8 @@
     	</script>
 		
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function()
+		{
 			$.fn.editable.defaults.mode = 'inline';
 			
 			$('#stdname').editable({
