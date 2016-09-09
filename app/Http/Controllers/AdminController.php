@@ -46,7 +46,7 @@ class AdminController extends Controller
 		{
 			$userId = $adminCheck->id;
             	$userType = $adminCheck->user_type;
-            	Session::put('userId' , $userId);
+            	Session::put('adminId' , $userId);
             	Session::put('userType' , $userType);
 			return redirect()->route('admin_home');
 			
@@ -74,15 +74,22 @@ class AdminController extends Controller
     		$type = 'admin';
     		$makingAdminObj = new users;
     		$makingAdmin = $makingAdminObj->MakeAdmin($id,$type);
-    		$msg = "Action successfully completed.";
-		return redirect()->route('message', ['message'=>$msg]);
+    		Session::flash('message', 'Action successfully completed!'); 
+    		return redirect()->route('user_view');
+    		//$msg = "Action successfully completed.";
+		//return redirect()->route('message', ['message'=>$msg]);
     	}
     	public function DowngradeToUser($id,$email)
     	{
     		$type = 'user';
     		$downgradeToUserObj = new users;
     		$downgradeToUser = $downgradeToUserObj->DowngradeToUser($id,$type);
-    		$msg = "Action successfully completed.";
-		return redirect()->route('message', ['message'=>$msg]);
+    		
+    		
+    		Session::flash('message', 'Action successfully completed!'); 
+		return redirect()->route('user_view');
+			           
+		//$msg = "Action successfully completed.";
+		//return redirect()->route('message', ['message'=>$msg]);
     	}
 }

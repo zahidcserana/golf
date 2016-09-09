@@ -13,8 +13,8 @@ class users extends Model
 	protected $primaryKey = 'id';
 
 	public function GetAllUser()
-	{
-	      return DB::table($this->table)->get();
+	{	
+	      return DB::table($this->table)->paginate(5);
 	}
 	
 	public function UserEmailCheck($email)
