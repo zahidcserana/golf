@@ -28,17 +28,17 @@
 	</table>
 	{{ $courseResult->render() }}
 </div>
- <script type="text/javascript">
-            function checkDelete()
-            {
-                var chk=confirm('Are You Sure to Delete This ? ');
-                if(chk)
-                {
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-        </script>
+<script type="text/javascript">
+    function checkDelete()
+    {
+        var chk=confirm('Are You Sure to Delete This ? ');
+        if(chk)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+</script>
 @stop

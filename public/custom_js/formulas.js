@@ -138,6 +138,14 @@ $(document).ready(function() {
 		var totalSum = inSum+outSum;
 		$("#fir_tot").val(totalSum);
 
+
+		var fir_tot = totalSum;
+		var fairways = fir_tot;
+		if(fairways==0)
+			$("#fairways").val("0");
+		else
+			$("#fairways").val(fairways);
+
 	}
 
 	$('.fir_in').on("change, keyup" , CheckFir);
@@ -285,62 +293,6 @@ $(document).ready(function() {
 	$('.penalties_in').on("change, keyup" , Penalties);
 	$(".penalties_out").on("change, keyup" ,Penalties);
 
-	function ParScoring()
-	{
-		var par3_tot = GetNumericValue(document.getElementById("par3_tot").value);
-		var par4_tot = GetNumericValue(document.getElementById("par4_tot").value);
-		var par5_tot = GetNumericValue(document.getElementById("par5_tot").value);
-
-		var fir_tot = GetNumericValue(document.getElementById("fir_tot").value);
-		var fairways = fir_tot;
-		if(fairways==0)
-			$("#fairways").val("");
-		else
-			$("#fairways").val(fairways);
-
-		var par3strokes_tot = GetNumericValue(document.getElementById("par3strokes_tot").value);
-		var par4strokes_tot = GetNumericValue(document.getElementById("par4strokes_tot").value);
-		var par5strokes_tot = GetNumericValue(document.getElementById("par5strokes_tot").value);
-
-		if(par3_tot==0)
-			$("#par3_scoring").val("");
-		else
-		{	
-			var par3_scoring = (par3strokes_tot / par3_tot).toFixed(2);
-			$("#par3_scoring").val(par3_scoring);
-		}
-		if(par4_tot==0)
-			$("#par4_scoring").val("");
-		else
-		{	
-			var par4_scoring = (par4strokes_tot / par4_tot).toFixed(2);
-			$("#par4_scoring").val(par4_scoring);
-		}
-		if(par5_tot==0)
-			$("#par5_scoring").val("");
-		else
-		{	
-			var par5_scoring = (par5strokes_tot / par5_tot).toFixed(2);
-			$("#par5_scoring").val(par5_scoring);
-		}
-		
-	}
-	$('.par3_in').on("change, keyup" , ParScoring);
-	$(".par3_out").on("change, keyup" ,ParScoring);
-	$('.par4_in').on("change, keyup" , ParScoring);
-	$(".par4_out").on("change, keyup" ,ParScoring);
-	$('.par5_in').on("change, keyup" , ParScoring);
-	$(".par5_out").on("change, keyup" ,ParScoring);
-
-	$('.par3strokes_in').on("change, keyup" , ParScoring);
-	$('.par3strokes_out').on("change, keyup" , ParScoring);
-	$('.par4strokes_in').on("change, keyup" , ParScoring);
-	$('.par4strokes_out').on("change, keyup" , ParScoring);
-	$('.par5strokes_in').on("change, keyup" , ParScoring);
-	$('.par5strokes_out').on("change, keyup" , ParScoring);
-
-	$('.fir_in').on("change, keyup" , ParScoring);
-	$('.fir_out').on("change, keyup" , ParScoring);
 
 	function FirPercentage()
 	{
@@ -349,7 +301,7 @@ $(document).ready(function() {
 		var par4_tot = GetNumericValue(document.getElementById("par4_tot").value);
 		var par5_tot = GetNumericValue(document.getElementById("par5_tot").value);
 		if((par4_tot + par5_tot)==0)
-			$("#fir_percentage").val(0);
+			$("#fir_percentage").val(0+"%");
 		else
 		{
 			var fir_percentage = ((fairways / (par4_tot + par5_tot) * 100).toFixed(0) + "%");
@@ -371,7 +323,7 @@ $(document).ready(function() {
 		var par4_tot = GetNumericValue(document.getElementById("par4_tot").value);
 		var par5_tot = GetNumericValue(document.getElementById("par5_tot").value);
 		if(( par3_tot + par4_tot + par5_tot)==0)
-			$("#gir_percentage").val(0);
+			$("#gir_percentage").val(0+"%");
 		else
 		{
 			var gir_percentage = ((greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(0)+ "%");
@@ -882,7 +834,7 @@ $(document).ready(function() {
 		$("#putt_make_5_equation").val(totalputMake5Tot);
 
 		if(totalputOpp5Tot==0)
-			$("#make_percentage_5").val(0);
+			$("#make_percentage_5").val(0+"%");
 		else
 		{
 			var make_percentage_5 = ((totalputMake5Tot / totalputOpp5Tot*100).toFixed(0)+ "%");
@@ -1020,7 +972,7 @@ $(document).ready(function() {
 		$("#putt_make_5_9_equation").val(totalputMake59Tot);
 
 		if(totalputOpp59Tot==0)
-			$("#make_percentage_5_9").val(0);
+			$("#make_percentage_5_9").val(0+"%");
 		else
 		{
 			var make_percentage_5_9 = ((totalputMake59Tot / totalputOpp59Tot*100).toFixed(0) + "%");
@@ -1160,7 +1112,7 @@ $(document).ready(function() {
 		$("#putt_make_10_19_equation").val(totalputMake1019Tot);
 
 		if(totalputOpp1019Tot==0)
-			$("#make_percentage_10_19").val(0);
+			$("#make_percentage_10_19").val(0+"%");
 		else
 		{
 			var make_percentage_10_19 = ((totalputMake1019Tot / totalputOpp1019Tot*100).toFixed(0) + "%");
@@ -1298,7 +1250,7 @@ $(document).ready(function() {
 		$("#putt_make_20_29_equation").val(totalputMake2029Tot);
 
 		if(totalputOpp2029Tot==0)
-			$("#make_percentage_20_29").val(0);
+			$("#make_percentage_20_29").val(0+"%");
 		else
 		{
 			var make_percentage_20_29 = ((totalputMake2029Tot / totalputOpp2029Tot*100).toFixed(0)+ "%");
@@ -1437,7 +1389,7 @@ $(document).ready(function() {
 		$("#putt_make_30_equation").val(totalputMake30InTot);	
 
 		if(totalputOpp30Tot==0)
-			$("#make_percentage_30").val(0);
+			$("#make_percentage_30").val(0+"%");
 		else
 		{
 			var make_percentage_30 = ((totalputMake30InTot / totalputOpp30Tot*100).toFixed(0)+ "%");
@@ -1655,19 +1607,22 @@ $(document).ready(function() {
 		$("#scrambl_sav_tot").val(scramblSavInTot);
 		$("#scramble_sav_equation").val(scramblSavInTot);
 
-		$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0) + "%");
+		if(oppositeValueSumTot==0)
+			$("#scramble_percentage").val(0+"%");
+		else
+			$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0) + "%");
 
 		if(oppositeValueSumOut==0)
-			$("#scrambl_percentage_out_sum").val(0);
+			$("#scrambl_percentage_out_sum").val(0+"%");
 		else
 			$("#scrambl_percentage_out_sum").val((scramblSavOutSum/oppositeValueSumOut*100).toFixed(0) + "%");
 
 		if(oppositeValueSumIn==0)
-			$("#scrambl_percentage_in_sum").val(0);
+			$("#scrambl_percentage_in_sum").val(0+"%");
 		else
 			$("#scrambl_percentage_in_sum").val((scramblSavInSum/oppositeValueSumIn*100).toFixed(0) + "%");
 		if(oppositeValueSumTot==0)
-			$("#scrambl_percentage_sum").val(0);
+			$("#scrambl_percentage_sum").val(0+"%");
 		else
 			$("#scrambl_percentage_sum").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0) + "%");
 	}
@@ -1777,17 +1732,17 @@ $(document).ready(function() {
 		$("#sand_sav_percentage").val(sand_sav_percentage);
 
 		if(sandOppOutSum==0)
-			$("#sand_percentage_out_sum").val((0)+ '%');
+			$("#sand_percentage_out_sum").val(0+"%");
 		else
 			$("#sand_percentage_out_sum").val((sandSavOutSum/sandOppOutSum*100).toFixed(0) + '%');
 
 		if(sandOppInSum==0)
-			$("#sand_percentage_in_sum").val(0);
+			$("#sand_percentage_in_sum").val(0+"%");
 		else
 			$("#sand_percentage_in_sum").val((sandSavInSum/sandOppInSum*100).toFixed(0) + '%');
 
 		if(totalSandOppSum==0)
-			$("#sand_percentage_sum").val(0);
+			$("#sand_percentage_sum").val(0+"%");
 		else
 			$("#sand_percentage_sum").val((sandSavSum/totalSandOppSum*100).toFixed(0) + '%');
 	}
@@ -1895,6 +1850,14 @@ $(document).ready(function() {
 		else
 			$("#par3_score_tot").val(par3StrokesTotForPar3Scor/totalPar3ForPar3Scor);
 
+		if(totalPar3==0)
+			$("#par3_scoring").val("0");
+		else
+		{	
+			var par3_scoring = (par3StrokesTot / totalPar3).toFixed(2);
+			$("#par3_scoring").val(par3_scoring);
+		}
+
 		var par4Out=0;
 		for(var index=0; index<9; index++)
 		{
@@ -1972,6 +1935,14 @@ $(document).ready(function() {
 			$("#par4_score_tot").val(0);
 		else
 			$("#par4_score_tot").val(par4StrokesTotForPar4Scor/totalPar4ForPar4Scor);
+
+		if(totalPar4==0)
+			$("#par4_scoring").val("0");
+		else
+		{	
+			var par4_scoring = (par4StrokesTot / totalPar4).toFixed(2);
+			$("#par4_scoring").val(par4_scoring);
+		}
 
 		var par5Out=0;
 		for(var index=0; index<9; index++)
@@ -2051,6 +2022,14 @@ $(document).ready(function() {
 			$("#par5_score_tot").val(0);
 		else
 			$("#par5_score_tot").val(par5StrokesTotForPar5Scor/totalPar5ForPar5Scor);
+
+		if(totalPar5==0)
+			$("#par5_scoring").val("0");
+		else
+		{	
+			var par5_scoring = (par5StrokesTot / totalPar5).toFixed(2);
+			$("#par5_scoring").val(par5_scoring);
+		}
 
 	}
 	$('.hole_par_in').on("change, keyup" , CalculateAllParStrokesAndParScors);
