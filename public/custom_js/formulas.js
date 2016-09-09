@@ -103,43 +103,58 @@ $(document).ready(function() {
 		$("#score_out_sum").val(outSum);
 
 		var totalSum = inSum+outSum;
+		var score_tot = totalSum;
 		$("#score_tot").val(totalSum);
 		$("#played_holes_tot").val(nonBlank);
 		//document.write(nonBlank);
 		$("#played_holes_equation").val(nonBlank);
 		if(nonBlank =='18')
+		{
+			var hole_rds_18 = 1;
 			$("#hole_rds_18").val(1);
-		else 
+		}
+		else
+		{ 
+			var hole_rds_18 = "";
 			$("#hole_rds_18").val("");
+		}
+
+		if(hole_rds_18==0)
+			$("#avg_score").val("");
+		else
+		{
+			var avg_score = ((score_tot / hole_rds_18)).toFixed(2);
+			$("#avg_score").val(avg_score);
+		}
 	}
 
 	$('.score_in').on("change, keyup" , CheckScore);
 	$(".score_out").on("change, keyup" ,CheckScore);
 
-	function CheckFir()
+	/*function CheckFir()
 	{
-		var inSum = 0;
+		var firInSum = 0;
 		$('.fir_in').each(function(){
 			var number = GetNumericValue(this.value);
 			//if(isInt(number))
-			   inSum = inSum + number;
+			   firInSum = firInSum + number;
 		});
-		$("#fir_in_sum").val(inSum);
+		$("#fir_in_sum").val(firInSum);
 
-		var outSum = 0;
+		var firOutSum = 0;
 		$('.fir_out').each(function(){
 			var number = GetNumericValue(this.value);
 			//if(isInt(number))
-			   outSum = outSum + number;
+			   firOutSum = firOutSum + number;
 		});
 
-		$("#fir_out_sum").val(outSum);
+		$("#fir_out_sum").val(firOutSum);
 
-		var totalSum = inSum+outSum;
-		$("#fir_tot").val(totalSum);
+		var firTotalSum = firInSum+outSum;
+		$("#fir_tot").val(firOutSum);
 
 
-		var fir_tot = totalSum;
+		var fir_tot = firTotalSum;
 		var fairways = fir_tot;
 		if(fairways==0)
 			$("#fairways").val("0");
@@ -149,11 +164,11 @@ $(document).ready(function() {
 	}
 
 	$('.fir_in').on("change, keyup" , CheckFir);
-	$(".fir_out").on("change, keyup" ,CheckFir);
+	$(".fir_out").on("change, keyup" ,CheckFir);*/
 
-	function CheckGir()
+	/*function CheckGir()
 	{
-		var inSum = 0;
+		var girInSum = 0;
 		var countZeroGir = 0;
 		$('.gir_in').each(function(){
 			var number = GetNumericValue(this.value);
@@ -161,31 +176,31 @@ $(document).ready(function() {
 				countZeroGir = countZeroGir + 1;
 			//if(isInt(number))
 				//countGir = countGir + 1;
-				inSum = inSum + number;
+				girInSum = girInSum + number;
 		});
-		$("#gir_in_sum").val(inSum);
+		$("#gir_in_sum").val(girInSum);
 
-		var outSum = 0;
+		var girOutSum = 0;
 		$('.gir_out').each(function(){
 			var number = GetNumericValue(this.value);
 			if((this.value)=='0')
 				countZeroGir = countZeroGir + 1;
 			//if(isInt(number))
 				//countGir = countGir + 1;
-				outSum = outSum + number;
+				girOutSum = girOutSum + number;
 		});
 
-		$("#gir_out_sum").val(outSum);
+		$("#gir_out_sum").val(girOutSum);
 
-		var totalSum = inSum+outSum;
-		$("#gir_tot").val(totalSum);
-		$("#greens").val(totalSum);
+		var girTotalSum = girInSum+girOutSum;
+		$("#gir_tot").val(girTotalSum);
+		$("#greens").val(girTotalSum);
 		$("#no_gir_tot").val(countZeroGir);
 		$("#missed_gir").val(countZeroGir);
 	}
 
 	$('.gir_in').on("change, keyup" , CheckGir);
-	$(".gir_out").on("change, keyup" ,CheckGir);
+	$(".gir_out").on("change, keyup" ,CheckGir);*/
 	function CheckPutt1()
 	{
 		var inSum = 0;
@@ -294,8 +309,11 @@ $(document).ready(function() {
 	$(".penalties_out").on("change, keyup" ,Penalties);
 
 
-	function FirPercentage()
+	/*function FirPercentage()
 	{
+
+		
+
 		var fir_tot = GetNumericValue(document.getElementById("fir_tot").value);
 		var fairways = fir_tot;
 		var par4_tot = GetNumericValue(document.getElementById("par4_tot").value);
@@ -337,9 +355,9 @@ $(document).ready(function() {
 	$('.par5_in').on("change, keyup" , GirPercentage);
 	$(".par5_out").on("change, keyup" ,GirPercentage);
 	$('.gir_in').on("change, keyup" , GirPercentage);
-	$('.gir_out').on("change, keyup" , GirPercentage);
+	$('.gir_out').on("change, keyup" , GirPercentage);*/
 
-	function AvgScore()
+	/*function AvgScore()
 	{
 		var score_tot = GetNumericValue(document.getElementById("score_tot").value);
 		var hole_rds_18 = GetNumericValue(document.getElementById("hole_rds_18").value);
@@ -352,7 +370,7 @@ $(document).ready(function() {
 		}
 	}
 	$('.score_out').on("change, keyup" , AvgScore);
-	$('.score_in').on("change, keyup" , AvgScore);
+	$('.score_in').on("change, keyup" , AvgScore);*/
 
 	function CalculateGirDistPutt1Tot()
 	{
@@ -1749,11 +1767,77 @@ $(document).ready(function() {
 
 	$('.sand_opp_in').on("change, keyup" , CalculateSandRows);
 	$(".sand_opp_out").on("change, keyup" ,CalculateSandRows);
+	$('.hole_par_in').on("change, keyup" , CalculateSandRows);
+	$(".hole_par_out").on("change, keyup" ,CalculateSandRows);
+	$('.score_out').on("change, keyup" , CalculateSandRows);
+	$(".score_in").on("change, keyup" ,CalculateSandRows);
 	//$('.sand_opp_in').on("change, keyup" , CalculateSandRows);
 	//$(".sand_opp_out").on("change, keyup" ,CalculateSandRows);
 
 	function CalculateAllParStrokesAndParScors()
 	{
+		////////////
+		var firInSum = 0;
+		$('.fir_in').each(function(){
+			var number = GetNumericValue(this.value);
+			//if(isInt(number))
+			   firInSum = firInSum + number;
+		});
+		$("#fir_in_sum").val(firInSum);
+
+		var firOutSum = 0;
+		$('.fir_out').each(function(){
+			var number = GetNumericValue(this.value);
+			//if(isInt(number))
+			   firOutSum = firOutSum + number;
+		});
+
+		$("#fir_out_sum").val(firOutSum);
+
+		var firTotalSum = firInSum+firOutSum;
+		var fir_tot = firTotalSum;
+		$("#fir_tot").val(fir_tot);
+
+
+		
+		var fairways = fir_tot;
+		if(fairways==0)
+			$("#fairways").val("0");
+		else
+			$("#fairways").val(fairways);
+		//////////
+		var girInSum = 0;
+		var countZeroGir = 0;
+		$('.gir_in').each(function(){
+			var number = GetNumericValue(this.value);
+			if((this.value)=='0')
+				countZeroGir = countZeroGir + 1;
+			//if(isInt(number))
+				//countGir = countGir + 1;
+				girInSum = girInSum + number;
+		});
+		$("#gir_in_sum").val(girInSum);
+
+		var girOutSum = 0;
+		$('.gir_out').each(function(){
+			var number = GetNumericValue(this.value);
+			if((this.value)=='0')
+				countZeroGir = countZeroGir + 1;
+			//if(isInt(number))
+				//countGir = countGir + 1;
+				girOutSum = girOutSum + number;
+		});
+
+		$("#gir_out_sum").val(girOutSum);
+
+		var girTotalSum = girInSum+girOutSum;
+		$("#gir_tot").val(girTotalSum);
+		var greens = girTotalSum;
+		$("#greens").val(greens);
+		$("#no_gir_tot").val(countZeroGir);
+		$("#missed_gir").val(countZeroGir);
+
+		///////////
 		var holePairOutList = []; 
 		$('.hole_par_out').each(function(){
 			holePairOutList.push( $(this).val() );
@@ -1784,6 +1868,7 @@ $(document).ready(function() {
 		$("#par3_in").val(par3In);
 		$("#par3_in_sum").val(par3In);
 		totalPar3 = par3Out + par3In;
+		par3_tot = totalPar3;
 		$("#par3_tot").val(totalPar3);
 		$("#hash_par3").val(totalPar3);
 
@@ -1880,6 +1965,7 @@ $(document).ready(function() {
 		$("#par4_in").val(par4In);
 		$("#par4_in_sum").val(par4In);
 		totalPar4 = par4Out + par4In;
+		var par4_tot = totalPar4;
 		$("#par4_tot").val(totalPar4);
 		$("#hash_par4").val(totalPar4);
 
@@ -1966,6 +2052,7 @@ $(document).ready(function() {
 		$("#par5_in").val(par5In);
 		$("#par5_in_sum").val(par5In);
 		totalPar5 = par5Out + par5In;
+		var par5_tot = totalPar5;
 		$("#par5_tot").val(totalPar5);
 		$("#hash_par5").val(totalPar5);
 
@@ -2031,11 +2118,31 @@ $(document).ready(function() {
 			$("#par5_scoring").val(par5_scoring);
 		}
 
+		if(( par3_tot + par4_tot + par5_tot)==0)
+			$("#gir_percentage").val(0+"%");
+		else
+		{
+			var gir_percentage = ((greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(0)+ "%");
+			$("#gir_percentage").val(gir_percentage);
+		}
+
+		if((par4_tot + par5_tot)==0)
+			$("#fir_percentage").val(0+"%");
+		else
+		{
+			var fir_percentage = ((fairways / (par4_tot + par5_tot) * 100).toFixed(0) + "%");
+			$("#fir_percentage").val(fir_percentage);
+		}
+
 	}
 	$('.hole_par_in').on("change, keyup" , CalculateAllParStrokesAndParScors);
 	$(".hole_par_out").on("change, keyup" ,CalculateAllParStrokesAndParScors);
 	$('.score_in').on("change, keyup" , CalculateAllParStrokesAndParScors);
 	$(".score_out").on("change, keyup" ,CalculateAllParStrokesAndParScors);
+	$('.gir_in').on("change, keyup" , CalculateAllParStrokesAndParScors);
+	$(".gir_out").on("change, keyup" ,CalculateAllParStrokesAndParScors);
+	$('.fir_in').on("change, keyup" , CalculateAllParStrokesAndParScors);
+	$(".fir_out").on("change, keyup" ,CalculateAllParStrokesAndParScors);
 
 	function CalculateEagle()
 	{
