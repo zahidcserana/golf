@@ -45,7 +45,7 @@ class users extends Model
 	}
 	public function AdminCheck($email,$password)
 	{
-		return DB::table($this->table)->where('email', $email)->where('password',$password)->first();
+		return DB::table($this->table)->where('email', $email)->where('password',$password)->where('user_type', 'admin')->first();
 	}
 	public function MakeAdmin($id,$type)
 	{
