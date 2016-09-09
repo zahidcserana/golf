@@ -75,7 +75,7 @@ class UserController extends Controller
 		
 
 		$rules = [
-		  'password'          =>  'required|min:6',
+		  'password'          =>  'required|min:5',
 		  'password_confirmation'  =>  'required|same:password'
 		];
         	$allInput = $request->all();
