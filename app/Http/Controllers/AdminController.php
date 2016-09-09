@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\admin;
+use App\Model\users;
 use App\Http\Requests;
 use Session;
 use Validator;
@@ -16,7 +16,7 @@ class AdminController extends Controller
 	}
 	public function AdminLogin(Request $request)
 	{
-		$adminCheckObj = new admin;
+		$adminCheckObj = new users;
 		$email = $request->email;
 		$password =md5($request->password);
 		
@@ -68,5 +68,21 @@ class AdminController extends Controller
           	$data['message'] = $message;
           	return view('message', $data);
           	
+    	}
+    	public function MakeAdmin($id,$email)
+    	{
+    		$type = 'admin';
+    		$makingAdminObj = new users;
+    		$makingAdmin = $makingAdminObj->MakeAdmin($id,$type);
+    		$msg = "Action successfully completed.";
+		return redirect()->route('message', ['message'=>$msg]);
+    	}
+    	public function DowngradeToUser($id,$email)
+    	{
+    		$type = 'user';
+    		$downgradeToUserObj = new users;
+    		$downgradeToUser = $downgradeToUserObj->DowngradeToUser($id,$type);
+    		$msg = "Action successfully completed.";
+		return redirect()->route('message', ['message'=>$msg]);
     	}
 }

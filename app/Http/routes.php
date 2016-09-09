@@ -14,6 +14,13 @@ Route::get('/user_view',['as'=>'user_view', 'uses' => 'UserController@UsersList'
 
 Route::get('/password_change/{id}/{email}',['as'=>'password_change', 'uses' => 'UserController@ChangePassword'])->middleware('AdminValidationMiddleware');
 
+Route::get('/make_admin/{id}/{email}',['as'=>'make_admin', 'uses' => 'AdminController@MakeAdmin'])->middleware('AdminValidationMiddleware');
+
+
+Route::get('/downgrade_to_user/{id}/{email}',['as'=>'downgrade_to_user', 'uses' => 'AdminController@DowngradeToUser'])->middleware('AdminValidationMiddleware');
+
+
+
 Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset'])->middleware('AdminValidationMiddleware');
 
 Route::get('/registration_form',['as'=>'registration_form', 'uses' => 'UserController@RegistrationForm'])->middleware('AdminValidationMiddleware');

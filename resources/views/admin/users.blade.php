@@ -6,15 +6,46 @@
 			<th>ID</th>
 			<th>NAME</th>
 			<th>EMAIL</th>
+			<th>USER TYPE</th>
 			<th>ACTION</th>
+			
 		</thead>
 		@foreach($users as $user)
 		<tr>
-		  <td><div>{{$user->id}} </div></td>
-		  <td><div>{{$user->name}} </div></td>
-		  <td><div>{{$user->email}} </div></td>
-		  <td><div><a href="{{route('password_change',['id'=>$user->id, 'email'=>$user->email])}}">change password</a> </div></td>
+		  <td>{{$user->id}} </td>
+		  <td>{{$user->name}} </td>
+		  <td>{{$user->email}} </td>
+		  <td>{{$user->user_type}} </td>
+		  <td><a href="{{route('password_change',['id'=>$user->id, 'email'=>$user->email])}}">change password</a> |
+		  <a href="{{route('make_admin', ['id'=>$user->id, 'email'=>$user->email])}}" title="make admin" onclick="return MakeAdmin();">make admin</a>|
+
+		 <a href="{{route('downgrade_to_user',['id'=>$user->id, 'email'=>$user->email])}}"  title="downgrade" onclick="return Downgrade();">downgrade to user</a> </td>
 		</tr>
 		@endforeach
 	</table>
 @stop
+
+  	<script type="text/javascript">
+            function MakeAdmin()
+            {
+                var chk=confirm('Are You Sure ? ');
+                if(chk)
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            function Downgrade()
+            {
+                var chk=confirm('Are You Sure ? ');
+                if(chk)
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+	</script>

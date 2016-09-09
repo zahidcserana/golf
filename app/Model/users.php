@@ -43,4 +43,19 @@ class users extends Model
 		return DB::table($this->table)->where('id', $userId)->update(['name'=>$name]);	
 
 	}
+	public function AdminCheck($email,$password)
+	{
+		return DB::table($this->table)->where('email', $email)->where('password',$password)->first();
+	}
+	public function MakeAdmin($id,$type)
+	{
+		return DB::table($this->table)->where('id', $id)->update(['user_type'=>$type]);	
+
+	}
+	public function DowngradeToUser($id,$type)
+	{
+		return DB::table($this->table)->where('id', $id)->update(['user_type'=>$type]);	
+
+	}
+	
 }
