@@ -16,10 +16,13 @@
 		  <td>{{$user->name}} </td>
 		  <td>{{$user->email}} </td>
 		  <td>{{$user->user_type}} </td>
-		  <td><a href="{{route('password_change',['id'=>$user->id, 'email'=>$user->email])}}">change password</a> |
-		  <a href="{{route('make_admin', ['id'=>$user->id, 'email'=>$user->email])}}" title="make admin" onclick="return MakeAdmin();">make admin</a>|
-
-		 <a href="{{route('downgrade_to_user',['id'=>$user->id, 'email'=>$user->email])}}"  title="downgrade" onclick="return Downgrade();">downgrade to user</a> </td>
+		  <td><a href="{{route('password_change',['id'=>$user->id, 'email'=>$user->email])}}">change password</a>
+		  @if($user->user_type == 'user')
+		   	|<a href="{{route('make_admin', ['id'=>$user->id, 'email'=>$user->email])}}" title="make admin" onclick="return MakeAdmin();">make admin</a></td>
+		  @endif
+		  @if($user->user_type == 'admin')
+		  	|<a href="{{route('downgrade_to_user',['id'=>$user->id, 'email'=>$user->email])}}"  title="downgrade" onclick="return Downgrade();">downgrade to user</a> </td>
+		 @endif
 		</tr>
 		@endforeach
 	</table>
