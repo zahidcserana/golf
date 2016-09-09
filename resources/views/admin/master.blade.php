@@ -1,5 +1,7 @@
 <?php
   $asset = asset('/');
+  use Illuminate\Routing\Route;
+  $route = \Request::route()->getName();
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -42,7 +44,13 @@
           <a class="navbar-brand" href="#">Golf</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right resNavHide">
+            <li><a href="{{route('admin_logout')}}">Logout</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right resNavShow">
+            <li><a href="{{route('admin_home') }}">Home</a></li>
+            <li><a href="{{route('user_view')}}">User List</a></li>
+            <li><a href="{{route('registration_form') }}">Create User</a></li>
             <li><a href="{{route('admin_logout')}}">Logout</a></li>
           </ul>
         </div>
@@ -53,9 +61,13 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
 
-            <li class="active"><a href="{{ URL::to('/admin/home') }}">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="{{route('user_view')}}">User List</a></li>
-            <li><a href="{{ URL::to('/registration_form') }}">Create User</a></li>
+
+            <li <?php echo $route=='admin_home'?'class="active"':'' ?> ><a href="{{route('admin_home') }}">Home<span class="sr-only">(current)</span></a></li>
+
+            <li <?php echo $route=='user_view'?'class="active"':'' ?> ><a href="{{route('user_view')}}">User List<span class="sr-only">(current)</span></a></li>
+
+            <li <?php echo $route=='registration_form'?'class="active"':'' ?> ><a href="{{route('registration_form') }}">Create User<span class="sr-only">(current)</span></a></li>
+
             
           </ul>
         </div>
