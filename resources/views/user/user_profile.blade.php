@@ -79,8 +79,6 @@
 		{{csrf_field()}}
 		<input type="file" id="file" name="file" value="file">
 	</form>
-
-
 	<div class="col-md-10">
 		<div class="table-responsive">
 			<table class="table table-striped" id="user_profile_table">
