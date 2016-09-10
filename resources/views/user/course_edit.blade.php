@@ -1629,7 +1629,7 @@ $asset = asset('/');
 									<td></td>
 								</tr>
 								<tr>
-									<td colspan="6" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="Edit" name="submit"/></td>
+									<td colspan="6" style="background: #006400;color: #fff;font-weight: 700; text-align:center"><input type="submit" value="Submit" name="submit"/></td>
 								</tr>
 							</table>
 						</div>
