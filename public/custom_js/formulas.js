@@ -852,10 +852,10 @@ $(document).ready(function() {
 		$("#putt_make_5_equation").val(totalputMake5Tot);
 
 		if(totalputOpp5Tot==0)
-			$("#make_percentage_5").val(0+"%");
+			$("#make_percentage_5").val("");
 		else
 		{
-			var make_percentage_5 = ((totalputMake5Tot / totalputOpp5Tot*100).toFixed(0)+ "%");
+			var make_percentage_5 = ((totalputMake5Tot / totalputOpp5Tot*100).toFixed(2)+ "%");
 			$("#make_percentage_5").val(make_percentage_5);
 		}
 		////PUTT_OPP_5-9	
@@ -990,10 +990,10 @@ $(document).ready(function() {
 		$("#putt_make_5_9_equation").val(totalputMake59Tot);
 
 		if(totalputOpp59Tot==0)
-			$("#make_percentage_5_9").val(0+"%");
+			$("#make_percentage_5_9").val("");
 		else
 		{
-			var make_percentage_5_9 = ((totalputMake59Tot / totalputOpp59Tot*100).toFixed(0) + "%");
+			var make_percentage_5_9 = ((totalputMake59Tot / totalputOpp59Tot*100).toFixed(2) + "%");
 			$("#make_percentage_5_9").val(make_percentage_5_9);
 		}
 
@@ -1130,10 +1130,10 @@ $(document).ready(function() {
 		$("#putt_make_10_19_equation").val(totalputMake1019Tot);
 
 		if(totalputOpp1019Tot==0)
-			$("#make_percentage_10_19").val(0+"%");
+			$("#make_percentage_10_19").val("");
 		else
 		{
-			var make_percentage_10_19 = ((totalputMake1019Tot / totalputOpp1019Tot*100).toFixed(0) + "%");
+			var make_percentage_10_19 = ((totalputMake1019Tot / totalputOpp1019Tot*100).toFixed(2) + "%");
 			$("#make_percentage_10_19").val(make_percentage_10_19);
 		}
 		//////PUTT_OPP_20-29
@@ -1268,10 +1268,10 @@ $(document).ready(function() {
 		$("#putt_make_20_29_equation").val(totalputMake2029Tot);
 
 		if(totalputOpp2029Tot==0)
-			$("#make_percentage_20_29").val(0+"%");
+			$("#make_percentage_20_29").val("");
 		else
 		{
-			var make_percentage_20_29 = ((totalputMake2029Tot / totalputOpp2029Tot*100).toFixed(0)+ "%");
+			var make_percentage_20_29 = ((totalputMake2029Tot / totalputOpp2029Tot*100).toFixed(2)+ "%");
 			$("#make_percentage_20_29").val(make_percentage_20_29);
 		}
 
@@ -1407,10 +1407,10 @@ $(document).ready(function() {
 		$("#putt_make_30_equation").val(totalputMake30InTot);	
 
 		if(totalputOpp30Tot==0)
-			$("#make_percentage_30").val(0+"%");
+			$("#make_percentage_30").val("");
 		else
 		{
-			var make_percentage_30 = ((totalputMake30InTot / totalputOpp30Tot*100).toFixed(0)+ "%");
+			var make_percentage_30 = ((totalputMake30InTot / totalputOpp30Tot*100).toFixed(2)+ "%");
 			$("#make_percentage_30").val(make_percentage_30);	
 		}
 	}
@@ -1626,9 +1626,9 @@ $(document).ready(function() {
 		$("#scramble_sav_equation").val(scramblSavInTot);
 
 		if(oppositeValueSumTot==0)
-			$("#scramble_percentage").val(0+"%");
+			$("#scramble_percentage").val("");
 		else
-			$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(0) + "%");
+			$("#scramble_percentage").val((scramblSavInTot/oppositeValueSumTot*100).toFixed(2) + "%");
 
 		if(oppositeValueSumOut==0)
 			$("#scrambl_percentage_out_sum").val(0+"%");
@@ -1746,8 +1746,13 @@ $(document).ready(function() {
 		$("#sand_sav_tot").val(sandSavSum);
 		$("#sand_sav_equation").val(sandSavSum);
 
-		var sand_sav_percentage = ((sandSavSum / totalSandOppSum * 100).toFixed(0) +"%");
-		$("#sand_sav_percentage").val(sand_sav_percentage);
+		if(totalSandOppSum==0)
+			$("#sand_sav_percentage").val("");
+		else
+		{
+			var sand_sav_percentage = ((sandSavSum / totalSandOppSum * 100).toFixed(2) +"%");
+			$("#sand_sav_percentage").val(sand_sav_percentage);
+		}
 
 		if(sandOppOutSum==0)
 			$("#sand_percentage_out_sum").val(0+"%");
@@ -1936,7 +1941,7 @@ $(document).ready(function() {
 			$("#par3_score_tot").val(par3StrokesTotForPar3Scor/totalPar3ForPar3Scor);
 
 		if(totalPar3==0)
-			$("#par3_scoring").val("0");
+			$("#par3_scoring").val("");
 		else
 		{	
 			var par3_scoring = (par3StrokesTot / totalPar3).toFixed(2);
@@ -2023,7 +2028,7 @@ $(document).ready(function() {
 			$("#par4_score_tot").val(par4StrokesTotForPar4Scor/totalPar4ForPar4Scor);
 
 		if(totalPar4==0)
-			$("#par4_scoring").val("0");
+			$("#par4_scoring").val("");
 		else
 		{	
 			var par4_scoring = (par4StrokesTot / totalPar4).toFixed(2);
@@ -2111,7 +2116,7 @@ $(document).ready(function() {
 			$("#par5_score_tot").val(par5StrokesTotForPar5Scor/totalPar5ForPar5Scor);
 
 		if(totalPar5==0)
-			$("#par5_scoring").val("0");
+			$("#par5_scoring").val("");
 		else
 		{	
 			var par5_scoring = (par5StrokesTot / totalPar5).toFixed(2);
@@ -2119,18 +2124,18 @@ $(document).ready(function() {
 		}
 
 		if(( par3_tot + par4_tot + par5_tot)==0)
-			$("#gir_percentage").val(0+"%");
+			$("#gir_percentage").val("");
 		else
 		{
-			var gir_percentage = ((greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(0)+ "%");
+			var gir_percentage = ((greens / ( par3_tot + par4_tot + par5_tot)*100).toFixed(2)+ "%");
 			$("#gir_percentage").val(gir_percentage);
 		}
 
 		if((par4_tot + par5_tot)==0)
-			$("#fir_percentage").val(0+"%");
+			$("#fir_percentage").val("");
 		else
 		{
-			var fir_percentage = ((fairways / (par4_tot + par5_tot) * 100).toFixed(0) + "%");
+			var fir_percentage = ((fairways / (par4_tot + par5_tot) * 100).toFixed(2) + "%");
 			$("#fir_percentage").val(fir_percentage);
 		}
 
