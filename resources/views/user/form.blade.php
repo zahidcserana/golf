@@ -336,7 +336,7 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input  type="text" id='num_putt_2_out_sum' Name="gameResult[num_putt_2][out_sum]" /></td>
+										<td><input  type="text" id='num_putt_2_out_sum' readonly="readonly" Name="gameResult[num_putt_2][out_sum]" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
