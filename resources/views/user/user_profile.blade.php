@@ -158,7 +158,7 @@
 				<td>{!! $stats['fir_percentage']['avg']===""?'&nbsp':$stats['fir_percentage']['avg'].'%'; !!} </td>
 				<td>{!! $stats['greens']['avg']===""?'&nbsp':$stats['greens']['avg']; !!} </td>
 				<td>{!! $stats['gir_percentage']['avg']===""?'&nbsp':$stats['gir_percentage']['avg'].'%'; !!} </td>
-				<td>{!! $stats['played_holes_equation']['avg']===""?'&nbsp':$stats['played_holes_equation']['avg'].'%'; !!} </td>
+				<td>{!! $stats['played_holes_equation']['avg']===""?'&nbsp':$stats['played_holes_equation']['avg']; !!} </td>
 				<td>{!! $stats['hole_rds_18']['avg']===""?'&nbsp':$stats['hole_rds_18']['avg']; !!} </td>
 			</tr>
 			<tr style="background: brown;">
@@ -204,7 +204,7 @@
 			<tr>
 				<td>{!! $stats['missed_gir']['avg']===""?'&nbsp':$stats['missed_gir']['avg']; !!} </td>
 				<td>{!! $stats['put_1_nogir']['avg']===""?'&nbsp':$stats['put_1_nogir']['avg']; !!} </td>
-				<td>{!! $stats['avg_dist_chip']['avg']===""?'&nbsp':$stats['avg_dist_chip']['avg']; !!} </td>
+				<td>{!! $stats['avg_dist_chip']['avg']===""?'&nbsp':$stats['avg_dist_chip']['avg']. '%'; !!} </td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -228,7 +228,7 @@
 			<tr>
 				<td>{!! $stats['total_putts']['avg']===""?'&nbsp':$stats['total_putts']['avg']; !!} </td>
 				<td>{!! $stats['putts_div_hole']['avg']===""?'&nbsp':$stats['putts_div_hole']['avg']; !!} </td>
-				<td>{!! $stats['avg_score']['avg']===""?'&nbsp':$stats['avg_score']['avg']; !!} </td>
+				<td>{!! $stats['avg_score']['avg']===""?'&nbsp':$stats['avg_score']['avg']. '%'; !!} </td>
 				<td></td>
 				<td></td>
 				<td></td>
