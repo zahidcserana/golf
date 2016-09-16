@@ -21,11 +21,12 @@
 		  <td>{{$user->user_type}} </td>
 		  <td><a href="{{route('password_change',['id'=>$user->id, 'email'=>$user->email])}}">change password</a>
 		  @if($user->user_type == 'user')
-		   	|<a href="{{route('make_admin', ['id'=>$user->id, 'email'=>$user->email])}}" title="make admin" onclick="return MakeAdmin();">make admin</a></td>
+		   	|<a href="{{route('make_admin', ['id'=>$user->id, 'email'=>$user->email])}}" title="make admin" onclick="return MakeAdmin();">upgrade to admin</a>
 		  @endif
 		  @if($user->user_type == 'admin')
-		  	|<a href="{{route('downgrade_to_user',['id'=>$user->id, 'email'=>$user->email])}}"  title="downgrade" onclick="return Downgrade();">downgrade to user</a> </td>
+		  	|<a href="{{route('downgrade_to_user',['id'=>$user->id, 'email'=>$user->email])}}"  title="downgrade" onclick="return Downgrade();">downgrade to user</a> 
 		 @endif
+		 |<a href="{{route('delete_user',['id'=>$user->id, 'email'=>$user->email])}}"  title="delete" onclick="return Delete();">delete</a> </td>
 		</tr>
 		@endforeach
 
@@ -46,6 +47,17 @@
                 }
             }
             function Downgrade()
+            {
+                var chk=confirm('Do you really want to proceed this action?');
+                if(chk)
+                {
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            function Delete()
             {
                 var chk=confirm('Do you really want to proceed this action?');
                 if(chk)

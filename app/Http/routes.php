@@ -19,6 +19,8 @@ Route::get('/make_admin/{id}/{email}',['as'=>'make_admin', 'uses' => 'AdminContr
 
 Route::get('/downgrade_to_user/{id}/{email}',['as'=>'downgrade_to_user', 'uses' => 'AdminController@DowngradeToUser'])->middleware('AdminValidationMiddleware');
 
+Route::get('/delete_user/{id}/{email}',['as'=>'delete_user', 'uses' => 'AdminController@DeleteUser'])->middleware('AdminValidationMiddleware');
+
 
 
 Route::post('/password_reset',['as'=>'password_reset', 'uses' => 'UserController@PasswordReset'])->middleware('AdminValidationMiddleware');

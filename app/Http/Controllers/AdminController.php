@@ -79,6 +79,16 @@ class AdminController extends Controller
     		return redirect()->route('user_view');
     		
     	}
+    	
+    	public function DeleteUser($id,$email)
+    	{
+    		$UserDeleteObj = new users;
+    		$UserDelete = $UserDeleteObj->DeleteUser($id,$email);
+    		
+    		Session::flash('message', 'Action successfully completed!'); 
+    		return redirect()->route('user_view');
+    		
+    	}
     	public function DowngradeToUser($id,$email)
     	{
     		$type = 'user';

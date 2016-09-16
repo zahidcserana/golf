@@ -55,6 +55,10 @@ class users extends Model
 	public function DowngradeToUser($id,$type)
 	{
 		return DB::table($this->table)->where('id', $id)->update(['user_type'=>$type]);	
+	}
+	public function DeleteUser($id,$email)
+	{
+		return DB::table($this->table)->where('id', $id)->where('email', $email)->delete();	
 
 	}
 	
