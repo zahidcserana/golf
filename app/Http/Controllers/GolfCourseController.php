@@ -13,7 +13,8 @@ class GolfCourseController extends Controller
 		return view('user.form');
 
 	}
-    	public function Form( Request $request )
+	
+    public function Form( Request $request )
 	{
 		$golfCourseObj = new GolfCourse;
 		$datetime = date('Y-m-d H:i:s');
@@ -68,7 +69,14 @@ class GolfCourseController extends Controller
 		$golfCourseObj->make_percentage_10_19 = $request->summaryResult['make_percentage_10_19'][0];
 		$golfCourseObj->make_percentage_20_29 = $request->summaryResult['make_percentage_20_29'][0];
 		$golfCourseObj->make_percentage_30 = $request->summaryResult['make_percentage_30'][0];
-
+		
+		$golfCourseObj->par3_strokes_tot = $request->gameResult['par3strokes']['tot'];
+		$golfCourseObj->par4_strokes_tot = $request->gameResult['par4strokes']['tot'];
+		$golfCourseObj->par5_strokes_tot = $request->gameResult['par5strokes']['tot'];
+		$golfCourseObj->par3_total = $request->gameResult['par3']['tot'];
+		$golfCourseObj->par4_total = $request->gameResult['par4']['tot'];
+		$golfCourseObj->par5_total = $request->gameResult['par5']['tot'];
+		
 		if(strlen($request->dateFromUser)>0)
 			$date = \DateTime::createFromFormat('m/d/Y', $request->dateFromUser);
 		else

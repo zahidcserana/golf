@@ -64,7 +64,7 @@ $asset = asset('/');
 		<div class="container-fluid">
 			<div class="row">
 				<div class="main">
-					<h3 class="page-header">You can edit here</h3>
+					<h3 class="page-header">Round Detail</h3>
 					<form  align="center">
 						
 					<div class="form-group">
