@@ -1,12 +1,10 @@
+@extends('user.master')
 <?php
   $asset = asset('/');
 ?>
-@extends('user.master')
 @section('html_header')
 	@parent
-	<script src="{{$asset}}js/jquery.min.js"></script>
 	<link href="{{$asset}}css/bootstrap-editable.css" rel="stylesheet" type="text/css">
-	<script src="js/bootstrap.min.js"></script>
 	<script src="{{$asset}}js/bootstrap-editable.min.js"></script>
 
 	<script >
@@ -204,7 +202,7 @@
 			<tr>
 				<td>{!! $stats['missed_gir']['avg']===""?'&nbsp':$stats['missed_gir']['avg']; !!} </td>
 				<td>{!! $stats['put_1_nogir']['avg']===""?'&nbsp':$stats['put_1_nogir']['avg']; !!} </td>
-				<td>{!! $stats['avg_dist_chip']['avg']===""?'&nbsp':$stats['avg_dist_chip']['avg']. '%'; !!} </td>
+				<td>{!! $stats['avg_dist_chip']['avg']===""?'&nbsp':$stats['avg_dist_chip']['avg']; !!} </td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -212,7 +210,7 @@
 			<tr style="background: green;">
 				<th>TOTAL PUTTS</th>
 				<th>PUTTS/HOLE</th>
-				<th>AVG. SCORE</th>
+				<th>SCORE</th>
 				<th></th>
 				<th></th>
 				<th></th>
@@ -228,7 +226,7 @@
 			<tr>
 				<td>{!! $stats['total_putts']['avg']===""?'&nbsp':$stats['total_putts']['avg']; !!} </td>
 				<td>{!! $stats['putts_div_hole']['avg']===""?'&nbsp':$stats['putts_div_hole']['avg']; !!} </td>
-				<td>{!! $stats['avg_score']['avg']===""?'&nbsp':$stats['avg_score']['avg']. '%'; !!} </td>
+				<td>{!! $stats['avg_score']['avg']===""?'&nbsp':$stats['avg_score']['avg']; !!} </td>
 				<td></td>
 				<td></td>
 				<td></td>

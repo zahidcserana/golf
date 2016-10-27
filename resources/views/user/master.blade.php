@@ -10,7 +10,7 @@
   @section('html_header')
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Golfer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -30,6 +30,8 @@
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="{{$asset}}js/ie-emulation-modes-warning.js"></script>
+		<script src="{{$asset}}js/jquery.min.js"></script>
+		<script src="{{$asset}}js/bootstrap.min.js"></script>
   @show
   </head>
   <body>
@@ -72,7 +74,7 @@
 
             <li <?php echo $route=='form'?'class="active"':'' ?> ><a href="{{$asset}}form">Add Round<span class="sr-only">(current)</span></a></li>
 
-            <li <?php echo $route=='list'?'class="active"':'' ?> ><a href="{{$asset}}list">Round List<span class="sr-only">(current)</span></a></li>
+            <li <?php echo ($route=='list'||$route=='course_view' ||$route=='course_edit')?'class="active"':'' ?> ><a href="{{$asset}}list">Round List<span class="sr-only">(current)</span></a></li>
 
             
           </ul>

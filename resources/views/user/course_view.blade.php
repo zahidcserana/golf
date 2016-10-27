@@ -1,61 +1,35 @@
 @extends('user.master')
-@section('content')
+
 <?php
-$asset = asset('/');
-
+  $asset = asset('/');
 ?>
-<!doctype html>
-<html class="no-js" lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title></title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<link rel="stylesheet" href="{{$asset}}css/bootstrap.min.css">
-		<link href="{{$asset}}css/bootstrap-datepicker.css" rel="stylesheet">
-		<link rel="stylesheet" href="{{$asset}}css/font-awesome.min.css">
-		<link rel="stylesheet" href="{{$asset}}css/style.css">
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<link href="{{$asset}}css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-		<!-- Custom styles for this template -->
-		<link href="{{$asset}}css/dashboard.css" rel="stylesheet">
-		
-		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-		<script src="{{$asset}}js/ie-emulation-modes-warning.js"></script>
-		
-		<style>
-			input{border:0px solid #000; margin:0; background:transparent; width:100%;text-align: center;}
-			table tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;width: 30px;}
-			table{background: #fff none repeat scroll 0 0;
-				border-left: 1px solid #ddd;
-				border-top: 1px solid #ddd;}
-			/*table tr:first-child{background:#006400; color:#fff;font-weight: bold;}*/
 
-			td.numeric{
-			    padding: 8px 0px !important;
-			}
-			.black{
-				background: #000;
-			}
-			.pink{
-				background: #FFB6C1;
-			}
-			.ash{
-				background:#808080;
-			}
-		</style>
-		<head>
-    		
-		</head>
-	</head>
-	<body>
+@section('html_header')
+	@parent
+	<style>
+		input{border:0px solid #000; margin:0; background:transparent; width:100%;text-align: center;}
+		table tr td{border-right:1px solid #ddd; border-bottom:1px solid #ddd;width: 30px;}
+		table{background: #fff none repeat scroll 0 0;
+			border-left: 1px solid #ddd;
+			border-top: 1px solid #ddd;}
+		/*table tr:first-child{background:#006400; color:#fff;font-weight: bold;}*/
+		
+		td.numeric {
+			padding: 8px 0px !important;
+		}
+		.black{
+			background: #000;
+		}
+		.pink{
+			background: #FFB6C1;
+		}
+		.ash{
+			background:#808080;
+		}
+	</style>
+@stop
+
+@section('content')
 		<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -1633,8 +1607,6 @@ $asset = asset('/');
 				</div>
 			</div>
 		</div>
-		<script src="{{$asset}}js/jquery.min.js"></script>
-		<script src="{{$asset}}js/bootstrap.min.js"></script>
 		<script src="{{$asset}}js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript">
             $(document).ready(function () {
@@ -1661,6 +1633,4 @@ $asset = asset('/');
 			  });
 			}
 		</script>
-	</body>
-</html>
 @stop

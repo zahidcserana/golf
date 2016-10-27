@@ -1,8 +1,8 @@
 @extends('user.master')
-@section('content')
 <?php
   $asset = asset('/');
 ?>
+@section('content')
 <div class="table-responsive">
 	<table class="table table-striped">
 		<thead>

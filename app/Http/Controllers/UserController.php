@@ -59,6 +59,7 @@ class UserController extends Controller
 		$userCheckObj->name= $name;
 		$userCheckObj->password=$password;
 		$userCheckObj->email= $email;
+		$userCheckObj->user_type= 'user';
 		$userCheckObj->save();
 		$msg = "User successfully added!";
 		return redirect()->route('message', ['message'=>$msg]);

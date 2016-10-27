@@ -46,6 +46,7 @@ $(document).ready(function() {
 	
 	function CheckHolePair()
 	{
+		debugger;
 		var inSum = 0;
 		$('.hole_par_in').each(function(){
 			var number = GetNumericValue(this.value);
@@ -2480,10 +2481,13 @@ $(document).ready(function() {
 	$(".score_out").on("change, keyup" ,CalculatOther);
 });
 
+String.prototype.endWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
 
 function GetNumericValue(str)
 {
-	if((typeof str === 'string' || str instanceof String) && str.endsWith("."))
+	if((typeof str === 'string' || str instanceof String) && str.endWith("."))
 		str = str.replace('.','');
 	
 	if(str.length==0)
@@ -2492,3 +2496,6 @@ function GetNumericValue(str)
 		return parseInt(str);
 	return parseFloat(str);
 }
+
+
+
