@@ -84,27 +84,27 @@
 									</tr>
 									<tr>
 										<td>HOLE PAR</td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][0]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][1]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][2]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][3]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][4]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][5]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][6]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][7]" /></td>
-										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][8]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][0]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][1]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][2]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][3]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][4]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][5]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][6]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][7]" /></td>
+										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][8]" /></td>
 
 										<td><input id="hole_par_out_sum" readonly="readonly" Name="gameResult[hole_pair][out_sum]" /></td>
 
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][9]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][10]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][11]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][12]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][13]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][14]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][15]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][16]" /></td>
-										<td class="pink"><input class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][17]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][9]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][10]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][11]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][12]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][13]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][14]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][15]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][16]" /></td>
+										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][17]" /></td>
 										
 										<td><input id="hole_par_in_sum" readonly="readonly" Name="gameResult[hole_pair][in_sum]" /></td>
 
