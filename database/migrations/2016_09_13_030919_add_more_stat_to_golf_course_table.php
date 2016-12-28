@@ -16,7 +16,7 @@ class AddMoreStatToGolfCourseTable extends Migration
             $table->string('par3_strokes_tot', 10);
             $table->string('par4_strokes_tot', 10);
             $table->string('par5_strokes_tot', 10);
-			$table->string('par3_total', 10);
+            $table->string('par3_total', 10);
             $table->string('par4_total', 10);
             $table->string('par5_total', 10);
         });

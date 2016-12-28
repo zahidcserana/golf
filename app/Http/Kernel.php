@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http;
+
 use Illuminate\Routing\Middleware\AdminValidationMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 

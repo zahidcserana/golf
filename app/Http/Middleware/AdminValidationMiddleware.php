@@ -22,6 +22,5 @@ class AdminValidationMiddleware
             return $next($request);
         }
         return redirect()->route('admin');
-        
     }
 }

@@ -117,5 +117,3 @@ class AddStatToGolfCourseTable extends Migration
         });
     }
 }
-
-
