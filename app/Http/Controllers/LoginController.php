@@ -71,7 +71,7 @@ class LoginController extends Controller
     
     public function GetCSRFToken()
     {
-        $retArr = array('success'=>true,'token'=>csrf_token());
+        $retArr = ['success'=>true,'token'=>csrf_token()];
         echo json_encode($retArr);
     }
 }

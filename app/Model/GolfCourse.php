@@ -47,12 +47,12 @@ class GolfCourse extends Model
     {
         $query = "select * from golf_course where user_id = ?";
         $rowList = DB::select($query, [$userId]);
-        $varriableList = array('par3_scoring' , 'par4_scoring', 'par5_scoring', 'hash_par3', 'hash_par4', 'hash_par5', 'eagles', 'birdies', 'pars', 'bogeys', 'dblbogeys', 'others', 'fairways', 'fir_percentage', 'greens', 'gir_percentage', 'played_holes_equation', 'hole_rds_18', 'scramble_opp_equation', 'scramble_sav_equation', 'scramble_percentage', 'sand_opp_equation', 'sand_sav_equation', 'sand_sav_percentage', 'missed_gir', 'put_1_nogir', 'avg_dist_chip', 'total_putts', 'putts_div_hole', 'avg_score', 'putt_opp_5_equation', 'putt_opp_5_9_equation', 'putt_opp_10_19_equation','putt_opp_20_29_equation', 'putt_opp_30_equation', 'putt_make_5_equation', 'putt_make_5_9_equation', 'putt_make_10_19_equation', 'putt_make_20_29_equation', 'putt_make_30_equation', 'make_percentage_5', 'make_percentage_5_9', 'make_percentage_10_19', 'make_percentage_20_29', 'make_percentage_30', 'par3_strokes_tot', 'par4_strokes_tot', 'par5_strokes_tot', 'par3_total', 'par4_total', 'par5_total' );
+        $varriableList = ['par3_scoring' , 'par4_scoring', 'par5_scoring', 'hash_par3', 'hash_par4', 'hash_par5', 'eagles', 'birdies', 'pars', 'bogeys', 'dblbogeys', 'others', 'fairways', 'fir_percentage', 'greens', 'gir_percentage', 'played_holes_equation', 'hole_rds_18', 'scramble_opp_equation', 'scramble_sav_equation', 'scramble_percentage', 'sand_opp_equation', 'sand_sav_equation', 'sand_sav_percentage', 'missed_gir', 'put_1_nogir', 'avg_dist_chip', 'total_putts', 'putts_div_hole', 'avg_score', 'putt_opp_5_equation', 'putt_opp_5_9_equation', 'putt_opp_10_19_equation','putt_opp_20_29_equation', 'putt_opp_30_equation', 'putt_make_5_equation', 'putt_make_5_9_equation', 'putt_make_10_19_equation', 'putt_make_20_29_equation', 'putt_make_30_equation', 'make_percentage_5', 'make_percentage_5_9', 'make_percentage_10_19', 'make_percentage_20_29', 'make_percentage_30', 'par3_strokes_tot', 'par4_strokes_tot', 'par5_strokes_tot', 'par3_total', 'par4_total', 'par5_total' ];
         
-        $statAverage = array();
+        $statAverage = [];
         
         foreach ($varriableList as $aVarriable) {
-            $statAverage[$aVarriable]=array('sum'=>0,'count'=>0);
+            $statAverage[$aVarriable]=['sum'=>0,'count'=>0];
         }
         foreach ($rowList as $row) {
             foreach ($varriableList as $aVarriable) {
