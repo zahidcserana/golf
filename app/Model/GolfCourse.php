@@ -122,17 +122,17 @@ class GolfCourse extends Model
 			}
 			else if($key=='avg_dist_chip' )
 			{
-				/*if($statAverage['missed_gir']['sum']!=0)
-					$aStat['avg'] = round( $statAverage['put_1_nogir']['sum'] / $statAverage['missed_gir']['sum'], 2);*/
-				if($totalRound!=0)
-					$aStat['avg'] = round( $statAverage['avg_dist_chip']['sum'] / $totalRound, 2);
+				/*if($totalRound!=0)
+					$aStat['avg'] = round( $statAverage['put_1_nogir']['sum'] / $statAverage['put_1_nogir']['missed_gir'], 2);
+				else
+					$aStat['avg'] = "";*/
+				if($statAverage['missed_gir']['sum']!=0)
+					$aStat['avg'] = round( $statAverage['put_1_nogir']['sum'] / $statAverage['missed_gir']['sum'], 2);
 				else
 					$aStat['avg'] = "";
 			}
 			else if($key=='avg_score')
 			{
-				/*if($statAverage['played_holes_equation']['sum']!=0)
-					$aStat['avg'] = round( $statAverage['total_putts']['sum'] / $statAverage['played_holes_equation']['sum'], 2);*/
 				if($totalRound!=0)
 					$aStat['avg'] = round( $statAverage['avg_score']['sum'] / $totalRound, 2);
 				else
@@ -170,6 +170,21 @@ class GolfCourse extends Model
 			{
 				if($statAverage['putt_opp_30_equation']['sum']!=0)
 					$aStat['avg'] = round( $statAverage['putt_make_30_equation']['sum'] * 100 / $statAverage['putt_opp_30_equation']['sum'], 2);
+				else
+					$aStat['avg'] =  "";
+			}
+			else if($key=='make_percentage_30' )
+			{
+				if($statAverage['putt_opp_30_equation']['sum']!=0)
+					$aStat['avg'] = round( $statAverage['putt_make_30_equation']['sum'] * 100 / $statAverage['putt_opp_30_equation']['sum'], 2);
+				else
+					$aStat['avg'] =  "";
+			}
+			////
+			else if($key=='putts_div_hole' )
+			{
+				if($statAverage['played_holes_equation']['sum']!=0)
+					$aStat['avg'] = round( $statAverage['total_putts']['sum'] / $statAverage['played_holes_equation']['sum'], 2);
 				else
 					$aStat['avg'] =  "";
 			}

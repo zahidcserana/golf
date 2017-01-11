@@ -1,15 +1,10 @@
 $(document).ready(function() {
 	
-	$(".numeric").keydown(function(e) 
+	$(".numeric").on("change, keyup" ,function(e) 
 	{
-		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && e.ctrlKey === true) || (e.keyCode == 67 && e.ctrlKey === true) || (e.keyCode == 88 && e.ctrlKey === true) || (e.keyCode >= 35 && e.keyCode <= 39)) 
-		{
-			return true;
-		}
-		if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) 
-		{
-			return false;
-		}
+		var currentInputValue = $(this).val();
+		currentInputValue = currentInputValue.replace(/[^0-9.]/g,'');
+		$(this).val(currentInputValue);
 	});
 
 	function isInt(n){
@@ -18,14 +13,22 @@ $(document).ready(function() {
 
 	function CheckHolePairLength(e)
 	{
-		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && e.ctrlKey === true) || (e.keyCode == 67 && e.ctrlKey === true) || (e.keyCode == 88 && e.ctrlKey === true) || (e.keyCode >= 35 && e.keyCode <= 39)) 
+		/*var charKeyCode = e.keyCode || e.which;
+		
+		if (navigator.userAgent.match(/Android/i)) {
+			var charKeyCode = e.keyCode || e.which;
+			if (charKeyCode == 0 || charKeyCode == 229) { 
+				charKeyCode = e.key.charCodeAt(0);
+		}
+		
+		if ($.inArray(charKeyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (charKeyCode == 65 && e.ctrlKey === true) || (charKeyCode == 67 && e.ctrlKey === true) || (charKeyCode == 88 && e.ctrlKey === true) || (charKeyCode >= 35 && charKeyCode <= 39)) 
 		{
 			return true;
 		}
 		var curVal = $(this).val();
 		if( curVal.length==1 )
 		{
-			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) 
+			if ((e.shiftKey || (charKeyCode < 48 || charKeyCode > 57)) && (charKeyCode < 96 || charKeyCode > 105)) 
 			{
 				return false;
 			}
@@ -37,16 +40,19 @@ $(document).ready(function() {
 			}
 		}
 		else
-			return true;
-
+			return true;*/
+		var currentInputValue = $(this).val();
+		currentInputValue = currentInputValue.replace(/[^0-9.]/g,'');
+		if(currentInputValue.length>1)
+			currentInputValue = currentInputValue.substr(0,1);
+		$(this).val(currentInputValue);
 	} 
-	$('.hole_par_in').on("keydown" , CheckHolePairLength);
-	$(".hole_par_out").on("keydown" ,CheckHolePairLength);
+	$('.hole_par_in').on("change, keyup"  , CheckHolePairLength);
+	$(".hole_par_out").on("change, keyup"  ,CheckHolePairLength);
 
 	
 	function CheckHolePair()
 	{
-		debugger;
 		var inSum = 0;
 		$('.hole_par_in').each(function(){
 			var number = GetNumericValue(this.value);
@@ -73,14 +79,22 @@ $(document).ready(function() {
 
 	function CheckScoreLength(e)
 	{
-		if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && e.ctrlKey === true) || (e.keyCode == 67 && e.ctrlKey === true) || (e.keyCode == 88 && e.ctrlKey === true) || (e.keyCode >= 35 && e.keyCode <= 39)) 
+		/*var charKeyCode = e.keyCode || e.which;
+		
+		if (navigator.userAgent.match(/Android/i)) {
+			var charKeyCode = e.keyCode || e.which;
+			if (charKeyCode == 0 || charKeyCode == 229) { 
+				charKeyCode = e.key.charCodeAt(0);
+		}
+		
+		if ($.inArray(charKeyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (charKeyCode == 65 && e.ctrlKey === true) || (charKeyCode == 67 && e.ctrlKey === true) || (charKeyCode == 88 && e.ctrlKey === true) || (charKeyCode >= 35 && charKeyCode <= 39)) 
 		{
 			return true;
 		}
 		var curVal = $(this).val();
 		if( curVal.length==2 )
 		{
-			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) 
+			if ((e.shiftKey || (charKeyCode < 48 || charKeyCode > 57)) && (charKeyCode < 96 || charKeyCode > 105)) 
 			{
 				return false;
 			}
@@ -91,11 +105,16 @@ $(document).ready(function() {
 			}
 		}
 		else
-			return true;
+			return true;*/
+		var currentInputValue = $(this).val();
+		currentInputValue = currentInputValue.replace(/[^0-9.]/g,'');
+		if(currentInputValue.length>2)
+			currentInputValue = currentInputValue.substr(0,2);
+		$(this).val(currentInputValue);
 
 	} 
-	$('.score_in').on("keydown" , CheckScoreLength);
-	$(".score_out").on("keydown" ,CheckScoreLength);
+	$('.score_in').on("change, keyup"  , CheckScoreLength);
+	$(".score_out").on("change, keyup" ,CheckScoreLength);
 
 	function CheckScore()
 	{

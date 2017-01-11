@@ -14,9 +14,6 @@
 			border-top: 1px solid #ddd;}
 		/*table tr:first-child{background:#006400; color:#fff;font-weight: bold;}*/
 		
-		td.numeric {
-			padding: 8px 0px !important;
-		}
 		.black{
 			background: #000;
 		}
@@ -26,6 +23,19 @@
 		.ash{
 			background:#808080;
 		}
+		#spreadSheet td 
+		{
+			min-width: 45px;
+			padding: 0px!important;
+		}
+		#spreadSheet input {
+		  border:none;
+		  width:100%;
+		  font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+		  font-size:12px;
+		  padding: 8px 0px!important;
+		}
+
 	</style>
 @stop
 
@@ -34,7 +44,7 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<!-- Add your site or application content here -->
-		
+		<div id='testNumber'></div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="main">
@@ -56,7 +66,7 @@
 					<br>
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table">
+							<table class="table" id='spreadSheet'>
 									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
@@ -84,27 +94,27 @@
 									</tr>
 									<tr>
 										<td>HOLE PAR</td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][0]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][1]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][2]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][3]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][4]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][5]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][6]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][7]" /></td>
-										<td class="pink"><input class="numeric hole_par_out" type="text" Name="gameResult[hole_pair][input][8]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][0]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][1]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][2]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][3]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][4]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][5]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][6]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][7]" /></td>
+										<td class="pink"><input class="hole_par_out" type="text" Name="gameResult[hole_pair][input][8]" /></td>
 
 										<td><input id="hole_par_out_sum" readonly="readonly" Name="gameResult[hole_pair][out_sum]" /></td>
 
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][9]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][10]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][11]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][12]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][13]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][14]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][15]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][16]" /></td>
-										<td class="pink"><input class="numeric hole_par_in" type="text" Name="gameResult[hole_pair][input][17]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][9]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][10]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][11]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][12]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][13]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][14]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][15]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][16]" /></td>
+										<td class="pink"><input class="hole_par_in" type="text" Name="gameResult[hole_pair][input][17]" /></td>
 										
 										<td><input id="hole_par_in_sum" readonly="readonly" Name="gameResult[hole_pair][in_sum]" /></td>
 
@@ -113,27 +123,27 @@
 
 									<tr>
 										<td>SCORE</td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][0]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][1]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][2]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][3]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][4]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][5]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][6]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][7]" /></td>
-										<td class=""><input class="numeric score_out" type="text" Name="gameResult[score][input][8]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][0]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][1]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][2]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][3]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][4]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][5]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][6]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][7]" /></td>
+										<td class=""><input class="score_out" type="text" Name="gameResult[score][input][8]" /></td>
 
 										<td><input id="score_out_sum" readonly="readonly" Name="gameResult[score][out_sum]" /></td>
 
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][9]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][10]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][11]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][12]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][13]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][14]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][15]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][16]" /></td>
-										<td class=""><input class="numeric score_in" type="text" Name="gameResult[score][input][17]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][9]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][10]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][11]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][12]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][13]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][14]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][15]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][16]" /></td>
+										<td class=""><input class="score_in" type="text" Name="gameResult[score][input][17]" /></td>
 										
 										<td><input id ="score_in_sum" readonly="readonly" Name="gameResult[score][in_sum]" /></td>
 										<td><input id="score_tot" readonly="readonly" Name="gameResult[score][tot]" /></td>

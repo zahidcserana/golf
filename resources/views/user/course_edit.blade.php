@@ -25,6 +25,19 @@
 		.ash{
 			background:#808080;
 		}
+		
+		#spreadSheet td 
+		{
+			min-width: 45px;
+			padding: 0px!important;
+		}
+		#spreadSheet input {
+		  border:none;
+		  width:100%;
+		  font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+		  font-size:12px;
+		  padding: 8px 0px!important;
+		}
 	</style>
 @stop
 
@@ -57,7 +70,7 @@
 					<br>
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table">
+							<table class="table" id='spreadSheet'>
 									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
@@ -86,27 +99,27 @@
 									<tr>
 										<td>HOLE PAR</td>
 
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][0]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][0]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][1]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][1]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][2]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][2]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][3]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][3]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][4]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][4]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][5]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][5]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][6]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][6]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][7]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][7]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][8]}}" class="hole_par_out numeric" type="text" Name="gameResult[hole_pair][input][8]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][0]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][0]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][1]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][1]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][2]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][2]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][3]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][3]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][4]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][4]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][5]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][5]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][6]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][6]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][7]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][7]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][8]}}" class="hole_par_out" type="text" Name="gameResult[hole_pair][input][8]" /></td>
 
 										<td><input value="{{$gameResult['hole_pair']['out_sum']}}"" id="hole_par_out_sum" readonly="readonly" Name="gameResult[hole_pair][out_sum]" /></td>
 
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][9]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][9]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][10]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][10]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][11]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][11]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][12]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][12]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][13]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][13]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][14]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][14]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][15]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][15]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][16]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][16]" /></td>
-										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][17]}}" class=" hole_par_in numeric" type="text" Name="gameResult[hole_pair][input][17]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][9]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][9]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][10]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][10]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][11]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][11]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][12]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][12]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][13]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][13]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][14]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][14]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][15]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][15]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][16]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][16]" /></td>
+										<td class="pink"><input value="{{$gameResult['hole_pair']['input'][17]}}" class=" hole_par_in" type="text" Name="gameResult[hole_pair][input][17]" /></td>
 										
 										<td><input value="{{$gameResult['hole_pair']['in_sum']}}" id="hole_par_in_sum" readonly="readonly" Name="gameResult[hole_pair][in_sum]" /></td>
 
@@ -115,27 +128,27 @@
 
 									<tr>
 										<td>SCORE</td>
-										<td><input value="{{$gameResult['score']['input'][0]}}" class="numeric score_out" type="text" Name="gameResult[score][input][0]" /></td>
-										<td><input value="{{$gameResult['score']['input'][1]}}" class="numeric score_out" type="text" Name="gameResult[score][input][1]" /></td>
-										<td><input value="{{$gameResult['score']['input'][2]}}" class="numeric score_out" type="text" Name="gameResult[score][input][2]" /></td>
-										<td><input value="{{$gameResult['score']['input'][3]}}" class="numeric score_out" type="text" Name="gameResult[score][input][3]" /></td>
-										<td><input value="{{$gameResult['score']['input'][4]}}" class="numeric score_out" type="text" Name="gameResult[score][input][4]" /></td>
-										<td><input value="{{$gameResult['score']['input'][5]}}" class="numeric score_out" type="text" Name="gameResult[score][input][5]" /></td>
-										<td><input value="{{$gameResult['score']['input'][6]}}" class="numeric score_out" type="text" Name="gameResult[score][input][6]" /></td>
-										<td><input value="{{$gameResult['score']['input'][7]}}" class="numeric score_out" type="text" Name="gameResult[score][input][7]" /></td>
-										<td><input value="{{$gameResult['score']['input'][8]}}" class="numeric score_out" type="text" Name="gameResult[score][input][8]" /></td>
+										<td><input value="{{$gameResult['score']['input'][0]}}" class="score_out" type="text" Name="gameResult[score][input][0]" /></td>
+										<td><input value="{{$gameResult['score']['input'][1]}}" class="score_out" type="text" Name="gameResult[score][input][1]" /></td>
+										<td><input value="{{$gameResult['score']['input'][2]}}" class="score_out" type="text" Name="gameResult[score][input][2]" /></td>
+										<td><input value="{{$gameResult['score']['input'][3]}}" class="score_out" type="text" Name="gameResult[score][input][3]" /></td>
+										<td><input value="{{$gameResult['score']['input'][4]}}" class="score_out" type="text" Name="gameResult[score][input][4]" /></td>
+										<td><input value="{{$gameResult['score']['input'][5]}}" class="score_out" type="text" Name="gameResult[score][input][5]" /></td>
+										<td><input value="{{$gameResult['score']['input'][6]}}" class="score_out" type="text" Name="gameResult[score][input][6]" /></td>
+										<td><input value="{{$gameResult['score']['input'][7]}}" class="score_out" type="text" Name="gameResult[score][input][7]" /></td>
+										<td><input value="{{$gameResult['score']['input'][8]}}" class="score_out" type="text" Name="gameResult[score][input][8]" /></td>
 
 										<td><input value="{{$gameResult['score']['out_sum']}}" id="score_out_sum" readonly="readonly" Name="gameResult[score][out_sum]" /></td>
 
-										<td><input value="{{$gameResult['score']['input'][9]}}" class="numeric score_in" type="text" Name="gameResult[score][input][9]" /></td>
-										<td><input value="{{$gameResult['score']['input'][10]}}" class="numeric score_in" type="text" Name="gameResult[score][input][10]" /></td>
-										<td><input value="{{$gameResult['score']['input'][11]}}" class="numeric score_in" type="text" Name="gameResult[score][input][11]" /></td>
-										<td><input value="{{$gameResult['score']['input'][12]}}" class="numeric score_in" type="text" Name="gameResult[score][input][12]" /></td>
-										<td><input value="{{$gameResult['score']['input'][13]}}" class="numeric score_in" type="text" Name="gameResult[score][input][13]" /></td>
-										<td><input value="{{$gameResult['score']['input'][14]}}" class="numeric score_in" type="text" Name="gameResult[score][input][14]" /></td>
-										<td><input value="{{$gameResult['score']['input'][15]}}" class="numeric score_in" type="text" Name="gameResult[score][input][15]" /></td>
-										<td><input value="{{$gameResult['score']['input'][16]}}" class="numeric score_in" type="text" Name="gameResult[score][input][16]" /></td>
-										<td><input value="{{$gameResult['score']['input'][17]}}" class="numeric score_in" type="text" Name="gameResult[score][input][17]" /></td>
+										<td><input value="{{$gameResult['score']['input'][9]}}" class="score_in" type="text" Name="gameResult[score][input][9]" /></td>
+										<td><input value="{{$gameResult['score']['input'][10]}}" class="score_in" type="text" Name="gameResult[score][input][10]" /></td>
+										<td><input value="{{$gameResult['score']['input'][11]}}" class="score_in" type="text" Name="gameResult[score][input][11]" /></td>
+										<td><input value="{{$gameResult['score']['input'][12]}}" class="score_in" type="text" Name="gameResult[score][input][12]" /></td>
+										<td><input value="{{$gameResult['score']['input'][13]}}" class="score_in" type="text" Name="gameResult[score][input][13]" /></td>
+										<td><input value="{{$gameResult['score']['input'][14]}}" class="score_in" type="text" Name="gameResult[score][input][14]" /></td>
+										<td><input value="{{$gameResult['score']['input'][15]}}" class="score_in" type="text" Name="gameResult[score][input][15]" /></td>
+										<td><input value="{{$gameResult['score']['input'][16]}}" class="score_in" type="text" Name="gameResult[score][input][16]" /></td>
+										<td><input value="{{$gameResult['score']['input'][17]}}" class="score_in" type="text" Name="gameResult[score][input][17]" /></td>
 										
 										<td><input value="{{$gameResult['score']['in_sum']}}" id ="score_in_sum" readonly="readonly" Name="gameResult[score][in_sum]" /></td>
 										<td><input value="{{$gameResult['score']['tot']}}" id="score_tot" readonly="readonly" Name="gameResult[score][tot]" /></td>

@@ -26,6 +26,18 @@
 		.ash{
 			background:#808080;
 		}
+		#spreadSheet td 
+		{
+			min-width: 45px;
+			padding: 0px!important;
+		}
+		#spreadSheet input {
+		  border:none;
+		  width:100%;
+		  font-family: Verdana, Helvetica, Arial, FreeSans, sans-serif;
+		  font-size:12px;
+		  padding: 8px 0px!important;
+		}
 	</style>
 @stop
 
@@ -56,7 +68,7 @@
 					<br>
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table class="table">
+							<table class="table" id='spreadSheet'>
 									
 									<tr style="background: #006400;color:#fff;font-weight: bold;text-align:center">
 										<td></td>
