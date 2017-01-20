@@ -163,7 +163,6 @@ class GolfCourseController extends Controller
 		//dd($editedLocation);
 		$editedData = json_encode($request->gameResult);
 		$editedSummaryData = json_encode($request->summaryResult);
-
 		$golfCourseObj->UpdateCourse($courseIdFromRoute, $editedData, $editedSummaryData, $editedLocation);
 		$msg = "You have successfully updated a round.";
    		return redirect()->route('user_message', ['message'=>$msg]);

@@ -392,8 +392,8 @@
 										<td><input value="{{$gameResult['putt_2']['input'][17]}}" class="numeric putt_2_in"  type="text" Name="gameResult[putt_2][input][17]" /></td>
 										<td><input value="{{$gameResult['putt_2']['input'][18]}}" class="numeric putt_2_in"  type="text" Name="gameResult[putt_2][input][18]" /></td>
 			
-										<td><input value="{{$gameResult['putt_2']['out_sum']}}" id="putt_2_in_sum" readonly="readonly" Name="gameResult[putt_2][in_sum]" /></td>
-										<td><input value="{{$gameResult['putt_2']['in_sum']}}" id="putt_2_tot" readonly="readonly" Name="gameResult[putt_2][tot]" /></td>
+										<td><input value="{{$gameResult['putt_2']['in_sum']}}" id="putt_2_in_sum" readonly="readonly" Name="gameResult[putt_2][in_sum]" /></td>
+										<td><input value="{{$gameResult['putt_2']['tot']}}" id="putt_2_tot" readonly="readonly" Name="gameResult[putt_2][tot]" /></td>
 									</tr>
 									<tr>
 										<td>NUM PUTT 3</td>
@@ -1225,7 +1225,7 @@
 
 									<tr>
 										<td>PAR5STROKES</td>
-										<td class="ash"><input value="{{$gameResult["par4strokes"]["input"][0]}}" id="par5strokes_out" readonly="readonly"  type="text" Name="gameResult[par5strokes][input][0]" class="numeric" /></td>
+										<td class="ash"><input value="{{$gameResult["par5strokes"]["input"][0]}}" id="par5strokes_out" readonly="readonly"  type="text" Name="gameResult[par5strokes][input][0]" class="numeric" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1234,8 +1234,8 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input value="{{$gameResult["par4strokes"]["out_sum"]}}" id="par5strokes_out_sum" readonly="readonly" type="text"  Name="gameResult[par5strokes][out_sum]" /></td>
-										<td class="ash"><input value="{{$gameResult["par4strokes"]["input"][1]}}"  id="par5strokes_in" readonly="readonly" type="text" Name="gameResult[par5strokes][input][1]" class="numeric" /></td>
+										<td><input value="{{$gameResult["par5strokes"]["out_sum"]}}" id="par5strokes_out_sum" readonly="readonly" type="text"  Name="gameResult[par5strokes][out_sum]" /></td>
+										<td class="ash"><input value="{{$gameResult["par5strokes"]["input"][1]}}"  id="par5strokes_in" readonly="readonly" type="text" Name="gameResult[par5strokes][input][1]" class="numeric" /></td>
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
@@ -1244,8 +1244,8 @@
 										<td class="black"></td>
 										<td class="black"></td>
 										<td class="black"></td>
-										<td><input value="{{$gameResult["par4strokes"]["in_sum"]}}"  id="par5strokes_in_sum" readonly="readonly" Name="gameResult[par5strokes][in_sum]" /></td>
-										<td><input value="{{$gameResult["par4strokes"]["tot"]}}"  id="par5strokes_tot" readonly="readonly" Name="gameResult[par5strokes][tot]" /></td>
+										<td><input value="{{$gameResult["par5strokes"]["in_sum"]}}"  id="par5strokes_in_sum" readonly="readonly" Name="gameResult[par5strokes][in_sum]" /></td>
+										<td><input value="{{$gameResult["par5strokes"]["tot"]}}"  id="par5strokes_tot" readonly="readonly" Name="gameResult[par5strokes][tot]" /></td>
 									</tr>
 									<tr>
 										<td>PAR5SCOR</td>

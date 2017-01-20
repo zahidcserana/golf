@@ -49,7 +49,9 @@ $(document).ready(function() {
 	} 
 	$('.hole_par_in').on("change, keyup"  , CheckHolePairLength);
 	$(".hole_par_out").on("change, keyup"  ,CheckHolePairLength);
-
+	
+	$(".penalties_out").on("change, keyup" ,CheckHolePairLength);
+	$(".penalties_in").on("change, keyup" ,CheckHolePairLength);
 	
 	function CheckHolePair()
 	{
@@ -115,6 +117,7 @@ $(document).ready(function() {
 	} 
 	$('.score_in').on("change, keyup"  , CheckScoreLength);
 	$(".score_out").on("change, keyup" ,CheckScoreLength);
+	
 
 	function CheckScore()
 	{
@@ -172,6 +175,24 @@ $(document).ready(function() {
 	$('.score_in').on("change, keyup" , CheckScore);
 	$(".score_out").on("change, keyup" ,CheckScore);
 
+	
+	function CheckFirAndGir()
+	{
+		var currentInputValue = $(this).val();
+		currentInputValue = currentInputValue.replace(/[^0-1]/g,'');
+		if(currentInputValue.length>1)
+			currentInputValue = currentInputValue.substr(0,1);
+		$(this).val(currentInputValue);
+	}
+	
+	$('.fir_out').on("change, keyup" , CheckFirAndGir);
+	$(".fir_in").on("change, keyup" ,CheckFirAndGir);
+	$('.gir_out').on("change, keyup" , CheckFirAndGir);
+	$(".gir_in").on("change, keyup" ,CheckFirAndGir);
+	$(".gir_in").on("change, keyup" ,CheckFirAndGir);
+	$(".sand_opp_out").on("change, keyup" ,CheckFirAndGir);
+	$(".sand_opp_in").on("change, keyup" ,CheckFirAndGir);
+	
 	function CheckPutt1()
 	{
 		var inSum = 0;
